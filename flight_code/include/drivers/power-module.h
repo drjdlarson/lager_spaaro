@@ -2,7 +2,7 @@
 * Brian R Taylor
 * brian.taylor@bolderflight.com
 * 
-* Copyright (c) 2022 Bolder Flight Systems Inc
+* Copyright (c) 2021 Bolder Flight Systems Inc
 *
 * Permission is hereby granted, free of charge, to any person obtaining a copy
 * of this software and associated documentation files (the “Software”), to
@@ -23,13 +23,16 @@
 * IN THE SOFTWARE.
 */
 
-#ifndef FLIGHT_CODE_INCLUDE_FLIGHT_SENSORS_H_
-#define FLIGHT_CODE_INCLUDE_FLIGHT_SENSORS_H_
+#ifndef FLIGHT_CODE_INCLUDE_FLIGHT_POWER_MODULE_H_
+#define FLIGHT_CODE_INCLUDE_FLIGHT_POWER_MODULE_H_
+
+#if defined(__FMU_R_MINI_V1__) || defined(__FMU_R_V2__)
 
 #include "global_defs.h"
 
-void SensorsInit(const SensorConfig &cfg);
-void SensorsCal();
-void SensorsRead(SensorData * const data);
+void PowerModuleInit(const PowerModuleConfig &cfg);
+void PowerModuleRead(PowerModuleData * const data);
 
-#endif  // FLIGHT_CODE_INCLUDE_FLIGHT_SENSORS_H_
+#endif
+
+#endif  // FLIGHT_CODE_INCLUDE_FLIGHT_POWER_MODULE_H_

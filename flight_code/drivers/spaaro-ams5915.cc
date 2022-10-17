@@ -23,44 +23,52 @@
 * IN THE SOFTWARE.
 */
 
-#include "flight/effectors.h"
 #include "global_defs.h"
 #include "hardware_defs.h"
-#include "flight/config.h"
 #include "flight/msg.h"
-#include "sbus.h"
-#include "pwm.h"
+#include "drivers/spaaro-ams5915.h"
+#include "statistics.h"
 
-namespace {
-/* Effectors */
-bfs::SbusTx sbus(&SBUS_UART);
-bfs::SbusData sbus_data = {
-  .lost_frame = false,
-  .failsafe = false,
-  .ch17 = false,
-  .ch18 = false
-};
-bfs::PwmTx<NUM_PWM_PINS> pwm(PWM_PINS);
-}  // namespace
-
-void EffectorsInit() {
-  MsgInfo("Intializing effectors...");
-  /* Init SBUS */
-  sbus.Begin();
-  /* Init PWM */
-  pwm.Begin();
-  MsgInfo("done.\n");
-}
-void EffectorsCmd(const VmsData &vms) {
-  /* Set effector commands */
-  for (int8_t i = 0; i < bfs::SbusData::NUM_CH; i++) {
-    sbus_data.ch[i] = vms.sbus[i];
+void SpaaroAms5915::Init(const PresConfig &cfg) {
+  if (cfg.device != PRES_NONE) {
+    if ((cfg.device == PRES_AMS5915_1000_A) ||
+        (cfg.device == PRES_AMS5915_1200_B)) {
+      is_static_pres_ = true;
+    } else {
+      is_static_pres_ = false;
+    }
+    pres_.Config(i2c_, cfg.addr,
+                static_cast<bfs::Ams5915::Transducer>(cfg.device));
+    if (!pres_.Begin()) {
+      MsgError("Unable to establish communication with external pressure transducer");
+    }
+    transducer_ = cfg.device;
+    installed_ = true;
+  } else {
+    installed_ = false;
   }
-  sbus.data(sbus_data);
-  pwm.ch(vms.pwm);
 }
-void EffectorsWrite() {
-  /* Write the effector commands */
-  sbus.Write();
-  pwm.Write();
+
+void SpaaroAms5915::Cal() {
+  if ((transducer_ == PRES_AMS5915_1000_A) ||
+      (transducer_ == PRES_AMS5915_1200_B)) {return;}
+  if (installed_) {
+    if (pres_.Read()) {
+      bias_.Update(pres_.pres_pa());
+    }
+  }
+}
+
+void SpaaroAms5915::Read(PresData * const data) {
+  data->installed = installed_;
+  data->is_static_pres = is_static_pres_;
+  if (data->installed) {
+    data->new_data = pres_.Read();
+    if (data->new_data) {
+      t_healthy_ms_ = 0;
+      data->pres_pa = pres_.pres_pa() - bias_.mean();
+      data->die_temp_c = pres_.die_temp_c();
+    }
+    data->healthy = (t_healthy_ms_ < 10 * FRAME_PERIOD_MS);
+  }
 }

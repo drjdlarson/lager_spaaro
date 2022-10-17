@@ -23,13 +23,15 @@
 * IN THE SOFTWARE.
 */
 
-#ifndef FLIGHT_CODE_INCLUDE_FLIGHT_SENSORS_H_
-#define FLIGHT_CODE_INCLUDE_FLIGHT_SENSORS_H_
+#ifndef FLIGHT_CODE_INCLUDE_DRIVERS_SPAARO_VECTOR_NAV_H_
+#define FLIGHT_CODE_INCLUDE_DRIVERS_SPAARO_VECTOR_NAV_H_
 
-#include "global_defs.h"
+#if defined(__FMU_R_V1__) || defined(__FMU_R_V2__) || \
+    defined(__FMU_R_V2_BETA__)
+void VectorNavInit(const VectorNavConfig & cfg);
+void VectorNavRead(ImuData * const imu, MagData * const mag,
+                   PresData * const pres, GnssData * const gnss,
+                   InsData * const ins);
+#endif
 
-void SensorsInit(const SensorConfig &cfg);
-void SensorsCal();
-void SensorsRead(SensorData * const data);
-
-#endif  // FLIGHT_CODE_INCLUDE_FLIGHT_SENSORS_H_
+#endif  // FLIGHT_CODE_INCLUDE_DRIVERS_SPAARO_VECTOR_NAV_H_

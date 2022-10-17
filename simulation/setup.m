@@ -9,7 +9,7 @@
 %% Cleanup
 bdclose all;
 close all;
-clear;
+clear all;
 clc;
 
 %% Configure
@@ -23,19 +23,9 @@ addpath(genpath('models'));
 addpath(genpath('vms'));
 
 %% Specify root folders for autocode and cache
-% clear all cached code
-cacheBase = '../flight_code/build';
-cacheFolder = [cacheBase '/slprj'];
-codeGenFolder = '../flight_code/autocode';
-if exist(cacheBase, 'dir')
-    rmdir(cacheBase, 's');
-end
-if exist(codeGenFolder, 'dir')
-    rmdir(codeGenFolder, 's');
-end
 Simulink.fileGenControl('set', ...
-    'CacheFolder', cacheFolder, ...
-    'CodeGenFolder', codeGenFolder, ...
+    'CacheFolder', '../flight_code/build/slprj', ...
+    'CodeGenFolder', '../flight_code/autocode', ...
     'CodeGenFolderStructure', ...
     Simulink.filegen.CodeGenFolderStructure.ModelSpecific, ...
     'createDir', true);
@@ -73,7 +63,7 @@ end
 framePeriod_s = 1/frameRate_hz;
 
 %% Trim
-%trim();
+trim();
 
 %% Create flight plan, fence, and rally point structs
 % Flight plan
@@ -116,11 +106,5 @@ for i = 1:Telem.NUM_RALLY_POINTS
     Telem.Rally(i).z = single(0);
 end
 
-Telem.FlightPlan = load_waypoint(Telem.FlightPlan,'test_mission_upload.waypoints');
-
-%% Select sim
-%multirotor_sim
-ground_sim
-
 %% Cleanup
-%clear vehicle fh_vehicle op_point op_report op_spec opt i;
+clear vehicle fh_vehicle op_point op_report op_spec opt i;

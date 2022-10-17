@@ -1,4 +1,13 @@
-/* rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+/*
+* Brian R Taylor
+* brian.taylor@bolderflight.com
+* 
+* Copyright (c) 2022 Bolder Flight Systems Inc
+*
+* Permission is hereby granted, free of charge, to any person obtaining a copy
+* of this software and associated documentation files (the “Software”), to
+* deal in the Software without restriction, including without limitation the
+* rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
 * sell copies of the Software, and to permit persons to whom the Software is
 * furnished to do so, subject to the following conditions:
 *
@@ -15,46 +24,27 @@
 */
 
 #include "flight/config.h"
-#include "flight/hardware_defs.h"
-#include "flight/global_defs.h"
+#include "hardware_defs.h"
+#include "global_defs.h"
 
 /* Debug */
-bool DEBUG = false;
+bool DEBUG = true;
 /* Aircraft config */
 AircraftConfig config = {
   .sensor = {
-    .pitot_static_installed = false,
-    .imu = {
-      .dev = IMU_CS,
-      .frame_rate = FRAME_RATE_HZ,
-      .bus = &IMU_SPI_BUS,
-      .accel_bias_mps2 = {0, 0, 0},
+    .fmu = {
+      .dlpf_hz = DLPF_BANDWIDTH_20HZ,
+      .accel_bias_mps = {0, 0, 0},
       .mag_bias_ut = {0, 0, 0},
       .accel_scale = {{1, 0, 0}, {0, 1, 0}, {0, 0, 1}},
       .mag_scale = {{1, 0, 0}, {0, 1, 0}, {0, 0, 1}},
-      .rotation = {{0, 1, 0}, {-1, 0, 0}, {0, 0, 1}}
+      .rotation = {{1, 0, 0}, {0, 1, 0}, {0, 0, 1}}
     },
-    .gnss = {
-      .sampling_period_ms = 250,  // 4 Hz
-      .baud = 115200,
-      .bus = &Serial4
-    },
-    .static_pres = {
-  	.dev = PRES_CS,
-  	.sampling_period_ms = FRAME_PERIOD_MS,
-  	.bus = &PRES_SPI_BUS
-    },
-  },
-  .nav = {
-    .accel_cutoff_hz = 20,
-    .gyro_cutoff_hz = 20,
-    .mag_cutoff_hz = 10,
-    .static_pres_cutoff_hz = 10,
-    .diff_pres_cutoff_hz = 10
+    .ext_gnss1 = {
+      .baud = 921600
+    }
   },
   .telem = {
-    .aircraft_type = bfs::MULTIROTOR,
-    .bus = &Serial3,
     .baud = 57600
   }
 };

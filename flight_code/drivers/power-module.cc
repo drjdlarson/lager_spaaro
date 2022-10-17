@@ -2,7 +2,7 @@
 * Brian R Taylor
 * brian.taylor@bolderflight.com
 * 
-* Copyright (c) 2022 Bolder Flight Systems Inc
+* Copyright (c) 2021 Bolder Flight Systems Inc
 *
 * Permission is hereby granted, free of charge, to any person obtaining a copy
 * of this software and associated documentation files (the “Software”), to
@@ -23,13 +23,26 @@
 * IN THE SOFTWARE.
 */
 
-#ifndef FLIGHT_CODE_INCLUDE_FLIGHT_SENSORS_H_
-#define FLIGHT_CODE_INCLUDE_FLIGHT_SENSORS_H_
+#if defined(__FMU_R_MINI_V1__) || defined(__FMU_R_V2__)
 
+#include "drivers/power-module.h"
 #include "global_defs.h"
+#include "flight/config.h"
+#include "flight/msg.h"
 
-void SensorsInit(const SensorConfig &cfg);
-void SensorsCal();
-void SensorsRead(SensorData * const data);
+namespace {
+PowerModuleConfig cfg_;
+}  // namespace
 
-#endif  // FLIGHT_CODE_INCLUDE_FLIGHT_SENSORS_H_
+void PowerModuleInit(const PowerModuleConfig &cfg) {
+  cfg_ = cfg;
+}
+
+void PowerModuleRead(PowerModuleData * const data) {
+  data->voltage_v = static_cast<float>(analogRead(PWR_MOD_VOLTAGE_PIN)) *
+                    AIN_VOLTAGE_SCALE * cfg_.volts_per_volt;
+  data->current_ma = static_cast<float>(analogRead(PWR_MOD_CURRENT_PIN)) *
+                     AIN_VOLTAGE_SCALE * cfg_.amps_per_volt * 1000.0f;
+}
+
+#endif
