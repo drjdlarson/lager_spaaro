@@ -51,6 +51,14 @@ elseif strcmpi(fmu_version, "V2-BETA")
     Telem.NUM_FENCE_POINTS = 100;
     Telem.NUM_RALLY_POINTS = 10;
     load('./data/fmu_v2_beta_bus_defs.mat');
+elseif strcmpi(fmu_version, "MINI")
+    Fmu.version = 4;
+    Fmu.NUM_AIN = 8;
+    frameRate_hz = 100;
+    Telem.NUM_FLIGHT_PLAN_POINTS = 500;
+    Telem.NUM_FENCE_POINTS = 100;
+    Telem.NUM_RALLY_POINTS = 10;
+    load('./data/fmu_mini_bus_defs.mat');  
 else
     Fmu.version = 1;
     Fmu.NUM_AIN = 2;
@@ -63,7 +71,7 @@ end
 framePeriod_s = 1/frameRate_hz;
 
 %% Trim
-trim();
+%trim();
 
 %% Create flight plan, fence, and rally point structs
 % Flight plan
@@ -106,5 +114,8 @@ for i = 1:Telem.NUM_RALLY_POINTS
     Telem.Rally(i).z = single(0);
 end
 
+% Select sim
+multirotor_sim
+
 %% Cleanup
-clear vehicle fh_vehicle op_point op_report op_spec opt i;
+%clear vehicle fh_vehicle op_point op_report op_spec opt i;

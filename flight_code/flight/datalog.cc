@@ -44,7 +44,7 @@
 
 namespace {
 /* Datalog file name */
-static const char * DATA_LOG_NAME_ = "flight_data";
+static const char * DATA_LOG_NAME_ = "malt";
 /* SD card */
 SdFat32 sd_;
 /* Logger object */
