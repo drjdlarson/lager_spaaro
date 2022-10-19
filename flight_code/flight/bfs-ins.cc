@@ -35,7 +35,7 @@ static constexpr float FRAME_PERIOD_S = static_cast<float>(FRAME_PERIOD_MS) /
                                         1000.0f;
 InsConfig cfg_;
 bool ins_initialized_ = false;
-static constexpr int8_t MIN_SAT_ = 12;
+static constexpr int8_t MIN_SAT_ = 7;
 ImuData *imu_;
 MagData *mag_;
 GnssData *gnss_;
@@ -47,6 +47,8 @@ bfs::Ekf15State ekf_;
 
 void BfsInsInit(const InsConfig &ref) {
   cfg_ = ref;
+  ekf_.gnss_pos_ne_std_m(cfg_.measurement_ne_std);
+  ekf_.gnss_pos_d_std_m(cfg_.measurement_d_std);
 }
 
 void BfsInsRun(SensorData &ref, InsData * const ptr) {

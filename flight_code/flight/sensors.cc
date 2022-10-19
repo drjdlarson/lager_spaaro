@@ -52,11 +52,12 @@ SpaaroUbx ext_gnss1(&GNSS_UART);
 SpaaroUbx ext_gnss1(&GNSS1_UART);
 SpaaroUbx ext_gnss2(&GNSS2_UART);
 #elif defined(__FMU_R_MINI_V1__)
-SpaaroUbx ext_gnss1(&GNSS1_UART);
+SpaaroUbx ext_gnss1(&GNSS1_UART); //UART3
 SpaaroUbx ext_gnss2(&GNSS2_UART);
 #endif
 #if defined(__FMU_R_V2__) || defined(__FMU_R_V2_BETA__)
 SpaaroAinsteinUsd1 rad_alt(&AUX_UART);
+// Disable radar altimeter for now
 #elif defined(__FMU_R_MINI_V1__)
 SpaaroAinsteinUsd1 rad_alt(&AUX_UART);
 #endif

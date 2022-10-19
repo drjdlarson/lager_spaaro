@@ -72,7 +72,66 @@ void DatalogInit() {
 
 void DatalogAdd(const AircraftData &ref) {
   /* Assign to message */
-
+  /* Sys data */
+  datalog_msg_.sys_frame_time_us = ref.sys.frame_time_us;
+  datalog_msg_.sys_time_s = static_cast<double>(ref.sys.sys_time_us) / 1e6;
+  /* Inceptor Data */
+  datalog_msg_.incept_healthy = ref.sensor.inceptor.healthy;
+  datalog_msg_.incept_new_data = ref.sensor.inceptor.new_data;
+  datalog_msg_.incept_lost_frame = ref.sensor.inceptor.lost_frame;
+  datalog_msg_.incept_failsafe = ref.sensor.inceptor.failsafe;
+  for (std::size_t i = 0; i < NUM_SBUS_CH; i++) {
+    datalog_msg_.incept_ch[i] = ref.sensor.inceptor.ch[i];
+  }
+  /* IMU data */
+  datalog_msg_.imu_installed = ref.sensor.fmu_imu.installed;
+  datalog_msg_.imu_new_data = ref.sensor.fmu_imu.new_data;
+  datalog_msg_.imu_healthy = ref.sensor.fmu_imu.healthy;
+  datalog_msg_.imu_die_temp_c = ref.sensor.fmu_imu.die_temp_c;
+  for (std::size_t i = 0; i < 3; i++) {
+    datalog_msg_.imu_accel_mps2[i] = ref.sensor.fmu_imu.accel_mps2[i];
+    datalog_msg_.imu_gyro_radps[i] = ref.sensor.fmu_imu.gyro_radps[i];
+  }
+  /* Mag data */
+  datalog_msg_.mag_installed = ref.sensor.fmu_mag.installed;
+  datalog_msg_.mag_new_data = ref.sensor.fmu_mag.new_data;
+  datalog_msg_.mag_healthy = ref.sensor.fmu_mag.healthy;
+  datalog_msg_.mag_die_temp_c = ref.sensor.fmu_mag.die_temp_c;
+  for (std::size_t i = 0; i < 3; i++) {
+    datalog_msg_.mag_ut[i] = ref.sensor.fmu_mag.mag_ut[i];
+  }
+  /* GNSS data */
+  datalog_msg_.gnss_installed = ref.sensor.ext_gnss1.installed;
+  datalog_msg_.gnss_new_data = ref.sensor.ext_gnss1.new_data;
+  datalog_msg_.gnss_healthy = ref.sensor.ext_gnss1.healthy;
+  datalog_msg_.rel_pos_avail = ref.sensor.ext_gnss1.rel_pos_avail;
+  datalog_msg_.rel_pos_moving_baseline = ref.sensor.ext_gnss1.rel_pos_moving_baseline;
+  datalog_msg_.rel_pos_baseline_normalized = ref.sensor.ext_gnss1.rel_pos_baseline_normalized;
+  datalog_msg_.gnss_fix = ref.sensor.ext_gnss1.fix;
+  datalog_msg_.gnss_num_sats = ref.sensor.ext_gnss1.num_sats;
+  datalog_msg_.gnss_week = ref.sensor.ext_gnss1.gps_week;
+  datalog_msg_.gnss_tow_s = ref.sensor.ext_gnss1.gps_tow_s;
+  datalog_msg_.gnss_alt_wgs84_m = ref.sensor.ext_gnss1.alt_wgs84_m;
+  datalog_msg_.gnss_horz_alt_acc_m = ref.sensor.ext_gnss1.horz_acc_m;
+  datalog_msg_.gnss_vert_acc_m = ref.sensor.ext_gnss1.vert_acc_m;
+  datalog_msg_.gnss_vel_acc_m = ref.sensor.ext_gnss1.vel_acc_mps;
+  for (std::size_t i = 0; i < 3; i++) {
+    datalog_msg_.gnss_ned_vel_mps[i] = ref.sensor.ext_gnss1.ned_vel_mps[i];
+    datalog_msg_.rel_pos_acc_ned_m[i] = ref.sensor.ext_gnss1.rel_pos_acc_ned_m[i];
+    datalog_msg_.rel_pos_ned_m[i] = ref.sensor.ext_gnss1.rel_pos_ned_m[i];
+  }
+  datalog_msg_.gnss_lat_rad = ref.sensor.gnss.lat_rad;
+  datalog_msg_.gnss_lon_rad = ref.sensor.gnss.lon_rad;
+  /* Static pressure data */
+  datalog_msg_.static_pres_installed = ref.sensor.fmu_static_pres.installed;
+  datalog_msg_.static_pres_healthy = ref.sensor.fmu_static_pres.healthy;
+  datalog_msg_.static_pres_new_data = ref.sensor.fmu_static_pres.new_data;
+  datalog_msg_.static_pres_die_temp_c = ref.sensor.fmu_static_pres.die_temp_c;
+  datalog_msg_.static_pres_pres_pa = ref.sensor.fmu_static_pres.pres_pa;
+  /* Analog data */
+  for (std::size_t i = 0; i < NUM_AIN_PINS; i++) {
+    datalog_msg_.adc_volt[i] = ref.sensor.analog.voltage_v[i]
+  }
   /* Encode */
   stream_ = pb_ostream_from_buffer(data_buffer_, sizeof(data_buffer_));
   if (!pb_encode(&stream_, DatalogMessage_fields, &datalog_msg_)) {

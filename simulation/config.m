@@ -8,7 +8,8 @@
 
 %% Definitions
 % Vehicle
-vehicle = 'sig_kadet';
+% vehicle = 'sig_kadet';
+vehicle = 'malt';
 % FMU-R version
 % fmu_version = "v1";
 % fmu_version = "v2-beta";

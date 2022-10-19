@@ -390,7 +390,7 @@ void TelemUpdate(AircraftData &data, TelemData * const ptr) {
   #if defined(__FMU_R_V1__)
   telem_.battery_volt(data.sys.input_volt);
   #endif
-  telem_.battery_remaining_prcnt(data.vms.power_remaining_prcnt);
+  telem_.battery_remaining_prcnt(data.vms.battery.remaining_prcnt);
   telem_.battery_remaining_time_s(data.vms.flight_time_remaining_s);
   /* IMU data */
   telem_.accel_installed(imu_->installed);
@@ -457,10 +457,10 @@ void TelemUpdate(AircraftData &data, TelemData * const ptr) {
   telem_.nav_gyro_z_radps(ins_->gyro_radps[2]);
   /* Effector */
   for (std::size_t i = 0; i < NUM_PWM_PINS; i++) {
-    effector_[i] = data.vms.pwm[i];
+    effector_[i] = data.vms.pwm.cnt[i];
   }
   for (std::size_t i = 0; i < NUM_SBUS; i++) {
-    effector_[i + NUM_PWM_PINS] = data.vms.sbus[i];
+    effector_[i + NUM_PWM_PINS] = data.vms.sbus.cnt[i];
   }
   telem_.effector(effector_);
   /* Inceptor */

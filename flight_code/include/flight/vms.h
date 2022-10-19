@@ -35,9 +35,13 @@ void VmsRun(const SysData &sys, const SensorData &sensor,
             const AdcData &adc, const TelemData &telem,
             VmsData *vms);
 #else
-void VmsRun(const SysData &sys, const SensorData &sensor,
+// Disable Air Data Computer
+/*void VmsRun(const SysData &sys, const SensorData &sensor,
             const InsData &bfs_ins,
             const AdcData &adc, const TelemData &telem,
+            VmsData *vms);*/
+void VmsRun(const SysData &sys, const SensorData &sensor,
+            const InsData &bfs_ins, const TelemData &telem,
             VmsData *vms);
 #endif
 

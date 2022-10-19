@@ -28,7 +28,7 @@
 #include "global_defs.h"
 
 /* Debug */
-bool DEBUG = true;
+bool DEBUG = false;
 /* Aircraft config */
 AircraftConfig config = {
   .sensor = {
@@ -41,10 +41,19 @@ AircraftConfig config = {
       .rotation = {{1, 0, 0}, {0, 1, 0}, {0, 0, 1}}
     },
     .ext_gnss1 = {
-      .baud = 921600
+      .baud = 115200
+    },
+    .power_module = {
+      .volts_per_volt = 1.0f,
+      .amps_per_volt = 1.0f
     }
   },
+  .bfs_ins = {
+    .measurement_ne_std = 0.5f,
+    .measurement_d_std = 0.5f
+  },
   .telem = {
-    .baud = 57600
+    .baud = 57600,
+    .aircraft_type = bfs::MULTIROTOR
   }
 };

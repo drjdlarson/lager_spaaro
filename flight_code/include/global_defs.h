@@ -152,22 +152,21 @@ struct PowerModuleConfig {
 };
 #endif
 
-// Removed uneccessary data struct for MALT
 struct SensorConfig {
   FmuConfig fmu;
-  //MagConfig ext_mag;
+  MagConfig ext_mag;
   #if defined(__FMU_R_V1__)
   GnssConfig ext_gnss1;
   #elif defined(__FMU_R_V2__) || defined(__FMU_R_V2_BETA__) || \
         defined(__FMU_R_MINI_V1__)
   GnssConfig ext_gnss1;
-  //GnssConfig ext_gnss2;
+  GnssConfig ext_gnss2;
   #endif
-  //PresConfig ext_pres1;
-  //PresConfig ext_pres2;
-  //PresConfig ext_pres3;
-  //PresConfig ext_pres4;
-  //RadAltConfig rad_alt;
+  PresConfig ext_pres1;
+  PresConfig ext_pres2;
+  PresConfig ext_pres3;
+  PresConfig ext_pres4;
+  RadAltConfig rad_alt;
   #if defined(__FMU_R_MINI_V1__) || defined(__FMU_R_V2__)
   PowerModuleConfig power_module;
   #endif
@@ -205,6 +204,8 @@ struct InsConfig {
   float accel_cutoff_hz = 10;
   float gyro_cutoff_hz = 10;
   float mag_cutoff_hz = 10;
+  float measurement_ne_std = 3;
+  float measurement_d_std = 6;
 };
 
 enum AdcStaticPresSource : int8_t {
@@ -415,19 +416,19 @@ struct SensorData {
   PresData vector_nav_static_pres;
   GnssData vector_nav_gnss;
   #endif
-  //MagData ext_mag;
+  MagData ext_mag;
   #if defined(__FMU_R_V1__)
   GnssData ext_gnss1;
   #elif defined(__FMU_R_V2__) || defined(__FMU_R_V2_BETA__) || \
         defined(__FMU_R_MINI_V1__)
   GnssData ext_gnss1;
-  //GnssData ext_gnss2;
+  GnssData ext_gnss2;
   #endif
-  //PresData ext_pres1;
-  //PresData ext_pres2;
-  //PresData ext_pres3;
-  //PresData ext_pres4;
-  //RadAltData rad_alt;
+  PresData ext_pres1;
+  PresData ext_pres2;
+  PresData ext_pres3;
+  PresData ext_pres4;
+  RadAltData rad_alt;
   AnalogData analog;
   #if defined(__FMU_R_V2__) || defined(__FMU_R_MINI_V1__)
   PowerModuleData power_module;
@@ -483,12 +484,22 @@ struct BatteryData {
 };
 #endif
 
+struct SbusCmd {
+  std::array<int16_t, NUM_SBUS_CH> cnt;
+  std::array<float, NUM_SBUS_CH> cmd;
+};
+
+struct PwmCmd {
+  std::array<int16_t, NUM_PWM_PINS> cnt;
+  std::array<float, NUM_PWM_PINS> cmd;
+};
+
 struct VmsData {
   bool advance_waypoint;
   bool motors_enabled;
   int8_t mode;
-  std::array<int16_t, NUM_SBUS_CH> sbus;
-  std::array<int16_t, NUM_PWM_PINS> pwm;
+  SbusCmd sbus;
+  PwmCmd pwm;
   float throttle_cmd_prcnt;
   float flight_time_remaining_s;
   #if defined(__FMU_R_V2__) || defined(__FMU_R_MINI_V1__)

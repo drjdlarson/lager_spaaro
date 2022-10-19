@@ -69,16 +69,18 @@ void run() {
                 &data.sensor.vector_nav_gnss, &data.vector_nav_ins);
   #endif
   /* Air data */
-  AdcRun(data.sensor, &data.adc);
+  //AdcRun(data.sensor, &data.adc);
   /* INS */
   BfsInsRun(data.sensor, &data.bfs_ins);
-  /* VMS */
+  /* VMS */ 
   #if defined(__FMU_R_V1__) || defined(__FMU_R_V2__) || \
       defined(__FMU_R_V2_BETA__)
   VmsRun(data.sys, data.sensor, data.bfs_ins, data.vector_nav_ins, data.adc,
          data.telem, &data.vms);
   #else
-  VmsRun(data.sys, data.sensor, data.bfs_ins, data.adc,
+  /*VmsRun(data.sys, data.sensor, data.bfs_ins, data.adc,
+         data.telem, &data.vms);*/
+  VmsRun(data.sys, data.sensor, data.bfs_ins,
          data.telem, &data.vms);
   #endif
   /* Command effectors */
@@ -105,8 +107,9 @@ int main() {
       defined(__FMU_R_V2_BETA__)
   VectorNavInit(config.vector_nav);
   #endif
-  /* Init ADC */
-  AdcInit(config.adc);
+  // Disable Air Data Computer
+  /* Init ADC */ 
+  //AdcInit(config.adc);
   /* Init INS */
   BfsInsInit(config.bfs_ins);
   /* Init effectors */

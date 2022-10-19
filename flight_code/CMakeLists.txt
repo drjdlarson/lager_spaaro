@@ -154,8 +154,10 @@ FetchContent_Declare(
 FetchContent_MakeAvailable(vector_nav)
 FetchContent_Declare(
   pwm
-  GIT_REPOSITORY https://github.com/bolderflight/pwm.git
-  GIT_TAG v6.0.1
+  #GIT_REPOSITORY https://github.com/bolderflight/pwm.git
+  #GIT_TAG v6.0.1
+  GIT_REPOSITORY git@github.com:TL-4319/ua_pwm.git
+  GIT_TAG v1.0.0
 )
 FetchContent_MakeAvailable(pwm)
 FetchContent_Declare(
