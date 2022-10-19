@@ -40,8 +40,8 @@ ImuData *imu_;
 MagData *mag_;
 GnssData *gnss_;
 bfs::Iir<float> ax_, ay_, az_, gx_, gy_, gz_, hx_, hy_, hz_;
-Eigen::Vector3f accel_mps2_, gyro_radps_, mag_ut_, ned_vel_, nav_ned_pos_m_;
-Eigen::Vector3d llh_;
+Eigen::Vector3f accel_mps2_, gyro_radps_, mag_ut_, ned_vel_;
+Eigen::Vector3d llh_, home_llh_, nav_ned_pos_m_;
 bfs::Ekf15State ekf_;
 }
 
@@ -160,8 +160,14 @@ void BfsInsRun(SensorData &ref, InsData * const ptr) {
       hy_.Init(cfg_.mag_cutoff_hz, MAG_RATE_HZ, mag_->mag_ut[1]);
       hz_.Init(cfg_.mag_cutoff_hz, MAG_RATE_HZ, mag_->mag_ut[2]);
       ins_initialized_ = true;
+      ptr->home_lat_rad = llh_[0];
+      ptr->home_lon_rad = llh_[1];
+      ptr->home_alt_wgs84_m = llh_[2];
+      home_llh_ = llh_;
     }
-  } else {
+  } 
+  // nav initialized
+  else {
     if (imu_->new_data) {
       accel_mps2_[0] = imu_->accel_mps2[0];
       accel_mps2_[1] = imu_->accel_mps2[1];
@@ -195,6 +201,10 @@ void BfsInsRun(SensorData &ref, InsData * const ptr) {
     ptr->ned_vel_mps[2] = ekf_.ned_vel_mps()[2];
     ptr->lat_rad = ekf_.lat_rad();
     ptr->lon_rad = ekf_.lon_rad();
+    nav_ned_pos_m_ = bfs::lla2ned(llh_, home_llh_, bfs::AngPosUnit::DEG);
+    ptr->ned_pos_m[0] = nav_ned_pos_m_[0];
+    ptr->ned_pos_m[1] = nav_ned_pos_m_[1];
+    ptr->ned_pos_m[2] = nav_ned_pos_m_[2];
     if (mag_->new_data) {
       ptr->mag_ut[0] = hx_.Filter(mag_->mag_ut[0]);
       ptr->mag_ut[1] = hy_.Filter(mag_->mag_ut[1]);
