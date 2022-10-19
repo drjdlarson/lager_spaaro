@@ -66,7 +66,7 @@ message DatalogMessage {
   bool rel_pos_baseline_normalized = 65;
   int32 gnss_fix = 66;
   int32 gnss_num_sats = 67;
-  int32 gnss_gps_week = 68;
+  int32 gnss_week = 68;
   float gnss_alt_wgs84_m = 69;
   float gnss_horz_acc_m = 70;
   float gnss_vert_acc_m = 71;

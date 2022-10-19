@@ -112,7 +112,7 @@ void DatalogAdd(const AircraftData &ref) {
   datalog_msg_.gnss_week = ref.sensor.ext_gnss1.gps_week;
   datalog_msg_.gnss_tow_s = ref.sensor.ext_gnss1.gps_tow_s;
   datalog_msg_.gnss_alt_wgs84_m = ref.sensor.ext_gnss1.alt_wgs84_m;
-  datalog_msg_.gnss_horz_alt_acc_m = ref.sensor.ext_gnss1.horz_acc_m;
+  datalog_msg_.gnss_horz_acc_m = ref.sensor.ext_gnss1.horz_acc_m;
   datalog_msg_.gnss_vert_acc_m = ref.sensor.ext_gnss1.vert_acc_m;
   datalog_msg_.gnss_vel_acc_m = ref.sensor.ext_gnss1.vel_acc_mps;
   for (std::size_t i = 0; i < 3; i++) {
@@ -120,21 +120,55 @@ void DatalogAdd(const AircraftData &ref) {
     datalog_msg_.rel_pos_acc_ned_m[i] = ref.sensor.ext_gnss1.rel_pos_acc_ned_m[i];
     datalog_msg_.rel_pos_ned_m[i] = ref.sensor.ext_gnss1.rel_pos_ned_m[i];
   }
-  datalog_msg_.gnss_lat_rad = ref.sensor.gnss.lat_rad;
-  datalog_msg_.gnss_lon_rad = ref.sensor.gnss.lon_rad;
+  datalog_msg_.gnss_lat_rad = ref.sensor.ext_gnss1.lat_rad;
+  datalog_msg_.gnss_lon_rad = ref.sensor.ext_gnss1.lon_rad;
   /* Static pressure data */
   datalog_msg_.static_pres_installed = ref.sensor.fmu_static_pres.installed;
   datalog_msg_.static_pres_healthy = ref.sensor.fmu_static_pres.healthy;
   datalog_msg_.static_pres_new_data = ref.sensor.fmu_static_pres.new_data;
   datalog_msg_.static_pres_die_temp_c = ref.sensor.fmu_static_pres.die_temp_c;
-  datalog_msg_.static_pres_pres_pa = ref.sensor.fmu_static_pres.pres_pa;
+  datalog_msg_.static_pres_pa = ref.sensor.fmu_static_pres.pres_pa;
   /* Analog data */
   for (std::size_t i = 0; i < NUM_AIN_PINS; i++) {
-    datalog_msg_.adc_volt[i] = ref.sensor.analog.voltage_v[i]
+    datalog_msg_.adc_volt[i] = ref.sensor.analog.voltage_v[i];
   }
   /* Power module data */
   datalog_msg_.pwr_mod_volt_v = ref.sensor.power_module.voltage_v;
   datalog_msg_.pwr_mod_curr_ma = ref.sensor.power_module.current_ma;
+  /* Nav data */
+  datalog_msg_.nav_initialized = ref.bfs_ins.initialized;
+  datalog_msg_.nav_pitch_rad = ref.bfs_ins.pitch_rad;
+  datalog_msg_.nav_roll_rad = ref.bfs_ins.roll_rad;
+  datalog_msg_.nav_heading_rad = ref.bfs_ins.heading_rad;
+  datalog_msg_.nav_alt_wgs84_m = ref.bfs_ins.alt_wgs84_m;
+  datalog_msg_.nav_lat_rad = ref.bfs_ins.lat_rad;
+  datalog_msg_.nav_lon_rad = ref.bfs_ins.lon_rad;
+  datalog_msg_.nav_home_alt_wgs84_m = ref.bfs_ins.home_alt_wgs84_m;
+  datalog_msg_.nav_home_lat_rad = ref.bfs_ins.home_lat_rad;
+  datalog_msg_.nav_home_lon_rad = ref.bfs_ins.home_lon_rad;
+  for (std::size_t i = 0; i < 3; i++) {
+    datalog_msg_.nav_accel_mps2[i] = ref.bfs_ins.accel_mps2[i];
+    datalog_msg_.nav_gyro_radps[i] = ref.bfs_ins.gyro_radps[i];
+    datalog_msg_.nav_mag_ut[i] = ref.bfs_ins.mag_ut[i];
+    datalog_msg_.nav_ned_vel_mps[i] = ref.bfs_ins.ned_vel_mps[i];
+    datalog_msg_.nav_ned_pos_m[i] = ref.bfs_ins.ned_pos_m[i];
+  }
+  /* VMS data */
+  datalog_msg_.vms_advance_waypoint = ref.vms.advance_waypoint;
+  datalog_msg_.vms_motors_enabled = ref.vms.motors_enabled;
+  datalog_msg_.vms_mode = ref.vms.mode;
+  datalog_msg_.vms_throttle_cmd_prcnt = ref.vms.throttle_cmd_prcnt;
+  for (std::size_t i = 0; i < 8; i++) {
+    datalog_msg_.vms_pwm_cnt[i] = ref.vms.pwm.cnt[i];
+    datalog_msg_.vms_pwm_cmd[i] = ref.vms.pwm.cmd[i];
+  }
+  for (std::size_t i = 0; i < 16; i++) {
+    datalog_msg_.vms_sbus_cnt[i] = ref.vms.sbus.cnt[i];
+    datalog_msg_.vms_sbus_cmd[i] = ref.vms.sbus.cmd[i];
+  }
+  for (std::size_t i = 0; i < 24; i++) {
+    datalog_msg_.vms_aux[i] = ref.vms.aux[i];
+  }
   /* Encode */
   stream_ = pb_ostream_from_buffer(data_buffer_, sizeof(data_buffer_));
   if (!pb_encode(&stream_, DatalogMessage_fields, &datalog_msg_)) {
