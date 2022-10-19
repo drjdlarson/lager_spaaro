@@ -132,6 +132,9 @@ void DatalogAdd(const AircraftData &ref) {
   for (std::size_t i = 0; i < NUM_AIN_PINS; i++) {
     datalog_msg_.adc_volt[i] = ref.sensor.analog.voltage_v[i]
   }
+  /* Power module data */
+  datalog_msg_.pwr_mod_volt_v = ref.sensor.power_module.voltage_v;
+  datalog_msg_.pwr_mod_curr_ma = ref.sensor.power_module.current_ma;
   /* Encode */
   stream_ = pb_ostream_from_buffer(data_buffer_, sizeof(data_buffer_));
   if (!pb_encode(&stream_, DatalogMessage_fields, &datalog_msg_)) {
