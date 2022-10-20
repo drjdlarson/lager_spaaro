@@ -152,6 +152,8 @@ void DatalogAdd(const AircraftData &ref) {
     datalog_msg_.nav_mag_ut[i] = ref.bfs_ins.mag_ut[i];
     datalog_msg_.nav_ned_vel_mps[i] = ref.bfs_ins.ned_vel_mps[i];
     datalog_msg_.nav_ned_pos_m[i] = ref.bfs_ins.ned_pos_m[i];
+    datalog_msg_.nav_accel_bias_mps2[i] = ref.bfs_ins.accel_bias_mps2[i];
+    datalog_msg_.nav_gyro_bias_radps[i] = ref.bfs_ins.gyro_bias_radps[i];
   }
   /* VMS data */
   datalog_msg_.vms_advance_waypoint = ref.vms.advance_waypoint;
@@ -168,6 +170,10 @@ void DatalogAdd(const AircraftData &ref) {
   }
   for (std::size_t i = 0; i < 24; i++) {
     datalog_msg_.vms_aux[i] = ref.vms.aux[i];
+  }
+  /* Telemetry data */
+  for (std::size_t i = 0; i < NUM_TELEM_PARAMS; i++) {
+    datalog_msg_.telem_param[i] = ref.telem.param[i];
   }
   /* Encode */
   stream_ = pb_ostream_from_buffer(data_buffer_, sizeof(data_buffer_));

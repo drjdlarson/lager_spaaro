@@ -40,7 +40,7 @@ ImuData *imu_;
 MagData *mag_;
 GnssData *gnss_;
 bfs::Iir<float> ax_, ay_, az_, gx_, gy_, gz_, hx_, hy_, hz_;
-Eigen::Vector3f accel_mps2_, gyro_radps_, mag_ut_, ned_vel_;
+Eigen::Vector3f accel_mps2_, gyro_radps_, mag_ut_, ned_vel_, accel_bias_mps2_, gyro_bias_radps_;
 Eigen::Vector3d llh_, home_llh_, nav_ned_pos_m_;
 bfs::Ekf15State ekf_;
 }
@@ -162,8 +162,10 @@ void BfsInsRun(SensorData &ref, InsData * const ptr) {
       ins_initialized_ = true;
       ptr->home_lat_rad = llh_[0];
       ptr->home_lon_rad = llh_[1];
-      ptr->home_alt_wgs84_m = llh_[2];
-      home_llh_ = llh_;
+      ptr->home_alt_wgs84_m = gnss_->alt_wgs84_m;
+      home_llh_[0] = llh_[0];
+      home_llh_[1] = llh_[1];
+      home_llh_[2] = llh_[2];
     }
   } 
   // nav initialized
@@ -184,6 +186,9 @@ void BfsInsRun(SensorData &ref, InsData * const ptr) {
       llh_[0] = gnss_->lat_rad;
       llh_[1] = gnss_->lon_rad;
       llh_[2] = gnss_->alt_wgs84_m;
+      std::string debug = std::to_string((int)(ned_vel_[0]*10-0)) + " | " + std::to_string((int)(ned_vel_[1]*1000)) + " | " +
+        std::to_string((int)(ned_vel_[2]*1000)) + " | " + std::to_string((int)(llh_[0]*1000000)) + " | " + std::to_string((int)(llh_[1]*1000000)) + " | " + std::to_string((int)(llh_[2]*100)) + "\n";
+      MsgInfo(debug.c_str());
       ekf_.MeasurementUpdate(ned_vel_, llh_);
     }
     ptr->pitch_rad = ekf_.pitch_rad();
@@ -201,10 +206,18 @@ void BfsInsRun(SensorData &ref, InsData * const ptr) {
     ptr->ned_vel_mps[2] = ekf_.ned_vel_mps()[2];
     ptr->lat_rad = ekf_.lat_rad();
     ptr->lon_rad = ekf_.lon_rad();
-    nav_ned_pos_m_ = bfs::lla2ned(llh_, home_llh_, bfs::AngPosUnit::DEG);
+    nav_ned_pos_m_ = bfs::lla2ned(llh_, home_llh_, bfs::AngPosUnit::RAD);
     ptr->ned_pos_m[0] = nav_ned_pos_m_[0];
     ptr->ned_pos_m[1] = nav_ned_pos_m_[1];
     ptr->ned_pos_m[2] = nav_ned_pos_m_[2];
+    accel_bias_mps2_ = ekf_.accel_bias_mps2();
+    gyro_bias_radps_ = ekf_.gyro_bias_radps();
+    ptr->accel_bias_mps2[0] = accel_bias_mps2_[0];
+    ptr->accel_bias_mps2[1] = accel_bias_mps2_[1];
+    ptr->accel_bias_mps2[2] = accel_bias_mps2_[2];
+    ptr->gyro_bias_radps[0] = gyro_bias_radps_[0];
+    ptr->gyro_bias_radps[1] = gyro_bias_radps_[1];
+    ptr->gyro_bias_radps[2] = gyro_bias_radps_[2];
     if (mag_->new_data) {
       ptr->mag_ut[0] = hx_.Filter(mag_->mag_ut[0]);
       ptr->mag_ut[1] = hy_.Filter(mag_->mag_ut[1]);

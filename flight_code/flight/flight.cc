@@ -124,6 +124,6 @@ int main() {
   attachInterrupt(IMU_DRDY, run, RISING);\
   while (1) {
     /* Flush datalog */
-    // DatalogFlush();
+    DatalogFlush();
   }
 }

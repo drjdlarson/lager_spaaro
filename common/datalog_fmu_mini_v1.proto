@@ -104,6 +104,8 @@ message DatalogMessage {
   float nav_home_alt_wgs84_m = 142;
   double nav_home_lat_rad = 143;
   double nav_home_lon_rad = 144;
+  repeated float nav_accel_bias_mps2 = 145;
+  repeated float nav_gyro_bias_radps = 146;
   /* VMS data */
   bool vms_advance_waypoint = 170;
   bool vms_motors_enabled = 173;

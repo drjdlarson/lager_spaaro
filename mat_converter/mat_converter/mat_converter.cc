@@ -39,6 +39,9 @@
 #if defined(__FMU_R_V1__)
 #include "./datalog_fmu_v1.pb.h"
 #endif
+#if defined(__FMU_R_MINI_V1__)
+#include "./datalog_fmu_mini_v1.pb.h"
+#endif
 
 int main(int argc, char** argv) {
   /* Verify version of protobuf */

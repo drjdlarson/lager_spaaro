@@ -19,6 +19,11 @@ elseif(FMU STREQUAL "V2-BETA")
 	add_definitions(
 		-D__FMU_R_V2_BETA__
 	)
+elseif(FMU STREQUAL "MINI-V1")
+	#FMU-MINI-V1
+	add_definitions(
+		-D__FMU_R_MINI_V1__
+	)
 else()
 	# FMU-R-V1
 	add_definitions(
@@ -35,6 +40,9 @@ if (FMU STREQUAL "V2")
 elseif(FMU STREQUAL "V2-BETA")
 	# FMU-R-V2-BETA
 	protobuf_generate_cpp(PROTO_SRCS PROTO_HDRS ../common/datalog_fmu_v2_beta.proto)
+elseif(FMU STREQUAL "MINI-V1")
+	# FMU-R-MINI-V1
+	protobuf_generate_cpp(PROTO_SRCS PROTO_HDRS ../common/datalog_fmu_mini_v1.proto)
 else()
 	# FMU-R-V1
 	protobuf_generate_cpp(PROTO_SRCS PROTO_HDRS ../common/datalog_fmu_v1.proto)

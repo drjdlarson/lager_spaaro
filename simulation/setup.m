@@ -58,7 +58,8 @@ elseif strcmpi(fmu_version, "MINI")
     Telem.NUM_FLIGHT_PLAN_POINTS = 500;
     Telem.NUM_FENCE_POINTS = 100;
     Telem.NUM_RALLY_POINTS = 10;
-    load('./data/fmu_mini_bus_defs.mat');  
+%     load('./data/fmu_mini_bus_defs.mat');  
+    fmu_mini_bus_defs();
 else
     Fmu.version = 1;
     Fmu.NUM_AIN = 2;
@@ -113,7 +114,7 @@ for i = 1:Telem.NUM_RALLY_POINTS
     Telem.Rally(i).y = int32(0);
     Telem.Rally(i).z = single(0);
 end
-
+Aircraft.Control.hardcode_values = 0;
 % Select sim
 multirotor_sim
 

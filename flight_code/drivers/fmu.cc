@@ -80,10 +80,10 @@ void FmuInit(const FmuConfig &cfg) {
   if (!imu_.Begin()) {
     MsgError("\tUnable to establish communication with FMU IMU");
   }
-  if (!imu_.ConfigAccelRange(imu_.ACCEL_RANGE_16G)) {
+  if (!imu_.ConfigAccelRange(imu_.ACCEL_RANGE_4G)) {
     MsgError("\tUnable to configure FMU IMU accelerometer range");
   }
-  if (!imu_.ConfigGyroRange(imu_.GYRO_RANGE_2000DPS)) {
+  if (!imu_.ConfigGyroRange(imu_.GYRO_RANGE_250DPS)) {
     MsgError("\tUnable to configure FMU IMU gyro range");
   }
   srd_ = 1000 / static_cast<uint8_t>(FRAME_RATE_HZ) - 1;

@@ -44,13 +44,13 @@ AircraftConfig config = {
       .baud = 115200
     },
     .power_module = {
-      .volts_per_volt = 1.0f,
-      .amps_per_volt = 1.0f
+      .volts_per_volt = 2.7f,
+      .amps_per_volt = 13.8f
     }
   },
   .bfs_ins = {
-    .measurement_ne_std = 0.5f,
-    .measurement_d_std = 0.5f
+    .measurement_ne_std = 1.0,
+    .measurement_d_std = 1.5
   },
   .telem = {
     .baud = 57600,

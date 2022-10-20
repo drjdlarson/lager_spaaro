@@ -451,6 +451,8 @@ struct InsData {
   float home_alt_wgs84_m;
   double home_lat_rad;
   double home_lon_rad;
+  float accel_bias_mps2[3];
+  float gyro_bias_radps[3];
 };
 
 struct AdcData {

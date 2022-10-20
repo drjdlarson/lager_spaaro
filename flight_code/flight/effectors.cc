@@ -47,7 +47,7 @@ void EffectorsInit() {
   MsgInfo("Intializing effectors...");
   /* Init SBUS */
   sbus.Begin();
-  /* Init PWM */ //Don't forget to target UA_pwm fork
+  /* Init PWM */ 
   pwm.Begin();
   MsgInfo("done.\n");
 }
