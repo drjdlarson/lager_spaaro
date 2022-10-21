@@ -45,7 +45,7 @@ AircraftConfig config = {
     },
     .power_module = {
       .volts_per_volt = 2.7f,
-      .amps_per_volt = 1.38f
+      .amps_per_volt = 1.0f
     }
   },
   .bfs_ins = {
