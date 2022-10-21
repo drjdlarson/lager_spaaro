@@ -178,6 +178,10 @@ void BfsInsRun(SensorData &ref, InsData * const ptr) {
       gyro_radps_[1] = imu_->gyro_radps[1];
       gyro_radps_[2] = imu_->gyro_radps[2];
       ekf_.TimeUpdate(accel_mps2_, gyro_radps_, FRAME_PERIOD_S);
+      for (int8_t i; i < 3; i++){
+        ptr->input_accel[i] = ekf_.input_accel(i);
+        ptr->input_gyro[i] = ekf_.input_gyro(i);
+      }
     }
     if (gnss_->new_data) {
       ned_vel_[0] = gnss_->ned_vel_mps[0];
@@ -186,10 +190,13 @@ void BfsInsRun(SensorData &ref, InsData * const ptr) {
       llh_[0] = gnss_->lat_rad;
       llh_[1] = gnss_->lon_rad;
       llh_[2] = gnss_->alt_wgs84_m;
-      std::string debug = std::to_string((int)(ned_vel_[0]*10-0)) + " | " + std::to_string((int)(ned_vel_[1]*1000)) + " | " +
-        std::to_string((int)(ned_vel_[2]*1000)) + " | " + std::to_string((int)(llh_[0]*1000000)) + " | " + std::to_string((int)(llh_[1]*1000000)) + " | " + std::to_string((int)(llh_[2]*100)) + "\n";
-      MsgInfo(debug.c_str());
       ekf_.MeasurementUpdate(ned_vel_, llh_);
+      ptr->input_lat = ekf_.input_lat();
+      ptr->input_lon = ekf_.input_lon();
+      ptr->input_alt = ekf_.input_alt();
+      for (int8_t i; i < 3; i++){
+        ptr->input_ned_vel[i] = ekf_.input_ned_vel(i);
+      }
     }
     ptr->pitch_rad = ekf_.pitch_rad();
     ptr->roll_rad = ekf_.roll_rad();

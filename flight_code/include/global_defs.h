@@ -453,6 +453,12 @@ struct InsData {
   double home_lon_rad;
   float accel_bias_mps2[3];
   float gyro_bias_radps[3];
+  float input_accel[3];
+  float input_gyro[3];
+  double input_lat;
+  double input_lon;
+  double input_alt;
+  float input_ned_vel[3];
 };
 
 struct AdcData {

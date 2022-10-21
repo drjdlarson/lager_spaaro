@@ -106,6 +106,12 @@ message DatalogMessage {
   double nav_home_lon_rad = 144;
   repeated float nav_accel_bias_mps2 = 145;
   repeated float nav_gyro_bias_radps = 146;
+  repeated float nav_input_accel = 147;
+  repeated float nav_input_gyro = 148;
+  repeated float nav_input_ned_vel = 149;
+  double nav_input_lat = 150;
+  double nav_input_lon = 151;
+  double nav_input_alt = 152;
   /* VMS data */
   bool vms_advance_waypoint = 170;
   bool vms_motors_enabled = 173;
