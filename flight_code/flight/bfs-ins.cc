@@ -178,7 +178,7 @@ void BfsInsRun(SensorData &ref, InsData * const ptr) {
       gyro_radps_[1] = imu_->gyro_radps[1];
       gyro_radps_[2] = imu_->gyro_radps[2];
       ekf_.TimeUpdate(accel_mps2_, gyro_radps_, FRAME_PERIOD_S);
-      for (int8_t i; i < 3; i++){
+      for (int8_t i = 0; i < 3; i++){
         ptr->input_accel[i] = ekf_.input_accel(i);
         ptr->input_gyro[i] = ekf_.input_gyro(i);
       }
@@ -194,7 +194,7 @@ void BfsInsRun(SensorData &ref, InsData * const ptr) {
       ptr->input_lat = ekf_.input_lat();
       ptr->input_lon = ekf_.input_lon();
       ptr->input_alt = ekf_.input_alt();
-      for (int8_t i; i < 3; i++){
+      for (int8_t i = 0; i < 3; i++){
         ptr->input_ned_vel[i] = ekf_.input_ned_vel(i);
       }
     }

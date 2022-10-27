@@ -85,6 +85,8 @@ void run() {
   #endif
   /* Command effectors */
   EffectorsCmd(data.vms);
+  std::string test = std::to_string(data.vms.pwm.cnt[0]) + "," + std::to_string(data.vms.pwm.cnt[1]) + "," + std::to_string(data.vms.pwm.cnt[2]) + "," + std::to_string(data.vms.pwm.cnt[3]) + ",1950,1100 \n";
+  MsgInfo(test.c_str());  
   /* Datalog */
   DatalogAdd(data);
   /* Telemetry */

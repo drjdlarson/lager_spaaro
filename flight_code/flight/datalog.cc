@@ -157,8 +157,8 @@ void DatalogAdd(const AircraftData &ref) {
     datalog_msg_.nav_ned_pos_m[i] = ref.bfs_ins.ned_pos_m[i];
     datalog_msg_.nav_accel_bias_mps2[i] = ref.bfs_ins.accel_bias_mps2[i];
     datalog_msg_.nav_gyro_bias_radps[i] = ref.bfs_ins.gyro_bias_radps[i];
-    datalog_msg_.nav_input_accel[i] = ref.bfs_ins.input_accel[1];
-    datalog_msg_.nav_input_gyro[i] = ref.bfs_ins.input_gyro[1];
+    datalog_msg_.nav_input_accel[i] = ref.bfs_ins.input_accel[i];
+    datalog_msg_.nav_input_gyro[i] = ref.bfs_ins.input_gyro[i];
     datalog_msg_.nav_input_ned_vel[i] = ref.bfs_ins.input_ned_vel[i];
   }
   /* VMS data */

@@ -33,7 +33,7 @@ bool DEBUG = false;
 AircraftConfig config = {
   .sensor = {
     .fmu = {
-      .dlpf_hz = DLPF_BANDWIDTH_20HZ,
+      .dlpf_hz = DLPF_BANDWIDTH_41HZ,
       .accel_bias_mps = {0.0, 0.0, 0},
       .mag_bias_ut = {0, 0, 0},
       .accel_scale = {{1, 0, 0}, {0, 1, 0}, {0, 0, 1}},
@@ -49,8 +49,8 @@ AircraftConfig config = {
     }
   },
   .bfs_ins = {
-    .measurement_ne_std = 1.0,
-    .measurement_d_std = 1.5
+      .accel_cutoff_hz = 20.0,
+      .gyro_cutoff_hz = 20.0
   },
   .telem = {
     .baud = 57600,
