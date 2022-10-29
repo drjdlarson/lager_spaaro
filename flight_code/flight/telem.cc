@@ -200,6 +200,7 @@ void TelemUpdate(AircraftData &data, TelemData * const ptr) {
         }
         break;
       }
+      /*
       case TELEM_MAG_EXT_MAG: {
         if (data.sensor.ext_mag.installed) {
           mag_ = &data.sensor.ext_mag;
@@ -207,7 +208,7 @@ void TelemUpdate(AircraftData &data, TelemData * const ptr) {
           MsgError("Telem mag source set to external, which is not installed");
         }
         break;
-      }
+      }*/
     }
     switch (cfg_.gnss_source) {
       #if defined(__FMU_R_V1__) || defined(__FMU_R_V2__) || \
@@ -229,6 +230,7 @@ void TelemUpdate(AircraftData &data, TelemData * const ptr) {
         }
         break;
       }
+      /*
       #if defined(__FMU_R_V2__) || defined(__FMU_R_V2_BETA__) || \
         defined(__FMU_R_MINI_V1__)
       case TELEM_GNSS_EXT_GNSS2: {
@@ -240,6 +242,7 @@ void TelemUpdate(AircraftData &data, TelemData * const ptr) {
         break;
       }
       #endif
+      */
     }
     switch (cfg_.static_pres_source) {
       case TELEM_STATIC_PRES_FMU: {
@@ -250,6 +253,7 @@ void TelemUpdate(AircraftData &data, TelemData * const ptr) {
         }
         break;
       }
+      /*
       case TELEM_STATIC_PRES_EXT_PRES1: {
         if (data.sensor.ext_pres1.installed) {
           if (data.sensor.ext_pres1.is_static_pres) {
@@ -297,12 +301,12 @@ void TelemUpdate(AircraftData &data, TelemData * const ptr) {
           MsgError("Telem static pres source set to external pres4, which is not installed");
         }
         break;
-      }
+      }*/
     }
     switch (cfg_.diff_pres_source) {
       case TELEM_DIFF_PRES_NONE: {
         break;
-      }
+      }/*
       case TELEM_DIFF_PRES_EXT_PRES1: {
         if (data.sensor.ext_pres1.installed) {
           if (!data.sensor.ext_pres1.is_static_pres) {
@@ -350,7 +354,7 @@ void TelemUpdate(AircraftData &data, TelemData * const ptr) {
           MsgError("Telem diff pres source set to external pres4, which is not installed");
         }
         break;
-      }
+      }*/
     }
     switch (cfg_.ins_source) {
       #if defined(__FMU_R_V1__) || defined(__FMU_R_V2__) || \
@@ -369,7 +373,7 @@ void TelemUpdate(AircraftData &data, TelemData * const ptr) {
         break;
       }
     }
-    adc_ = &data.adc;
+    //adc_ = &data.adc;
     telem_initialized_ = true;
   }
   /* System data */

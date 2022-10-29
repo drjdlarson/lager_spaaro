@@ -39,12 +39,12 @@
 
 namespace {
 /* External mag */
-SpaaroLis3mdl ext_mag;
+//SpaaroLis3mdl ext_mag;
 /* External pressure transducer */
-SpaaroAms5915 ext_pres1(&I2C_BUS);
-SpaaroAms5915 ext_pres2(&I2C_BUS);
-SpaaroAms5915 ext_pres3(&I2C_BUS);
-SpaaroAms5915 ext_pres4(&I2C_BUS);
+//SpaaroAms5915 ext_pres1(&I2C_BUS);
+//SpaaroAms5915 ext_pres2(&I2C_BUS);
+//SpaaroAms5915 ext_pres3(&I2C_BUS);
+//SpaaroAms5915 ext_pres4(&I2C_BUS);
 /* External GNSS receivers */
 #if defined(__FMU_R_V1__)
 SpaaroUbx ext_gnss1(&GNSS_UART);
@@ -53,13 +53,13 @@ SpaaroUbx ext_gnss1(&GNSS1_UART);
 SpaaroUbx ext_gnss2(&GNSS2_UART);
 #elif defined(__FMU_R_MINI_V1__)
 SpaaroUbx ext_gnss1(&GNSS1_UART); //UART3
-SpaaroUbx ext_gnss2(&GNSS2_UART);
+//SpaaroUbx ext_gnss2(&GNSS2_UART);
 #endif
 #if defined(__FMU_R_V2__) || defined(__FMU_R_V2_BETA__)
 SpaaroAinsteinUsd1 rad_alt(&AUX_UART);
 // Disable radar altimeter for now
-#elif defined(__FMU_R_MINI_V1__)
-SpaaroAinsteinUsd1 rad_alt(&AUX_UART);
+//#elif defined(__FMU_R_MINI_V1__)
+//SpaaroAinsteinUsd1 rad_alt(&AUX_UART);
 #endif
 SpaaroSbus incept(&SBUS_UART);
 /* Sensor calibration */
@@ -71,18 +71,18 @@ void SensorsInit(const SensorConfig &cfg) {
   MsgInfo("Initializing sensors...");
   incept.Init();
   FmuInit(cfg.fmu);
-  ext_mag.Init(cfg.ext_mag);
-  ext_pres1.Init(cfg.ext_pres1);
-  ext_pres2.Init(cfg.ext_pres2);
-  ext_pres3.Init(cfg.ext_pres3);
-  ext_pres4.Init(cfg.ext_pres4);
+  //ext_mag.Init(cfg.ext_mag);
+  //ext_pres1.Init(cfg.ext_pres1);
+  //ext_pres2.Init(cfg.ext_pres2);
+  //ext_pres3.Init(cfg.ext_pres3);
+  //ext_pres4.Init(cfg.ext_pres4);
   #if defined(__FMU_R_V1__)
   ext_gnss1.Init(cfg.ext_gnss1);
   #elif defined(__FMU_R_V2__) || defined(__FMU_R_V2_BETA__) || \
         defined(__FMU_R_MINI_V1__)
   ext_gnss1.Init(cfg.ext_gnss1);
-  ext_gnss2.Init(cfg.ext_gnss2);
-  rad_alt.Init(cfg.rad_alt);
+  //ext_gnss2.Init(cfg.ext_gnss2);
+  //rad_alt.Init(cfg.rad_alt);
   #endif
   #if defined(__FMU_R_V2__) || defined(__FMU_R_MINI_V1__)
   PowerModuleInit(cfg.power_module);
@@ -95,10 +95,10 @@ void SensorsCal() {
   t_ms = 0;
   while (t_ms < CAL_TIME_MS) {
     FmuCal();
-    ext_pres1.Cal();
-    ext_pres2.Cal();
-    ext_pres3.Cal();
-    ext_pres4.Cal();
+    //ext_pres1.Cal();
+    //ext_pres2.Cal();
+    //ext_pres3.Cal();
+    //ext_pres4.Cal();
   }
   MsgInfo("done.\n");
 }
@@ -108,18 +108,18 @@ void SensorsRead(SensorData * const data) {
   incept.Read(&data->inceptor);
   FmuRead(&data->fmu_imu, &data->fmu_mag, &data->fmu_static_pres);
   AnalogRead(&data->analog);
-  ext_mag.Read(&data->ext_mag);
-  ext_pres1.Read(&data->ext_pres1);
-  ext_pres2.Read(&data->ext_pres2);
-  ext_pres3.Read(&data->ext_pres3);
-  ext_pres4.Read(&data->ext_pres4);
+  //ext_mag.Read(&data->ext_mag);
+  //ext_pres1.Read(&data->ext_pres1);
+  //ext_pres2.Read(&data->ext_pres2);
+  //ext_pres3.Read(&data->ext_pres3);
+  //ext_pres4.Read(&data->ext_pres4);
   #if defined(__FMU_R_V1__)
   ext_gnss1.Read(&data->ext_gnss1);
   #elif defined(__FMU_R_V2__) || defined(__FMU_R_V2_BETA__) || \
         defined(__FMU_R_MINI_V1__)
   ext_gnss1.Read(&data->ext_gnss1);
-  ext_gnss2.Read(&data->ext_gnss2);
-  rad_alt.Read(&data->rad_alt);
+  //ext_gnss2.Read(&data->ext_gnss2);
+  //rad_alt.Read(&data->rad_alt);
   #endif
   #if defined(__FMU_R_V2__) || defined(__FMU_R_MINI_V1__)
   PowerModuleRead(&data->power_module);

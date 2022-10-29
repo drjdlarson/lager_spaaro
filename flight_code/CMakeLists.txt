@@ -240,7 +240,7 @@ add_executable(flight
   include/flight/config.h
   include/flight/sys.h
   include/flight/sensors.h
-  include/flight/adc.h
+  #include/flight/adc.h
   include/flight/bfs-ins.h
   include/flight/datalog.h
   include/flight/effectors.h
@@ -259,7 +259,7 @@ add_executable(flight
   flight/config.cc
   flight/sys.cc
   flight/sensors.cc
-  flight/adc.cc
+  #flight/adc.cc
   flight/bfs-ins.cc
   flight/datalog.cc
   flight/effectors.cc

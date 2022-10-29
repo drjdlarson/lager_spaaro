@@ -87,6 +87,7 @@ void BfsInsRun(SensorData &ref, InsData * const ptr) {
         }
         break;
       }
+      /*
       case INS_MAG_EXT_MAG: {
         if (ref.ext_mag.installed) {
           mag_ = &ref.ext_mag;
@@ -94,7 +95,7 @@ void BfsInsRun(SensorData &ref, InsData * const ptr) {
           MsgError("INS mag source set to ext mag1, which is not installed");
         }
         break;
-      }
+      }*/
     }
     /* Setup GNSS source */
     switch (cfg_.gnss_source) {
@@ -117,6 +118,7 @@ void BfsInsRun(SensorData &ref, InsData * const ptr) {
         }
         break;
       }
+      /*
       #if defined(__FMU_R_V2__) || defined(__FMU_R_V2_BETA__) || \
           defined(__FMU_R_MINI_V1__)
       case INS_GNSS_EXT_GNSS2: {
@@ -128,6 +130,7 @@ void BfsInsRun(SensorData &ref, InsData * const ptr) {
         break;
       }
       #endif
+      */
     }
     /* Init EKF */
     if ((imu_->new_data) && (mag_->new_data) && (gnss_->new_data) &&

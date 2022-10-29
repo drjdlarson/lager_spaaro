@@ -49,6 +49,9 @@ Aircraft.Inceptor.yaw = 4;
 Aircraft.Inceptor.mode0 = 5;
 Aircraft.Inceptor.throttle_e_stop = 7;
 
+% Inceptor deadband
+Aircraft.Inceptor.deadband = 0.1;
+
 %% Effectors
 % Number of PWM channels
 Aircraft.Eff.nPwm = 8;
@@ -196,7 +199,7 @@ Aircraft.Control.D_yaw_rate = 0.02;
 
 %% Pitch rate controller parameters
 % Max pitch rate [radps]
-Aircraft.Control.pitch_rate_max = 1; %~60deg/s
+Aircraft.Control.pitch_rate_max = 1.74533; %~100deg/s
 
 % Pitch rate controller PID gains
 Aircraft.Control.P_pitch_rate = 0.5;
@@ -205,12 +208,12 @@ Aircraft.Control.D_pitch_rate = 0.02;
 
 %% Roll rate controller parameters
 % Max roll rate [radps]
-Aircraft.Control.roll_rate_max = 1; %~60deg/s
+Aircraft.Control.roll_rate_max = 1.74533; %~100deg/s
 
 % Roll rate controller PID gains
-Aircraft.Control.P_yaw_rate = 0.5;
-Aircraft.Control.I_yaw_rate = 0.05;
-Aircraft.Control.D_yaw_rate = 0.02;
+Aircraft.Control.P_roll_rate = 0.5;
+Aircraft.Control.I_roll_rate = 0.05;
+Aircraft.Control.D_roll_rate = 0.02;
 
 %% Pitch angle controller parameters
 % Max pitch angle [rad]
@@ -218,8 +221,6 @@ Aircraft.Control.pitch_angle_lim = 0.261799;  %~15deg
 
 % Pitch cmd controller gains
 Aircraft.Control.P_pitch_angle = 0.04;
-Aircraft.Control.I_pitch_angle = 0.04;
-Aircraft.Control.D_pitch_angle = 0.02;
 
 %% Roll controller parameters
 % Max roll angle [rad]
@@ -227,14 +228,12 @@ Aircraft.Control.roll_angle_lim = 0.261799;  %~15deg
 
 % Roll cmd controller gains
 Aircraft.Control.P_roll_angle = 0.04;
-Aircraft.Control.I_roll_angle = 0.04;
-Aircraft.Control.D_roll_angle = 0.02;
 
 %% Vertical speed controller parameters
 Aircraft.Control.est_hover_thr = 0.6724;
 % Vertical speed limit [m/s]
-Aircraft.Control.v_z_up_max = 2;
-Aircraft.Control.v_z_down_max = 1; %minimum of -1 m/s
+Aircraft.Control.v_z_up_max = 0.2;
+Aircraft.Control.v_z_down_max = 0.2; %minimum of -1 m/s
 % Vertical speed controller gain
 Aircraft.Control.P_v_z = 0.09;
 Aircraft.Control.I_v_z = 0.05;

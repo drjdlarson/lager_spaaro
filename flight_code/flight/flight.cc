@@ -33,7 +33,7 @@
     defined(__FMU_R_V2_BETA__)
 #include "drivers/spaaro-vector-nav.h"
 #endif
-#include "flight/adc.h"
+//#include "flight/adc.h"
 #include "flight/bfs-ins.h"
 #include "flight/effectors.h"
 #include "flight/datalog.h"

@@ -160,7 +160,7 @@ struct SensorConfig {
   #elif defined(__FMU_R_V2__) || defined(__FMU_R_V2_BETA__) || \
         defined(__FMU_R_MINI_V1__)
   GnssConfig ext_gnss1;
-  GnssConfig ext_gnss2;
+  //GnssConfig ext_gnss2;
   #endif
   PresConfig ext_pres1;
   PresConfig ext_pres2;
@@ -314,7 +314,7 @@ struct AircraftConfig {
   VectorNavConfig vector_nav;
   #endif
   InsConfig bfs_ins;
-  AdcConfig adc;
+  //AdcConfig adc;
   TelemConfig telem;
 };
 
@@ -416,19 +416,19 @@ struct SensorData {
   PresData vector_nav_static_pres;
   GnssData vector_nav_gnss;
   #endif
-  MagData ext_mag;
+  //MagData ext_mag;
   #if defined(__FMU_R_V1__)
   GnssData ext_gnss1;
   #elif defined(__FMU_R_V2__) || defined(__FMU_R_V2_BETA__) || \
         defined(__FMU_R_MINI_V1__)
   GnssData ext_gnss1;
-  GnssData ext_gnss2;
+  //GnssData ext_gnss2;
   #endif
-  PresData ext_pres1;
-  PresData ext_pres2;
-  PresData ext_pres3;
-  PresData ext_pres4;
-  RadAltData rad_alt;
+  //PresData ext_pres1;
+  //PresData ext_pres2;
+  //PresData ext_pres3;
+  //PresData ext_pres4;
+  //RadAltData rad_alt;
   AnalogData analog;
   #if defined(__FMU_R_V2__) || defined(__FMU_R_MINI_V1__)
   PowerModuleData power_module;
@@ -524,7 +524,7 @@ struct AircraftData {
       defined(__FMU_R_V2_BETA__)
   InsData vector_nav_ins;
   #endif
-  AdcData adc;
+  //AdcData adc;
   TelemData telem;
   VmsData vms;
 };
