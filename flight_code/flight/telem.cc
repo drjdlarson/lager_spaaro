@@ -57,7 +57,7 @@ ImuData *imu_;
 MagData *mag_;
 GnssData *gnss_;
 PresData *static_pres_, *diff_pres_;
-AdcData *adc_;
+//AdcData *adc_;
 InsData *ins_;
 /* Effector */
 std::array<int16_t, 16> effector_;
@@ -452,7 +452,7 @@ void TelemUpdate(AircraftData &data, TelemData * const ptr) {
   telem_.nav_east_vel_mps(ins_->ned_vel_mps[1]);
   telem_.nav_down_vel_mps(ins_->ned_vel_mps[2]);
   // telem_.nav_gnd_spd_mps(data.nav.gnd_spd_mps);
-  telem_.nav_ias_mps(adc_->ias_mps);
+  //telem_.nav_ias_mps(adc_->ias_mps);
   telem_.nav_pitch_rad(ins_->pitch_rad);
   telem_.nav_roll_rad(ins_->roll_rad);
   telem_.nav_hdg_rad(ins_->heading_rad);

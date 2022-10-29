@@ -42,6 +42,7 @@ void MsgBegin() {
 
 void MsgInfo(const char * str) {
   MSG_BUS.print(str);
+  MSG_BUS.flush();
 }
 
 void MsgWarning(const char * str) {
