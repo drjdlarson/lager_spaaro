@@ -70,24 +70,6 @@ else()
     -DSERIAL4_TX_BUFFER_SIZE=1024
   )
 endif()
-# nanopb
-set(NANOPB_SRC_ROOT_FOLDER "/usr/local/nanopb")
-set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} ${NANOPB_SRC_ROOT_FOLDER}/extra)
-find_package(Nanopb REQUIRED)
-include_directories(${NANOPB_INCLUDE_DIRS})
-if (FMU STREQUAL "MINI-V1")
-  # FMU-R-mini
-  NANOPB_GENERATE_CPP(PROTO_SRCS PROTO_HDRS ../common/datalog_fmu_mini_v1.proto)
-elseif (FMU STREQUAL "V2")
-  # FMU-R-V2
-  NANOPB_GENERATE_CPP(PROTO_SRCS PROTO_HDRS ../common/datalog_fmu_v2.proto)
-elseif(FMU STREQUAL "V2-BETA")
-  # FMU-R-V2-BETA
-  NANOPB_GENERATE_CPP(PROTO_SRCS PROTO_HDRS ../common/datalog_fmu_v2_beta.proto)
-else()
-  # FMU-R-V1
-  NANOPB_GENERATE_CPP(PROTO_SRCS PROTO_HDRS ../common/datalog_fmu_v1.proto)
-endif()
 # Include directories
 include_directories(${CMAKE_CURRENT_BINARY_DIR})
 # Fetch dependencies
@@ -154,10 +136,8 @@ FetchContent_Declare(
 FetchContent_MakeAvailable(vector_nav)
 FetchContent_Declare(
   pwm
-  #GIT_REPOSITORY https://github.com/bolderflight/pwm.git
-  #GIT_TAG v6.0.1
-  GIT_REPOSITORY git@github.com:TL-4319/ua_pwm.git
-  GIT_TAG v1.0.0
+  GIT_REPOSITORY https://github.com/bolderflight/pwm.git
+  GIT_TAG v6.0.1
 )
 FetchContent_MakeAvailable(pwm)
 FetchContent_Declare(
@@ -232,6 +212,12 @@ FetchContent_Declare(
   GIT_TAG v3.1.0
 )
 FetchContent_MakeAvailable(filter)
+FetchContent_Declare(
+  imap
+  GIT_REPOSITORY https://github.com/bolderflight/imap.git
+  GIT_TAG v2.0.2
+)
+FetchContent_MakeAvailable(imap)
 # Add the executable
 add_executable(flight
   include/global_defs.h
@@ -240,8 +226,9 @@ add_executable(flight
   include/flight/config.h
   include/flight/sys.h
   include/flight/sensors.h
-  #include/flight/adc.h
+  include/flight/adc.h
   include/flight/bfs-ins.h
+  include/flight/aux-ins.h
   include/flight/datalog.h
   include/flight/effectors.h
   include/flight/telem.h
@@ -259,8 +246,9 @@ add_executable(flight
   flight/config.cc
   flight/sys.cc
   flight/sensors.cc
-  #flight/adc.cc
+  flight/adc.cc
   flight/bfs-ins.cc
+  flight/aux-ins.cc
   flight/datalog.cc
   flight/effectors.cc
   flight/telem.cc
@@ -273,8 +261,6 @@ add_executable(flight
   drivers/spaaro-sbus.cc
   drivers/analog.cc
   drivers/spaaro-vector-nav.cc
-  ${PROTO_SRCS}
-  ${PROTO_HDRS}
 )
 if (FMU STREQUAL "MINI-V1" OR FMU STREQUAL "V2")
   # FMU-R mini V1 | FMU-R-V2
@@ -325,6 +311,7 @@ target_link_libraries(flight
     polytools
     vector_nav
     pwm
+    imap
 )
 target_compile_options(flight PUBLIC -std=c++20)
 # Add hex and upload targets

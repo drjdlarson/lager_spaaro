@@ -57,7 +57,7 @@ ImuData *imu_;
 MagData *mag_;
 GnssData *gnss_;
 PresData *static_pres_, *diff_pres_;
-//AdcData *adc_;
+AdcData *adc_;
 InsData *ins_;
 /* Effector */
 std::array<int16_t, 16> effector_;
@@ -200,7 +200,6 @@ void TelemUpdate(AircraftData &data, TelemData * const ptr) {
         }
         break;
       }
-      /*
       case TELEM_MAG_EXT_MAG: {
         if (data.sensor.ext_mag.installed) {
           mag_ = &data.sensor.ext_mag;
@@ -208,7 +207,7 @@ void TelemUpdate(AircraftData &data, TelemData * const ptr) {
           MsgError("Telem mag source set to external, which is not installed");
         }
         break;
-      }*/
+      }
     }
     switch (cfg_.gnss_source) {
       #if defined(__FMU_R_V1__) || defined(__FMU_R_V2__) || \
@@ -230,7 +229,6 @@ void TelemUpdate(AircraftData &data, TelemData * const ptr) {
         }
         break;
       }
-      /*
       #if defined(__FMU_R_V2__) || defined(__FMU_R_V2_BETA__) || \
         defined(__FMU_R_MINI_V1__)
       case TELEM_GNSS_EXT_GNSS2: {
@@ -242,7 +240,6 @@ void TelemUpdate(AircraftData &data, TelemData * const ptr) {
         break;
       }
       #endif
-      */
     }
     switch (cfg_.static_pres_source) {
       case TELEM_STATIC_PRES_FMU: {
@@ -253,7 +250,6 @@ void TelemUpdate(AircraftData &data, TelemData * const ptr) {
         }
         break;
       }
-      /*
       case TELEM_STATIC_PRES_EXT_PRES1: {
         if (data.sensor.ext_pres1.installed) {
           if (data.sensor.ext_pres1.is_static_pres) {
@@ -301,12 +297,12 @@ void TelemUpdate(AircraftData &data, TelemData * const ptr) {
           MsgError("Telem static pres source set to external pres4, which is not installed");
         }
         break;
-      }*/
+      }
     }
     switch (cfg_.diff_pres_source) {
       case TELEM_DIFF_PRES_NONE: {
         break;
-      }/*
+      }
       case TELEM_DIFF_PRES_EXT_PRES1: {
         if (data.sensor.ext_pres1.installed) {
           if (!data.sensor.ext_pres1.is_static_pres) {
@@ -354,7 +350,7 @@ void TelemUpdate(AircraftData &data, TelemData * const ptr) {
           MsgError("Telem diff pres source set to external pres4, which is not installed");
         }
         break;
-      }*/
+      }
     }
     switch (cfg_.ins_source) {
       #if defined(__FMU_R_V1__) || defined(__FMU_R_V2__) || \
@@ -373,7 +369,7 @@ void TelemUpdate(AircraftData &data, TelemData * const ptr) {
         break;
       }
     }
-    //adc_ = &data.adc;
+    adc_ = &data.adc;
     telem_initialized_ = true;
   }
   /* System data */
@@ -394,7 +390,7 @@ void TelemUpdate(AircraftData &data, TelemData * const ptr) {
   #if defined(__FMU_R_V1__)
   telem_.battery_volt(data.sys.input_volt);
   #endif
-  telem_.battery_remaining_prcnt(data.vms.battery.remaining_prcnt);
+  telem_.battery_remaining_prcnt(data.vms.power_remaining_prcnt);
   telem_.battery_remaining_time_s(data.vms.flight_time_remaining_s);
   /* IMU data */
   telem_.accel_installed(imu_->installed);
@@ -452,7 +448,7 @@ void TelemUpdate(AircraftData &data, TelemData * const ptr) {
   telem_.nav_east_vel_mps(ins_->ned_vel_mps[1]);
   telem_.nav_down_vel_mps(ins_->ned_vel_mps[2]);
   // telem_.nav_gnd_spd_mps(data.nav.gnd_spd_mps);
-  //telem_.nav_ias_mps(adc_->ias_mps);
+  telem_.nav_ias_mps(adc_->ias_mps);
   telem_.nav_pitch_rad(ins_->pitch_rad);
   telem_.nav_roll_rad(ins_->roll_rad);
   telem_.nav_hdg_rad(ins_->heading_rad);
@@ -461,10 +457,10 @@ void TelemUpdate(AircraftData &data, TelemData * const ptr) {
   telem_.nav_gyro_z_radps(ins_->gyro_radps[2]);
   /* Effector */
   for (std::size_t i = 0; i < NUM_PWM_PINS; i++) {
-    effector_[i] = data.vms.pwm.cnt[i];
+    effector_[i] = data.vms.pwm[i];
   }
   for (std::size_t i = 0; i < NUM_SBUS; i++) {
-    effector_[i + NUM_PWM_PINS] = data.vms.sbus.cnt[i];
+    effector_[i + NUM_PWM_PINS] = data.vms.sbus[i];
   }
   telem_.effector(effector_);
   /* Inceptor */

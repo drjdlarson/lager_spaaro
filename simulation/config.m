@@ -27,12 +27,3 @@ Target.heading_deg = 90;  % +/-180 degrees relative to true north
 Target.airspeed_mps = 17;
 % Ground height above mean sea level [m]
 Env.terrain_alt_msl_m = 0;
-
-%% Initial Condition for simulation
-InitCond.lat_rad = 0.579621767644;
-InitCond.lon_rad = -1.527761279167;
-InitCond.alt_m = 67.117600;
-InitCond.ned_pos_m = [0 0 -5];
-InitCond.body_vel_mps = [0 0 0];
-InitCond.euler_rad = [0 0 0];
-InitCond.body_rot_rate_radps = [0 0 0];

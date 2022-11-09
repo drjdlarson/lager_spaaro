@@ -131,7 +131,7 @@ enum PresTransducer : int8_t {
   PRES_AMS5915_1200_B = bfs::Ams5915::AMS5915_1200_B
 };
 
-struct PresConfig {
+struct  PresConfig {
   uint8_t addr;
   PresTransducer device = PRES_NONE;
 };
@@ -147,26 +147,27 @@ struct RadAltConfig {
 
 #if defined(__FMU_R_MINI_V1__) || defined(__FMU_R_V2__)
 struct PowerModuleConfig {
-  float volts_per_volt = 1.0f;
-  float amps_per_volt = 1.0f;
+  float volts_per_volt = 15.3f;
+  float amps_per_volt = 50.0f;
 };
 #endif
 
 struct SensorConfig {
   FmuConfig fmu;
   MagConfig ext_mag;
-  #if defined(__FMU_R_V1__)
   GnssConfig ext_gnss1;
-  #elif defined(__FMU_R_V2__) || defined(__FMU_R_V2_BETA__) || \
-        defined(__FMU_R_MINI_V1__)
-  GnssConfig ext_gnss1;
-  //GnssConfig ext_gnss2;
+  #if defined(__FMU_R_V2__) || defined(__FMU_R_V2_BETA__) || \
+      defined(__FMU_R_MINI_V1__)
+  GnssConfig ext_gnss2;
   #endif
   PresConfig ext_pres1;
   PresConfig ext_pres2;
   PresConfig ext_pres3;
   PresConfig ext_pres4;
+  #if defined(__FMU_R_V2__) || defined(__FMU_R_V2_BETA__) || \
+      defined(__FMU_R_MINI_V1__)
   RadAltConfig rad_alt;
+  #endif
   #if defined(__FMU_R_MINI_V1__) || defined(__FMU_R_V2__)
   PowerModuleConfig power_module;
   #endif
@@ -201,11 +202,21 @@ struct InsConfig {
   InsImuSource imu_source = INS_IMU_FMU;
   InsMagSource mag_source = INS_MAG_FMU;
   InsGnssSource gnss_source = INS_GNSS_EXT_GNSS1;
-  float accel_cutoff_hz = 10;
-  float gyro_cutoff_hz = 10;
+  float accel_cutoff_hz = 20;
+  float gyro_cutoff_hz = 20;
   float mag_cutoff_hz = 10;
-  float measurement_ne_std = 3;
-  float measurement_d_std = 6;
+};
+
+enum AuxInsSource {
+  #if defined(__FMU_R_V1__) || defined(__FMU_R_V2__) || \
+      defined(__FMU_R_V2_BETA__)
+  AUX_INS_VECTOR_NAV,
+  #endif
+  AUX_INS_BFS
+};
+
+struct AuxInsConfig {
+  AuxInsSource ins_source = AUX_INS_BFS;
 };
 
 enum AdcStaticPresSource : int8_t {
@@ -314,7 +325,8 @@ struct AircraftConfig {
   VectorNavConfig vector_nav;
   #endif
   InsConfig bfs_ins;
-  //AdcConfig adc;
+  AuxInsConfig aux_ins;
+  AdcConfig adc;
   TelemConfig telem;
 };
 
@@ -330,12 +342,11 @@ struct SysData {
 };
 
 struct InceptorData {
-  //static constexpr int8_t max_ch = 16; To match with simulink bus_def
-  bool healthy;
+  static constexpr int8_t max_ch = 16;
   bool new_data;
   bool lost_frame;
   bool failsafe;
-  std::array<int16_t, 16> ch;
+  std::array<int16_t, max_ch> ch;
 };
 
 struct ImuData {
@@ -390,8 +401,8 @@ struct RadAltData {
   bool installed = false;
   bool healthy;
   bool new_data;
+  uint8_t snr;
   float alt_m;
-  float snr;
 };
 
 struct AnalogData {
@@ -403,7 +414,6 @@ struct PowerModuleData {
   float current_ma;
 };
 
-// Remove uneccessary struct for MALT
 struct SensorData {
   InceptorData inceptor;
   ImuData fmu_imu;
@@ -416,19 +426,20 @@ struct SensorData {
   PresData vector_nav_static_pres;
   GnssData vector_nav_gnss;
   #endif
-  //MagData ext_mag;
-  #if defined(__FMU_R_V1__)
+  MagData ext_mag;
   GnssData ext_gnss1;
-  #elif defined(__FMU_R_V2__) || defined(__FMU_R_V2_BETA__) || \
-        defined(__FMU_R_MINI_V1__)
-  GnssData ext_gnss1;
-  //GnssData ext_gnss2;
+  #if defined(__FMU_R_V2__) || defined(__FMU_R_V2_BETA__) || \
+      defined(__FMU_R_MINI_V1__)
+  GnssData ext_gnss2;
   #endif
-  //PresData ext_pres1;
-  //PresData ext_pres2;
-  //PresData ext_pres3;
-  //PresData ext_pres4;
-  //RadAltData rad_alt;
+  PresData ext_pres1;
+  PresData ext_pres2;
+  PresData ext_pres3;
+  PresData ext_pres4;
+  #if defined(__FMU_R_V2__) || defined(__FMU_R_V2_BETA__) || \
+      defined(__FMU_R_MINI_V1__)
+  RadAltData rad_alt;
+  #endif
   AnalogData analog;
   #if defined(__FMU_R_V2__) || defined(__FMU_R_MINI_V1__)
   PowerModuleData power_module;
@@ -445,27 +456,26 @@ struct InsData {
   float gyro_radps[3];
   float mag_ut[3];
   float ned_vel_mps[3];
-  float ned_pos_m[3];
   double lat_rad;
   double lon_rad;
-  float home_alt_wgs84_m;
-  double home_lat_rad;
-  double home_lon_rad;
-  float accel_bias_mps2[3];
-  float gyro_bias_radps[3];
-  float input_accel[3];
-  float input_gyro[3];
-  double input_lat;
-  double input_lon;
-  double input_alt;
-  float input_ned_vel[3];
 };
 
 struct AdcData {
   float static_pres_pa;
   float diff_pres_pa;
   float pres_alt_m;
+  float rel_alt_m;
   float ias_mps;
+};
+
+struct AuxInsData {
+  float home_alt_wgs84_m;
+  float gnd_spd_mps;
+  float gnd_track_rad;
+  float flight_path_rad;
+  double home_lat_rad;
+  double home_lon_rad;
+  double ned_pos_m[3];
 };
 
 struct TelemData {
@@ -482,37 +492,15 @@ struct TelemData {
   bfs::MissionItem rally[NUM_RALLY_POINTS];
 };
 
-#if defined(__FMU_R_V2__) || defined(__FMU_R_MINI_V1__)
-struct BatteryData {
-  float voltage_v;
-  float current_ma;
-  float consumed_mah;
-  float remaining_prcnt;
-  float remaining_time_s;
-};
-#endif
-
-struct SbusCmd {
-  std::array<int16_t, NUM_SBUS_CH> cnt;
-  std::array<float, NUM_SBUS_CH> cmd;
-};
-
-struct PwmCmd {
-  std::array<int16_t, NUM_PWM_PINS> cnt;
-  std::array<float, NUM_PWM_PINS> cmd;
-};
-
 struct VmsData {
   bool advance_waypoint;
   bool motors_enabled;
   int8_t mode;
-  SbusCmd sbus;
-  PwmCmd pwm;
+  std::array<int16_t, NUM_SBUS_CH> sbus;
+  std::array<int16_t, NUM_PWM_PINS> pwm;
   float throttle_cmd_prcnt;
   float flight_time_remaining_s;
-  #if defined(__FMU_R_V2__) || defined(__FMU_R_MINI_V1__)
-  BatteryData battery;
-  #endif
+  float power_remaining_prcnt;
   float aux[NUM_AUX_VAR];
 };
 
@@ -524,7 +512,8 @@ struct AircraftData {
       defined(__FMU_R_V2_BETA__)
   InsData vector_nav_ins;
   #endif
-  //AdcData adc;
+  AuxInsData aux_ins;
+  AdcData adc;
   TelemData telem;
   VmsData vms;
 };

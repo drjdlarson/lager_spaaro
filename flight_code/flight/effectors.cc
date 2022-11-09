@@ -47,17 +47,17 @@ void EffectorsInit() {
   MsgInfo("Intializing effectors...");
   /* Init SBUS */
   sbus.Begin();
-  /* Init PWM */ 
+  /* Init PWM */
   pwm.Begin();
   MsgInfo("done.\n");
 }
 void EffectorsCmd(const VmsData &vms) {
   /* Set effector commands */
   for (int8_t i = 0; i < bfs::SbusData::NUM_CH; i++) {
-    sbus_data.ch[i] = vms.sbus.cnt[i];
+    sbus_data.ch[i] = vms.sbus[i];
   }
   sbus.data(sbus_data);
-  pwm.ch(vms.pwm.cnt);
+  pwm.ch(vms.pwm);
 }
 void EffectorsWrite() {
   /* Write the effector commands */

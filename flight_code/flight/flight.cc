@@ -33,8 +33,9 @@
     defined(__FMU_R_V2_BETA__)
 #include "drivers/spaaro-vector-nav.h"
 #endif
-//#include "flight/adc.h"
+#include "flight/adc.h"
 #include "flight/bfs-ins.h"
+#include "flight/aux-ins.h"
 #include "flight/effectors.h"
 #include "flight/datalog.h"
 #include "flight/telem.h"
@@ -69,24 +70,22 @@ void run() {
                 &data.sensor.vector_nav_gnss, &data.vector_nav_ins);
   #endif
   /* Air data */
-  //AdcRun(data.sensor, &data.adc);
+  AdcRun(data.sensor, &data.adc);
   /* INS */
   BfsInsRun(data.sensor, &data.bfs_ins);
-  /* VMS */ 
+  /* Aux INS */
+  AuxInsRun(data, &data.aux_ins);
+  /* VMS */
   #if defined(__FMU_R_V1__) || defined(__FMU_R_V2__) || \
       defined(__FMU_R_V2_BETA__)
   VmsRun(data.sys, data.sensor, data.bfs_ins, data.vector_nav_ins, data.adc,
          data.telem, &data.vms);
   #else
-  /*VmsRun(data.sys, data.sensor, data.bfs_ins, data.adc,
-         data.telem, &data.vms);*/
-  VmsRun(data.sys, data.sensor, data.bfs_ins,
+  VmsRun(data.sys, data.sensor, data.bfs_ins, data.adc,
          data.telem, &data.vms);
   #endif
   /* Command effectors */
   EffectorsCmd(data.vms);
-  std::string test = std::to_string(data.vms.pwm.cnt[0]) + "," + std::to_string(data.vms.pwm.cnt[1]) + "," + std::to_string(data.vms.pwm.cnt[2]) + "," + std::to_string(data.vms.pwm.cnt[3]) + ",1950,1100 \n";
-  MsgInfo(test.c_str());  
   /* Datalog */
   DatalogAdd(data);
   /* Telemetry */
@@ -109,11 +108,12 @@ int main() {
       defined(__FMU_R_V2_BETA__)
   VectorNavInit(config.vector_nav);
   #endif
-  // Disable Air Data Computer
-  /* Init ADC */ 
-  //AdcInit(config.adc);
+  /* Init ADC */
+  AdcInit(config.adc);
   /* Init INS */
   BfsInsInit(config.bfs_ins);
+  /* Init Aux INS */
+  AuxInsInit(config.aux_ins);
   /* Init effectors */
   EffectorsInit();
   /* Init VMS */

@@ -40,15 +40,15 @@ ImuData *imu_;
 MagData *mag_;
 GnssData *gnss_;
 bfs::Iir<float> ax_, ay_, az_, gx_, gy_, gz_, hx_, hy_, hz_;
-Eigen::Vector3f accel_mps2_, gyro_radps_, mag_ut_, ned_vel_, accel_bias_mps2_, gyro_bias_radps_;
-Eigen::Vector3d llh_, home_llh_, nav_ned_pos_m_;
+Eigen::Vector3f accel_mps2_, gyro_radps_, mag_ut_, ned_vel_, nav_ned_pos_m_;
+Eigen::Vector3d llh_;
 bfs::Ekf15State ekf_;
 }
 
 void BfsInsInit(const InsConfig &ref) {
   cfg_ = ref;
-  ekf_.gnss_pos_ne_std_m(cfg_.measurement_ne_std);
-  ekf_.gnss_pos_d_std_m(cfg_.measurement_d_std);
+  ekf_.gnss_pos_ne_std_m(0.15f);
+  ekf_.gnss_pos_d_std_m(0.2f);
 }
 
 void BfsInsRun(SensorData &ref, InsData * const ptr) {
@@ -87,7 +87,6 @@ void BfsInsRun(SensorData &ref, InsData * const ptr) {
         }
         break;
       }
-      /*
       case INS_MAG_EXT_MAG: {
         if (ref.ext_mag.installed) {
           mag_ = &ref.ext_mag;
@@ -95,7 +94,7 @@ void BfsInsRun(SensorData &ref, InsData * const ptr) {
           MsgError("INS mag source set to ext mag1, which is not installed");
         }
         break;
-      }*/
+      }
     }
     /* Setup GNSS source */
     switch (cfg_.gnss_source) {
@@ -118,7 +117,6 @@ void BfsInsRun(SensorData &ref, InsData * const ptr) {
         }
         break;
       }
-      /*
       #if defined(__FMU_R_V2__) || defined(__FMU_R_V2_BETA__) || \
           defined(__FMU_R_MINI_V1__)
       case INS_GNSS_EXT_GNSS2: {
@@ -130,7 +128,6 @@ void BfsInsRun(SensorData &ref, InsData * const ptr) {
         break;
       }
       #endif
-      */
     }
     /* Init EKF */
     if ((imu_->new_data) && (mag_->new_data) && (gnss_->new_data) &&
@@ -163,16 +160,8 @@ void BfsInsRun(SensorData &ref, InsData * const ptr) {
       hy_.Init(cfg_.mag_cutoff_hz, MAG_RATE_HZ, mag_->mag_ut[1]);
       hz_.Init(cfg_.mag_cutoff_hz, MAG_RATE_HZ, mag_->mag_ut[2]);
       ins_initialized_ = true;
-      ptr->home_lat_rad = llh_[0];
-      ptr->home_lon_rad = llh_[1];
-      ptr->home_alt_wgs84_m = gnss_->alt_wgs84_m;
-      home_llh_[0] = llh_[0];
-      home_llh_[1] = llh_[1];
-      home_llh_[2] = llh_[2];
     }
-  } 
-  // nav initialized
-  else {
+  } else {
     if (imu_->new_data) {
       accel_mps2_[0] = imu_->accel_mps2[0];
       accel_mps2_[1] = imu_->accel_mps2[1];
@@ -181,10 +170,6 @@ void BfsInsRun(SensorData &ref, InsData * const ptr) {
       gyro_radps_[1] = imu_->gyro_radps[1];
       gyro_radps_[2] = imu_->gyro_radps[2];
       ekf_.TimeUpdate(accel_mps2_, gyro_radps_, FRAME_PERIOD_S);
-      for (int8_t i = 0; i < 3; i++){
-        ptr->input_accel[i] = ekf_.input_accel(i);
-        ptr->input_gyro[i] = ekf_.input_gyro(i);
-      }
     }
     if (gnss_->new_data) {
       ned_vel_[0] = gnss_->ned_vel_mps[0];
@@ -194,12 +179,6 @@ void BfsInsRun(SensorData &ref, InsData * const ptr) {
       llh_[1] = gnss_->lon_rad;
       llh_[2] = gnss_->alt_wgs84_m;
       ekf_.MeasurementUpdate(ned_vel_, llh_);
-      ptr->input_lat = ekf_.input_lat();
-      ptr->input_lon = ekf_.input_lon();
-      ptr->input_alt = ekf_.input_alt();
-      for (int8_t i = 0; i < 3; i++){
-        ptr->input_ned_vel[i] = ekf_.input_ned_vel(i);
-      }
     }
     ptr->pitch_rad = ekf_.pitch_rad();
     ptr->roll_rad = ekf_.roll_rad();
@@ -216,18 +195,6 @@ void BfsInsRun(SensorData &ref, InsData * const ptr) {
     ptr->ned_vel_mps[2] = ekf_.ned_vel_mps()[2];
     ptr->lat_rad = ekf_.lat_rad();
     ptr->lon_rad = ekf_.lon_rad();
-    nav_ned_pos_m_ = bfs::lla2ned(llh_, home_llh_, bfs::AngPosUnit::RAD);
-    ptr->ned_pos_m[0] = nav_ned_pos_m_[0];
-    ptr->ned_pos_m[1] = nav_ned_pos_m_[1];
-    ptr->ned_pos_m[2] = nav_ned_pos_m_[2];
-    accel_bias_mps2_ = ekf_.accel_bias_mps2();
-    gyro_bias_radps_ = ekf_.gyro_bias_radps();
-    ptr->accel_bias_mps2[0] = accel_bias_mps2_[0];
-    ptr->accel_bias_mps2[1] = accel_bias_mps2_[1];
-    ptr->accel_bias_mps2[2] = accel_bias_mps2_[2];
-    ptr->gyro_bias_radps[0] = gyro_bias_radps_[0];
-    ptr->gyro_bias_radps[1] = gyro_bias_radps_[1];
-    ptr->gyro_bias_radps[2] = gyro_bias_radps_[2];
     if (mag_->new_data) {
       ptr->mag_ut[0] = hx_.Filter(mag_->mag_ut[0]);
       ptr->mag_ut[1] = hy_.Filter(mag_->mag_ut[1]);
