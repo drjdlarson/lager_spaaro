@@ -136,14 +136,18 @@ FetchContent_Declare(
 FetchContent_MakeAvailable(vector_nav)
 FetchContent_Declare(
   pwm
-  GIT_REPOSITORY https://github.com/bolderflight/pwm.git
-  GIT_TAG v6.0.1
+  #GIT_REPOSITORY https://github.com/bolderflight/pwm.git
+  #GIT_TAG v6.0.1
+  GIT_REPOSITORY git@github.com:TL-4319/ua_pwm.git
+  GIT_TAG v1.0.0
 )
 FetchContent_MakeAvailable(pwm)
 FetchContent_Declare(
   mavlink
-  GIT_REPOSITORY https://github.com/bolderflight/mavlink.git
-  GIT_TAG v4.8.6
+  #GIT_REPOSITORY https://github.com/bolderflight/mavlink.git
+  #GIT_TAG v4.8.6
+  GIT_REPOSITORY git@github.com:TL-4319/mavlink.git
+  GIT_TAG v1.0.1
 )
 FetchContent_MakeAvailable(mavlink)
 FetchContent_Declare(
@@ -172,8 +176,10 @@ FetchContent_Declare(
 FetchContent_MakeAvailable(framing)
 FetchContent_Declare(
   navigation
-  GIT_REPOSITORY https://github.com/bolderflight/navigation.git
-  GIT_TAG v4.0.1
+  #GIT_REPOSITORY https://github.com/bolderflight/navigation.git
+  #GIT_TAG v4.0.1
+  GIT_REPOSITORY git@github.com:TL-4319/navigation.git
+  GIT_TAG v1.0.1
 )
 FetchContent_MakeAvailable(navigation)
 FetchContent_Declare(

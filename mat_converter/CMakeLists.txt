@@ -19,6 +19,11 @@ elseif(FMU STREQUAL "V2-BETA")
   add_definitions(
     -D__FMU_R_V2_BETA__
   )
+elseif(FMU STREQUAL "MINI-V1")
+  # FMU-R-V2-BETA
+  add_definitions(
+    -D__FMU_R_MINI_V1__
+  )
 else()
   # FMU-R-V1
   add_definitions(

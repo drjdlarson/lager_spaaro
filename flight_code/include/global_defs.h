@@ -60,7 +60,7 @@ enum DlpfBandwidth : int8_t {
 };
 
 struct FmuConfig {
-  DlpfBandwidth dlpf_hz = DLPF_BANDWIDTH_20HZ;
+  DlpfBandwidth dlpf_hz = DLPF_BANDWIDTH_41HZ;
   float accel_bias_mps[3] = {0, 0, 0};
   float mag_bias_ut[3] = {0, 0, 0};
   float accel_scale[3][3] = {{1, 0, 0}, {0, 1, 0}, {0, 0, 1}};
