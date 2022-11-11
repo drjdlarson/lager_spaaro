@@ -48,12 +48,12 @@ void VmsInit() {
 }
 #if defined(__FMU_R_V1__) || defined(__FMU_R_V2__) || defined(__FMU_R_V2_BETA__)
 void VmsRun(const SysData &sys, const SensorData &sensor,
-            const InsData &bfs_ins, const InsData &vector_nav_ins,
+            const InsData &bfs_ins, const InsData &vector_nav_ins, const AuxInsData &aux_ins,
             const AdcData &adc, const TelemData &telem,
             VmsData *vms) {
 #else
 void VmsRun(const SysData &sys, const SensorData &sensor,
-            const InsData &bfs_ins,
+            const InsData &bfs_ins, const AuxInsData &aux_ins,
             const AdcData &adc, const TelemData &telem,
             VmsData *vms) {
 #endif
@@ -61,9 +61,9 @@ void VmsRun(const SysData &sys, const SensorData &sensor,
 #ifdef __AUTOCODE__
   #if defined(__FMU_R_V1__) || defined(__FMU_R_V2__) || \
       defined(__FMU_R_V2_BETA__)
-  autocode.Run(sys, sensor, bfs_ins, vector_nav_ins, adc, telem, vms);
+  autocode.Run(sys, sensor, bfs_ins, vector_nav_ins, aux_ins, adc, telem, vms);
   #else
-  autocode.Run(sys, sensor, bfs_ins, adc, telem, vms);
+  autocode.Run(sys, sensor, bfs_ins, aux_ins, adc, telem, vms);
   #endif
 #endif
 }

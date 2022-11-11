@@ -78,10 +78,10 @@ void run() {
   /* VMS */
   #if defined(__FMU_R_V1__) || defined(__FMU_R_V2__) || \
       defined(__FMU_R_V2_BETA__)
-  VmsRun(data.sys, data.sensor, data.bfs_ins, data.vector_nav_ins, data.adc,
+  VmsRun(data.sys, data.sensor, data.bfs_ins, data.vector_nav_ins, data.aux_ins, data.adc,
          data.telem, &data.vms);
   #else
-  VmsRun(data.sys, data.sensor, data.bfs_ins, data.adc,
+  VmsRun(data.sys, data.sensor, data.bfs_ins, data.aux_ins ,data.adc,
          data.telem, &data.vms);
   #endif
   /* Command effectors */
