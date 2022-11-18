@@ -33,7 +33,7 @@ bool DEBUG = false;
 AircraftConfig config = {
   .sensor = {
     .fmu = {
-      .dlpf_hz = DLPF_BANDWIDTH_20HZ,
+      .dlpf_hz = DLPF_BANDWIDTH_41HZ,
       .accel_bias_mps = {0, 0, 0},
       .mag_bias_ut = {0, 0, 0},
       .accel_scale = {{1, 0, 0}, {0, 1, 0}, {0, 0, 1}},
@@ -42,9 +42,14 @@ AircraftConfig config = {
     },
     .ext_gnss1 = {
       .baud = 115200
+    },
+    .power_module = {
+      .volts_per_volt = 2.723f,
+      .amps_per_volt = 50.0f
     }
   },
   .telem = {
-    .baud = 57600
+    .baud = 57600,
+    .aircraft_type = bfs::MULTIROTOR
   }
 };
