@@ -202,8 +202,8 @@ struct InsConfig {
   InsImuSource imu_source = INS_IMU_FMU;
   InsMagSource mag_source = INS_MAG_FMU;
   InsGnssSource gnss_source = INS_GNSS_EXT_GNSS1;
-  float accel_cutoff_hz = 20;
-  float gyro_cutoff_hz = 20;
+  float accel_cutoff_hz = 30;
+  float gyro_cutoff_hz = 30;
   float mag_cutoff_hz = 10;
 };
 

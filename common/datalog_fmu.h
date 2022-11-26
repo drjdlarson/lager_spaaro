@@ -358,6 +358,7 @@ struct DatalogMsg {
   uint64_t vms_aux21 : 32;
   uint64_t vms_aux22 : 32;
   uint64_t vms_aux23 : 32;
+  uint64_t vms_throttle_prcnt : 10;
 };
 
 #endif  // COMMON_DATALOG_FMU_V1_H_

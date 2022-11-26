@@ -486,6 +486,7 @@ void DatalogAdd(const AircraftData &ref) {
   datalog_msg_.vms_pwm_cmd7 = ref.vms.pwm[7] - 1000;
   datalog_msg_.vms_flight_time_remaining_s = Scale(ref.vms.flight_time_remaining_s, 0.0f, 32400.0f, 2.02268518518519f, 0.0f);
   datalog_msg_.vms_power_remaining_prcnt = Scale(ref.vms.power_remaining_prcnt, 0.0f, 100.0f, 10.23f, 0.0f);
+  datalog_msg_.vms_throttle_prcnt = Scale(ref.vms.throttle_cmd_prcnt, 0.0f, 100.0f, 10.23f, 0.0f);
   memcpy(&temp_, &ref.vms.aux[0], 4);
   datalog_msg_.vms_aux0 = temp_;
   memcpy(&temp_, &ref.vms.aux[1], 4);

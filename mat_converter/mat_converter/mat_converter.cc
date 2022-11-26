@@ -338,6 +338,7 @@ std::vector<int16_t> vms_pwm_cmd6;
 std::vector<int16_t> vms_pwm_cmd7;
 std::vector<float> vms_flight_time_remaining_s;
 std::vector<float> vms_power_remaining_prcnt;
+std::vector<float> vms_throttle_cmd_prcnt;
 std::vector<float> vms_aux0;
 std::vector<float> vms_aux1;
 std::vector<float> vms_aux2;
@@ -798,6 +799,7 @@ int main(int argc, char** argv) {
         vms_pwm_cmd7.push_back(datalog_msg_.vms_pwm_cmd7 + 1000);
         vms_flight_time_remaining_s.push_back(Scale(datalog_msg_.vms_flight_time_remaining_s, 0.0f, 32400.0f, 2.02268518518519f, 0.0f));
         vms_power_remaining_prcnt.push_back(Scale(datalog_msg_.vms_power_remaining_prcnt, 0.0f, 100.0f, 10.23f, 0.0f));
+        vms_throttle_cmd_prcnt.push_back(Scale(datalog_msg_.vms_throttle_prcnt, 0.0f, 100.0f, 10.23f, 0.0f));
         temp_ = datalog_msg_.vms_aux0;
         memcpy(&tempf_, &temp_, 4);
         vms_aux0.push_back(tempf_);

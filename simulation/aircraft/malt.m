@@ -181,14 +181,10 @@ Aircraft.Control.motor_spin_min = 0.15;
 % Prevent motor from spining at max to reduce current draw on the top end
 Aircraft.Control.motor_spin_max = 0.9;
 
-% Motor ramp time [s]
-% Time so slowly ramp motor from 0 to motor_spin_min. Prevent initial
-% voltage spike
-Aircraft.Control.motor_ramp_time_s = 3;
 
 %% Yaw rate controller parameters
 % Max yaw rate [radps]
-Aircraft.Control.yaw_rate_max = 1.74533; %~100deg/s
+Aircraft.Control.yaw_rate_max = 3.14159; %~180deg/s
 % It's good to limit the maximum yaw rate because excessive yaw rate may
 % cause some motors to slow down too much that hover cannot be maintained
 
@@ -199,38 +195,44 @@ Aircraft.Control.D_yaw_rate = 0.02;
 
 %% Pitch rate controller parameters
 % Max pitch rate [radps]
-Aircraft.Control.pitch_rate_max = 1.74533; %~100deg/s
+Aircraft.Control.pitch_rate_max = 3.83972; %~220deg/s
 
 % Pitch rate controller PID gains
-Aircraft.Control.P_pitch_rate = 0.5;
-Aircraft.Control.I_pitch_rate = 0.05;
-Aircraft.Control.D_pitch_rate = 0.02;
+Aircraft.Control.P_pitch_rate = 0.25;
+Aircraft.Control.I_pitch_rate = 0.1;
+Aircraft.Control.D_pitch_rate = 0.012;
+
+% Pitch rate D Controller LPFT cutoff frequency [Hz]
+Aircraft.Control.D_pitch_FLTR_CTOFF = 20;
 
 %% Roll rate controller parameters
 % Max roll rate [radps]
-Aircraft.Control.roll_rate_max = 1.74533; %~100deg/s
+Aircraft.Control.roll_rate_max = 3.83972; %~100deg/s
 
 % Roll rate controller PID gains
-Aircraft.Control.P_roll_rate = 0.5;
-Aircraft.Control.I_roll_rate = 0.05;
-Aircraft.Control.D_roll_rate = 0.02;
+Aircraft.Control.P_roll_rate = 0.25;
+Aircraft.Control.I_roll_rate = 0.1;
+Aircraft.Control.D_roll_rate = 0.012;
+
+% Roll rate D Controller LPFT cutoff frequency [Hz]
+Aircraft.Control.D_roll_FLTR_CTOFF = 20;
 
 %% Pitch angle controller parameters
 % Max pitch angle [rad]
-Aircraft.Control.pitch_angle_lim = 0.261799;  %~15deg
+Aircraft.Control.pitch_angle_lim = 0.349066;  %~20deg
 
 % Pitch cmd controller gains
-Aircraft.Control.P_pitch_angle = 0.04;
+Aircraft.Control.P_pitch_angle = 6.5;
 
 %% Roll controller parameters
 % Max roll angle [rad]
-Aircraft.Control.roll_angle_lim = 0.261799;  %~15deg
+Aircraft.Control.roll_angle_lim = 0.349066;  %~20deg
 
 % Roll cmd controller gains
-Aircraft.Control.P_roll_angle = 0.04;
+Aircraft.Control.P_roll_angle = 6.5;
 
 %% Vertical speed controller parameters
-Aircraft.Control.est_hover_thr = 0.6724;
+Aircraft.Control.est_hover_thr = 0.75;
 % Vertical speed limit [m/s]
 Aircraft.Control.v_z_up_max = 0.2;
 Aircraft.Control.v_z_down_max = 0.2; %minimum of -1 m/s
