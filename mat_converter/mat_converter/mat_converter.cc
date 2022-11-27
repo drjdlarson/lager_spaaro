@@ -1180,6 +1180,7 @@ int main(int argc, char** argv) {
   bfs::MatWrite("vms_pwm_cmd7", vms_pwm_cmd7, output);
   bfs::MatWrite("vms_flight_time_remaining_s", vms_flight_time_remaining_s, output);
   bfs::MatWrite("vms_power_remaining_prcnt", vms_power_remaining_prcnt, output);
+  bfs::MatWrite("vms_throttle_cmd_prcnt", vms_throttle_cmd_prcnt, output);
   bfs::MatWrite("vms_aux0", vms_aux0, output);
   bfs::MatWrite("vms_aux1", vms_aux1, output);
   bfs::MatWrite("vms_aux2", vms_aux2, output);
