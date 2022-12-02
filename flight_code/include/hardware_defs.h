@@ -49,8 +49,8 @@ inline constexpr HardwareSerial &TELEM_UART = Serial7;
 /* Frame period */
 inline constexpr float MAG_RATE_HZ = 100.0f;
 inline constexpr float FMU_MAG_PERIOD_MS = 10.0f;
-inline constexpr float FRAME_RATE_HZ = 100.0f;
-inline constexpr float FRAME_PERIOD_MS = 10.0f;
+inline constexpr float FRAME_RATE_HZ = 200.0f;
+inline constexpr float FRAME_PERIOD_MS = 5.0f;
 /* 90% of the frame period */
 inline constexpr float EFFECTOR_DELAY_US = FRAME_PERIOD_MS * 0.9f * 1e3;
 /* SPI BUS */

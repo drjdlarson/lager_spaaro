@@ -214,8 +214,10 @@ FetchContent_Declare(
 FetchContent_MakeAvailable(units)
 FetchContent_Declare(
   filter
-  GIT_REPOSITORY https://github.com/bolderflight/filter.git
-  GIT_TAG v3.1.0
+  #GIT_REPOSITORY https://github.com/bolderflight/filter.git
+  #GIT_TAG v3.1.0
+  GIT_REPOSITORY git@github.com:TL-4319/filter.git
+  GIT_TAG v1.0.3
 )
 FetchContent_MakeAvailable(filter)
 FetchContent_Declare(

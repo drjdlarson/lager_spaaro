@@ -52,6 +52,7 @@ inline constexpr std::size_t NUM_RALLY_POINTS = 10;
 enum DlpfBandwidth : int8_t {
   #if defined(__FMU_R_MINI_V1__) || defined(__FMU_R_V2__) || \
       defined(__FMU_R_V2_BETA__)
+  DLPF_BANDWIDTH_92HZ,
   DLPF_BANDWIDTH_41HZ,
   #endif
   DLPF_BANDWIDTH_20HZ,
@@ -202,8 +203,8 @@ struct InsConfig {
   InsImuSource imu_source = INS_IMU_FMU;
   InsMagSource mag_source = INS_MAG_FMU;
   InsGnssSource gnss_source = INS_GNSS_EXT_GNSS1;
-  float accel_cutoff_hz = 30;
-  float gyro_cutoff_hz = 30;
+  float accel_cutoff_hz = 40;
+  float gyro_cutoff_hz = 40;
   float mag_cutoff_hz = 10;
 };
 

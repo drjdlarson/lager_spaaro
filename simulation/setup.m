@@ -54,7 +54,7 @@ elseif strcmpi(fmu_version, "V2-BETA")
 elseif strcmpi(fmu_version, "MINI")
     Fmu.version = 4;
     Fmu.NUM_AIN = 8;
-    frameRate_hz = 100;
+    frameRate_hz = 200;
     Telem.NUM_FLIGHT_PLAN_POINTS = 500;
     Telem.NUM_FENCE_POINTS = 100;
     Telem.NUM_RALLY_POINTS = 10;
