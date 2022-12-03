@@ -1,0 +1,46 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "/home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/_deps/circle_buf-subbuild/CMakeFiles/circle_buf-populate"
+		},
+		{
+			"file" : "/home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/_deps/circle_buf-subbuild/CMakeFiles/circle_buf-populate.rule"
+		},
+		{
+			"file" : "/home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/_deps/circle_buf-subbuild/CMakeFiles/circle_buf-populate-complete.rule"
+		},
+		{
+			"file" : "/home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/_deps/circle_buf-subbuild/circle_buf-populate-prefix/src/circle_buf-populate-stamp/circle_buf-populate-build.rule"
+		},
+		{
+			"file" : "/home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/_deps/circle_buf-subbuild/circle_buf-populate-prefix/src/circle_buf-populate-stamp/circle_buf-populate-configure.rule"
+		},
+		{
+			"file" : "/home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/_deps/circle_buf-subbuild/circle_buf-populate-prefix/src/circle_buf-populate-stamp/circle_buf-populate-download.rule"
+		},
+		{
+			"file" : "/home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/_deps/circle_buf-subbuild/circle_buf-populate-prefix/src/circle_buf-populate-stamp/circle_buf-populate-install.rule"
+		},
+		{
+			"file" : "/home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/_deps/circle_buf-subbuild/circle_buf-populate-prefix/src/circle_buf-populate-stamp/circle_buf-populate-mkdir.rule"
+		},
+		{
+			"file" : "/home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/_deps/circle_buf-subbuild/circle_buf-populate-prefix/src/circle_buf-populate-stamp/circle_buf-populate-patch.rule"
+		},
+		{
+			"file" : "/home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/_deps/circle_buf-subbuild/circle_buf-populate-prefix/src/circle_buf-populate-stamp/circle_buf-populate-test.rule"
+		},
+		{
+			"file" : "/home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/_deps/circle_buf-subbuild/circle_buf-populate-prefix/src/circle_buf-populate-stamp/circle_buf-populate-update.rule"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"circle_buf-populate"
+		],
+		"name" : "circle_buf-populate"
+	}
+}

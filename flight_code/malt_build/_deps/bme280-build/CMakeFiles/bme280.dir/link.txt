@@ -1,0 +1,2 @@
+/usr/local/bin/arm-none-eabi-ar qc libbme280.a CMakeFiles/bme280.dir/src/bme280.cpp.obj CMakeFiles/bme280.dir/src/bst/bme280.c.obj
+/usr/local/bin/arm-none-eabi-ranlib libbme280.a

@@ -1,0 +1,2 @@
+/usr/local/bin/arm-none-eabi-ar qc libams5915.a CMakeFiles/ams5915.dir/src/ams5915.cpp.obj
+/usr/local/bin/arm-none-eabi-ranlib libams5915.a

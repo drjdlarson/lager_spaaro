@@ -1,0 +1,46 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "/home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/_deps/sbus-subbuild/CMakeFiles/sbus-populate"
+		},
+		{
+			"file" : "/home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/_deps/sbus-subbuild/CMakeFiles/sbus-populate.rule"
+		},
+		{
+			"file" : "/home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/_deps/sbus-subbuild/CMakeFiles/sbus-populate-complete.rule"
+		},
+		{
+			"file" : "/home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/_deps/sbus-subbuild/sbus-populate-prefix/src/sbus-populate-stamp/sbus-populate-build.rule"
+		},
+		{
+			"file" : "/home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/_deps/sbus-subbuild/sbus-populate-prefix/src/sbus-populate-stamp/sbus-populate-configure.rule"
+		},
+		{
+			"file" : "/home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/_deps/sbus-subbuild/sbus-populate-prefix/src/sbus-populate-stamp/sbus-populate-download.rule"
+		},
+		{
+			"file" : "/home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/_deps/sbus-subbuild/sbus-populate-prefix/src/sbus-populate-stamp/sbus-populate-install.rule"
+		},
+		{
+			"file" : "/home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/_deps/sbus-subbuild/sbus-populate-prefix/src/sbus-populate-stamp/sbus-populate-mkdir.rule"
+		},
+		{
+			"file" : "/home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/_deps/sbus-subbuild/sbus-populate-prefix/src/sbus-populate-stamp/sbus-populate-patch.rule"
+		},
+		{
+			"file" : "/home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/_deps/sbus-subbuild/sbus-populate-prefix/src/sbus-populate-stamp/sbus-populate-test.rule"
+		},
+		{
+			"file" : "/home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/_deps/sbus-subbuild/sbus-populate-prefix/src/sbus-populate-stamp/sbus-populate-update.rule"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"sbus-populate"
+		],
+		"name" : "sbus-populate"
+	}
+}

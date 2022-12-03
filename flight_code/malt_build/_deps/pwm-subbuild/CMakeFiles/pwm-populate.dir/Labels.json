@@ -1,0 +1,46 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "/home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/_deps/pwm-subbuild/CMakeFiles/pwm-populate"
+		},
+		{
+			"file" : "/home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/_deps/pwm-subbuild/CMakeFiles/pwm-populate.rule"
+		},
+		{
+			"file" : "/home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/_deps/pwm-subbuild/CMakeFiles/pwm-populate-complete.rule"
+		},
+		{
+			"file" : "/home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/_deps/pwm-subbuild/pwm-populate-prefix/src/pwm-populate-stamp/pwm-populate-build.rule"
+		},
+		{
+			"file" : "/home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/_deps/pwm-subbuild/pwm-populate-prefix/src/pwm-populate-stamp/pwm-populate-configure.rule"
+		},
+		{
+			"file" : "/home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/_deps/pwm-subbuild/pwm-populate-prefix/src/pwm-populate-stamp/pwm-populate-download.rule"
+		},
+		{
+			"file" : "/home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/_deps/pwm-subbuild/pwm-populate-prefix/src/pwm-populate-stamp/pwm-populate-install.rule"
+		},
+		{
+			"file" : "/home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/_deps/pwm-subbuild/pwm-populate-prefix/src/pwm-populate-stamp/pwm-populate-mkdir.rule"
+		},
+		{
+			"file" : "/home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/_deps/pwm-subbuild/pwm-populate-prefix/src/pwm-populate-stamp/pwm-populate-patch.rule"
+		},
+		{
+			"file" : "/home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/_deps/pwm-subbuild/pwm-populate-prefix/src/pwm-populate-stamp/pwm-populate-test.rule"
+		},
+		{
+			"file" : "/home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/_deps/pwm-subbuild/pwm-populate-prefix/src/pwm-populate-stamp/pwm-populate-update.rule"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"pwm-populate"
+		],
+		"name" : "pwm-populate"
+	}
+}

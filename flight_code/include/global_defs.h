@@ -206,6 +206,7 @@ struct InsConfig {
   float accel_cutoff_hz = 40;
   float gyro_cutoff_hz = 40;
   float mag_cutoff_hz = 10;
+  float hardcoded_heading = -1.0f;
 };
 
 enum AuxInsSource {

@@ -1,0 +1,3 @@
+repository='git@github.com:TL-4319/mavlink.git'
+module=''
+tag='origin'

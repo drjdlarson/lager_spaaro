@@ -1,0 +1,2 @@
+/usr/local/bin/arm-none-eabi-ar qc libinvensense_imu.a CMakeFiles/invensense_imu.dir/src/invensense_imu.cpp.obj CMakeFiles/invensense_imu.dir/src/mpu9250.cpp.obj CMakeFiles/invensense_imu.dir/src/mpu6500.cpp.obj
+/usr/local/bin/arm-none-eabi-ranlib libinvensense_imu.a

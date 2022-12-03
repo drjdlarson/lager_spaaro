@@ -1,0 +1,46 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "/home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/_deps/core-subbuild/CMakeFiles/core-populate"
+		},
+		{
+			"file" : "/home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/_deps/core-subbuild/CMakeFiles/core-populate.rule"
+		},
+		{
+			"file" : "/home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/_deps/core-subbuild/CMakeFiles/core-populate-complete.rule"
+		},
+		{
+			"file" : "/home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/_deps/core-subbuild/core-populate-prefix/src/core-populate-stamp/core-populate-build.rule"
+		},
+		{
+			"file" : "/home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/_deps/core-subbuild/core-populate-prefix/src/core-populate-stamp/core-populate-configure.rule"
+		},
+		{
+			"file" : "/home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/_deps/core-subbuild/core-populate-prefix/src/core-populate-stamp/core-populate-download.rule"
+		},
+		{
+			"file" : "/home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/_deps/core-subbuild/core-populate-prefix/src/core-populate-stamp/core-populate-install.rule"
+		},
+		{
+			"file" : "/home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/_deps/core-subbuild/core-populate-prefix/src/core-populate-stamp/core-populate-mkdir.rule"
+		},
+		{
+			"file" : "/home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/_deps/core-subbuild/core-populate-prefix/src/core-populate-stamp/core-populate-patch.rule"
+		},
+		{
+			"file" : "/home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/_deps/core-subbuild/core-populate-prefix/src/core-populate-stamp/core-populate-test.rule"
+		},
+		{
+			"file" : "/home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/_deps/core-subbuild/core-populate-prefix/src/core-populate-stamp/core-populate-update.rule"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"core-populate"
+		],
+		"name" : "core-populate"
+	}
+}

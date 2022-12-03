@@ -1,0 +1,3 @@
+repository='https://github.com/bolderflight/ublox.git'
+module=''
+tag='origin'

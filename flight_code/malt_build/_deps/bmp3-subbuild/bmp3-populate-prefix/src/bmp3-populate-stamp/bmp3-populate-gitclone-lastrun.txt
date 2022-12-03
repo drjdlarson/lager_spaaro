@@ -1,0 +1,3 @@
+repository='https://github.com/bolderflight/bmp3.git'
+module=''
+tag='origin'

@@ -43,10 +43,21 @@ AircraftConfig config = {
     .ext_gnss1 = {
       .baud = 115200
     },
+    .ext_gnss2 = {
+      .baud = -1
+    },
     .power_module = {
       .volts_per_volt = 2.723f,
       .amps_per_volt = 50.0f
     }
+  },
+  .bfs_ins = {
+    .imu_source = INS_IMU_FMU,
+    .mag_source = INS_MAG_FMU,
+    .gnss_source = INS_GNSS_EXT_GNSS1,
+    .accel_cutoff_hz = 40.0f,
+    .gyro_cutoff_hz = 40.0f,
+    .hardcoded_heading = 4.71239f
   },
   .telem = {
     .baud = 57600,

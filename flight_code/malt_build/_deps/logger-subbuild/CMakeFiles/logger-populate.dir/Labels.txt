@@ -1,0 +1,14 @@
+# Target labels
+ logger-populate
+# Source files and their labels
+/home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/_deps/logger-subbuild/CMakeFiles/logger-populate
+/home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/_deps/logger-subbuild/CMakeFiles/logger-populate.rule
+/home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/_deps/logger-subbuild/CMakeFiles/logger-populate-complete.rule
+/home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/_deps/logger-subbuild/logger-populate-prefix/src/logger-populate-stamp/logger-populate-build.rule
+/home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/_deps/logger-subbuild/logger-populate-prefix/src/logger-populate-stamp/logger-populate-configure.rule
+/home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/_deps/logger-subbuild/logger-populate-prefix/src/logger-populate-stamp/logger-populate-download.rule
+/home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/_deps/logger-subbuild/logger-populate-prefix/src/logger-populate-stamp/logger-populate-install.rule
+/home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/_deps/logger-subbuild/logger-populate-prefix/src/logger-populate-stamp/logger-populate-mkdir.rule
+/home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/_deps/logger-subbuild/logger-populate-prefix/src/logger-populate-stamp/logger-populate-patch.rule
+/home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/_deps/logger-subbuild/logger-populate-prefix/src/logger-populate-stamp/logger-populate-test.rule
+/home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/_deps/logger-subbuild/logger-populate-prefix/src/logger-populate-stamp/logger-populate-update.rule
