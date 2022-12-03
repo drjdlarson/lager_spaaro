@@ -45,6 +45,27 @@ else()
     -D__FMU_R_V1__
   )
 endif()
+
+# determine config.cc based on vehicle type
+if (DEFINED VEHICLE)
+	string(TOUPPER ${VEHICLE} VEHICLE)
+endif()
+if (VEHICLE STREQUAL "ALE")
+	message("Using ALE config.cc")
+	set(CONFIG_CC config_ale.cc)
+else()
+if (VEHICLE STREQUAL "MALT")
+	message("Using MALT config.cc")
+	set(CONFIG_CC config_malt.cc)
+else()
+if (VEHICLE STREQUAL "SUPER")
+message("Using SUPER config.cc")
+set(CONFIG_CC config_super.cc)
+else()
+	message("Using default config.cc")
+	set(CONFIG_CC config.cc)
+endif()
+
 # Grab the processor and set up definitions and compile options
 include(${mcu_support_SOURCE_DIR}/cmake/config_mcu.cmake)
 configMcu(${MCU} ${mcu_support_SOURCE_DIR})
@@ -136,10 +157,8 @@ FetchContent_Declare(
 FetchContent_MakeAvailable(vector_nav)
 FetchContent_Declare(
   pwm
-  #GIT_REPOSITORY https://github.com/bolderflight/pwm.git
-  #GIT_TAG v6.0.1
-  GIT_REPOSITORY git@github.com:TL-4319/ua_pwm.git
-  GIT_TAG v1.0.0
+  GIT_REPOSITORY https://github.com/bolderflight/pwm.git
+  GIT_TAG v6.0.2
 )
 FetchContent_MakeAvailable(pwm)
 FetchContent_Declare(
@@ -251,7 +270,7 @@ add_executable(flight
   include/drivers/spaaro-vector-nav.h
   flight/flight.cc
   flight/msg.cc
-  flight/config.cc
+  flight/${CONFIG_CC}
   flight/sys.cc
   flight/sensors.cc
   flight/adc.cc
