@@ -1,0 +1,46 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "/home/tuan/Projects/super/ua_spaaro/flight_code/super_build/_deps/bme280-subbuild/CMakeFiles/bme280-populate"
+		},
+		{
+			"file" : "/home/tuan/Projects/super/ua_spaaro/flight_code/super_build/_deps/bme280-subbuild/CMakeFiles/bme280-populate.rule"
+		},
+		{
+			"file" : "/home/tuan/Projects/super/ua_spaaro/flight_code/super_build/_deps/bme280-subbuild/CMakeFiles/bme280-populate-complete.rule"
+		},
+		{
+			"file" : "/home/tuan/Projects/super/ua_spaaro/flight_code/super_build/_deps/bme280-subbuild/bme280-populate-prefix/src/bme280-populate-stamp/bme280-populate-build.rule"
+		},
+		{
+			"file" : "/home/tuan/Projects/super/ua_spaaro/flight_code/super_build/_deps/bme280-subbuild/bme280-populate-prefix/src/bme280-populate-stamp/bme280-populate-configure.rule"
+		},
+		{
+			"file" : "/home/tuan/Projects/super/ua_spaaro/flight_code/super_build/_deps/bme280-subbuild/bme280-populate-prefix/src/bme280-populate-stamp/bme280-populate-download.rule"
+		},
+		{
+			"file" : "/home/tuan/Projects/super/ua_spaaro/flight_code/super_build/_deps/bme280-subbuild/bme280-populate-prefix/src/bme280-populate-stamp/bme280-populate-install.rule"
+		},
+		{
+			"file" : "/home/tuan/Projects/super/ua_spaaro/flight_code/super_build/_deps/bme280-subbuild/bme280-populate-prefix/src/bme280-populate-stamp/bme280-populate-mkdir.rule"
+		},
+		{
+			"file" : "/home/tuan/Projects/super/ua_spaaro/flight_code/super_build/_deps/bme280-subbuild/bme280-populate-prefix/src/bme280-populate-stamp/bme280-populate-patch.rule"
+		},
+		{
+			"file" : "/home/tuan/Projects/super/ua_spaaro/flight_code/super_build/_deps/bme280-subbuild/bme280-populate-prefix/src/bme280-populate-stamp/bme280-populate-test.rule"
+		},
+		{
+			"file" : "/home/tuan/Projects/super/ua_spaaro/flight_code/super_build/_deps/bme280-subbuild/bme280-populate-prefix/src/bme280-populate-stamp/bme280-populate-update.rule"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"bme280-populate"
+		],
+		"name" : "bme280-populate"
+	}
+}

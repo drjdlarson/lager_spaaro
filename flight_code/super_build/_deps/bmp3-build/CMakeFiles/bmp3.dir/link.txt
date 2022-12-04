@@ -1,0 +1,2 @@
+/usr/local/bin/arm-none-eabi-ar qc libbmp3.a CMakeFiles/bmp3.dir/src/bmp3.cpp.obj CMakeFiles/bmp3.dir/src/bst/bmp3.c.obj
+/usr/local/bin/arm-none-eabi-ranlib libbmp3.a

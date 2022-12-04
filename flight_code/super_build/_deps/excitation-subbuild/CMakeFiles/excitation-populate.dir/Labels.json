@@ -1,0 +1,46 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "/home/tuan/Projects/super/ua_spaaro/flight_code/super_build/_deps/excitation-subbuild/CMakeFiles/excitation-populate"
+		},
+		{
+			"file" : "/home/tuan/Projects/super/ua_spaaro/flight_code/super_build/_deps/excitation-subbuild/CMakeFiles/excitation-populate.rule"
+		},
+		{
+			"file" : "/home/tuan/Projects/super/ua_spaaro/flight_code/super_build/_deps/excitation-subbuild/CMakeFiles/excitation-populate-complete.rule"
+		},
+		{
+			"file" : "/home/tuan/Projects/super/ua_spaaro/flight_code/super_build/_deps/excitation-subbuild/excitation-populate-prefix/src/excitation-populate-stamp/excitation-populate-build.rule"
+		},
+		{
+			"file" : "/home/tuan/Projects/super/ua_spaaro/flight_code/super_build/_deps/excitation-subbuild/excitation-populate-prefix/src/excitation-populate-stamp/excitation-populate-configure.rule"
+		},
+		{
+			"file" : "/home/tuan/Projects/super/ua_spaaro/flight_code/super_build/_deps/excitation-subbuild/excitation-populate-prefix/src/excitation-populate-stamp/excitation-populate-download.rule"
+		},
+		{
+			"file" : "/home/tuan/Projects/super/ua_spaaro/flight_code/super_build/_deps/excitation-subbuild/excitation-populate-prefix/src/excitation-populate-stamp/excitation-populate-install.rule"
+		},
+		{
+			"file" : "/home/tuan/Projects/super/ua_spaaro/flight_code/super_build/_deps/excitation-subbuild/excitation-populate-prefix/src/excitation-populate-stamp/excitation-populate-mkdir.rule"
+		},
+		{
+			"file" : "/home/tuan/Projects/super/ua_spaaro/flight_code/super_build/_deps/excitation-subbuild/excitation-populate-prefix/src/excitation-populate-stamp/excitation-populate-patch.rule"
+		},
+		{
+			"file" : "/home/tuan/Projects/super/ua_spaaro/flight_code/super_build/_deps/excitation-subbuild/excitation-populate-prefix/src/excitation-populate-stamp/excitation-populate-test.rule"
+		},
+		{
+			"file" : "/home/tuan/Projects/super/ua_spaaro/flight_code/super_build/_deps/excitation-subbuild/excitation-populate-prefix/src/excitation-populate-stamp/excitation-populate-update.rule"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"excitation-populate"
+		],
+		"name" : "excitation-populate"
+	}
+}

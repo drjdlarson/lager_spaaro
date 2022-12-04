@@ -1,0 +1,3 @@
+repository='https://github.com/bolderflight/bme280.git'
+module=''
+tag='origin'

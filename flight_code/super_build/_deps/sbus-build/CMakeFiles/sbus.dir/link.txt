@@ -1,0 +1,2 @@
+/usr/local/bin/arm-none-eabi-ar qc libsbus.a CMakeFiles/sbus.dir/src/sbus.cpp.obj
+/usr/local/bin/arm-none-eabi-ranlib libsbus.a

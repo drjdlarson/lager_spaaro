@@ -1,0 +1,46 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "/home/tuan/Projects/super/ua_spaaro/flight_code/super_build/_deps/invensense_imu-subbuild/CMakeFiles/invensense_imu-populate"
+		},
+		{
+			"file" : "/home/tuan/Projects/super/ua_spaaro/flight_code/super_build/_deps/invensense_imu-subbuild/CMakeFiles/invensense_imu-populate.rule"
+		},
+		{
+			"file" : "/home/tuan/Projects/super/ua_spaaro/flight_code/super_build/_deps/invensense_imu-subbuild/CMakeFiles/invensense_imu-populate-complete.rule"
+		},
+		{
+			"file" : "/home/tuan/Projects/super/ua_spaaro/flight_code/super_build/_deps/invensense_imu-subbuild/invensense_imu-populate-prefix/src/invensense_imu-populate-stamp/invensense_imu-populate-build.rule"
+		},
+		{
+			"file" : "/home/tuan/Projects/super/ua_spaaro/flight_code/super_build/_deps/invensense_imu-subbuild/invensense_imu-populate-prefix/src/invensense_imu-populate-stamp/invensense_imu-populate-configure.rule"
+		},
+		{
+			"file" : "/home/tuan/Projects/super/ua_spaaro/flight_code/super_build/_deps/invensense_imu-subbuild/invensense_imu-populate-prefix/src/invensense_imu-populate-stamp/invensense_imu-populate-download.rule"
+		},
+		{
+			"file" : "/home/tuan/Projects/super/ua_spaaro/flight_code/super_build/_deps/invensense_imu-subbuild/invensense_imu-populate-prefix/src/invensense_imu-populate-stamp/invensense_imu-populate-install.rule"
+		},
+		{
+			"file" : "/home/tuan/Projects/super/ua_spaaro/flight_code/super_build/_deps/invensense_imu-subbuild/invensense_imu-populate-prefix/src/invensense_imu-populate-stamp/invensense_imu-populate-mkdir.rule"
+		},
+		{
+			"file" : "/home/tuan/Projects/super/ua_spaaro/flight_code/super_build/_deps/invensense_imu-subbuild/invensense_imu-populate-prefix/src/invensense_imu-populate-stamp/invensense_imu-populate-patch.rule"
+		},
+		{
+			"file" : "/home/tuan/Projects/super/ua_spaaro/flight_code/super_build/_deps/invensense_imu-subbuild/invensense_imu-populate-prefix/src/invensense_imu-populate-stamp/invensense_imu-populate-test.rule"
+		},
+		{
+			"file" : "/home/tuan/Projects/super/ua_spaaro/flight_code/super_build/_deps/invensense_imu-subbuild/invensense_imu-populate-prefix/src/invensense_imu-populate-stamp/invensense_imu-populate-update.rule"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"invensense_imu-populate"
+		],
+		"name" : "invensense_imu-populate"
+	}
+}

@@ -1,0 +1,46 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "/home/tuan/Projects/super/ua_spaaro/flight_code/super_build/_deps/bmp3-subbuild/CMakeFiles/bmp3-populate"
+		},
+		{
+			"file" : "/home/tuan/Projects/super/ua_spaaro/flight_code/super_build/_deps/bmp3-subbuild/CMakeFiles/bmp3-populate.rule"
+		},
+		{
+			"file" : "/home/tuan/Projects/super/ua_spaaro/flight_code/super_build/_deps/bmp3-subbuild/CMakeFiles/bmp3-populate-complete.rule"
+		},
+		{
+			"file" : "/home/tuan/Projects/super/ua_spaaro/flight_code/super_build/_deps/bmp3-subbuild/bmp3-populate-prefix/src/bmp3-populate-stamp/bmp3-populate-build.rule"
+		},
+		{
+			"file" : "/home/tuan/Projects/super/ua_spaaro/flight_code/super_build/_deps/bmp3-subbuild/bmp3-populate-prefix/src/bmp3-populate-stamp/bmp3-populate-configure.rule"
+		},
+		{
+			"file" : "/home/tuan/Projects/super/ua_spaaro/flight_code/super_build/_deps/bmp3-subbuild/bmp3-populate-prefix/src/bmp3-populate-stamp/bmp3-populate-download.rule"
+		},
+		{
+			"file" : "/home/tuan/Projects/super/ua_spaaro/flight_code/super_build/_deps/bmp3-subbuild/bmp3-populate-prefix/src/bmp3-populate-stamp/bmp3-populate-install.rule"
+		},
+		{
+			"file" : "/home/tuan/Projects/super/ua_spaaro/flight_code/super_build/_deps/bmp3-subbuild/bmp3-populate-prefix/src/bmp3-populate-stamp/bmp3-populate-mkdir.rule"
+		},
+		{
+			"file" : "/home/tuan/Projects/super/ua_spaaro/flight_code/super_build/_deps/bmp3-subbuild/bmp3-populate-prefix/src/bmp3-populate-stamp/bmp3-populate-patch.rule"
+		},
+		{
+			"file" : "/home/tuan/Projects/super/ua_spaaro/flight_code/super_build/_deps/bmp3-subbuild/bmp3-populate-prefix/src/bmp3-populate-stamp/bmp3-populate-test.rule"
+		},
+		{
+			"file" : "/home/tuan/Projects/super/ua_spaaro/flight_code/super_build/_deps/bmp3-subbuild/bmp3-populate-prefix/src/bmp3-populate-stamp/bmp3-populate-update.rule"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"bmp3-populate"
+		],
+		"name" : "bmp3-populate"
+	}
+}

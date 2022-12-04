@@ -1,0 +1,46 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "/home/tuan/Projects/super/ua_spaaro/flight_code/super_build/_deps/sd-subbuild/CMakeFiles/sd-populate"
+		},
+		{
+			"file" : "/home/tuan/Projects/super/ua_spaaro/flight_code/super_build/_deps/sd-subbuild/CMakeFiles/sd-populate.rule"
+		},
+		{
+			"file" : "/home/tuan/Projects/super/ua_spaaro/flight_code/super_build/_deps/sd-subbuild/CMakeFiles/sd-populate-complete.rule"
+		},
+		{
+			"file" : "/home/tuan/Projects/super/ua_spaaro/flight_code/super_build/_deps/sd-subbuild/sd-populate-prefix/src/sd-populate-stamp/sd-populate-build.rule"
+		},
+		{
+			"file" : "/home/tuan/Projects/super/ua_spaaro/flight_code/super_build/_deps/sd-subbuild/sd-populate-prefix/src/sd-populate-stamp/sd-populate-configure.rule"
+		},
+		{
+			"file" : "/home/tuan/Projects/super/ua_spaaro/flight_code/super_build/_deps/sd-subbuild/sd-populate-prefix/src/sd-populate-stamp/sd-populate-download.rule"
+		},
+		{
+			"file" : "/home/tuan/Projects/super/ua_spaaro/flight_code/super_build/_deps/sd-subbuild/sd-populate-prefix/src/sd-populate-stamp/sd-populate-install.rule"
+		},
+		{
+			"file" : "/home/tuan/Projects/super/ua_spaaro/flight_code/super_build/_deps/sd-subbuild/sd-populate-prefix/src/sd-populate-stamp/sd-populate-mkdir.rule"
+		},
+		{
+			"file" : "/home/tuan/Projects/super/ua_spaaro/flight_code/super_build/_deps/sd-subbuild/sd-populate-prefix/src/sd-populate-stamp/sd-populate-patch.rule"
+		},
+		{
+			"file" : "/home/tuan/Projects/super/ua_spaaro/flight_code/super_build/_deps/sd-subbuild/sd-populate-prefix/src/sd-populate-stamp/sd-populate-test.rule"
+		},
+		{
+			"file" : "/home/tuan/Projects/super/ua_spaaro/flight_code/super_build/_deps/sd-subbuild/sd-populate-prefix/src/sd-populate-stamp/sd-populate-update.rule"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"sd-populate"
+		],
+		"name" : "sd-populate"
+	}
+}

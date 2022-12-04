@@ -1,0 +1,3 @@
+repository='https://github.com/bolderflight/lis3mdl.git'
+module=''
+tag='origin'
