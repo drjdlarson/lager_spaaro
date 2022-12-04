@@ -1,3 +1,0 @@
-repository='git@github.com:TL-4319/navigation.git'
-module=''
-tag='origin'

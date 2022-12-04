@@ -9,19 +9,12 @@ cmake_minimum_required(VERSION 3.21.3)
 
 project(mavlink-populate NONE)
 
-# Pass through things we've already detected in the main project to avoid
-# paying the cost of redetecting them again in ExternalProject_Add()
-set(GIT_EXECUTABLE [==[/usr/bin/git]==])
-set(GIT_VERSION_STRING [==[2.34.1]==])
-set_property(GLOBAL PROPERTY _CMAKE_FindGit_GIT_EXECUTABLE_VERSION
-  [==[/usr/bin/git;2.34.1]==]
-)
 
 
 include(ExternalProject)
 ExternalProject_Add(mavlink-populate
-                     "UPDATE_DISCONNECTED" "False" "GIT_REPOSITORY" "git@github.com:TL-4319/mavlink.git" "GIT_TAG" "v1.0.1"
-                    SOURCE_DIR          "/home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/_deps/mavlink-src"
+                     "UPDATE_DISCONNECTED" "False"
+                    SOURCE_DIR          "/home/tuan/Projects/mavlink"
                     BINARY_DIR          "/home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/_deps/mavlink-build"
                     CONFIGURE_COMMAND   ""
                     BUILD_COMMAND       ""

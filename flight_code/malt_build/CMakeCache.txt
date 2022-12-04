@@ -605,7 +605,7 @@ Mavlink_BINARY_DIR:STATIC=/home/tuan/Projects/super/ua_spaaro/flight_code/malt_b
 Mavlink_IS_TOP_LEVEL:STATIC=OFF
 
 //Value Computed by CMake
-Mavlink_SOURCE_DIR:STATIC=/home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/_deps/mavlink-src
+Mavlink_SOURCE_DIR:STATIC=/home/tuan/Projects/mavlink
 
 //Value Computed by CMake
 Navigation_BINARY_DIR:STATIC=/home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/_deps/navigation-build
@@ -614,7 +614,7 @@ Navigation_BINARY_DIR:STATIC=/home/tuan/Projects/super/ua_spaaro/flight_code/mal
 Navigation_IS_TOP_LEVEL:STATIC=OFF
 
 //Value Computed by CMake
-Navigation_SOURCE_DIR:STATIC=/home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/_deps/navigation-src
+Navigation_SOURCE_DIR:STATIC=/home/tuan/Projects/navigation
 
 //Value Computed by CMake
 PolyTools_BINARY_DIR:STATIC=/home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/_deps/polytools-build
@@ -680,7 +680,7 @@ Units_IS_TOP_LEVEL:STATIC=OFF
 Units_SOURCE_DIR:STATIC=/home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/_deps/units-src
 
 //No help, variable specified on the command line.
-VEHICLE:UNINITIALIZED=MALT
+VEHICLE:UNINITIALIZED=malt
 
 //Value Computed by CMake
 VectorNav_BINARY_DIR:STATIC=/home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/_deps/vector_nav-build

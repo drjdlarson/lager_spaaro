@@ -10,10 +10,13 @@ set(CMAKE_MAKEFILE_DEPENDS
   "CMakeFiles/3.21.3/CMakeSystem.cmake"
   "CMakeLists.txt"
   "mcu_support-populate-prefix/tmp/mcu_support-populate-cfgcmd.txt.in"
+  "/usr/local/share/cmake-3.21/Modules/CMakeDetermineSystem.cmake"
   "/usr/local/share/cmake-3.21/Modules/CMakeGenericSystem.cmake"
   "/usr/local/share/cmake-3.21/Modules/CMakeInitializeConfigs.cmake"
+  "/usr/local/share/cmake-3.21/Modules/CMakeSystem.cmake.in"
   "/usr/local/share/cmake-3.21/Modules/CMakeSystemSpecificInformation.cmake"
   "/usr/local/share/cmake-3.21/Modules/CMakeSystemSpecificInitialize.cmake"
+  "/usr/local/share/cmake-3.21/Modules/CMakeUnixFindMake.cmake"
   "/usr/local/share/cmake-3.21/Modules/ExternalProject-gitupdate.cmake.in"
   "/usr/local/share/cmake-3.21/Modules/ExternalProject.cmake"
   "/usr/local/share/cmake-3.21/Modules/Platform/Linux.cmake"
@@ -29,6 +32,7 @@ set(CMAKE_MAKEFILE_OUTPUTS
 
 # Byproducts of CMake generate step:
 set(CMAKE_MAKEFILE_PRODUCTS
+  "CMakeFiles/3.21.3/CMakeSystem.cmake"
   "mcu_support-populate-prefix/src/mcu_support-populate-stamp/mcu_support-populate-gitinfo.txt"
   "mcu_support-populate-prefix/tmp/mcu_support-populate-gitupdate.cmake"
   "mcu_support-populate-prefix/tmp/mcu_support-populate-cfgcmd.txt"

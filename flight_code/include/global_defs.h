@@ -207,6 +207,7 @@ struct InsConfig {
   float gyro_cutoff_hz = 40;
   float mag_cutoff_hz = 10;
   float hardcoded_heading = -1.0f;
+  Eigen::Vector3f antenna_baseline_m = Eigen::Vector3f::Zero();
 };
 
 enum AuxInsSource {

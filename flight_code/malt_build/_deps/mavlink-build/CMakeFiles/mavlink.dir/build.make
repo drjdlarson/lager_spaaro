@@ -70,60 +70,60 @@ include _deps/mavlink-build/CMakeFiles/mavlink.dir/progress.make
 include _deps/mavlink-build/CMakeFiles/mavlink.dir/flags.make
 
 _deps/mavlink-build/CMakeFiles/mavlink.dir/src/heartbeat.cpp.obj: _deps/mavlink-build/CMakeFiles/mavlink.dir/flags.make
-_deps/mavlink-build/CMakeFiles/mavlink.dir/src/heartbeat.cpp.obj: _deps/mavlink-src/src/heartbeat.cpp
+_deps/mavlink-build/CMakeFiles/mavlink.dir/src/heartbeat.cpp.obj: /home/tuan/Projects/mavlink/src/heartbeat.cpp
 _deps/mavlink-build/CMakeFiles/mavlink.dir/src/heartbeat.cpp.obj: _deps/mavlink-build/CMakeFiles/mavlink.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object _deps/mavlink-build/CMakeFiles/mavlink.dir/src/heartbeat.cpp.obj"
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/_deps/mavlink-build && /usr/local/bin/arm-none-eabi-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT _deps/mavlink-build/CMakeFiles/mavlink.dir/src/heartbeat.cpp.obj -MF CMakeFiles/mavlink.dir/src/heartbeat.cpp.obj.d -o CMakeFiles/mavlink.dir/src/heartbeat.cpp.obj -c /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/_deps/mavlink-src/src/heartbeat.cpp
+	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/_deps/mavlink-build && /usr/local/bin/arm-none-eabi-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT _deps/mavlink-build/CMakeFiles/mavlink.dir/src/heartbeat.cpp.obj -MF CMakeFiles/mavlink.dir/src/heartbeat.cpp.obj.d -o CMakeFiles/mavlink.dir/src/heartbeat.cpp.obj -c /home/tuan/Projects/mavlink/src/heartbeat.cpp
 
 _deps/mavlink-build/CMakeFiles/mavlink.dir/src/heartbeat.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/mavlink.dir/src/heartbeat.cpp.i"
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/_deps/mavlink-build && /usr/local/bin/arm-none-eabi-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/_deps/mavlink-src/src/heartbeat.cpp > CMakeFiles/mavlink.dir/src/heartbeat.cpp.i
+	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/_deps/mavlink-build && /usr/local/bin/arm-none-eabi-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tuan/Projects/mavlink/src/heartbeat.cpp > CMakeFiles/mavlink.dir/src/heartbeat.cpp.i
 
 _deps/mavlink-build/CMakeFiles/mavlink.dir/src/heartbeat.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/mavlink.dir/src/heartbeat.cpp.s"
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/_deps/mavlink-build && /usr/local/bin/arm-none-eabi-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/_deps/mavlink-src/src/heartbeat.cpp -o CMakeFiles/mavlink.dir/src/heartbeat.cpp.s
+	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/_deps/mavlink-build && /usr/local/bin/arm-none-eabi-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tuan/Projects/mavlink/src/heartbeat.cpp -o CMakeFiles/mavlink.dir/src/heartbeat.cpp.s
 
 _deps/mavlink-build/CMakeFiles/mavlink.dir/src/telemetry.cpp.obj: _deps/mavlink-build/CMakeFiles/mavlink.dir/flags.make
-_deps/mavlink-build/CMakeFiles/mavlink.dir/src/telemetry.cpp.obj: _deps/mavlink-src/src/telemetry.cpp
+_deps/mavlink-build/CMakeFiles/mavlink.dir/src/telemetry.cpp.obj: /home/tuan/Projects/mavlink/src/telemetry.cpp
 _deps/mavlink-build/CMakeFiles/mavlink.dir/src/telemetry.cpp.obj: _deps/mavlink-build/CMakeFiles/mavlink.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object _deps/mavlink-build/CMakeFiles/mavlink.dir/src/telemetry.cpp.obj"
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/_deps/mavlink-build && /usr/local/bin/arm-none-eabi-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT _deps/mavlink-build/CMakeFiles/mavlink.dir/src/telemetry.cpp.obj -MF CMakeFiles/mavlink.dir/src/telemetry.cpp.obj.d -o CMakeFiles/mavlink.dir/src/telemetry.cpp.obj -c /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/_deps/mavlink-src/src/telemetry.cpp
+	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/_deps/mavlink-build && /usr/local/bin/arm-none-eabi-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT _deps/mavlink-build/CMakeFiles/mavlink.dir/src/telemetry.cpp.obj -MF CMakeFiles/mavlink.dir/src/telemetry.cpp.obj.d -o CMakeFiles/mavlink.dir/src/telemetry.cpp.obj -c /home/tuan/Projects/mavlink/src/telemetry.cpp
 
 _deps/mavlink-build/CMakeFiles/mavlink.dir/src/telemetry.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/mavlink.dir/src/telemetry.cpp.i"
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/_deps/mavlink-build && /usr/local/bin/arm-none-eabi-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/_deps/mavlink-src/src/telemetry.cpp > CMakeFiles/mavlink.dir/src/telemetry.cpp.i
+	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/_deps/mavlink-build && /usr/local/bin/arm-none-eabi-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tuan/Projects/mavlink/src/telemetry.cpp > CMakeFiles/mavlink.dir/src/telemetry.cpp.i
 
 _deps/mavlink-build/CMakeFiles/mavlink.dir/src/telemetry.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/mavlink.dir/src/telemetry.cpp.s"
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/_deps/mavlink-build && /usr/local/bin/arm-none-eabi-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/_deps/mavlink-src/src/telemetry.cpp -o CMakeFiles/mavlink.dir/src/telemetry.cpp.s
+	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/_deps/mavlink-build && /usr/local/bin/arm-none-eabi-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tuan/Projects/mavlink/src/telemetry.cpp -o CMakeFiles/mavlink.dir/src/telemetry.cpp.s
 
 _deps/mavlink-build/CMakeFiles/mavlink.dir/src/mission.cpp.obj: _deps/mavlink-build/CMakeFiles/mavlink.dir/flags.make
-_deps/mavlink-build/CMakeFiles/mavlink.dir/src/mission.cpp.obj: _deps/mavlink-src/src/mission.cpp
+_deps/mavlink-build/CMakeFiles/mavlink.dir/src/mission.cpp.obj: /home/tuan/Projects/mavlink/src/mission.cpp
 _deps/mavlink-build/CMakeFiles/mavlink.dir/src/mission.cpp.obj: _deps/mavlink-build/CMakeFiles/mavlink.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object _deps/mavlink-build/CMakeFiles/mavlink.dir/src/mission.cpp.obj"
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/_deps/mavlink-build && /usr/local/bin/arm-none-eabi-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT _deps/mavlink-build/CMakeFiles/mavlink.dir/src/mission.cpp.obj -MF CMakeFiles/mavlink.dir/src/mission.cpp.obj.d -o CMakeFiles/mavlink.dir/src/mission.cpp.obj -c /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/_deps/mavlink-src/src/mission.cpp
+	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/_deps/mavlink-build && /usr/local/bin/arm-none-eabi-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT _deps/mavlink-build/CMakeFiles/mavlink.dir/src/mission.cpp.obj -MF CMakeFiles/mavlink.dir/src/mission.cpp.obj.d -o CMakeFiles/mavlink.dir/src/mission.cpp.obj -c /home/tuan/Projects/mavlink/src/mission.cpp
 
 _deps/mavlink-build/CMakeFiles/mavlink.dir/src/mission.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/mavlink.dir/src/mission.cpp.i"
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/_deps/mavlink-build && /usr/local/bin/arm-none-eabi-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/_deps/mavlink-src/src/mission.cpp > CMakeFiles/mavlink.dir/src/mission.cpp.i
+	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/_deps/mavlink-build && /usr/local/bin/arm-none-eabi-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tuan/Projects/mavlink/src/mission.cpp > CMakeFiles/mavlink.dir/src/mission.cpp.i
 
 _deps/mavlink-build/CMakeFiles/mavlink.dir/src/mission.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/mavlink.dir/src/mission.cpp.s"
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/_deps/mavlink-build && /usr/local/bin/arm-none-eabi-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/_deps/mavlink-src/src/mission.cpp -o CMakeFiles/mavlink.dir/src/mission.cpp.s
+	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/_deps/mavlink-build && /usr/local/bin/arm-none-eabi-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tuan/Projects/mavlink/src/mission.cpp -o CMakeFiles/mavlink.dir/src/mission.cpp.s
 
 _deps/mavlink-build/CMakeFiles/mavlink.dir/src/rtcm.cpp.obj: _deps/mavlink-build/CMakeFiles/mavlink.dir/flags.make
-_deps/mavlink-build/CMakeFiles/mavlink.dir/src/rtcm.cpp.obj: _deps/mavlink-src/src/rtcm.cpp
+_deps/mavlink-build/CMakeFiles/mavlink.dir/src/rtcm.cpp.obj: /home/tuan/Projects/mavlink/src/rtcm.cpp
 _deps/mavlink-build/CMakeFiles/mavlink.dir/src/rtcm.cpp.obj: _deps/mavlink-build/CMakeFiles/mavlink.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object _deps/mavlink-build/CMakeFiles/mavlink.dir/src/rtcm.cpp.obj"
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/_deps/mavlink-build && /usr/local/bin/arm-none-eabi-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT _deps/mavlink-build/CMakeFiles/mavlink.dir/src/rtcm.cpp.obj -MF CMakeFiles/mavlink.dir/src/rtcm.cpp.obj.d -o CMakeFiles/mavlink.dir/src/rtcm.cpp.obj -c /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/_deps/mavlink-src/src/rtcm.cpp
+	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/_deps/mavlink-build && /usr/local/bin/arm-none-eabi-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT _deps/mavlink-build/CMakeFiles/mavlink.dir/src/rtcm.cpp.obj -MF CMakeFiles/mavlink.dir/src/rtcm.cpp.obj.d -o CMakeFiles/mavlink.dir/src/rtcm.cpp.obj -c /home/tuan/Projects/mavlink/src/rtcm.cpp
 
 _deps/mavlink-build/CMakeFiles/mavlink.dir/src/rtcm.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/mavlink.dir/src/rtcm.cpp.i"
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/_deps/mavlink-build && /usr/local/bin/arm-none-eabi-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/_deps/mavlink-src/src/rtcm.cpp > CMakeFiles/mavlink.dir/src/rtcm.cpp.i
+	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/_deps/mavlink-build && /usr/local/bin/arm-none-eabi-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tuan/Projects/mavlink/src/rtcm.cpp > CMakeFiles/mavlink.dir/src/rtcm.cpp.i
 
 _deps/mavlink-build/CMakeFiles/mavlink.dir/src/rtcm.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/mavlink.dir/src/rtcm.cpp.s"
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/_deps/mavlink-build && /usr/local/bin/arm-none-eabi-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/_deps/mavlink-src/src/rtcm.cpp -o CMakeFiles/mavlink.dir/src/rtcm.cpp.s
+	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/_deps/mavlink-build && /usr/local/bin/arm-none-eabi-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tuan/Projects/mavlink/src/rtcm.cpp -o CMakeFiles/mavlink.dir/src/rtcm.cpp.s
 
 # Object files for target mavlink
 mavlink_OBJECTS = \
@@ -154,6 +154,6 @@ _deps/mavlink-build/CMakeFiles/mavlink.dir/clean:
 .PHONY : _deps/mavlink-build/CMakeFiles/mavlink.dir/clean
 
 _deps/mavlink-build/CMakeFiles/mavlink.dir/depend:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/tuan/Projects/super/ua_spaaro/flight_code /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/_deps/mavlink-src /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/_deps/mavlink-build /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/_deps/mavlink-build/CMakeFiles/mavlink.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/tuan/Projects/super/ua_spaaro/flight_code /home/tuan/Projects/mavlink /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/_deps/mavlink-build /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/_deps/mavlink-build/CMakeFiles/mavlink.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : _deps/mavlink-build/CMakeFiles/mavlink.dir/depend
 

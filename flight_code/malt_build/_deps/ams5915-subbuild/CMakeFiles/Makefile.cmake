@@ -10,8 +10,10 @@ set(CMAKE_MAKEFILE_DEPENDS
   "CMakeFiles/3.21.3/CMakeSystem.cmake"
   "CMakeLists.txt"
   "ams5915-populate-prefix/tmp/ams5915-populate-cfgcmd.txt.in"
+  "/usr/local/share/cmake-3.21/Modules/CMakeDetermineSystem.cmake"
   "/usr/local/share/cmake-3.21/Modules/CMakeGenericSystem.cmake"
   "/usr/local/share/cmake-3.21/Modules/CMakeInitializeConfigs.cmake"
+  "/usr/local/share/cmake-3.21/Modules/CMakeSystem.cmake.in"
   "/usr/local/share/cmake-3.21/Modules/CMakeSystemSpecificInformation.cmake"
   "/usr/local/share/cmake-3.21/Modules/CMakeSystemSpecificInitialize.cmake"
   "/usr/local/share/cmake-3.21/Modules/ExternalProject-gitupdate.cmake.in"
@@ -29,6 +31,7 @@ set(CMAKE_MAKEFILE_OUTPUTS
 
 # Byproducts of CMake generate step:
 set(CMAKE_MAKEFILE_PRODUCTS
+  "CMakeFiles/3.21.3/CMakeSystem.cmake"
   "ams5915-populate-prefix/src/ams5915-populate-stamp/ams5915-populate-gitinfo.txt"
   "ams5915-populate-prefix/tmp/ams5915-populate-gitupdate.cmake"
   "ams5915-populate-prefix/tmp/ams5915-populate-cfgcmd.txt"

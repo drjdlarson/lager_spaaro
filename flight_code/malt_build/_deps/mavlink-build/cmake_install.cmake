@@ -1,4 +1,4 @@
-# Install script for directory: /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/_deps/mavlink-src
+# Install script for directory: /home/tuan/Projects/mavlink
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

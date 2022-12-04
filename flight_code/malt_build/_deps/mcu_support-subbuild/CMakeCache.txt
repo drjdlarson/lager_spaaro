@@ -23,7 +23,7 @@ CMAKE_EXPORT_COMPILE_COMMANDS:BOOL=
 //Install path prefix, prepended onto install directories.
 CMAKE_INSTALL_PREFIX:PATH=/usr/local
 
-//No help, variable specified on the command line.
+//Path to a program.
 CMAKE_MAKE_PROGRAM:FILEPATH=/usr/bin/gmake
 
 //Value Computed by CMake

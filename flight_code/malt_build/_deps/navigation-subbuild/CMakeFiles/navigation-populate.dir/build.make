@@ -82,9 +82,6 @@ CMakeFiles/navigation-populate-complete: navigation-populate-prefix/src/navigati
 	/usr/local/bin/cmake -E touch /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/_deps/navigation-subbuild/CMakeFiles/navigation-populate-complete
 	/usr/local/bin/cmake -E touch /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/_deps/navigation-subbuild/navigation-populate-prefix/src/navigation-populate-stamp/navigation-populate-done
 
-navigation-populate-prefix/src/navigation-populate-stamp/navigation-populate-update:
-.PHONY : navigation-populate-prefix/src/navigation-populate-stamp/navigation-populate-update
-
 navigation-populate-prefix/src/navigation-populate-stamp/navigation-populate-build: navigation-populate-prefix/src/navigation-populate-stamp/navigation-populate-configure
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/_deps/navigation-subbuild/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "No build step for 'navigation-populate'"
 	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/_deps/navigation-build && /usr/local/bin/cmake -E echo_append
@@ -96,11 +93,10 @@ navigation-populate-prefix/src/navigation-populate-stamp/navigation-populate-con
 	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/_deps/navigation-build && /usr/local/bin/cmake -E echo_append
 	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/_deps/navigation-build && /usr/local/bin/cmake -E touch /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/_deps/navigation-subbuild/navigation-populate-prefix/src/navigation-populate-stamp/navigation-populate-configure
 
-navigation-populate-prefix/src/navigation-populate-stamp/navigation-populate-download: navigation-populate-prefix/src/navigation-populate-stamp/navigation-populate-gitinfo.txt
 navigation-populate-prefix/src/navigation-populate-stamp/navigation-populate-download: navigation-populate-prefix/src/navigation-populate-stamp/navigation-populate-mkdir
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/_deps/navigation-subbuild/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Performing download step (git clone) for 'navigation-populate'"
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/_deps && /usr/local/bin/cmake -P /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/_deps/navigation-subbuild/navigation-populate-prefix/tmp/navigation-populate-gitclone.cmake
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/_deps && /usr/local/bin/cmake -E touch /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/_deps/navigation-subbuild/navigation-populate-prefix/src/navigation-populate-stamp/navigation-populate-download
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/_deps/navigation-subbuild/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "No download step for 'navigation-populate'"
+	/usr/local/bin/cmake -E echo_append
+	/usr/local/bin/cmake -E touch /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/_deps/navigation-subbuild/navigation-populate-prefix/src/navigation-populate-stamp/navigation-populate-download
 
 navigation-populate-prefix/src/navigation-populate-stamp/navigation-populate-install: navigation-populate-prefix/src/navigation-populate-stamp/navigation-populate-build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/_deps/navigation-subbuild/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "No install step for 'navigation-populate'"
@@ -109,7 +105,7 @@ navigation-populate-prefix/src/navigation-populate-stamp/navigation-populate-ins
 
 navigation-populate-prefix/src/navigation-populate-stamp/navigation-populate-mkdir:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/_deps/navigation-subbuild/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Creating directories for 'navigation-populate'"
-	/usr/local/bin/cmake -E make_directory /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/_deps/navigation-src
+	/usr/local/bin/cmake -E make_directory /home/tuan/Projects/navigation
 	/usr/local/bin/cmake -E make_directory /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/_deps/navigation-build
 	/usr/local/bin/cmake -E make_directory /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/_deps/navigation-subbuild/navigation-populate-prefix
 	/usr/local/bin/cmake -E make_directory /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/_deps/navigation-subbuild/navigation-populate-prefix/tmp
@@ -123,17 +119,15 @@ navigation-populate-prefix/src/navigation-populate-stamp/navigation-populate-pat
 	/usr/local/bin/cmake -E echo_append
 	/usr/local/bin/cmake -E touch /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/_deps/navigation-subbuild/navigation-populate-prefix/src/navigation-populate-stamp/navigation-populate-patch
 
-navigation-populate-prefix/src/navigation-populate-stamp/navigation-populate-update:
-.PHONY : navigation-populate-prefix/src/navigation-populate-stamp/navigation-populate-update
-
 navigation-populate-prefix/src/navigation-populate-stamp/navigation-populate-test: navigation-populate-prefix/src/navigation-populate-stamp/navigation-populate-install
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/_deps/navigation-subbuild/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "No test step for 'navigation-populate'"
 	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/_deps/navigation-build && /usr/local/bin/cmake -E echo_append
 	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/_deps/navigation-build && /usr/local/bin/cmake -E touch /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/_deps/navigation-subbuild/navigation-populate-prefix/src/navigation-populate-stamp/navigation-populate-test
 
 navigation-populate-prefix/src/navigation-populate-stamp/navigation-populate-update: navigation-populate-prefix/src/navigation-populate-stamp/navigation-populate-download
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/_deps/navigation-subbuild/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Performing update step for 'navigation-populate'"
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/_deps/navigation-src && /usr/local/bin/cmake -P /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/_deps/navigation-subbuild/navigation-populate-prefix/tmp/navigation-populate-gitupdate.cmake
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/_deps/navigation-subbuild/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "No update step for 'navigation-populate'"
+	/usr/local/bin/cmake -E echo_append
+	/usr/local/bin/cmake -E touch /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/_deps/navigation-subbuild/navigation-populate-prefix/src/navigation-populate-stamp/navigation-populate-update
 
 navigation-populate: CMakeFiles/navigation-populate
 navigation-populate: CMakeFiles/navigation-populate-complete

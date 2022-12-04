@@ -82,9 +82,6 @@ CMakeFiles/mavlink-populate-complete: mavlink-populate-prefix/src/mavlink-popula
 	/usr/local/bin/cmake -E touch /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/_deps/mavlink-subbuild/CMakeFiles/mavlink-populate-complete
 	/usr/local/bin/cmake -E touch /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/_deps/mavlink-subbuild/mavlink-populate-prefix/src/mavlink-populate-stamp/mavlink-populate-done
 
-mavlink-populate-prefix/src/mavlink-populate-stamp/mavlink-populate-update:
-.PHONY : mavlink-populate-prefix/src/mavlink-populate-stamp/mavlink-populate-update
-
 mavlink-populate-prefix/src/mavlink-populate-stamp/mavlink-populate-build: mavlink-populate-prefix/src/mavlink-populate-stamp/mavlink-populate-configure
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/_deps/mavlink-subbuild/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "No build step for 'mavlink-populate'"
 	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/_deps/mavlink-build && /usr/local/bin/cmake -E echo_append
@@ -96,11 +93,10 @@ mavlink-populate-prefix/src/mavlink-populate-stamp/mavlink-populate-configure: m
 	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/_deps/mavlink-build && /usr/local/bin/cmake -E echo_append
 	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/_deps/mavlink-build && /usr/local/bin/cmake -E touch /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/_deps/mavlink-subbuild/mavlink-populate-prefix/src/mavlink-populate-stamp/mavlink-populate-configure
 
-mavlink-populate-prefix/src/mavlink-populate-stamp/mavlink-populate-download: mavlink-populate-prefix/src/mavlink-populate-stamp/mavlink-populate-gitinfo.txt
 mavlink-populate-prefix/src/mavlink-populate-stamp/mavlink-populate-download: mavlink-populate-prefix/src/mavlink-populate-stamp/mavlink-populate-mkdir
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/_deps/mavlink-subbuild/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Performing download step (git clone) for 'mavlink-populate'"
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/_deps && /usr/local/bin/cmake -P /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/_deps/mavlink-subbuild/mavlink-populate-prefix/tmp/mavlink-populate-gitclone.cmake
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/_deps && /usr/local/bin/cmake -E touch /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/_deps/mavlink-subbuild/mavlink-populate-prefix/src/mavlink-populate-stamp/mavlink-populate-download
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/_deps/mavlink-subbuild/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "No download step for 'mavlink-populate'"
+	/usr/local/bin/cmake -E echo_append
+	/usr/local/bin/cmake -E touch /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/_deps/mavlink-subbuild/mavlink-populate-prefix/src/mavlink-populate-stamp/mavlink-populate-download
 
 mavlink-populate-prefix/src/mavlink-populate-stamp/mavlink-populate-install: mavlink-populate-prefix/src/mavlink-populate-stamp/mavlink-populate-build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/_deps/mavlink-subbuild/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "No install step for 'mavlink-populate'"
@@ -109,7 +105,7 @@ mavlink-populate-prefix/src/mavlink-populate-stamp/mavlink-populate-install: mav
 
 mavlink-populate-prefix/src/mavlink-populate-stamp/mavlink-populate-mkdir:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/_deps/mavlink-subbuild/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Creating directories for 'mavlink-populate'"
-	/usr/local/bin/cmake -E make_directory /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/_deps/mavlink-src
+	/usr/local/bin/cmake -E make_directory /home/tuan/Projects/mavlink
 	/usr/local/bin/cmake -E make_directory /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/_deps/mavlink-build
 	/usr/local/bin/cmake -E make_directory /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/_deps/mavlink-subbuild/mavlink-populate-prefix
 	/usr/local/bin/cmake -E make_directory /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/_deps/mavlink-subbuild/mavlink-populate-prefix/tmp
@@ -123,17 +119,15 @@ mavlink-populate-prefix/src/mavlink-populate-stamp/mavlink-populate-patch: mavli
 	/usr/local/bin/cmake -E echo_append
 	/usr/local/bin/cmake -E touch /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/_deps/mavlink-subbuild/mavlink-populate-prefix/src/mavlink-populate-stamp/mavlink-populate-patch
 
-mavlink-populate-prefix/src/mavlink-populate-stamp/mavlink-populate-update:
-.PHONY : mavlink-populate-prefix/src/mavlink-populate-stamp/mavlink-populate-update
-
 mavlink-populate-prefix/src/mavlink-populate-stamp/mavlink-populate-test: mavlink-populate-prefix/src/mavlink-populate-stamp/mavlink-populate-install
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/_deps/mavlink-subbuild/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "No test step for 'mavlink-populate'"
 	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/_deps/mavlink-build && /usr/local/bin/cmake -E echo_append
 	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/_deps/mavlink-build && /usr/local/bin/cmake -E touch /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/_deps/mavlink-subbuild/mavlink-populate-prefix/src/mavlink-populate-stamp/mavlink-populate-test
 
 mavlink-populate-prefix/src/mavlink-populate-stamp/mavlink-populate-update: mavlink-populate-prefix/src/mavlink-populate-stamp/mavlink-populate-download
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/_deps/mavlink-subbuild/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Performing update step for 'mavlink-populate'"
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/_deps/mavlink-src && /usr/local/bin/cmake -P /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/_deps/mavlink-subbuild/mavlink-populate-prefix/tmp/mavlink-populate-gitupdate.cmake
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/_deps/mavlink-subbuild/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "No update step for 'mavlink-populate'"
+	/usr/local/bin/cmake -E echo_append
+	/usr/local/bin/cmake -E touch /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/_deps/mavlink-subbuild/mavlink-populate-prefix/src/mavlink-populate-stamp/mavlink-populate-update
 
 mavlink-populate: CMakeFiles/mavlink-populate
 mavlink-populate: CMakeFiles/mavlink-populate-complete
