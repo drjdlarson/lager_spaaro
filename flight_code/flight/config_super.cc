@@ -41,12 +41,23 @@ AircraftConfig config = {
       .rotation = {{1, 0, 0}, {0, 1, 0}, {0, 0, 1}}
     },
     .ext_gnss1 = {
-      .baud = 115200
+      .baud = 921600
     },
-    .power_module = {
-      .volts_per_volt = 2.723f,
-      .amps_per_volt = 50.0f
+    .ext_gnss2 = {
+      .baud = 921600
     }
+    .power_module = {
+      .volts_per_volt = 18.95f,
+      .amps_per_volt = 125.65f
+    }
+  },
+  .bfs_ins = {
+    .imu_source = INS_IMU_FMU,
+    .mag_source = INS_MAG_FMU,
+    .gnss_source = INS_GNSS_EXT_GNSS2,
+    .accel_cutoff_hz = 40.0f,
+    .gyro_cutoff_hz = 40.0f,
+    .antenna_baseline_m = (Vector3f() << 0.0f, -0.62f, 0.0f).finished()
   },
   .telem = {
     .baud = 57600,
