@@ -45,7 +45,7 @@ AircraftConfig config = {
     },
     .ext_gnss2 = {
       .baud = 921600
-    }
+    },
     .power_module = {
       .volts_per_volt = 18.95f,
       .amps_per_volt = 125.65f
@@ -57,7 +57,7 @@ AircraftConfig config = {
     .gnss_source = INS_GNSS_EXT_GNSS2,
     .accel_cutoff_hz = 40.0f,
     .gyro_cutoff_hz = 40.0f,
-    .antenna_baseline_m = (Vector3f() << 0.0f, -0.62f, 0.0f).finished()
+    .antenna_baseline_m = (Eigen::Vector3f() << 0.0f, -0.62f, 0.0f).finished()
   },
   .telem = {
     .baud = 57600,
