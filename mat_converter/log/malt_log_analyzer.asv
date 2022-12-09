@@ -2,34 +2,47 @@ close all
 clear
 clc
 
-load malt15.mat;
+load malt67.mat;
 
-lean_angle_rad = acos(cos(bfs_ins_roll_rad) .* cos(bfs_ins_pitch_rad));
+filtered_vbx = vms_aux7;
+
+vbx_iir = IIR;
+vbx_iir = vbx_iir.init_filter(200,1,0);
+
+filtered_vbx(1) = 0;
+for i = 2:size(vms_aux7,1)
+    vbx_iir = vbx_iir.apply_filter(vms_aux10(i));
+    filtered_vbx(i) = vbx_iir.output;
+end
 
 figure(1)
-plot (sys_time_s, fmu_imu_gyro_x_radps, sys_time_s, fmu_imu_gyro_y_radps,...
-    sys_time_s, fmu_imu_gyro_z_radps)
-legend ('x','y','z')
+plot(sys_time_s, vms_aux6,'DisplayName','vb x cmd')
+hold on
+plot (sys_time_s,vms_aux7,'DisplayName','vb x')
 grid on
 grid minor
+legend
 
 figure(2)
-plot (sys_time_s, bfs_ins_gyro_x_radps, sys_time_s, bfs_ins_gyro_y_radps,...
-    sys_time_s, bfs_ins_gyro_z_radps)
-legend ('x','y','z')
+plot (sys_time_s,vms_aux9,'DisplayName','vb y')
+hold on
+plot(sys_time_s, vms_aux8,'DisplayName','vb y cmd')
 grid on
 grid minor
+legend
 
 figure(3)
-plot (sys_time_s, fmu_imu_accel_x_mps2, sys_time_s, fmu_imu_accel_y_mps2,...
-    sys_time_s, fmu_imu_accel_z_mps2)
-legend ('x','y','z')
+plot (sys_time_s, vms_aux17,'DisplayName','target x')
+hold on
+plot (sys_time_s, aux_ins_ned_pos_north_m, 'DisplayName','x')
 grid on
 grid minor
+legend
 
 figure(4)
-plot (sys_time_s, bfs_ins_accel_x_mps2, sys_time_s, bfs_ins_accel_y_mps2,...
-    sys_time_s, bfs_ins_accel_z_mps2)
-legend ('x','y','z')
+plot (sys_time_s, vms_aux17,'DisplayName','target x')
+hold on
+plot (sys_time_s, aux_ins_ned_pos_north_m, 'DisplayName','x')
 grid on
 grid minor
+legend
