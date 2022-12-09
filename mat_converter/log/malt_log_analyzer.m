@@ -2,7 +2,7 @@ close all
 clear
 clc
 
-load malt20.mat;
+load malt24.mat;
 
 filtered_vbx = vms_aux7;
 test_wp = [2 1 0;
@@ -23,24 +23,24 @@ for i = 2:size(vms_aux7,1)
 end
 
 figure(1)
-plot(sys_time_s, vms_aux6,'DisplayName','vb x cmd')
+plot(sys_time_s, vms_aux6,'DisplayName','vb z cmd')
 hold on
-plot (sys_time_s,vms_aux7,'DisplayName','vb x')
+plot (sys_time_s,vms_aux7,'DisplayName','vb z')
 grid on
 grid minor
 legend
 
-figure(2)
-plot (sys_time_s,vms_aux8,'DisplayName','vb y cmd')
-hold on
-plot(sys_time_s, vms_aux9,'DisplayName','vb y')
-grid on
-grid minor
-legend
+% figure(2)
+% plot (sys_time_s,vms_aux8,'DisplayName','vb y cmd')
+% hold on
+% plot(sys_time_s, vms_aux9,'DisplayName','vb y')
+% grid on
+% grid minor
+% legend
 
-figure(3)
-plot (test_wp(:,1), test_wp(:,2),'*');
-hold on
-plot (mav_pos_ned(:,1), mav_pos_ned(:,2))
-xlim([0 8])
-ylim([0 5])
+% figure(3)
+% plot (test_wp(:,1), test_wp(:,2),'*');
+% hold on
+% plot (mav_pos_ned(:,1), mav_pos_ned(:,2))
+% xlim([0 8])
+% ylim([0 5])
