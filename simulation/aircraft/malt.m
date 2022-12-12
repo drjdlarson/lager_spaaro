@@ -265,7 +265,8 @@ Aircraft.Control.I_alt = 0.1;
 
 %% Distance controller parameters
 Aircraft.Control.P_xy = 0.8;
-Aircraft.Control.wp_radius = 0.1;
+Aircraft.Control.wp_radius = 0.05;
+Aircraft.Control.nav_speed = 0.3;
 
 %% Heading controller parameters
 Aircraft.Control.P_heading = 6;
