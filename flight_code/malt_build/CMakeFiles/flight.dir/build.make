@@ -53,10 +53,10 @@ RM = /usr/local/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/tuan/Projects/super/ua_spaaro/flight_code
+CMAKE_SOURCE_DIR = /home/tuan/Projects/ua_spaaro/flight_code
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build
+CMAKE_BINARY_DIR = /home/tuan/Projects/ua_spaaro/flight_code/malt_build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/flight.dir/depend.make
@@ -72,310 +72,310 @@ include CMakeFiles/flight.dir/flags.make
 CMakeFiles/flight.dir/flight/flight.cc.obj: CMakeFiles/flight.dir/flags.make
 CMakeFiles/flight.dir/flight/flight.cc.obj: ../flight/flight.cc
 CMakeFiles/flight.dir/flight/flight.cc.obj: CMakeFiles/flight.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/flight.dir/flight/flight.cc.obj"
-	/usr/local/bin/arm-none-eabi-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/flight.dir/flight/flight.cc.obj -MF CMakeFiles/flight.dir/flight/flight.cc.obj.d -o CMakeFiles/flight.dir/flight/flight.cc.obj -c /home/tuan/Projects/super/ua_spaaro/flight_code/flight/flight.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tuan/Projects/ua_spaaro/flight_code/malt_build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/flight.dir/flight/flight.cc.obj"
+	/usr/local/bin/arm-none-eabi-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/flight.dir/flight/flight.cc.obj -MF CMakeFiles/flight.dir/flight/flight.cc.obj.d -o CMakeFiles/flight.dir/flight/flight.cc.obj -c /home/tuan/Projects/ua_spaaro/flight_code/flight/flight.cc
 
 CMakeFiles/flight.dir/flight/flight.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/flight.dir/flight/flight.cc.i"
-	/usr/local/bin/arm-none-eabi-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tuan/Projects/super/ua_spaaro/flight_code/flight/flight.cc > CMakeFiles/flight.dir/flight/flight.cc.i
+	/usr/local/bin/arm-none-eabi-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tuan/Projects/ua_spaaro/flight_code/flight/flight.cc > CMakeFiles/flight.dir/flight/flight.cc.i
 
 CMakeFiles/flight.dir/flight/flight.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/flight.dir/flight/flight.cc.s"
-	/usr/local/bin/arm-none-eabi-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tuan/Projects/super/ua_spaaro/flight_code/flight/flight.cc -o CMakeFiles/flight.dir/flight/flight.cc.s
+	/usr/local/bin/arm-none-eabi-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tuan/Projects/ua_spaaro/flight_code/flight/flight.cc -o CMakeFiles/flight.dir/flight/flight.cc.s
 
 CMakeFiles/flight.dir/flight/msg.cc.obj: CMakeFiles/flight.dir/flags.make
 CMakeFiles/flight.dir/flight/msg.cc.obj: ../flight/msg.cc
 CMakeFiles/flight.dir/flight/msg.cc.obj: CMakeFiles/flight.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/flight.dir/flight/msg.cc.obj"
-	/usr/local/bin/arm-none-eabi-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/flight.dir/flight/msg.cc.obj -MF CMakeFiles/flight.dir/flight/msg.cc.obj.d -o CMakeFiles/flight.dir/flight/msg.cc.obj -c /home/tuan/Projects/super/ua_spaaro/flight_code/flight/msg.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tuan/Projects/ua_spaaro/flight_code/malt_build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/flight.dir/flight/msg.cc.obj"
+	/usr/local/bin/arm-none-eabi-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/flight.dir/flight/msg.cc.obj -MF CMakeFiles/flight.dir/flight/msg.cc.obj.d -o CMakeFiles/flight.dir/flight/msg.cc.obj -c /home/tuan/Projects/ua_spaaro/flight_code/flight/msg.cc
 
 CMakeFiles/flight.dir/flight/msg.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/flight.dir/flight/msg.cc.i"
-	/usr/local/bin/arm-none-eabi-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tuan/Projects/super/ua_spaaro/flight_code/flight/msg.cc > CMakeFiles/flight.dir/flight/msg.cc.i
+	/usr/local/bin/arm-none-eabi-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tuan/Projects/ua_spaaro/flight_code/flight/msg.cc > CMakeFiles/flight.dir/flight/msg.cc.i
 
 CMakeFiles/flight.dir/flight/msg.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/flight.dir/flight/msg.cc.s"
-	/usr/local/bin/arm-none-eabi-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tuan/Projects/super/ua_spaaro/flight_code/flight/msg.cc -o CMakeFiles/flight.dir/flight/msg.cc.s
+	/usr/local/bin/arm-none-eabi-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tuan/Projects/ua_spaaro/flight_code/flight/msg.cc -o CMakeFiles/flight.dir/flight/msg.cc.s
 
 CMakeFiles/flight.dir/flight/config_malt.cc.obj: CMakeFiles/flight.dir/flags.make
 CMakeFiles/flight.dir/flight/config_malt.cc.obj: ../flight/config_malt.cc
 CMakeFiles/flight.dir/flight/config_malt.cc.obj: CMakeFiles/flight.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/flight.dir/flight/config_malt.cc.obj"
-	/usr/local/bin/arm-none-eabi-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/flight.dir/flight/config_malt.cc.obj -MF CMakeFiles/flight.dir/flight/config_malt.cc.obj.d -o CMakeFiles/flight.dir/flight/config_malt.cc.obj -c /home/tuan/Projects/super/ua_spaaro/flight_code/flight/config_malt.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tuan/Projects/ua_spaaro/flight_code/malt_build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/flight.dir/flight/config_malt.cc.obj"
+	/usr/local/bin/arm-none-eabi-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/flight.dir/flight/config_malt.cc.obj -MF CMakeFiles/flight.dir/flight/config_malt.cc.obj.d -o CMakeFiles/flight.dir/flight/config_malt.cc.obj -c /home/tuan/Projects/ua_spaaro/flight_code/flight/config_malt.cc
 
 CMakeFiles/flight.dir/flight/config_malt.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/flight.dir/flight/config_malt.cc.i"
-	/usr/local/bin/arm-none-eabi-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tuan/Projects/super/ua_spaaro/flight_code/flight/config_malt.cc > CMakeFiles/flight.dir/flight/config_malt.cc.i
+	/usr/local/bin/arm-none-eabi-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tuan/Projects/ua_spaaro/flight_code/flight/config_malt.cc > CMakeFiles/flight.dir/flight/config_malt.cc.i
 
 CMakeFiles/flight.dir/flight/config_malt.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/flight.dir/flight/config_malt.cc.s"
-	/usr/local/bin/arm-none-eabi-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tuan/Projects/super/ua_spaaro/flight_code/flight/config_malt.cc -o CMakeFiles/flight.dir/flight/config_malt.cc.s
+	/usr/local/bin/arm-none-eabi-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tuan/Projects/ua_spaaro/flight_code/flight/config_malt.cc -o CMakeFiles/flight.dir/flight/config_malt.cc.s
 
 CMakeFiles/flight.dir/flight/sys.cc.obj: CMakeFiles/flight.dir/flags.make
 CMakeFiles/flight.dir/flight/sys.cc.obj: ../flight/sys.cc
 CMakeFiles/flight.dir/flight/sys.cc.obj: CMakeFiles/flight.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/flight.dir/flight/sys.cc.obj"
-	/usr/local/bin/arm-none-eabi-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/flight.dir/flight/sys.cc.obj -MF CMakeFiles/flight.dir/flight/sys.cc.obj.d -o CMakeFiles/flight.dir/flight/sys.cc.obj -c /home/tuan/Projects/super/ua_spaaro/flight_code/flight/sys.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tuan/Projects/ua_spaaro/flight_code/malt_build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/flight.dir/flight/sys.cc.obj"
+	/usr/local/bin/arm-none-eabi-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/flight.dir/flight/sys.cc.obj -MF CMakeFiles/flight.dir/flight/sys.cc.obj.d -o CMakeFiles/flight.dir/flight/sys.cc.obj -c /home/tuan/Projects/ua_spaaro/flight_code/flight/sys.cc
 
 CMakeFiles/flight.dir/flight/sys.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/flight.dir/flight/sys.cc.i"
-	/usr/local/bin/arm-none-eabi-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tuan/Projects/super/ua_spaaro/flight_code/flight/sys.cc > CMakeFiles/flight.dir/flight/sys.cc.i
+	/usr/local/bin/arm-none-eabi-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tuan/Projects/ua_spaaro/flight_code/flight/sys.cc > CMakeFiles/flight.dir/flight/sys.cc.i
 
 CMakeFiles/flight.dir/flight/sys.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/flight.dir/flight/sys.cc.s"
-	/usr/local/bin/arm-none-eabi-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tuan/Projects/super/ua_spaaro/flight_code/flight/sys.cc -o CMakeFiles/flight.dir/flight/sys.cc.s
+	/usr/local/bin/arm-none-eabi-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tuan/Projects/ua_spaaro/flight_code/flight/sys.cc -o CMakeFiles/flight.dir/flight/sys.cc.s
 
 CMakeFiles/flight.dir/flight/sensors.cc.obj: CMakeFiles/flight.dir/flags.make
 CMakeFiles/flight.dir/flight/sensors.cc.obj: ../flight/sensors.cc
 CMakeFiles/flight.dir/flight/sensors.cc.obj: CMakeFiles/flight.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/flight.dir/flight/sensors.cc.obj"
-	/usr/local/bin/arm-none-eabi-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/flight.dir/flight/sensors.cc.obj -MF CMakeFiles/flight.dir/flight/sensors.cc.obj.d -o CMakeFiles/flight.dir/flight/sensors.cc.obj -c /home/tuan/Projects/super/ua_spaaro/flight_code/flight/sensors.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tuan/Projects/ua_spaaro/flight_code/malt_build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/flight.dir/flight/sensors.cc.obj"
+	/usr/local/bin/arm-none-eabi-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/flight.dir/flight/sensors.cc.obj -MF CMakeFiles/flight.dir/flight/sensors.cc.obj.d -o CMakeFiles/flight.dir/flight/sensors.cc.obj -c /home/tuan/Projects/ua_spaaro/flight_code/flight/sensors.cc
 
 CMakeFiles/flight.dir/flight/sensors.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/flight.dir/flight/sensors.cc.i"
-	/usr/local/bin/arm-none-eabi-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tuan/Projects/super/ua_spaaro/flight_code/flight/sensors.cc > CMakeFiles/flight.dir/flight/sensors.cc.i
+	/usr/local/bin/arm-none-eabi-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tuan/Projects/ua_spaaro/flight_code/flight/sensors.cc > CMakeFiles/flight.dir/flight/sensors.cc.i
 
 CMakeFiles/flight.dir/flight/sensors.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/flight.dir/flight/sensors.cc.s"
-	/usr/local/bin/arm-none-eabi-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tuan/Projects/super/ua_spaaro/flight_code/flight/sensors.cc -o CMakeFiles/flight.dir/flight/sensors.cc.s
+	/usr/local/bin/arm-none-eabi-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tuan/Projects/ua_spaaro/flight_code/flight/sensors.cc -o CMakeFiles/flight.dir/flight/sensors.cc.s
 
 CMakeFiles/flight.dir/flight/adc.cc.obj: CMakeFiles/flight.dir/flags.make
 CMakeFiles/flight.dir/flight/adc.cc.obj: ../flight/adc.cc
 CMakeFiles/flight.dir/flight/adc.cc.obj: CMakeFiles/flight.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/flight.dir/flight/adc.cc.obj"
-	/usr/local/bin/arm-none-eabi-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/flight.dir/flight/adc.cc.obj -MF CMakeFiles/flight.dir/flight/adc.cc.obj.d -o CMakeFiles/flight.dir/flight/adc.cc.obj -c /home/tuan/Projects/super/ua_spaaro/flight_code/flight/adc.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tuan/Projects/ua_spaaro/flight_code/malt_build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/flight.dir/flight/adc.cc.obj"
+	/usr/local/bin/arm-none-eabi-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/flight.dir/flight/adc.cc.obj -MF CMakeFiles/flight.dir/flight/adc.cc.obj.d -o CMakeFiles/flight.dir/flight/adc.cc.obj -c /home/tuan/Projects/ua_spaaro/flight_code/flight/adc.cc
 
 CMakeFiles/flight.dir/flight/adc.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/flight.dir/flight/adc.cc.i"
-	/usr/local/bin/arm-none-eabi-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tuan/Projects/super/ua_spaaro/flight_code/flight/adc.cc > CMakeFiles/flight.dir/flight/adc.cc.i
+	/usr/local/bin/arm-none-eabi-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tuan/Projects/ua_spaaro/flight_code/flight/adc.cc > CMakeFiles/flight.dir/flight/adc.cc.i
 
 CMakeFiles/flight.dir/flight/adc.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/flight.dir/flight/adc.cc.s"
-	/usr/local/bin/arm-none-eabi-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tuan/Projects/super/ua_spaaro/flight_code/flight/adc.cc -o CMakeFiles/flight.dir/flight/adc.cc.s
+	/usr/local/bin/arm-none-eabi-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tuan/Projects/ua_spaaro/flight_code/flight/adc.cc -o CMakeFiles/flight.dir/flight/adc.cc.s
 
 CMakeFiles/flight.dir/flight/bfs-ins.cc.obj: CMakeFiles/flight.dir/flags.make
 CMakeFiles/flight.dir/flight/bfs-ins.cc.obj: ../flight/bfs-ins.cc
 CMakeFiles/flight.dir/flight/bfs-ins.cc.obj: CMakeFiles/flight.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/flight.dir/flight/bfs-ins.cc.obj"
-	/usr/local/bin/arm-none-eabi-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/flight.dir/flight/bfs-ins.cc.obj -MF CMakeFiles/flight.dir/flight/bfs-ins.cc.obj.d -o CMakeFiles/flight.dir/flight/bfs-ins.cc.obj -c /home/tuan/Projects/super/ua_spaaro/flight_code/flight/bfs-ins.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tuan/Projects/ua_spaaro/flight_code/malt_build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/flight.dir/flight/bfs-ins.cc.obj"
+	/usr/local/bin/arm-none-eabi-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/flight.dir/flight/bfs-ins.cc.obj -MF CMakeFiles/flight.dir/flight/bfs-ins.cc.obj.d -o CMakeFiles/flight.dir/flight/bfs-ins.cc.obj -c /home/tuan/Projects/ua_spaaro/flight_code/flight/bfs-ins.cc
 
 CMakeFiles/flight.dir/flight/bfs-ins.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/flight.dir/flight/bfs-ins.cc.i"
-	/usr/local/bin/arm-none-eabi-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tuan/Projects/super/ua_spaaro/flight_code/flight/bfs-ins.cc > CMakeFiles/flight.dir/flight/bfs-ins.cc.i
+	/usr/local/bin/arm-none-eabi-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tuan/Projects/ua_spaaro/flight_code/flight/bfs-ins.cc > CMakeFiles/flight.dir/flight/bfs-ins.cc.i
 
 CMakeFiles/flight.dir/flight/bfs-ins.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/flight.dir/flight/bfs-ins.cc.s"
-	/usr/local/bin/arm-none-eabi-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tuan/Projects/super/ua_spaaro/flight_code/flight/bfs-ins.cc -o CMakeFiles/flight.dir/flight/bfs-ins.cc.s
+	/usr/local/bin/arm-none-eabi-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tuan/Projects/ua_spaaro/flight_code/flight/bfs-ins.cc -o CMakeFiles/flight.dir/flight/bfs-ins.cc.s
 
 CMakeFiles/flight.dir/flight/aux-ins.cc.obj: CMakeFiles/flight.dir/flags.make
 CMakeFiles/flight.dir/flight/aux-ins.cc.obj: ../flight/aux-ins.cc
 CMakeFiles/flight.dir/flight/aux-ins.cc.obj: CMakeFiles/flight.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/flight.dir/flight/aux-ins.cc.obj"
-	/usr/local/bin/arm-none-eabi-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/flight.dir/flight/aux-ins.cc.obj -MF CMakeFiles/flight.dir/flight/aux-ins.cc.obj.d -o CMakeFiles/flight.dir/flight/aux-ins.cc.obj -c /home/tuan/Projects/super/ua_spaaro/flight_code/flight/aux-ins.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tuan/Projects/ua_spaaro/flight_code/malt_build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/flight.dir/flight/aux-ins.cc.obj"
+	/usr/local/bin/arm-none-eabi-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/flight.dir/flight/aux-ins.cc.obj -MF CMakeFiles/flight.dir/flight/aux-ins.cc.obj.d -o CMakeFiles/flight.dir/flight/aux-ins.cc.obj -c /home/tuan/Projects/ua_spaaro/flight_code/flight/aux-ins.cc
 
 CMakeFiles/flight.dir/flight/aux-ins.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/flight.dir/flight/aux-ins.cc.i"
-	/usr/local/bin/arm-none-eabi-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tuan/Projects/super/ua_spaaro/flight_code/flight/aux-ins.cc > CMakeFiles/flight.dir/flight/aux-ins.cc.i
+	/usr/local/bin/arm-none-eabi-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tuan/Projects/ua_spaaro/flight_code/flight/aux-ins.cc > CMakeFiles/flight.dir/flight/aux-ins.cc.i
 
 CMakeFiles/flight.dir/flight/aux-ins.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/flight.dir/flight/aux-ins.cc.s"
-	/usr/local/bin/arm-none-eabi-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tuan/Projects/super/ua_spaaro/flight_code/flight/aux-ins.cc -o CMakeFiles/flight.dir/flight/aux-ins.cc.s
+	/usr/local/bin/arm-none-eabi-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tuan/Projects/ua_spaaro/flight_code/flight/aux-ins.cc -o CMakeFiles/flight.dir/flight/aux-ins.cc.s
 
 CMakeFiles/flight.dir/flight/datalog.cc.obj: CMakeFiles/flight.dir/flags.make
 CMakeFiles/flight.dir/flight/datalog.cc.obj: ../flight/datalog.cc
 CMakeFiles/flight.dir/flight/datalog.cc.obj: CMakeFiles/flight.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/flight.dir/flight/datalog.cc.obj"
-	/usr/local/bin/arm-none-eabi-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/flight.dir/flight/datalog.cc.obj -MF CMakeFiles/flight.dir/flight/datalog.cc.obj.d -o CMakeFiles/flight.dir/flight/datalog.cc.obj -c /home/tuan/Projects/super/ua_spaaro/flight_code/flight/datalog.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tuan/Projects/ua_spaaro/flight_code/malt_build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/flight.dir/flight/datalog.cc.obj"
+	/usr/local/bin/arm-none-eabi-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/flight.dir/flight/datalog.cc.obj -MF CMakeFiles/flight.dir/flight/datalog.cc.obj.d -o CMakeFiles/flight.dir/flight/datalog.cc.obj -c /home/tuan/Projects/ua_spaaro/flight_code/flight/datalog.cc
 
 CMakeFiles/flight.dir/flight/datalog.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/flight.dir/flight/datalog.cc.i"
-	/usr/local/bin/arm-none-eabi-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tuan/Projects/super/ua_spaaro/flight_code/flight/datalog.cc > CMakeFiles/flight.dir/flight/datalog.cc.i
+	/usr/local/bin/arm-none-eabi-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tuan/Projects/ua_spaaro/flight_code/flight/datalog.cc > CMakeFiles/flight.dir/flight/datalog.cc.i
 
 CMakeFiles/flight.dir/flight/datalog.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/flight.dir/flight/datalog.cc.s"
-	/usr/local/bin/arm-none-eabi-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tuan/Projects/super/ua_spaaro/flight_code/flight/datalog.cc -o CMakeFiles/flight.dir/flight/datalog.cc.s
+	/usr/local/bin/arm-none-eabi-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tuan/Projects/ua_spaaro/flight_code/flight/datalog.cc -o CMakeFiles/flight.dir/flight/datalog.cc.s
 
 CMakeFiles/flight.dir/flight/effectors.cc.obj: CMakeFiles/flight.dir/flags.make
 CMakeFiles/flight.dir/flight/effectors.cc.obj: ../flight/effectors.cc
 CMakeFiles/flight.dir/flight/effectors.cc.obj: CMakeFiles/flight.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/flight.dir/flight/effectors.cc.obj"
-	/usr/local/bin/arm-none-eabi-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/flight.dir/flight/effectors.cc.obj -MF CMakeFiles/flight.dir/flight/effectors.cc.obj.d -o CMakeFiles/flight.dir/flight/effectors.cc.obj -c /home/tuan/Projects/super/ua_spaaro/flight_code/flight/effectors.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tuan/Projects/ua_spaaro/flight_code/malt_build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/flight.dir/flight/effectors.cc.obj"
+	/usr/local/bin/arm-none-eabi-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/flight.dir/flight/effectors.cc.obj -MF CMakeFiles/flight.dir/flight/effectors.cc.obj.d -o CMakeFiles/flight.dir/flight/effectors.cc.obj -c /home/tuan/Projects/ua_spaaro/flight_code/flight/effectors.cc
 
 CMakeFiles/flight.dir/flight/effectors.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/flight.dir/flight/effectors.cc.i"
-	/usr/local/bin/arm-none-eabi-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tuan/Projects/super/ua_spaaro/flight_code/flight/effectors.cc > CMakeFiles/flight.dir/flight/effectors.cc.i
+	/usr/local/bin/arm-none-eabi-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tuan/Projects/ua_spaaro/flight_code/flight/effectors.cc > CMakeFiles/flight.dir/flight/effectors.cc.i
 
 CMakeFiles/flight.dir/flight/effectors.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/flight.dir/flight/effectors.cc.s"
-	/usr/local/bin/arm-none-eabi-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tuan/Projects/super/ua_spaaro/flight_code/flight/effectors.cc -o CMakeFiles/flight.dir/flight/effectors.cc.s
+	/usr/local/bin/arm-none-eabi-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tuan/Projects/ua_spaaro/flight_code/flight/effectors.cc -o CMakeFiles/flight.dir/flight/effectors.cc.s
 
 CMakeFiles/flight.dir/flight/telem.cc.obj: CMakeFiles/flight.dir/flags.make
 CMakeFiles/flight.dir/flight/telem.cc.obj: ../flight/telem.cc
 CMakeFiles/flight.dir/flight/telem.cc.obj: CMakeFiles/flight.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/flight.dir/flight/telem.cc.obj"
-	/usr/local/bin/arm-none-eabi-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/flight.dir/flight/telem.cc.obj -MF CMakeFiles/flight.dir/flight/telem.cc.obj.d -o CMakeFiles/flight.dir/flight/telem.cc.obj -c /home/tuan/Projects/super/ua_spaaro/flight_code/flight/telem.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tuan/Projects/ua_spaaro/flight_code/malt_build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/flight.dir/flight/telem.cc.obj"
+	/usr/local/bin/arm-none-eabi-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/flight.dir/flight/telem.cc.obj -MF CMakeFiles/flight.dir/flight/telem.cc.obj.d -o CMakeFiles/flight.dir/flight/telem.cc.obj -c /home/tuan/Projects/ua_spaaro/flight_code/flight/telem.cc
 
 CMakeFiles/flight.dir/flight/telem.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/flight.dir/flight/telem.cc.i"
-	/usr/local/bin/arm-none-eabi-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tuan/Projects/super/ua_spaaro/flight_code/flight/telem.cc > CMakeFiles/flight.dir/flight/telem.cc.i
+	/usr/local/bin/arm-none-eabi-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tuan/Projects/ua_spaaro/flight_code/flight/telem.cc > CMakeFiles/flight.dir/flight/telem.cc.i
 
 CMakeFiles/flight.dir/flight/telem.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/flight.dir/flight/telem.cc.s"
-	/usr/local/bin/arm-none-eabi-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tuan/Projects/super/ua_spaaro/flight_code/flight/telem.cc -o CMakeFiles/flight.dir/flight/telem.cc.s
+	/usr/local/bin/arm-none-eabi-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tuan/Projects/ua_spaaro/flight_code/flight/telem.cc -o CMakeFiles/flight.dir/flight/telem.cc.s
 
 CMakeFiles/flight.dir/flight/vms.cc.obj: CMakeFiles/flight.dir/flags.make
 CMakeFiles/flight.dir/flight/vms.cc.obj: ../flight/vms.cc
 CMakeFiles/flight.dir/flight/vms.cc.obj: CMakeFiles/flight.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/flight.dir/flight/vms.cc.obj"
-	/usr/local/bin/arm-none-eabi-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/flight.dir/flight/vms.cc.obj -MF CMakeFiles/flight.dir/flight/vms.cc.obj.d -o CMakeFiles/flight.dir/flight/vms.cc.obj -c /home/tuan/Projects/super/ua_spaaro/flight_code/flight/vms.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tuan/Projects/ua_spaaro/flight_code/malt_build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/flight.dir/flight/vms.cc.obj"
+	/usr/local/bin/arm-none-eabi-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/flight.dir/flight/vms.cc.obj -MF CMakeFiles/flight.dir/flight/vms.cc.obj.d -o CMakeFiles/flight.dir/flight/vms.cc.obj -c /home/tuan/Projects/ua_spaaro/flight_code/flight/vms.cc
 
 CMakeFiles/flight.dir/flight/vms.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/flight.dir/flight/vms.cc.i"
-	/usr/local/bin/arm-none-eabi-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tuan/Projects/super/ua_spaaro/flight_code/flight/vms.cc > CMakeFiles/flight.dir/flight/vms.cc.i
+	/usr/local/bin/arm-none-eabi-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tuan/Projects/ua_spaaro/flight_code/flight/vms.cc > CMakeFiles/flight.dir/flight/vms.cc.i
 
 CMakeFiles/flight.dir/flight/vms.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/flight.dir/flight/vms.cc.s"
-	/usr/local/bin/arm-none-eabi-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tuan/Projects/super/ua_spaaro/flight_code/flight/vms.cc -o CMakeFiles/flight.dir/flight/vms.cc.s
+	/usr/local/bin/arm-none-eabi-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tuan/Projects/ua_spaaro/flight_code/flight/vms.cc -o CMakeFiles/flight.dir/flight/vms.cc.s
 
 CMakeFiles/flight.dir/drivers/fmu.cc.obj: CMakeFiles/flight.dir/flags.make
 CMakeFiles/flight.dir/drivers/fmu.cc.obj: ../drivers/fmu.cc
 CMakeFiles/flight.dir/drivers/fmu.cc.obj: CMakeFiles/flight.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/flight.dir/drivers/fmu.cc.obj"
-	/usr/local/bin/arm-none-eabi-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/flight.dir/drivers/fmu.cc.obj -MF CMakeFiles/flight.dir/drivers/fmu.cc.obj.d -o CMakeFiles/flight.dir/drivers/fmu.cc.obj -c /home/tuan/Projects/super/ua_spaaro/flight_code/drivers/fmu.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tuan/Projects/ua_spaaro/flight_code/malt_build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/flight.dir/drivers/fmu.cc.obj"
+	/usr/local/bin/arm-none-eabi-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/flight.dir/drivers/fmu.cc.obj -MF CMakeFiles/flight.dir/drivers/fmu.cc.obj.d -o CMakeFiles/flight.dir/drivers/fmu.cc.obj -c /home/tuan/Projects/ua_spaaro/flight_code/drivers/fmu.cc
 
 CMakeFiles/flight.dir/drivers/fmu.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/flight.dir/drivers/fmu.cc.i"
-	/usr/local/bin/arm-none-eabi-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tuan/Projects/super/ua_spaaro/flight_code/drivers/fmu.cc > CMakeFiles/flight.dir/drivers/fmu.cc.i
+	/usr/local/bin/arm-none-eabi-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tuan/Projects/ua_spaaro/flight_code/drivers/fmu.cc > CMakeFiles/flight.dir/drivers/fmu.cc.i
 
 CMakeFiles/flight.dir/drivers/fmu.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/flight.dir/drivers/fmu.cc.s"
-	/usr/local/bin/arm-none-eabi-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tuan/Projects/super/ua_spaaro/flight_code/drivers/fmu.cc -o CMakeFiles/flight.dir/drivers/fmu.cc.s
+	/usr/local/bin/arm-none-eabi-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tuan/Projects/ua_spaaro/flight_code/drivers/fmu.cc -o CMakeFiles/flight.dir/drivers/fmu.cc.s
 
 CMakeFiles/flight.dir/drivers/spaaro-lis3mdl.cc.obj: CMakeFiles/flight.dir/flags.make
 CMakeFiles/flight.dir/drivers/spaaro-lis3mdl.cc.obj: ../drivers/spaaro-lis3mdl.cc
 CMakeFiles/flight.dir/drivers/spaaro-lis3mdl.cc.obj: CMakeFiles/flight.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/flight.dir/drivers/spaaro-lis3mdl.cc.obj"
-	/usr/local/bin/arm-none-eabi-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/flight.dir/drivers/spaaro-lis3mdl.cc.obj -MF CMakeFiles/flight.dir/drivers/spaaro-lis3mdl.cc.obj.d -o CMakeFiles/flight.dir/drivers/spaaro-lis3mdl.cc.obj -c /home/tuan/Projects/super/ua_spaaro/flight_code/drivers/spaaro-lis3mdl.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tuan/Projects/ua_spaaro/flight_code/malt_build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/flight.dir/drivers/spaaro-lis3mdl.cc.obj"
+	/usr/local/bin/arm-none-eabi-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/flight.dir/drivers/spaaro-lis3mdl.cc.obj -MF CMakeFiles/flight.dir/drivers/spaaro-lis3mdl.cc.obj.d -o CMakeFiles/flight.dir/drivers/spaaro-lis3mdl.cc.obj -c /home/tuan/Projects/ua_spaaro/flight_code/drivers/spaaro-lis3mdl.cc
 
 CMakeFiles/flight.dir/drivers/spaaro-lis3mdl.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/flight.dir/drivers/spaaro-lis3mdl.cc.i"
-	/usr/local/bin/arm-none-eabi-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tuan/Projects/super/ua_spaaro/flight_code/drivers/spaaro-lis3mdl.cc > CMakeFiles/flight.dir/drivers/spaaro-lis3mdl.cc.i
+	/usr/local/bin/arm-none-eabi-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tuan/Projects/ua_spaaro/flight_code/drivers/spaaro-lis3mdl.cc > CMakeFiles/flight.dir/drivers/spaaro-lis3mdl.cc.i
 
 CMakeFiles/flight.dir/drivers/spaaro-lis3mdl.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/flight.dir/drivers/spaaro-lis3mdl.cc.s"
-	/usr/local/bin/arm-none-eabi-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tuan/Projects/super/ua_spaaro/flight_code/drivers/spaaro-lis3mdl.cc -o CMakeFiles/flight.dir/drivers/spaaro-lis3mdl.cc.s
+	/usr/local/bin/arm-none-eabi-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tuan/Projects/ua_spaaro/flight_code/drivers/spaaro-lis3mdl.cc -o CMakeFiles/flight.dir/drivers/spaaro-lis3mdl.cc.s
 
 CMakeFiles/flight.dir/drivers/spaaro-ams5915.cc.obj: CMakeFiles/flight.dir/flags.make
 CMakeFiles/flight.dir/drivers/spaaro-ams5915.cc.obj: ../drivers/spaaro-ams5915.cc
 CMakeFiles/flight.dir/drivers/spaaro-ams5915.cc.obj: CMakeFiles/flight.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/flight.dir/drivers/spaaro-ams5915.cc.obj"
-	/usr/local/bin/arm-none-eabi-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/flight.dir/drivers/spaaro-ams5915.cc.obj -MF CMakeFiles/flight.dir/drivers/spaaro-ams5915.cc.obj.d -o CMakeFiles/flight.dir/drivers/spaaro-ams5915.cc.obj -c /home/tuan/Projects/super/ua_spaaro/flight_code/drivers/spaaro-ams5915.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tuan/Projects/ua_spaaro/flight_code/malt_build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/flight.dir/drivers/spaaro-ams5915.cc.obj"
+	/usr/local/bin/arm-none-eabi-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/flight.dir/drivers/spaaro-ams5915.cc.obj -MF CMakeFiles/flight.dir/drivers/spaaro-ams5915.cc.obj.d -o CMakeFiles/flight.dir/drivers/spaaro-ams5915.cc.obj -c /home/tuan/Projects/ua_spaaro/flight_code/drivers/spaaro-ams5915.cc
 
 CMakeFiles/flight.dir/drivers/spaaro-ams5915.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/flight.dir/drivers/spaaro-ams5915.cc.i"
-	/usr/local/bin/arm-none-eabi-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tuan/Projects/super/ua_spaaro/flight_code/drivers/spaaro-ams5915.cc > CMakeFiles/flight.dir/drivers/spaaro-ams5915.cc.i
+	/usr/local/bin/arm-none-eabi-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tuan/Projects/ua_spaaro/flight_code/drivers/spaaro-ams5915.cc > CMakeFiles/flight.dir/drivers/spaaro-ams5915.cc.i
 
 CMakeFiles/flight.dir/drivers/spaaro-ams5915.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/flight.dir/drivers/spaaro-ams5915.cc.s"
-	/usr/local/bin/arm-none-eabi-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tuan/Projects/super/ua_spaaro/flight_code/drivers/spaaro-ams5915.cc -o CMakeFiles/flight.dir/drivers/spaaro-ams5915.cc.s
+	/usr/local/bin/arm-none-eabi-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tuan/Projects/ua_spaaro/flight_code/drivers/spaaro-ams5915.cc -o CMakeFiles/flight.dir/drivers/spaaro-ams5915.cc.s
 
 CMakeFiles/flight.dir/drivers/spaaro-ublox.cc.obj: CMakeFiles/flight.dir/flags.make
 CMakeFiles/flight.dir/drivers/spaaro-ublox.cc.obj: ../drivers/spaaro-ublox.cc
 CMakeFiles/flight.dir/drivers/spaaro-ublox.cc.obj: CMakeFiles/flight.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/flight.dir/drivers/spaaro-ublox.cc.obj"
-	/usr/local/bin/arm-none-eabi-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/flight.dir/drivers/spaaro-ublox.cc.obj -MF CMakeFiles/flight.dir/drivers/spaaro-ublox.cc.obj.d -o CMakeFiles/flight.dir/drivers/spaaro-ublox.cc.obj -c /home/tuan/Projects/super/ua_spaaro/flight_code/drivers/spaaro-ublox.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tuan/Projects/ua_spaaro/flight_code/malt_build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/flight.dir/drivers/spaaro-ublox.cc.obj"
+	/usr/local/bin/arm-none-eabi-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/flight.dir/drivers/spaaro-ublox.cc.obj -MF CMakeFiles/flight.dir/drivers/spaaro-ublox.cc.obj.d -o CMakeFiles/flight.dir/drivers/spaaro-ublox.cc.obj -c /home/tuan/Projects/ua_spaaro/flight_code/drivers/spaaro-ublox.cc
 
 CMakeFiles/flight.dir/drivers/spaaro-ublox.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/flight.dir/drivers/spaaro-ublox.cc.i"
-	/usr/local/bin/arm-none-eabi-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tuan/Projects/super/ua_spaaro/flight_code/drivers/spaaro-ublox.cc > CMakeFiles/flight.dir/drivers/spaaro-ublox.cc.i
+	/usr/local/bin/arm-none-eabi-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tuan/Projects/ua_spaaro/flight_code/drivers/spaaro-ublox.cc > CMakeFiles/flight.dir/drivers/spaaro-ublox.cc.i
 
 CMakeFiles/flight.dir/drivers/spaaro-ublox.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/flight.dir/drivers/spaaro-ublox.cc.s"
-	/usr/local/bin/arm-none-eabi-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tuan/Projects/super/ua_spaaro/flight_code/drivers/spaaro-ublox.cc -o CMakeFiles/flight.dir/drivers/spaaro-ublox.cc.s
+	/usr/local/bin/arm-none-eabi-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tuan/Projects/ua_spaaro/flight_code/drivers/spaaro-ublox.cc -o CMakeFiles/flight.dir/drivers/spaaro-ublox.cc.s
 
 CMakeFiles/flight.dir/drivers/spaaro-ainstein-usd1.cc.obj: CMakeFiles/flight.dir/flags.make
 CMakeFiles/flight.dir/drivers/spaaro-ainstein-usd1.cc.obj: ../drivers/spaaro-ainstein-usd1.cc
 CMakeFiles/flight.dir/drivers/spaaro-ainstein-usd1.cc.obj: CMakeFiles/flight.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object CMakeFiles/flight.dir/drivers/spaaro-ainstein-usd1.cc.obj"
-	/usr/local/bin/arm-none-eabi-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/flight.dir/drivers/spaaro-ainstein-usd1.cc.obj -MF CMakeFiles/flight.dir/drivers/spaaro-ainstein-usd1.cc.obj.d -o CMakeFiles/flight.dir/drivers/spaaro-ainstein-usd1.cc.obj -c /home/tuan/Projects/super/ua_spaaro/flight_code/drivers/spaaro-ainstein-usd1.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tuan/Projects/ua_spaaro/flight_code/malt_build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object CMakeFiles/flight.dir/drivers/spaaro-ainstein-usd1.cc.obj"
+	/usr/local/bin/arm-none-eabi-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/flight.dir/drivers/spaaro-ainstein-usd1.cc.obj -MF CMakeFiles/flight.dir/drivers/spaaro-ainstein-usd1.cc.obj.d -o CMakeFiles/flight.dir/drivers/spaaro-ainstein-usd1.cc.obj -c /home/tuan/Projects/ua_spaaro/flight_code/drivers/spaaro-ainstein-usd1.cc
 
 CMakeFiles/flight.dir/drivers/spaaro-ainstein-usd1.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/flight.dir/drivers/spaaro-ainstein-usd1.cc.i"
-	/usr/local/bin/arm-none-eabi-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tuan/Projects/super/ua_spaaro/flight_code/drivers/spaaro-ainstein-usd1.cc > CMakeFiles/flight.dir/drivers/spaaro-ainstein-usd1.cc.i
+	/usr/local/bin/arm-none-eabi-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tuan/Projects/ua_spaaro/flight_code/drivers/spaaro-ainstein-usd1.cc > CMakeFiles/flight.dir/drivers/spaaro-ainstein-usd1.cc.i
 
 CMakeFiles/flight.dir/drivers/spaaro-ainstein-usd1.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/flight.dir/drivers/spaaro-ainstein-usd1.cc.s"
-	/usr/local/bin/arm-none-eabi-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tuan/Projects/super/ua_spaaro/flight_code/drivers/spaaro-ainstein-usd1.cc -o CMakeFiles/flight.dir/drivers/spaaro-ainstein-usd1.cc.s
+	/usr/local/bin/arm-none-eabi-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tuan/Projects/ua_spaaro/flight_code/drivers/spaaro-ainstein-usd1.cc -o CMakeFiles/flight.dir/drivers/spaaro-ainstein-usd1.cc.s
 
 CMakeFiles/flight.dir/drivers/spaaro-sbus.cc.obj: CMakeFiles/flight.dir/flags.make
 CMakeFiles/flight.dir/drivers/spaaro-sbus.cc.obj: ../drivers/spaaro-sbus.cc
 CMakeFiles/flight.dir/drivers/spaaro-sbus.cc.obj: CMakeFiles/flight.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object CMakeFiles/flight.dir/drivers/spaaro-sbus.cc.obj"
-	/usr/local/bin/arm-none-eabi-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/flight.dir/drivers/spaaro-sbus.cc.obj -MF CMakeFiles/flight.dir/drivers/spaaro-sbus.cc.obj.d -o CMakeFiles/flight.dir/drivers/spaaro-sbus.cc.obj -c /home/tuan/Projects/super/ua_spaaro/flight_code/drivers/spaaro-sbus.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tuan/Projects/ua_spaaro/flight_code/malt_build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object CMakeFiles/flight.dir/drivers/spaaro-sbus.cc.obj"
+	/usr/local/bin/arm-none-eabi-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/flight.dir/drivers/spaaro-sbus.cc.obj -MF CMakeFiles/flight.dir/drivers/spaaro-sbus.cc.obj.d -o CMakeFiles/flight.dir/drivers/spaaro-sbus.cc.obj -c /home/tuan/Projects/ua_spaaro/flight_code/drivers/spaaro-sbus.cc
 
 CMakeFiles/flight.dir/drivers/spaaro-sbus.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/flight.dir/drivers/spaaro-sbus.cc.i"
-	/usr/local/bin/arm-none-eabi-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tuan/Projects/super/ua_spaaro/flight_code/drivers/spaaro-sbus.cc > CMakeFiles/flight.dir/drivers/spaaro-sbus.cc.i
+	/usr/local/bin/arm-none-eabi-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tuan/Projects/ua_spaaro/flight_code/drivers/spaaro-sbus.cc > CMakeFiles/flight.dir/drivers/spaaro-sbus.cc.i
 
 CMakeFiles/flight.dir/drivers/spaaro-sbus.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/flight.dir/drivers/spaaro-sbus.cc.s"
-	/usr/local/bin/arm-none-eabi-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tuan/Projects/super/ua_spaaro/flight_code/drivers/spaaro-sbus.cc -o CMakeFiles/flight.dir/drivers/spaaro-sbus.cc.s
+	/usr/local/bin/arm-none-eabi-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tuan/Projects/ua_spaaro/flight_code/drivers/spaaro-sbus.cc -o CMakeFiles/flight.dir/drivers/spaaro-sbus.cc.s
 
 CMakeFiles/flight.dir/drivers/analog.cc.obj: CMakeFiles/flight.dir/flags.make
 CMakeFiles/flight.dir/drivers/analog.cc.obj: ../drivers/analog.cc
 CMakeFiles/flight.dir/drivers/analog.cc.obj: CMakeFiles/flight.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object CMakeFiles/flight.dir/drivers/analog.cc.obj"
-	/usr/local/bin/arm-none-eabi-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/flight.dir/drivers/analog.cc.obj -MF CMakeFiles/flight.dir/drivers/analog.cc.obj.d -o CMakeFiles/flight.dir/drivers/analog.cc.obj -c /home/tuan/Projects/super/ua_spaaro/flight_code/drivers/analog.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tuan/Projects/ua_spaaro/flight_code/malt_build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object CMakeFiles/flight.dir/drivers/analog.cc.obj"
+	/usr/local/bin/arm-none-eabi-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/flight.dir/drivers/analog.cc.obj -MF CMakeFiles/flight.dir/drivers/analog.cc.obj.d -o CMakeFiles/flight.dir/drivers/analog.cc.obj -c /home/tuan/Projects/ua_spaaro/flight_code/drivers/analog.cc
 
 CMakeFiles/flight.dir/drivers/analog.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/flight.dir/drivers/analog.cc.i"
-	/usr/local/bin/arm-none-eabi-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tuan/Projects/super/ua_spaaro/flight_code/drivers/analog.cc > CMakeFiles/flight.dir/drivers/analog.cc.i
+	/usr/local/bin/arm-none-eabi-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tuan/Projects/ua_spaaro/flight_code/drivers/analog.cc > CMakeFiles/flight.dir/drivers/analog.cc.i
 
 CMakeFiles/flight.dir/drivers/analog.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/flight.dir/drivers/analog.cc.s"
-	/usr/local/bin/arm-none-eabi-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tuan/Projects/super/ua_spaaro/flight_code/drivers/analog.cc -o CMakeFiles/flight.dir/drivers/analog.cc.s
+	/usr/local/bin/arm-none-eabi-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tuan/Projects/ua_spaaro/flight_code/drivers/analog.cc -o CMakeFiles/flight.dir/drivers/analog.cc.s
 
 CMakeFiles/flight.dir/drivers/spaaro-vector-nav.cc.obj: CMakeFiles/flight.dir/flags.make
 CMakeFiles/flight.dir/drivers/spaaro-vector-nav.cc.obj: ../drivers/spaaro-vector-nav.cc
 CMakeFiles/flight.dir/drivers/spaaro-vector-nav.cc.obj: CMakeFiles/flight.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building CXX object CMakeFiles/flight.dir/drivers/spaaro-vector-nav.cc.obj"
-	/usr/local/bin/arm-none-eabi-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/flight.dir/drivers/spaaro-vector-nav.cc.obj -MF CMakeFiles/flight.dir/drivers/spaaro-vector-nav.cc.obj.d -o CMakeFiles/flight.dir/drivers/spaaro-vector-nav.cc.obj -c /home/tuan/Projects/super/ua_spaaro/flight_code/drivers/spaaro-vector-nav.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tuan/Projects/ua_spaaro/flight_code/malt_build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building CXX object CMakeFiles/flight.dir/drivers/spaaro-vector-nav.cc.obj"
+	/usr/local/bin/arm-none-eabi-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/flight.dir/drivers/spaaro-vector-nav.cc.obj -MF CMakeFiles/flight.dir/drivers/spaaro-vector-nav.cc.obj.d -o CMakeFiles/flight.dir/drivers/spaaro-vector-nav.cc.obj -c /home/tuan/Projects/ua_spaaro/flight_code/drivers/spaaro-vector-nav.cc
 
 CMakeFiles/flight.dir/drivers/spaaro-vector-nav.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/flight.dir/drivers/spaaro-vector-nav.cc.i"
-	/usr/local/bin/arm-none-eabi-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tuan/Projects/super/ua_spaaro/flight_code/drivers/spaaro-vector-nav.cc > CMakeFiles/flight.dir/drivers/spaaro-vector-nav.cc.i
+	/usr/local/bin/arm-none-eabi-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tuan/Projects/ua_spaaro/flight_code/drivers/spaaro-vector-nav.cc > CMakeFiles/flight.dir/drivers/spaaro-vector-nav.cc.i
 
 CMakeFiles/flight.dir/drivers/spaaro-vector-nav.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/flight.dir/drivers/spaaro-vector-nav.cc.s"
-	/usr/local/bin/arm-none-eabi-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tuan/Projects/super/ua_spaaro/flight_code/drivers/spaaro-vector-nav.cc -o CMakeFiles/flight.dir/drivers/spaaro-vector-nav.cc.s
+	/usr/local/bin/arm-none-eabi-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tuan/Projects/ua_spaaro/flight_code/drivers/spaaro-vector-nav.cc -o CMakeFiles/flight.dir/drivers/spaaro-vector-nav.cc.s
 
 CMakeFiles/flight.dir/drivers/power-module.cc.obj: CMakeFiles/flight.dir/flags.make
 CMakeFiles/flight.dir/drivers/power-module.cc.obj: ../drivers/power-module.cc
 CMakeFiles/flight.dir/drivers/power-module.cc.obj: CMakeFiles/flight.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building CXX object CMakeFiles/flight.dir/drivers/power-module.cc.obj"
-	/usr/local/bin/arm-none-eabi-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/flight.dir/drivers/power-module.cc.obj -MF CMakeFiles/flight.dir/drivers/power-module.cc.obj.d -o CMakeFiles/flight.dir/drivers/power-module.cc.obj -c /home/tuan/Projects/super/ua_spaaro/flight_code/drivers/power-module.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tuan/Projects/ua_spaaro/flight_code/malt_build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building CXX object CMakeFiles/flight.dir/drivers/power-module.cc.obj"
+	/usr/local/bin/arm-none-eabi-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/flight.dir/drivers/power-module.cc.obj -MF CMakeFiles/flight.dir/drivers/power-module.cc.obj.d -o CMakeFiles/flight.dir/drivers/power-module.cc.obj -c /home/tuan/Projects/ua_spaaro/flight_code/drivers/power-module.cc
 
 CMakeFiles/flight.dir/drivers/power-module.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/flight.dir/drivers/power-module.cc.i"
-	/usr/local/bin/arm-none-eabi-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tuan/Projects/super/ua_spaaro/flight_code/drivers/power-module.cc > CMakeFiles/flight.dir/drivers/power-module.cc.i
+	/usr/local/bin/arm-none-eabi-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tuan/Projects/ua_spaaro/flight_code/drivers/power-module.cc > CMakeFiles/flight.dir/drivers/power-module.cc.i
 
 CMakeFiles/flight.dir/drivers/power-module.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/flight.dir/drivers/power-module.cc.s"
-	/usr/local/bin/arm-none-eabi-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tuan/Projects/super/ua_spaaro/flight_code/drivers/power-module.cc -o CMakeFiles/flight.dir/drivers/power-module.cc.s
+	/usr/local/bin/arm-none-eabi-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tuan/Projects/ua_spaaro/flight_code/drivers/power-module.cc -o CMakeFiles/flight.dir/drivers/power-module.cc.s
 
 CMakeFiles/flight.dir/autocode/malt_ert_rtw/autocode.cpp.obj: CMakeFiles/flight.dir/flags.make
 CMakeFiles/flight.dir/autocode/malt_ert_rtw/autocode.cpp.obj: ../autocode/malt_ert_rtw/autocode.cpp
 CMakeFiles/flight.dir/autocode/malt_ert_rtw/autocode.cpp.obj: CMakeFiles/flight.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building CXX object CMakeFiles/flight.dir/autocode/malt_ert_rtw/autocode.cpp.obj"
-	/usr/local/bin/arm-none-eabi-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/flight.dir/autocode/malt_ert_rtw/autocode.cpp.obj -MF CMakeFiles/flight.dir/autocode/malt_ert_rtw/autocode.cpp.obj.d -o CMakeFiles/flight.dir/autocode/malt_ert_rtw/autocode.cpp.obj -c /home/tuan/Projects/super/ua_spaaro/flight_code/autocode/malt_ert_rtw/autocode.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tuan/Projects/ua_spaaro/flight_code/malt_build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building CXX object CMakeFiles/flight.dir/autocode/malt_ert_rtw/autocode.cpp.obj"
+	/usr/local/bin/arm-none-eabi-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/flight.dir/autocode/malt_ert_rtw/autocode.cpp.obj -MF CMakeFiles/flight.dir/autocode/malt_ert_rtw/autocode.cpp.obj.d -o CMakeFiles/flight.dir/autocode/malt_ert_rtw/autocode.cpp.obj -c /home/tuan/Projects/ua_spaaro/flight_code/autocode/malt_ert_rtw/autocode.cpp
 
 CMakeFiles/flight.dir/autocode/malt_ert_rtw/autocode.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/flight.dir/autocode/malt_ert_rtw/autocode.cpp.i"
-	/usr/local/bin/arm-none-eabi-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tuan/Projects/super/ua_spaaro/flight_code/autocode/malt_ert_rtw/autocode.cpp > CMakeFiles/flight.dir/autocode/malt_ert_rtw/autocode.cpp.i
+	/usr/local/bin/arm-none-eabi-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tuan/Projects/ua_spaaro/flight_code/autocode/malt_ert_rtw/autocode.cpp > CMakeFiles/flight.dir/autocode/malt_ert_rtw/autocode.cpp.i
 
 CMakeFiles/flight.dir/autocode/malt_ert_rtw/autocode.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/flight.dir/autocode/malt_ert_rtw/autocode.cpp.s"
-	/usr/local/bin/arm-none-eabi-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tuan/Projects/super/ua_spaaro/flight_code/autocode/malt_ert_rtw/autocode.cpp -o CMakeFiles/flight.dir/autocode/malt_ert_rtw/autocode.cpp.s
+	/usr/local/bin/arm-none-eabi-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tuan/Projects/ua_spaaro/flight_code/autocode/malt_ert_rtw/autocode.cpp -o CMakeFiles/flight.dir/autocode/malt_ert_rtw/autocode.cpp.s
 
 # Object files for target flight
 flight_OBJECTS = \
@@ -443,7 +443,7 @@ flight: _deps/sd-build/libsd.a
 flight: _deps/core-build/libcore.a
 flight: _deps/mcu_support-src/ld/imxrt1062_mm.ld
 flight: CMakeFiles/flight.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Linking CXX executable flight"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/tuan/Projects/ua_spaaro/flight_code/malt_build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Linking CXX executable flight"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/flight.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -455,6 +455,6 @@ CMakeFiles/flight.dir/clean:
 .PHONY : CMakeFiles/flight.dir/clean
 
 CMakeFiles/flight.dir/depend:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/tuan/Projects/super/ua_spaaro/flight_code /home/tuan/Projects/super/ua_spaaro/flight_code /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/CMakeFiles/flight.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/tuan/Projects/ua_spaaro/flight_code /home/tuan/Projects/ua_spaaro/flight_code /home/tuan/Projects/ua_spaaro/flight_code/malt_build /home/tuan/Projects/ua_spaaro/flight_code/malt_build /home/tuan/Projects/ua_spaaro/flight_code/malt_build/CMakeFiles/flight.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/flight.dir/depend
 

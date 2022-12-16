@@ -53,10 +53,10 @@ RM = /usr/local/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/tuan/Projects/super/ua_spaaro/flight_code
+CMAKE_SOURCE_DIR = /home/tuan/Projects/ua_spaaro/flight_code
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build
+CMAKE_BINARY_DIR = /home/tuan/Projects/ua_spaaro/flight_code/malt_build
 
 # Include any dependencies generated for this target.
 include _deps/bmp3-build/CMakeFiles/bmp3.dir/depend.make
@@ -72,30 +72,30 @@ include _deps/bmp3-build/CMakeFiles/bmp3.dir/flags.make
 _deps/bmp3-build/CMakeFiles/bmp3.dir/src/bmp3.cpp.obj: _deps/bmp3-build/CMakeFiles/bmp3.dir/flags.make
 _deps/bmp3-build/CMakeFiles/bmp3.dir/src/bmp3.cpp.obj: _deps/bmp3-src/src/bmp3.cpp
 _deps/bmp3-build/CMakeFiles/bmp3.dir/src/bmp3.cpp.obj: _deps/bmp3-build/CMakeFiles/bmp3.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object _deps/bmp3-build/CMakeFiles/bmp3.dir/src/bmp3.cpp.obj"
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/_deps/bmp3-build && /usr/local/bin/arm-none-eabi-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT _deps/bmp3-build/CMakeFiles/bmp3.dir/src/bmp3.cpp.obj -MF CMakeFiles/bmp3.dir/src/bmp3.cpp.obj.d -o CMakeFiles/bmp3.dir/src/bmp3.cpp.obj -c /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/_deps/bmp3-src/src/bmp3.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tuan/Projects/ua_spaaro/flight_code/malt_build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object _deps/bmp3-build/CMakeFiles/bmp3.dir/src/bmp3.cpp.obj"
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build/_deps/bmp3-build && /usr/local/bin/arm-none-eabi-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT _deps/bmp3-build/CMakeFiles/bmp3.dir/src/bmp3.cpp.obj -MF CMakeFiles/bmp3.dir/src/bmp3.cpp.obj.d -o CMakeFiles/bmp3.dir/src/bmp3.cpp.obj -c /home/tuan/Projects/ua_spaaro/flight_code/malt_build/_deps/bmp3-src/src/bmp3.cpp
 
 _deps/bmp3-build/CMakeFiles/bmp3.dir/src/bmp3.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/bmp3.dir/src/bmp3.cpp.i"
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/_deps/bmp3-build && /usr/local/bin/arm-none-eabi-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/_deps/bmp3-src/src/bmp3.cpp > CMakeFiles/bmp3.dir/src/bmp3.cpp.i
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build/_deps/bmp3-build && /usr/local/bin/arm-none-eabi-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tuan/Projects/ua_spaaro/flight_code/malt_build/_deps/bmp3-src/src/bmp3.cpp > CMakeFiles/bmp3.dir/src/bmp3.cpp.i
 
 _deps/bmp3-build/CMakeFiles/bmp3.dir/src/bmp3.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/bmp3.dir/src/bmp3.cpp.s"
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/_deps/bmp3-build && /usr/local/bin/arm-none-eabi-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/_deps/bmp3-src/src/bmp3.cpp -o CMakeFiles/bmp3.dir/src/bmp3.cpp.s
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build/_deps/bmp3-build && /usr/local/bin/arm-none-eabi-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tuan/Projects/ua_spaaro/flight_code/malt_build/_deps/bmp3-src/src/bmp3.cpp -o CMakeFiles/bmp3.dir/src/bmp3.cpp.s
 
 _deps/bmp3-build/CMakeFiles/bmp3.dir/src/bst/bmp3.c.obj: _deps/bmp3-build/CMakeFiles/bmp3.dir/flags.make
 _deps/bmp3-build/CMakeFiles/bmp3.dir/src/bst/bmp3.c.obj: _deps/bmp3-src/src/bst/bmp3.c
 _deps/bmp3-build/CMakeFiles/bmp3.dir/src/bst/bmp3.c.obj: _deps/bmp3-build/CMakeFiles/bmp3.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object _deps/bmp3-build/CMakeFiles/bmp3.dir/src/bst/bmp3.c.obj"
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/_deps/bmp3-build && /usr/local/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT _deps/bmp3-build/CMakeFiles/bmp3.dir/src/bst/bmp3.c.obj -MF CMakeFiles/bmp3.dir/src/bst/bmp3.c.obj.d -o CMakeFiles/bmp3.dir/src/bst/bmp3.c.obj -c /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/_deps/bmp3-src/src/bst/bmp3.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tuan/Projects/ua_spaaro/flight_code/malt_build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object _deps/bmp3-build/CMakeFiles/bmp3.dir/src/bst/bmp3.c.obj"
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build/_deps/bmp3-build && /usr/local/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT _deps/bmp3-build/CMakeFiles/bmp3.dir/src/bst/bmp3.c.obj -MF CMakeFiles/bmp3.dir/src/bst/bmp3.c.obj.d -o CMakeFiles/bmp3.dir/src/bst/bmp3.c.obj -c /home/tuan/Projects/ua_spaaro/flight_code/malt_build/_deps/bmp3-src/src/bst/bmp3.c
 
 _deps/bmp3-build/CMakeFiles/bmp3.dir/src/bst/bmp3.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/bmp3.dir/src/bst/bmp3.c.i"
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/_deps/bmp3-build && /usr/local/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/_deps/bmp3-src/src/bst/bmp3.c > CMakeFiles/bmp3.dir/src/bst/bmp3.c.i
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build/_deps/bmp3-build && /usr/local/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/tuan/Projects/ua_spaaro/flight_code/malt_build/_deps/bmp3-src/src/bst/bmp3.c > CMakeFiles/bmp3.dir/src/bst/bmp3.c.i
 
 _deps/bmp3-build/CMakeFiles/bmp3.dir/src/bst/bmp3.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/bmp3.dir/src/bst/bmp3.c.s"
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/_deps/bmp3-build && /usr/local/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/_deps/bmp3-src/src/bst/bmp3.c -o CMakeFiles/bmp3.dir/src/bst/bmp3.c.s
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build/_deps/bmp3-build && /usr/local/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/tuan/Projects/ua_spaaro/flight_code/malt_build/_deps/bmp3-src/src/bst/bmp3.c -o CMakeFiles/bmp3.dir/src/bst/bmp3.c.s
 
 # Object files for target bmp3
 bmp3_OBJECTS = \
@@ -109,19 +109,19 @@ _deps/bmp3-build/libbmp3.a: _deps/bmp3-build/CMakeFiles/bmp3.dir/src/bmp3.cpp.ob
 _deps/bmp3-build/libbmp3.a: _deps/bmp3-build/CMakeFiles/bmp3.dir/src/bst/bmp3.c.obj
 _deps/bmp3-build/libbmp3.a: _deps/bmp3-build/CMakeFiles/bmp3.dir/build.make
 _deps/bmp3-build/libbmp3.a: _deps/bmp3-build/CMakeFiles/bmp3.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX static library libbmp3.a"
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/_deps/bmp3-build && $(CMAKE_COMMAND) -P CMakeFiles/bmp3.dir/cmake_clean_target.cmake
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/_deps/bmp3-build && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/bmp3.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/tuan/Projects/ua_spaaro/flight_code/malt_build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX static library libbmp3.a"
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build/_deps/bmp3-build && $(CMAKE_COMMAND) -P CMakeFiles/bmp3.dir/cmake_clean_target.cmake
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build/_deps/bmp3-build && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/bmp3.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 _deps/bmp3-build/CMakeFiles/bmp3.dir/build: _deps/bmp3-build/libbmp3.a
 .PHONY : _deps/bmp3-build/CMakeFiles/bmp3.dir/build
 
 _deps/bmp3-build/CMakeFiles/bmp3.dir/clean:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/_deps/bmp3-build && $(CMAKE_COMMAND) -P CMakeFiles/bmp3.dir/cmake_clean.cmake
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build/_deps/bmp3-build && $(CMAKE_COMMAND) -P CMakeFiles/bmp3.dir/cmake_clean.cmake
 .PHONY : _deps/bmp3-build/CMakeFiles/bmp3.dir/clean
 
 _deps/bmp3-build/CMakeFiles/bmp3.dir/depend:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/tuan/Projects/super/ua_spaaro/flight_code /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/_deps/bmp3-src /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/_deps/bmp3-build /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/_deps/bmp3-build/CMakeFiles/bmp3.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/tuan/Projects/ua_spaaro/flight_code /home/tuan/Projects/ua_spaaro/flight_code/malt_build/_deps/bmp3-src /home/tuan/Projects/ua_spaaro/flight_code/malt_build /home/tuan/Projects/ua_spaaro/flight_code/malt_build/_deps/bmp3-build /home/tuan/Projects/ua_spaaro/flight_code/malt_build/_deps/bmp3-build/CMakeFiles/bmp3.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : _deps/bmp3-build/CMakeFiles/bmp3.dir/depend
 

@@ -1,4 +1,4 @@
-# Install script for directory: /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/_deps/bmp3-src
+# Install script for directory: /home/tuan/Projects/ua_spaaro/flight_code/malt_build/_deps/bmp3-src
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

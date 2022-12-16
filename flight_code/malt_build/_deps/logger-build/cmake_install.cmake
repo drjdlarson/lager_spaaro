@@ -1,4 +1,4 @@
-# Install script for directory: /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/_deps/logger-src
+# Install script for directory: /home/tuan/Projects/ua_spaaro/flight_code/malt_build/_deps/logger-src
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -39,6 +39,6 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/_deps/sd-build/cmake_install.cmake")
+  include("/home/tuan/Projects/ua_spaaro/flight_code/malt_build/_deps/sd-build/cmake_install.cmake")
 endif()
 

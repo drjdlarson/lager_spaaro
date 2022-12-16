@@ -21,8 +21,8 @@ set_property(GLOBAL PROPERTY _CMAKE_FindGit_GIT_EXECUTABLE_VERSION
 include(ExternalProject)
 ExternalProject_Add(mcu_support-populate
                      "UPDATE_DISCONNECTED" "False" "GIT_REPOSITORY" "https://github.com/bolderflight/mcu-support.git" "GIT_TAG" "v1.1.0"
-                    SOURCE_DIR          "/home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/_deps/mcu_support-src"
-                    BINARY_DIR          "/home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/_deps/mcu_support-build"
+                    SOURCE_DIR          "/home/tuan/Projects/ua_spaaro/flight_code/malt_build/_deps/mcu_support-src"
+                    BINARY_DIR          "/home/tuan/Projects/ua_spaaro/flight_code/malt_build/_deps/mcu_support-build"
                     CONFIGURE_COMMAND   ""
                     BUILD_COMMAND       ""
                     INSTALL_COMMAND     ""

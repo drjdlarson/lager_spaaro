@@ -53,10 +53,10 @@ RM = /usr/local/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/_deps/logger-subbuild
+CMAKE_SOURCE_DIR = /home/tuan/Projects/ua_spaaro/flight_code/malt_build/_deps/logger-subbuild
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/_deps/logger-subbuild
+CMAKE_BINARY_DIR = /home/tuan/Projects/ua_spaaro/flight_code/malt_build/_deps/logger-subbuild
 
 # Utility rule file for logger-populate.
 
@@ -77,63 +77,63 @@ CMakeFiles/logger-populate-complete: logger-populate-prefix/src/logger-populate-
 CMakeFiles/logger-populate-complete: logger-populate-prefix/src/logger-populate-stamp/logger-populate-build
 CMakeFiles/logger-populate-complete: logger-populate-prefix/src/logger-populate-stamp/logger-populate-install
 CMakeFiles/logger-populate-complete: logger-populate-prefix/src/logger-populate-stamp/logger-populate-test
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/_deps/logger-subbuild/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Completed 'logger-populate'"
-	/usr/local/bin/cmake -E make_directory /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/_deps/logger-subbuild/CMakeFiles
-	/usr/local/bin/cmake -E touch /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/_deps/logger-subbuild/CMakeFiles/logger-populate-complete
-	/usr/local/bin/cmake -E touch /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/_deps/logger-subbuild/logger-populate-prefix/src/logger-populate-stamp/logger-populate-done
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/tuan/Projects/ua_spaaro/flight_code/malt_build/_deps/logger-subbuild/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Completed 'logger-populate'"
+	/usr/local/bin/cmake -E make_directory /home/tuan/Projects/ua_spaaro/flight_code/malt_build/_deps/logger-subbuild/CMakeFiles
+	/usr/local/bin/cmake -E touch /home/tuan/Projects/ua_spaaro/flight_code/malt_build/_deps/logger-subbuild/CMakeFiles/logger-populate-complete
+	/usr/local/bin/cmake -E touch /home/tuan/Projects/ua_spaaro/flight_code/malt_build/_deps/logger-subbuild/logger-populate-prefix/src/logger-populate-stamp/logger-populate-done
 
 logger-populate-prefix/src/logger-populate-stamp/logger-populate-update:
 .PHONY : logger-populate-prefix/src/logger-populate-stamp/logger-populate-update
 
 logger-populate-prefix/src/logger-populate-stamp/logger-populate-build: logger-populate-prefix/src/logger-populate-stamp/logger-populate-configure
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/_deps/logger-subbuild/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "No build step for 'logger-populate'"
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/_deps/logger-build && /usr/local/bin/cmake -E echo_append
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/_deps/logger-build && /usr/local/bin/cmake -E touch /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/_deps/logger-subbuild/logger-populate-prefix/src/logger-populate-stamp/logger-populate-build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/tuan/Projects/ua_spaaro/flight_code/malt_build/_deps/logger-subbuild/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "No build step for 'logger-populate'"
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build/_deps/logger-build && /usr/local/bin/cmake -E echo_append
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build/_deps/logger-build && /usr/local/bin/cmake -E touch /home/tuan/Projects/ua_spaaro/flight_code/malt_build/_deps/logger-subbuild/logger-populate-prefix/src/logger-populate-stamp/logger-populate-build
 
 logger-populate-prefix/src/logger-populate-stamp/logger-populate-configure: logger-populate-prefix/tmp/logger-populate-cfgcmd.txt
 logger-populate-prefix/src/logger-populate-stamp/logger-populate-configure: logger-populate-prefix/src/logger-populate-stamp/logger-populate-patch
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/_deps/logger-subbuild/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "No configure step for 'logger-populate'"
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/_deps/logger-build && /usr/local/bin/cmake -E echo_append
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/_deps/logger-build && /usr/local/bin/cmake -E touch /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/_deps/logger-subbuild/logger-populate-prefix/src/logger-populate-stamp/logger-populate-configure
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/tuan/Projects/ua_spaaro/flight_code/malt_build/_deps/logger-subbuild/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "No configure step for 'logger-populate'"
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build/_deps/logger-build && /usr/local/bin/cmake -E echo_append
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build/_deps/logger-build && /usr/local/bin/cmake -E touch /home/tuan/Projects/ua_spaaro/flight_code/malt_build/_deps/logger-subbuild/logger-populate-prefix/src/logger-populate-stamp/logger-populate-configure
 
 logger-populate-prefix/src/logger-populate-stamp/logger-populate-download: logger-populate-prefix/src/logger-populate-stamp/logger-populate-gitinfo.txt
 logger-populate-prefix/src/logger-populate-stamp/logger-populate-download: logger-populate-prefix/src/logger-populate-stamp/logger-populate-mkdir
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/_deps/logger-subbuild/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Performing download step (git clone) for 'logger-populate'"
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/_deps && /usr/local/bin/cmake -P /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/_deps/logger-subbuild/logger-populate-prefix/tmp/logger-populate-gitclone.cmake
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/_deps && /usr/local/bin/cmake -E touch /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/_deps/logger-subbuild/logger-populate-prefix/src/logger-populate-stamp/logger-populate-download
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/tuan/Projects/ua_spaaro/flight_code/malt_build/_deps/logger-subbuild/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Performing download step (git clone) for 'logger-populate'"
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build/_deps && /usr/local/bin/cmake -P /home/tuan/Projects/ua_spaaro/flight_code/malt_build/_deps/logger-subbuild/logger-populate-prefix/tmp/logger-populate-gitclone.cmake
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build/_deps && /usr/local/bin/cmake -E touch /home/tuan/Projects/ua_spaaro/flight_code/malt_build/_deps/logger-subbuild/logger-populate-prefix/src/logger-populate-stamp/logger-populate-download
 
 logger-populate-prefix/src/logger-populate-stamp/logger-populate-install: logger-populate-prefix/src/logger-populate-stamp/logger-populate-build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/_deps/logger-subbuild/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "No install step for 'logger-populate'"
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/_deps/logger-build && /usr/local/bin/cmake -E echo_append
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/_deps/logger-build && /usr/local/bin/cmake -E touch /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/_deps/logger-subbuild/logger-populate-prefix/src/logger-populate-stamp/logger-populate-install
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/tuan/Projects/ua_spaaro/flight_code/malt_build/_deps/logger-subbuild/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "No install step for 'logger-populate'"
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build/_deps/logger-build && /usr/local/bin/cmake -E echo_append
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build/_deps/logger-build && /usr/local/bin/cmake -E touch /home/tuan/Projects/ua_spaaro/flight_code/malt_build/_deps/logger-subbuild/logger-populate-prefix/src/logger-populate-stamp/logger-populate-install
 
 logger-populate-prefix/src/logger-populate-stamp/logger-populate-mkdir:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/_deps/logger-subbuild/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Creating directories for 'logger-populate'"
-	/usr/local/bin/cmake -E make_directory /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/_deps/logger-src
-	/usr/local/bin/cmake -E make_directory /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/_deps/logger-build
-	/usr/local/bin/cmake -E make_directory /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/_deps/logger-subbuild/logger-populate-prefix
-	/usr/local/bin/cmake -E make_directory /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/_deps/logger-subbuild/logger-populate-prefix/tmp
-	/usr/local/bin/cmake -E make_directory /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/_deps/logger-subbuild/logger-populate-prefix/src/logger-populate-stamp
-	/usr/local/bin/cmake -E make_directory /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/_deps/logger-subbuild/logger-populate-prefix/src
-	/usr/local/bin/cmake -E make_directory /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/_deps/logger-subbuild/logger-populate-prefix/src/logger-populate-stamp
-	/usr/local/bin/cmake -E touch /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/_deps/logger-subbuild/logger-populate-prefix/src/logger-populate-stamp/logger-populate-mkdir
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/tuan/Projects/ua_spaaro/flight_code/malt_build/_deps/logger-subbuild/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Creating directories for 'logger-populate'"
+	/usr/local/bin/cmake -E make_directory /home/tuan/Projects/ua_spaaro/flight_code/malt_build/_deps/logger-src
+	/usr/local/bin/cmake -E make_directory /home/tuan/Projects/ua_spaaro/flight_code/malt_build/_deps/logger-build
+	/usr/local/bin/cmake -E make_directory /home/tuan/Projects/ua_spaaro/flight_code/malt_build/_deps/logger-subbuild/logger-populate-prefix
+	/usr/local/bin/cmake -E make_directory /home/tuan/Projects/ua_spaaro/flight_code/malt_build/_deps/logger-subbuild/logger-populate-prefix/tmp
+	/usr/local/bin/cmake -E make_directory /home/tuan/Projects/ua_spaaro/flight_code/malt_build/_deps/logger-subbuild/logger-populate-prefix/src/logger-populate-stamp
+	/usr/local/bin/cmake -E make_directory /home/tuan/Projects/ua_spaaro/flight_code/malt_build/_deps/logger-subbuild/logger-populate-prefix/src
+	/usr/local/bin/cmake -E make_directory /home/tuan/Projects/ua_spaaro/flight_code/malt_build/_deps/logger-subbuild/logger-populate-prefix/src/logger-populate-stamp
+	/usr/local/bin/cmake -E touch /home/tuan/Projects/ua_spaaro/flight_code/malt_build/_deps/logger-subbuild/logger-populate-prefix/src/logger-populate-stamp/logger-populate-mkdir
 
 logger-populate-prefix/src/logger-populate-stamp/logger-populate-patch: logger-populate-prefix/src/logger-populate-stamp/logger-populate-update
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/_deps/logger-subbuild/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "No patch step for 'logger-populate'"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/tuan/Projects/ua_spaaro/flight_code/malt_build/_deps/logger-subbuild/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "No patch step for 'logger-populate'"
 	/usr/local/bin/cmake -E echo_append
-	/usr/local/bin/cmake -E touch /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/_deps/logger-subbuild/logger-populate-prefix/src/logger-populate-stamp/logger-populate-patch
+	/usr/local/bin/cmake -E touch /home/tuan/Projects/ua_spaaro/flight_code/malt_build/_deps/logger-subbuild/logger-populate-prefix/src/logger-populate-stamp/logger-populate-patch
 
 logger-populate-prefix/src/logger-populate-stamp/logger-populate-update:
 .PHONY : logger-populate-prefix/src/logger-populate-stamp/logger-populate-update
 
 logger-populate-prefix/src/logger-populate-stamp/logger-populate-test: logger-populate-prefix/src/logger-populate-stamp/logger-populate-install
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/_deps/logger-subbuild/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "No test step for 'logger-populate'"
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/_deps/logger-build && /usr/local/bin/cmake -E echo_append
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/_deps/logger-build && /usr/local/bin/cmake -E touch /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/_deps/logger-subbuild/logger-populate-prefix/src/logger-populate-stamp/logger-populate-test
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/tuan/Projects/ua_spaaro/flight_code/malt_build/_deps/logger-subbuild/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "No test step for 'logger-populate'"
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build/_deps/logger-build && /usr/local/bin/cmake -E echo_append
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build/_deps/logger-build && /usr/local/bin/cmake -E touch /home/tuan/Projects/ua_spaaro/flight_code/malt_build/_deps/logger-subbuild/logger-populate-prefix/src/logger-populate-stamp/logger-populate-test
 
 logger-populate-prefix/src/logger-populate-stamp/logger-populate-update: logger-populate-prefix/src/logger-populate-stamp/logger-populate-download
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/_deps/logger-subbuild/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Performing update step for 'logger-populate'"
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/_deps/logger-src && /usr/local/bin/cmake -P /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/_deps/logger-subbuild/logger-populate-prefix/tmp/logger-populate-gitupdate.cmake
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/tuan/Projects/ua_spaaro/flight_code/malt_build/_deps/logger-subbuild/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Performing update step for 'logger-populate'"
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build/_deps/logger-src && /usr/local/bin/cmake -P /home/tuan/Projects/ua_spaaro/flight_code/malt_build/_deps/logger-subbuild/logger-populate-prefix/tmp/logger-populate-gitupdate.cmake
 
 logger-populate: CMakeFiles/logger-populate
 logger-populate: CMakeFiles/logger-populate-complete
@@ -157,6 +157,6 @@ CMakeFiles/logger-populate.dir/clean:
 .PHONY : CMakeFiles/logger-populate.dir/clean
 
 CMakeFiles/logger-populate.dir/depend:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/_deps/logger-subbuild && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/_deps/logger-subbuild /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/_deps/logger-subbuild /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/_deps/logger-subbuild /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/_deps/logger-subbuild /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/_deps/logger-subbuild/CMakeFiles/logger-populate.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build/_deps/logger-subbuild && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/tuan/Projects/ua_spaaro/flight_code/malt_build/_deps/logger-subbuild /home/tuan/Projects/ua_spaaro/flight_code/malt_build/_deps/logger-subbuild /home/tuan/Projects/ua_spaaro/flight_code/malt_build/_deps/logger-subbuild /home/tuan/Projects/ua_spaaro/flight_code/malt_build/_deps/logger-subbuild /home/tuan/Projects/ua_spaaro/flight_code/malt_build/_deps/logger-subbuild/CMakeFiles/logger-populate.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/logger-populate.dir/depend
 

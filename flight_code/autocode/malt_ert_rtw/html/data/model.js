@@ -1,0 +1,1 @@
+var modelInfo = {model:"malt"};var modelHierarchy=[{model:"malt",relativePath:"_internal.html",parent:"null"},];

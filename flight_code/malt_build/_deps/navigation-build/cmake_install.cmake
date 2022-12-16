@@ -39,6 +39,6 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/_deps/eigen-build/cmake_install.cmake")
+  include("/home/tuan/Projects/ua_spaaro/flight_code/malt_build/_deps/eigen-build/cmake_install.cmake")
 endif()
 

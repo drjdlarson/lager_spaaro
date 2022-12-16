@@ -15,7 +15,7 @@ include(ExternalProject)
 ExternalProject_Add(navigation-populate
                      "UPDATE_DISCONNECTED" "False"
                     SOURCE_DIR          "/home/tuan/Projects/navigation"
-                    BINARY_DIR          "/home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/_deps/navigation-build"
+                    BINARY_DIR          "/home/tuan/Projects/ua_spaaro/flight_code/malt_build/_deps/navigation-build"
                     CONFIGURE_COMMAND   ""
                     BUILD_COMMAND       ""
                     INSTALL_COMMAND     ""

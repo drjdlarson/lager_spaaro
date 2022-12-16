@@ -21,8 +21,8 @@ set_property(GLOBAL PROPERTY _CMAKE_FindGit_GIT_EXECUTABLE_VERSION
 include(ExternalProject)
 ExternalProject_Add(imap-populate
                      "UPDATE_DISCONNECTED" "False" "GIT_REPOSITORY" "https://github.com/bolderflight/imap.git" "GIT_TAG" "v2.0.2"
-                    SOURCE_DIR          "/home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/_deps/imap-src"
-                    BINARY_DIR          "/home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/_deps/imap-build"
+                    SOURCE_DIR          "/home/tuan/Projects/ua_spaaro/flight_code/malt_build/_deps/imap-src"
+                    BINARY_DIR          "/home/tuan/Projects/ua_spaaro/flight_code/malt_build/_deps/imap-build"
                     CONFIGURE_COMMAND   ""
                     BUILD_COMMAND       ""
                     INSTALL_COMMAND     ""

@@ -21,8 +21,8 @@ set_property(GLOBAL PROPERTY _CMAKE_FindGit_GIT_EXECUTABLE_VERSION
 include(ExternalProject)
 ExternalProject_Add(pwm-populate
                      "UPDATE_DISCONNECTED" "False" "GIT_REPOSITORY" "https://github.com/bolderflight/pwm.git" "GIT_TAG" "v6.0.2"
-                    SOURCE_DIR          "/home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/_deps/pwm-src"
-                    BINARY_DIR          "/home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/_deps/pwm-build"
+                    SOURCE_DIR          "/home/tuan/Projects/ua_spaaro/flight_code/malt_build/_deps/pwm-src"
+                    BINARY_DIR          "/home/tuan/Projects/ua_spaaro/flight_code/malt_build/_deps/pwm-build"
                     CONFIGURE_COMMAND   ""
                     BUILD_COMMAND       ""
                     INSTALL_COMMAND     ""

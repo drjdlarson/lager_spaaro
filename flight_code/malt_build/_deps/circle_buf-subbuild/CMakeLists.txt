@@ -21,8 +21,8 @@ set_property(GLOBAL PROPERTY _CMAKE_FindGit_GIT_EXECUTABLE_VERSION
 include(ExternalProject)
 ExternalProject_Add(circle_buf-populate
                      "UPDATE_DISCONNECTED" "False" "GIT_REPOSITORY" "https://github.com/bolderflight/circle_buf.git" "GIT_TAG" "v4.0.2"
-                    SOURCE_DIR          "/home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/_deps/circle_buf-src"
-                    BINARY_DIR          "/home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/_deps/circle_buf-build"
+                    SOURCE_DIR          "/home/tuan/Projects/ua_spaaro/flight_code/malt_build/_deps/circle_buf-src"
+                    BINARY_DIR          "/home/tuan/Projects/ua_spaaro/flight_code/malt_build/_deps/circle_buf-build"
                     CONFIGURE_COMMAND   ""
                     BUILD_COMMAND       ""
                     INSTALL_COMMAND     ""

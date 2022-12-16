@@ -57,10 +57,10 @@ RM = /usr/local/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/tuan/Projects/super/ua_spaaro/flight_code
+CMAKE_SOURCE_DIR = /home/tuan/Projects/ua_spaaro/flight_code
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build
+CMAKE_BINARY_DIR = /home/tuan/Projects/ua_spaaro/flight_code/malt_build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -87,14 +87,14 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(CMAKE_COMMAND) -E cmake_progress_start /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/CMakeFiles /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/_deps/bmp3-build//CMakeFiles/progress.marks
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 _deps/bmp3-build/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/CMakeFiles 0
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(CMAKE_COMMAND) -E cmake_progress_start /home/tuan/Projects/ua_spaaro/flight_code/malt_build/CMakeFiles /home/tuan/Projects/ua_spaaro/flight_code/malt_build/_deps/bmp3-build//CMakeFiles/progress.marks
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 _deps/bmp3-build/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/tuan/Projects/ua_spaaro/flight_code/malt_build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 _deps/bmp3-build/clean
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 _deps/bmp3-build/clean
 .PHONY : clean
 
 # The main clean target
@@ -103,22 +103,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 _deps/bmp3-build/preinstall
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 _deps/bmp3-build/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 _deps/bmp3-build/preinstall
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 _deps/bmp3-build/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 _deps/bmp3-build/CMakeFiles/bmp3.dir/rule:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 _deps/bmp3-build/CMakeFiles/bmp3.dir/rule
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 _deps/bmp3-build/CMakeFiles/bmp3.dir/rule
 .PHONY : _deps/bmp3-build/CMakeFiles/bmp3.dir/rule
 
 # Convenience name for target.
@@ -127,7 +127,7 @@ bmp3: _deps/bmp3-build/CMakeFiles/bmp3.dir/rule
 
 # fast build rule for target.
 bmp3/fast:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/bmp3-build/CMakeFiles/bmp3.dir/build.make _deps/bmp3-build/CMakeFiles/bmp3.dir/build
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/bmp3-build/CMakeFiles/bmp3.dir/build.make _deps/bmp3-build/CMakeFiles/bmp3.dir/build
 .PHONY : bmp3/fast
 
 src/bmp3.obj: src/bmp3.cpp.obj
@@ -135,7 +135,7 @@ src/bmp3.obj: src/bmp3.cpp.obj
 
 # target to build an object file
 src/bmp3.cpp.obj:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/bmp3-build/CMakeFiles/bmp3.dir/build.make _deps/bmp3-build/CMakeFiles/bmp3.dir/src/bmp3.cpp.obj
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/bmp3-build/CMakeFiles/bmp3.dir/build.make _deps/bmp3-build/CMakeFiles/bmp3.dir/src/bmp3.cpp.obj
 .PHONY : src/bmp3.cpp.obj
 
 src/bmp3.i: src/bmp3.cpp.i
@@ -143,7 +143,7 @@ src/bmp3.i: src/bmp3.cpp.i
 
 # target to preprocess a source file
 src/bmp3.cpp.i:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/bmp3-build/CMakeFiles/bmp3.dir/build.make _deps/bmp3-build/CMakeFiles/bmp3.dir/src/bmp3.cpp.i
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/bmp3-build/CMakeFiles/bmp3.dir/build.make _deps/bmp3-build/CMakeFiles/bmp3.dir/src/bmp3.cpp.i
 .PHONY : src/bmp3.cpp.i
 
 src/bmp3.s: src/bmp3.cpp.s
@@ -151,7 +151,7 @@ src/bmp3.s: src/bmp3.cpp.s
 
 # target to generate assembly for a file
 src/bmp3.cpp.s:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/bmp3-build/CMakeFiles/bmp3.dir/build.make _deps/bmp3-build/CMakeFiles/bmp3.dir/src/bmp3.cpp.s
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/bmp3-build/CMakeFiles/bmp3.dir/build.make _deps/bmp3-build/CMakeFiles/bmp3.dir/src/bmp3.cpp.s
 .PHONY : src/bmp3.cpp.s
 
 src/bst/bmp3.obj: src/bst/bmp3.c.obj
@@ -159,7 +159,7 @@ src/bst/bmp3.obj: src/bst/bmp3.c.obj
 
 # target to build an object file
 src/bst/bmp3.c.obj:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/bmp3-build/CMakeFiles/bmp3.dir/build.make _deps/bmp3-build/CMakeFiles/bmp3.dir/src/bst/bmp3.c.obj
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/bmp3-build/CMakeFiles/bmp3.dir/build.make _deps/bmp3-build/CMakeFiles/bmp3.dir/src/bst/bmp3.c.obj
 .PHONY : src/bst/bmp3.c.obj
 
 src/bst/bmp3.i: src/bst/bmp3.c.i
@@ -167,7 +167,7 @@ src/bst/bmp3.i: src/bst/bmp3.c.i
 
 # target to preprocess a source file
 src/bst/bmp3.c.i:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/bmp3-build/CMakeFiles/bmp3.dir/build.make _deps/bmp3-build/CMakeFiles/bmp3.dir/src/bst/bmp3.c.i
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/bmp3-build/CMakeFiles/bmp3.dir/build.make _deps/bmp3-build/CMakeFiles/bmp3.dir/src/bst/bmp3.c.i
 .PHONY : src/bst/bmp3.c.i
 
 src/bst/bmp3.s: src/bst/bmp3.c.s
@@ -175,7 +175,7 @@ src/bst/bmp3.s: src/bst/bmp3.c.s
 
 # target to generate assembly for a file
 src/bst/bmp3.c.s:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/bmp3-build/CMakeFiles/bmp3.dir/build.make _deps/bmp3-build/CMakeFiles/bmp3.dir/src/bst/bmp3.c.s
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/bmp3-build/CMakeFiles/bmp3.dir/build.make _deps/bmp3-build/CMakeFiles/bmp3.dir/src/bst/bmp3.c.s
 .PHONY : src/bst/bmp3.c.s
 
 # Help Target
@@ -204,6 +204,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

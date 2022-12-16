@@ -21,8 +21,8 @@ set_property(GLOBAL PROPERTY _CMAKE_FindGit_GIT_EXECUTABLE_VERSION
 include(ExternalProject)
 ExternalProject_Add(control-populate
                      "UPDATE_DISCONNECTED" "False" "GIT_REPOSITORY" "https://github.com/bolderflight/control.git" "GIT_TAG" "v3.0.0"
-                    SOURCE_DIR          "/home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/_deps/control-src"
-                    BINARY_DIR          "/home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/_deps/control-build"
+                    SOURCE_DIR          "/home/tuan/Projects/ua_spaaro/flight_code/malt_build/_deps/control-src"
+                    BINARY_DIR          "/home/tuan/Projects/ua_spaaro/flight_code/malt_build/_deps/control-build"
                     CONFIGURE_COMMAND   ""
                     BUILD_COMMAND       ""
                     INSTALL_COMMAND     ""

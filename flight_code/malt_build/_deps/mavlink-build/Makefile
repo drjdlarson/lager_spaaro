@@ -57,10 +57,10 @@ RM = /usr/local/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/tuan/Projects/super/ua_spaaro/flight_code
+CMAKE_SOURCE_DIR = /home/tuan/Projects/ua_spaaro/flight_code
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build
+CMAKE_BINARY_DIR = /home/tuan/Projects/ua_spaaro/flight_code/malt_build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -87,14 +87,14 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(CMAKE_COMMAND) -E cmake_progress_start /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/CMakeFiles /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/_deps/mavlink-build//CMakeFiles/progress.marks
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 _deps/mavlink-build/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/CMakeFiles 0
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(CMAKE_COMMAND) -E cmake_progress_start /home/tuan/Projects/ua_spaaro/flight_code/malt_build/CMakeFiles /home/tuan/Projects/ua_spaaro/flight_code/malt_build/_deps/mavlink-build//CMakeFiles/progress.marks
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 _deps/mavlink-build/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/tuan/Projects/ua_spaaro/flight_code/malt_build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 _deps/mavlink-build/clean
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 _deps/mavlink-build/clean
 .PHONY : clean
 
 # The main clean target
@@ -103,22 +103,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 _deps/mavlink-build/preinstall
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 _deps/mavlink-build/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 _deps/mavlink-build/preinstall
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 _deps/mavlink-build/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 _deps/mavlink-build/CMakeFiles/mavlink.dir/rule:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 _deps/mavlink-build/CMakeFiles/mavlink.dir/rule
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 _deps/mavlink-build/CMakeFiles/mavlink.dir/rule
 .PHONY : _deps/mavlink-build/CMakeFiles/mavlink.dir/rule
 
 # Convenience name for target.
@@ -127,7 +127,7 @@ mavlink: _deps/mavlink-build/CMakeFiles/mavlink.dir/rule
 
 # fast build rule for target.
 mavlink/fast:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/mavlink-build/CMakeFiles/mavlink.dir/build.make _deps/mavlink-build/CMakeFiles/mavlink.dir/build
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/mavlink-build/CMakeFiles/mavlink.dir/build.make _deps/mavlink-build/CMakeFiles/mavlink.dir/build
 .PHONY : mavlink/fast
 
 src/heartbeat.obj: src/heartbeat.cpp.obj
@@ -135,7 +135,7 @@ src/heartbeat.obj: src/heartbeat.cpp.obj
 
 # target to build an object file
 src/heartbeat.cpp.obj:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/mavlink-build/CMakeFiles/mavlink.dir/build.make _deps/mavlink-build/CMakeFiles/mavlink.dir/src/heartbeat.cpp.obj
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/mavlink-build/CMakeFiles/mavlink.dir/build.make _deps/mavlink-build/CMakeFiles/mavlink.dir/src/heartbeat.cpp.obj
 .PHONY : src/heartbeat.cpp.obj
 
 src/heartbeat.i: src/heartbeat.cpp.i
@@ -143,7 +143,7 @@ src/heartbeat.i: src/heartbeat.cpp.i
 
 # target to preprocess a source file
 src/heartbeat.cpp.i:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/mavlink-build/CMakeFiles/mavlink.dir/build.make _deps/mavlink-build/CMakeFiles/mavlink.dir/src/heartbeat.cpp.i
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/mavlink-build/CMakeFiles/mavlink.dir/build.make _deps/mavlink-build/CMakeFiles/mavlink.dir/src/heartbeat.cpp.i
 .PHONY : src/heartbeat.cpp.i
 
 src/heartbeat.s: src/heartbeat.cpp.s
@@ -151,7 +151,7 @@ src/heartbeat.s: src/heartbeat.cpp.s
 
 # target to generate assembly for a file
 src/heartbeat.cpp.s:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/mavlink-build/CMakeFiles/mavlink.dir/build.make _deps/mavlink-build/CMakeFiles/mavlink.dir/src/heartbeat.cpp.s
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/mavlink-build/CMakeFiles/mavlink.dir/build.make _deps/mavlink-build/CMakeFiles/mavlink.dir/src/heartbeat.cpp.s
 .PHONY : src/heartbeat.cpp.s
 
 src/mission.obj: src/mission.cpp.obj
@@ -159,7 +159,7 @@ src/mission.obj: src/mission.cpp.obj
 
 # target to build an object file
 src/mission.cpp.obj:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/mavlink-build/CMakeFiles/mavlink.dir/build.make _deps/mavlink-build/CMakeFiles/mavlink.dir/src/mission.cpp.obj
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/mavlink-build/CMakeFiles/mavlink.dir/build.make _deps/mavlink-build/CMakeFiles/mavlink.dir/src/mission.cpp.obj
 .PHONY : src/mission.cpp.obj
 
 src/mission.i: src/mission.cpp.i
@@ -167,7 +167,7 @@ src/mission.i: src/mission.cpp.i
 
 # target to preprocess a source file
 src/mission.cpp.i:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/mavlink-build/CMakeFiles/mavlink.dir/build.make _deps/mavlink-build/CMakeFiles/mavlink.dir/src/mission.cpp.i
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/mavlink-build/CMakeFiles/mavlink.dir/build.make _deps/mavlink-build/CMakeFiles/mavlink.dir/src/mission.cpp.i
 .PHONY : src/mission.cpp.i
 
 src/mission.s: src/mission.cpp.s
@@ -175,7 +175,7 @@ src/mission.s: src/mission.cpp.s
 
 # target to generate assembly for a file
 src/mission.cpp.s:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/mavlink-build/CMakeFiles/mavlink.dir/build.make _deps/mavlink-build/CMakeFiles/mavlink.dir/src/mission.cpp.s
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/mavlink-build/CMakeFiles/mavlink.dir/build.make _deps/mavlink-build/CMakeFiles/mavlink.dir/src/mission.cpp.s
 .PHONY : src/mission.cpp.s
 
 src/rtcm.obj: src/rtcm.cpp.obj
@@ -183,7 +183,7 @@ src/rtcm.obj: src/rtcm.cpp.obj
 
 # target to build an object file
 src/rtcm.cpp.obj:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/mavlink-build/CMakeFiles/mavlink.dir/build.make _deps/mavlink-build/CMakeFiles/mavlink.dir/src/rtcm.cpp.obj
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/mavlink-build/CMakeFiles/mavlink.dir/build.make _deps/mavlink-build/CMakeFiles/mavlink.dir/src/rtcm.cpp.obj
 .PHONY : src/rtcm.cpp.obj
 
 src/rtcm.i: src/rtcm.cpp.i
@@ -191,7 +191,7 @@ src/rtcm.i: src/rtcm.cpp.i
 
 # target to preprocess a source file
 src/rtcm.cpp.i:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/mavlink-build/CMakeFiles/mavlink.dir/build.make _deps/mavlink-build/CMakeFiles/mavlink.dir/src/rtcm.cpp.i
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/mavlink-build/CMakeFiles/mavlink.dir/build.make _deps/mavlink-build/CMakeFiles/mavlink.dir/src/rtcm.cpp.i
 .PHONY : src/rtcm.cpp.i
 
 src/rtcm.s: src/rtcm.cpp.s
@@ -199,7 +199,7 @@ src/rtcm.s: src/rtcm.cpp.s
 
 # target to generate assembly for a file
 src/rtcm.cpp.s:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/mavlink-build/CMakeFiles/mavlink.dir/build.make _deps/mavlink-build/CMakeFiles/mavlink.dir/src/rtcm.cpp.s
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/mavlink-build/CMakeFiles/mavlink.dir/build.make _deps/mavlink-build/CMakeFiles/mavlink.dir/src/rtcm.cpp.s
 .PHONY : src/rtcm.cpp.s
 
 src/telemetry.obj: src/telemetry.cpp.obj
@@ -207,7 +207,7 @@ src/telemetry.obj: src/telemetry.cpp.obj
 
 # target to build an object file
 src/telemetry.cpp.obj:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/mavlink-build/CMakeFiles/mavlink.dir/build.make _deps/mavlink-build/CMakeFiles/mavlink.dir/src/telemetry.cpp.obj
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/mavlink-build/CMakeFiles/mavlink.dir/build.make _deps/mavlink-build/CMakeFiles/mavlink.dir/src/telemetry.cpp.obj
 .PHONY : src/telemetry.cpp.obj
 
 src/telemetry.i: src/telemetry.cpp.i
@@ -215,7 +215,7 @@ src/telemetry.i: src/telemetry.cpp.i
 
 # target to preprocess a source file
 src/telemetry.cpp.i:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/mavlink-build/CMakeFiles/mavlink.dir/build.make _deps/mavlink-build/CMakeFiles/mavlink.dir/src/telemetry.cpp.i
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/mavlink-build/CMakeFiles/mavlink.dir/build.make _deps/mavlink-build/CMakeFiles/mavlink.dir/src/telemetry.cpp.i
 .PHONY : src/telemetry.cpp.i
 
 src/telemetry.s: src/telemetry.cpp.s
@@ -223,7 +223,7 @@ src/telemetry.s: src/telemetry.cpp.s
 
 # target to generate assembly for a file
 src/telemetry.cpp.s:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/mavlink-build/CMakeFiles/mavlink.dir/build.make _deps/mavlink-build/CMakeFiles/mavlink.dir/src/telemetry.cpp.s
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/mavlink-build/CMakeFiles/mavlink.dir/build.make _deps/mavlink-build/CMakeFiles/mavlink.dir/src/telemetry.cpp.s
 .PHONY : src/telemetry.cpp.s
 
 # Help Target
@@ -258,6 +258,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

@@ -3,7 +3,7 @@
 
 # Relative path conversion top directories.
 set(CMAKE_RELATIVE_PATH_TOP_SOURCE "/home/tuan/Projects/navigation")
-set(CMAKE_RELATIVE_PATH_TOP_BINARY "/home/tuan/Projects/super/ua_spaaro/flight_code/malt_build")
+set(CMAKE_RELATIVE_PATH_TOP_BINARY "/home/tuan/Projects/ua_spaaro/flight_code/malt_build")
 
 # Force unix paths in dependencies.
 set(CMAKE_FORCE_UNIX_PATHS 1)
