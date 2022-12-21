@@ -59,6 +59,7 @@ GnssData *gnss_;
 PresData *static_pres_, *diff_pres_;
 AdcData *adc_;
 InsData *ins_;
+AuxInsData *aux_ins_;
 /* Effector */
 std::array<int16_t, 16> effector_;
 int NUM_SBUS = std::min(static_cast<std::size_t>(NUM_SBUS_CH),
@@ -67,6 +68,7 @@ int NUM_SBUS = std::min(static_cast<std::size_t>(NUM_SBUS_CH),
 
 void TelemInit(const TelemConfig &cfg, TelemData * const ptr) {
   /* Config */
+  MsgInfo("Intializing telemetry...");
   cfg_ = cfg;
   telem_.hardware_serial(&TELEM_UART);
   #if defined(__FMU_R_V2__) || defined(__FMU_R_V2_BETA__) || \
@@ -94,7 +96,7 @@ void TelemInit(const TelemConfig &cfg, TelemData * const ptr) {
   if ((param_buf[0] != PARAM_STORE_HEADER[0]) ||
       (param_buf[1] != PARAM_STORE_HEADER[1]) ||
       (param_buf[2] != PARAM_STORE_HEADER[2])) {
-    MsgInfo("Parameter storage not initialized, initializing...");
+    MsgInfo("\nParameter storage not initialized, initializing...");
     /* Set the header */
     param_buf[0] = PARAM_STORE_HEADER[0];
     param_buf[1] = PARAM_STORE_HEADER[1];
@@ -128,7 +130,7 @@ void TelemInit(const TelemConfig &cfg, TelemData * const ptr) {
                static_cast<uint16_t>(chk_buf[1]);
     if (chk_computed != chk_read) {
       /* Parameter store corrupted, reset and warn */
-      MsgWarning("Parameter storage corrupted, resetting...");
+      MsgWarning("\nParameter storage corrupted, resetting...");
       /* Set the header */
       param_buf[0] = PARAM_STORE_HEADER[0];
       param_buf[1] = PARAM_STORE_HEADER[1];
@@ -167,6 +169,7 @@ void TelemInit(const TelemConfig &cfg, TelemData * const ptr) {
   telem_.pos_stream_period_ms(cfg.pos_stream_period_ms);
   telem_.extra1_stream_period_ms(cfg.extra1_stream_period_ms);
   telem_.extra2_stream_period_ms(cfg.extra2_stream_period_ms);
+  MsgInfo("done\n"); 
 }
 void TelemUpdate(AircraftData &data, TelemData * const ptr) {
   if (!telem_initialized_) {
@@ -366,6 +369,7 @@ void TelemUpdate(AircraftData &data, TelemData * const ptr) {
       #endif
       case TELEM_INS_BFS: {
         ins_ = &data.bfs_ins;
+        aux_ins_ = &data.aux_ins;
         break;
       }
     }
@@ -440,10 +444,10 @@ void TelemUpdate(AircraftData &data, TelemData * const ptr) {
   telem_.nav_lat_rad(ins_->lat_rad);
   telem_.nav_lon_rad(ins_->lon_rad);
   // telem_.nav_alt_msl_m(data.nav.alt_msl_m);
-  // telem_.nav_alt_agl_m(data.nav.alt_rel_m);
-  // telem_.nav_north_pos_m(data.nav.ned_pos_m[0]);
-  // telem_.nav_east_pos_m(data.nav.ned_pos_m[1]);
-  // telem_.nav_down_pos_m(data.nav.ned_pos_m[2]);
+  // telem_.nav_alt_agl_m(-1 * aux_ins_->ned_pos_m[2]);
+  telem_.nav_north_pos_m(aux_ins_ ->ned_pos_m[0]);
+  telem_.nav_east_pos_m(aux_ins_->ned_pos_m[1]);
+  telem_.nav_down_pos_m(aux_ins_->ned_pos_m[2]);
   telem_.nav_north_vel_mps(ins_->ned_vel_mps[0]);
   telem_.nav_east_vel_mps(ins_->ned_vel_mps[1]);
   telem_.nav_down_vel_mps(ins_->ned_vel_mps[2]);
@@ -473,7 +477,7 @@ void TelemUpdate(AircraftData &data, TelemData * const ptr) {
     telem_.AdvanceMissionItem();
   }
   /* Update */
-  telem_.Update();
+  //telem_.Update();
   /* Params */
   param_idx_ = telem_.updated_param();
   if (param_idx_ >= 0) {
