@@ -1,3 +1,0 @@
-repository='https://github.com/bolderflight/invensense-imu.git'
-module=''
-tag='origin'

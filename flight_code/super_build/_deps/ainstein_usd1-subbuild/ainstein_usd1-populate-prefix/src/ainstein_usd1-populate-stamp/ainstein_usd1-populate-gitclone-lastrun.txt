@@ -1,3 +1,0 @@
-repository='https://github.com/bolderflight/ainstein-usd1.git'
-module=''
-tag='origin'

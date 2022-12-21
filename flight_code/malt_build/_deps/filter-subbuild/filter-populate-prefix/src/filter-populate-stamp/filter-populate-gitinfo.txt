@@ -1,3 +1,0 @@
-repository='git@github.com:TL-4319/filter.git'
-module=''
-tag='origin'

@@ -1,3 +1,0 @@
-repository='https://github.com/bolderflight/control.git'
-module=''
-tag='origin'

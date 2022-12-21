@@ -1,3 +1,0 @@
-repository='https://github.com/bolderflight/imap.git'
-module=''
-tag='origin'

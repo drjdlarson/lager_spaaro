@@ -1,3 +1,0 @@
-repository='https://github.com/bolderflight/polytools.git'
-module=''
-tag='origin'
