@@ -141,7 +141,7 @@ void BfsInsRun(SensorData &ref, InsData * const ptr) {
     if ((imu_->new_data) && (mag_->new_data) && (gnss_->new_data) &&
         (gnss_->num_sats > MIN_SAT_)) {
       // Wait for initial conditions to pass several time before initializing the filter. Just to make sure everything is stabile
-      if (init_counter_ < 10){
+      if (init_counter_ < 20){
         init_counter_ ++;
         return;
       }

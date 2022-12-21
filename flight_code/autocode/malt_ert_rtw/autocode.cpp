@@ -7,9 +7,9 @@
 //
 // Code generated for Simulink model 'malt'.
 //
-// Model version                  : 4.360
+// Model version                  : 4.366
 // Simulink Coder version         : 9.7 (R2022a) 13-Nov-2021
-// C/C++ source code generated on : Thu Dec 15 18:40:21 2022
+// C/C++ source code generated on : Fri Dec 16 17:33:56 2022
 //
 // Target selection: ert.tlc
 // Embedded hardware selection: NXP->Cortex-M4
@@ -1337,42 +1337,19 @@ namespace bfs
       // Sum: '<S379>/Sum1'
       rtDW.Sum1 = rtDW.Product1 + rtDW.Product1_h;
 
-      // SignalConversion generated from: '<S386>/Magnitude Squared'
-      //
-      //  About SignalConversion generated from '<S386>/Magnitude Squared':
-      //   Operator: magnitude^2
-      rtDW.TmpSignalConversionAtMagnitudeS[0] = rtDW.Sum;
-      rtDW.TmpSignalConversionAtMagnitudeS[1] = rtDW.Sum1;
+      // SignalConversion generated from: '<S386>/Normalization1'
+      rtDW.TmpSignalConversionAtNormalizat[0] = rtDW.Sum;
+      rtDW.TmpSignalConversionAtNormalizat[1] = rtDW.Sum1;
 
-      // Math: '<S386>/Magnitude Squared'
-      //
-      //  About '<S386>/Magnitude Squared':
-      //   Operator: magnitude^2
-      c_lat = rtDW.TmpSignalConversionAtMagnitudeS[0];
-      c_lat *= c_lat;
-
-      // Math: '<S386>/Magnitude Squared'
-      //
-      //  About '<S386>/Magnitude Squared':
-      //   Operator: magnitude^2
-      rtDW.MagnitudeSquared[0] = c_lat;
-
-      // Math: '<S386>/Magnitude Squared'
-      //
-      //  About '<S386>/Magnitude Squared':
-      //   Operator: magnitude^2
-      c_lat = rtDW.TmpSignalConversionAtMagnitudeS[1];
-      c_lat *= c_lat;
-
-      // Math: '<S386>/Magnitude Squared'
-      //
-      //  About '<S386>/Magnitude Squared':
-      //   Operator: magnitude^2
-      rtDW.MagnitudeSquared[1] = c_lat;
+      // Math: '<S386>/Square'
+      rtDW.Square[0] = rtDW.TmpSignalConversionAtNormalizat[0] *
+        rtDW.TmpSignalConversionAtNormalizat[0];
+      rtDW.Square[1] = rtDW.TmpSignalConversionAtNormalizat[1] *
+        rtDW.TmpSignalConversionAtNormalizat[1];
 
       // Sum: '<S386>/Sum of Elements'
-      c_lat = rtDW.MagnitudeSquared[0];
-      c_lat += rtDW.MagnitudeSquared[1];
+      c_lat = rtDW.Square[0];
+      c_lat += rtDW.Square[1];
 
       // Sum: '<S386>/Sum of Elements'
       rtDW.SumofElements = c_lat;
@@ -1394,14 +1371,14 @@ namespace bfs
         idx2 = 0;
         c_lat = 0.0;
         for (int32_T i{0}; i < 2; i++) {
-          c_lat += rtDW.TmpSignalConversionAtMagnitudeS[idx1] *
-            rtDW.TmpSignalConversionAtMagnitudeS[idx1];
+          c_lat += rtDW.TmpSignalConversionAtNormalizat[idx1] *
+            rtDW.TmpSignalConversionAtNormalizat[idx1];
           idx1++;
         }
 
         c_lat = 1.0 / (std::sqrt(c_lat) + 1.0E-10);
         for (int32_T i{0}; i < 2; i++) {
-          rtDW.Normalization1[idx2] = rtDW.TmpSignalConversionAtMagnitudeS[idx2]
+          rtDW.Normalization1[idx2] = rtDW.TmpSignalConversionAtNormalizat[idx2]
             * c_lat;
           idx2++;
         }
@@ -1421,8 +1398,8 @@ namespace bfs
         rtDW.Switch_d[1] = rtDW.Gain_f[1];
       } else {
         // Switch: '<S386>/Switch'
-        rtDW.Switch_d[0] = rtDW.TmpSignalConversionAtMagnitudeS[0];
-        rtDW.Switch_d[1] = rtDW.TmpSignalConversionAtMagnitudeS[1];
+        rtDW.Switch_d[0] = rtDW.TmpSignalConversionAtNormalizat[0];
+        rtDW.Switch_d[1] = rtDW.TmpSignalConversionAtNormalizat[1];
       }
 
       // End of Switch: '<S386>/Switch'
@@ -1927,7 +1904,7 @@ namespace bfs
       // MATLAB Function: '<S198>/MATLAB Function' incorporates:
       //   Constant: '<S192>/Constant1'
       //   Constant: '<S198>/Constant'
-      MATLABFunction_i(rtDW.UnitDelay_k, rtDW.Switch_db[0], 40.0F, 50.0F,
+      MATLABFunction_i(rtDW.UnitDelay_k, rtDW.Switch_db[0], 30.0F, 50.0F,
                        &rtDW.filtered_val_p);
 
       // Sum: '<S192>/Sum'
@@ -2097,7 +2074,7 @@ namespace bfs
       // MATLAB Function: '<S254>/MATLAB Function' incorporates:
       //   Constant: '<S193>/Constant1'
       //   Constant: '<S254>/Constant'
-      MATLABFunction_i(rtDW.UnitDelay_j2, rtDW.Switch_db[1], 40.0F, 50.0F,
+      MATLABFunction_i(rtDW.UnitDelay_j2, rtDW.Switch_db[1], 30.0F, 50.0F,
                        &rtDW.filtered_val);
 
       // Sum: '<S193>/Sum'
@@ -3099,7 +3076,7 @@ namespace bfs
 
     // Product: '<S110>/IProd Out' incorporates:
     //   Constant: '<S18>/Constant3'
-    rtDW.IProdOut_g = rtDW.roll_angle_error_b * 0.3F;
+    rtDW.IProdOut_g = rtDW.roll_angle_error_b * 0.2F;
 
     // RelationalOperator: '<S104>/fix for DT propagation issue1' incorporates:
     //   Constant: '<S104>/Constant5'

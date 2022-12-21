@@ -7,9 +7,9 @@
 //
 // Code generated for Simulink model 'malt'.
 //
-// Model version                  : 4.360
+// Model version                  : 4.366
 // Simulink Coder version         : 9.7 (R2022a) 13-Nov-2021
-// C/C++ source code generated on : Thu Dec 15 18:40:21 2022
+// C/C++ source code generated on : Fri Dec 16 17:33:56 2022
 //
 // Target selection: ert.tlc
 // Embedded hardware selection: NXP->Cortex-M4
@@ -151,8 +151,8 @@ extern "C" {
       std::array<real_T, 8> Switch2;   // '<S189>/Switch2'
       std::array<real_T, 3> Subtract;  // '<S381>/Subtract'
       std::array<real_T, 2> Transpose; // '<S381>/Transpose'
-      std::array<real_T, 2> TmpSignalConversionAtMagnitudeS;
-      std::array<real_T, 2> MagnitudeSquared;// '<S386>/Magnitude Squared'
+      std::array<real_T, 2> TmpSignalConversionAtNormalizat;
+      std::array<real_T, 2> Square;    // '<S386>/Square'
       std::array<real_T, 2> Switch_d;  // '<S386>/Switch'
       std::array<real_T, 2> vb_xy;     // '<S387>/Product'
       std::array<real_T, 2> Normalization1;// '<S386>/Normalization1'

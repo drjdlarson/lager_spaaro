@@ -7,9 +7,9 @@
 //
 // Code generated for Simulink model 'malt'.
 //
-// Model version                  : 4.360
+// Model version                  : 4.366
 // Simulink Coder version         : 9.7 (R2022a) 13-Nov-2021
-// C/C++ source code generated on : Thu Dec 15 18:40:21 2022
+// C/C++ source code generated on : Fri Dec 16 17:33:56 2022
 //
 // Target selection: ert.tlc
 // Embedded hardware selection: NXP->Cortex-M4

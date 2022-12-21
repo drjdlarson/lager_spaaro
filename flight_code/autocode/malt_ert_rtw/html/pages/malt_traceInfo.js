@@ -7137,14 +7137,14 @@ function RTW_rtwnameSIDMap() {
 	this.sidHashMap["malt:9925"] = {rtwname: "<S386>/Demux"};
 	this.rtwnameHashMap["<S386>/Gain"] = {sid: "malt:9921"};
 	this.sidHashMap["malt:9921"] = {rtwname: "<S386>/Gain"};
-	this.rtwnameHashMap["<S386>/Magnitude Squared"] = {sid: "malt:9927"};
-	this.sidHashMap["malt:9927"] = {rtwname: "<S386>/Magnitude Squared"};
 	this.rtwnameHashMap["<S386>/Mux"] = {sid: "malt:9923"};
 	this.sidHashMap["malt:9923"] = {rtwname: "<S386>/Mux"};
 	this.rtwnameHashMap["<S386>/Normalization1"] = {sid: "malt:9922"};
 	this.sidHashMap["malt:9922"] = {rtwname: "<S386>/Normalization1"};
 	this.rtwnameHashMap["<S386>/Sqrt"] = {sid: "malt:9928"};
 	this.sidHashMap["malt:9928"] = {rtwname: "<S386>/Sqrt"};
+	this.rtwnameHashMap["<S386>/Square"] = {sid: "malt:10015"};
+	this.sidHashMap["malt:10015"] = {rtwname: "<S386>/Square"};
 	this.rtwnameHashMap["<S386>/Sum of Elements"] = {sid: "malt:9932"};
 	this.sidHashMap["malt:9932"] = {rtwname: "<S386>/Sum of Elements"};
 	this.rtwnameHashMap["<S386>/Switch"] = {sid: "malt:9930"};

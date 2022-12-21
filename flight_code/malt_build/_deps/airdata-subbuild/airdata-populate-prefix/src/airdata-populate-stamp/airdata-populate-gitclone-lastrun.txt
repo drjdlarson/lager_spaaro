@@ -1,3 +1,0 @@
-repository='https://github.com/bolderflight/airdata.git'
-module=''
-tag='origin'
