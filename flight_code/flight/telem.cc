@@ -477,7 +477,7 @@ void TelemUpdate(AircraftData &data, TelemData * const ptr) {
     telem_.AdvanceMissionItem();
   }
   /* Update */
-  //telem_.Update();
+  telem_.Update();
   /* Params */
   param_idx_ = telem_.updated_param();
   if (param_idx_ >= 0) {

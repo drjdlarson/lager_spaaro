@@ -92,6 +92,9 @@ void run() {
   TelemUpdate(data, &data.telem);
   /* Frame duration */
   SysFrameEnd();
+  std::string debug = std::to_string(data.vms.pwm[0]) + "," + std::to_string(data.vms.pwm[1]) + "," + std::to_string(data.vms.pwm[2]) + "," + std::to_string(data.vms.pwm[3]) + "," + std::to_string(data.vms.pwm[4]) + "," + std::to_string(data.vms.pwm[5]) + "," +
+    std::to_string(data.vms.pwm[6]) + "," + std::to_string(data.vms.pwm[7]) + ",0,2000\n";
+  MsgInfo(debug.c_str());   
 }
 
 int main() {
