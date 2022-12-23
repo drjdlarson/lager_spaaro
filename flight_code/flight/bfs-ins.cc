@@ -50,8 +50,8 @@ uint8_t init_counter_ = 0;
 
 void BfsInsInit(const InsConfig &ref) {
   cfg_ = ref;
-  ekf_.gnss_pos_ne_std_m(0.15f);
-  ekf_.gnss_pos_d_std_m(0.2f);
+  ekf_.gnss_pos_ne_std_m(3.0f);
+  ekf_.gnss_pos_d_std_m(6.0f);
   BASELINE_LEN_M = cfg_.antenna_baseline_m.norm();
 }
 
@@ -199,9 +199,9 @@ void BfsInsRun(SensorData &ref, InsData * const ptr) {
       rel_pos_ [2] = float(gnss_->rel_pos_ned_m[2]);
       cur_baseline_len_m_ = rel_pos_.norm();
       ekf_.MeasurementUpdate_gnss(ned_vel_, llh_);
-      if ((gnss_->fix >= 5) && (abs(cur_baseline_len_m_ - BASELINE_LEN_M) < 0.1f )){
+      if ((gnss_->fix >= 5)){ //&& (abs(cur_baseline_len_m_ - BASELINE_LEN_M) < 0.1f )){
         ekf_.MeasurementUpdate_moving_base(rel_pos_);
-        MsgInfo("rek pos gnss ran\n");
+        MsgInfo("rel pos gnss ran\n");
       }
     }
     ptr->pitch_rad = ekf_.pitch_rad();
