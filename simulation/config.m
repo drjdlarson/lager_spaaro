@@ -9,13 +9,13 @@
 %% Definitions
 % Vehicle
 % vehicle = 'sig_kadet';
-% vehicle = 'malt';
- vehicle = 'super';
+ vehicle = 'malt';
+% vehicle = 'super';
 % FMU-R version
 % fmu_version = "v1";
 % fmu_version = "v2-beta";
- fmu_version = "v2";
-% fmu_version = "mini";
+% fmu_version = "v2";
+ fmu_version = "mini";
 
 %% Target trim conditions
 % Latitude and longitude [deg]

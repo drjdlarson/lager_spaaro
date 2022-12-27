@@ -56,6 +56,7 @@ void send_effectors() {
 
 /* ISR to gather sensor data and run VMS */
 void run() {
+  MsgInfo("Run\n");
   /* Start the effector timer */
   effector_timer.begin(send_effectors, EFFECTOR_DELAY_US);
   /* System data */

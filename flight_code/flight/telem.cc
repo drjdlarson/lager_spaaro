@@ -172,6 +172,7 @@ void TelemInit(const TelemConfig &cfg, TelemData * const ptr) {
   MsgInfo("done\n"); 
 }
 void TelemUpdate(AircraftData &data, TelemData * const ptr) {
+  MsgInfo("Telem update\n");
   if (!telem_initialized_) {
     switch (cfg_.imu_source) {
       #if defined(__FMU_R_V1__) || defined(__FMU_R_V2__) || \
@@ -445,9 +446,9 @@ void TelemUpdate(AircraftData &data, TelemData * const ptr) {
   telem_.nav_lon_rad(ins_->lon_rad);
   // telem_.nav_alt_msl_m(data.nav.alt_msl_m);
   // telem_.nav_alt_agl_m(-1 * aux_ins_->ned_pos_m[2]);
-  telem_.nav_north_pos_m(aux_ins_ ->ned_pos_m[0]);
-  telem_.nav_east_pos_m(aux_ins_->ned_pos_m[1]);
-  telem_.nav_down_pos_m(aux_ins_->ned_pos_m[2]);
+  //telem_.nav_north_pos_m(aux_ins_ ->ned_pos_m[0]);
+  //telem_.nav_east_pos_m(aux_ins_->ned_pos_m[1]);
+  //telem_.nav_down_pos_m(aux_ins_->ned_pos_m[2]);
   telem_.nav_north_vel_mps(ins_->ned_vel_mps[0]);
   telem_.nav_east_vel_mps(ins_->ned_vel_mps[1]);
   telem_.nav_down_vel_mps(ins_->ned_vel_mps[2]);

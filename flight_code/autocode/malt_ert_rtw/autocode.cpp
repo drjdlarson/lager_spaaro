@@ -7,9 +7,9 @@
 //
 // Code generated for Simulink model 'malt'.
 //
-// Model version                  : 4.366
+// Model version                  : 4.371
 // Simulink Coder version         : 9.7 (R2022a) 13-Nov-2021
-// C/C++ source code generated on : Fri Dec 16 17:33:56 2022
+// C/C++ source code generated on : Tue Dec 27 11:36:49 2022
 //
 // Target selection: ert.tlc
 // Embedded hardware selection: NXP->Cortex-M4
@@ -341,10 +341,12 @@ namespace bfs
   //
   // Output and update for atomic system:
   //    '<S22>/MATLAB Function'
-  //    '<S77>/MATLAB Function'
-  //    '<S136>/MATLAB Function'
-  //    '<S197>/MATLAB Function'
-  //    '<S253>/MATLAB Function'
+  //    '<S23>/MATLAB Function'
+  //    '<S79>/MATLAB Function'
+  //    '<S80>/MATLAB Function'
+  //    '<S140>/MATLAB Function'
+  //    '<S201>/MATLAB Function'
+  //    '<S257>/MATLAB Function'
   //
   void Autocode::MATLABFunction(real32_T rtu_prev_val, real32_T rtu_raw_val,
     real32_T rtu_freq_cut, real32_T rtu_samp_freq, real32_T *rty_filtered_val)
@@ -362,8 +364,8 @@ namespace bfs
 {
   //
   // Output and update for atomic system:
-  //    '<S198>/MATLAB Function'
-  //    '<S254>/MATLAB Function'
+  //    '<S202>/MATLAB Function'
+  //    '<S258>/MATLAB Function'
   //
   void Autocode::MATLABFunction_i(real32_T rtu_prev_val, real_T rtu_raw_val,
     real32_T rtu_freq_cut, real32_T rtu_samp_freq, real32_T *rty_filtered_val)
@@ -382,12 +384,12 @@ namespace bfs
 {
   //
   // Output and update for atomic system:
-  //    '<S368>/remap1'
-  //    '<S370>/remap1'
   //    '<S372>/remap1'
-  //    '<S494>/remap'
-  //    '<S495>/remap'
+  //    '<S374>/remap1'
+  //    '<S376>/remap1'
   //    '<S498>/remap'
+  //    '<S499>/remap'
+  //    '<S502>/remap'
   //
   void Autocode::remap1(real32_T rtu_raw_in, real32_T rtu_in_min, real32_T
                         rtu_in_max, real32_T rtu_out_min, real32_T rtu_out_max,
@@ -402,9 +404,9 @@ namespace bfs
 {
   //
   // Output and update for atomic system:
-  //    '<S496>/remap_with_deadband'
-  //    '<S497>/remap_with_deadband'
-  //    '<S499>/remap_with_deadband'
+  //    '<S500>/remap_with_deadband'
+  //    '<S501>/remap_with_deadband'
+  //    '<S503>/remap_with_deadband'
   //
   void Autocode::remap_with_deadband(real32_T rtu_raw_in, real32_T rtu_in_min,
     real32_T rtu_in_max, real32_T rtu_out_min, real32_T rtu_out_max, real_T
@@ -456,7 +458,7 @@ real_T rt_remd_snf(real_T u0, real_T u1)
 
 namespace bfs
 {
-  // Function for MATLAB Function: '<S376>/determine_current_tar_pos'
+  // Function for MATLAB Function: '<S380>/determine_current_tar_pos'
   void Autocode::cosd_i(real_T *x)
   {
     if (std::isinf(*x) || std::isnan(*x)) {
@@ -516,7 +518,7 @@ namespace bfs
     }
   }
 
-  // Function for MATLAB Function: '<S376>/determine_current_tar_pos'
+  // Function for MATLAB Function: '<S380>/determine_current_tar_pos'
   void Autocode::sind_b(real_T *x)
   {
     if (std::isinf(*x) || std::isnan(*x)) {
@@ -687,11 +689,11 @@ namespace bfs
     //   Inport: '<Root>/Sensor Data'
     rtDW.DataTypeConversion1 = sensor.inceptor.ch[6];
 
-    // MATLAB Function: '<S494>/remap' incorporates:
-    //   Constant: '<S494>/Constant'
-    //   Constant: '<S494>/Constant1'
-    //   Constant: '<S494>/Constant2'
-    //   Constant: '<S494>/Constant3'
+    // MATLAB Function: '<S498>/remap' incorporates:
+    //   Constant: '<S498>/Constant'
+    //   Constant: '<S498>/Constant1'
+    //   Constant: '<S498>/Constant2'
+    //   Constant: '<S498>/Constant3'
     remap1(rtDW.DataTypeConversion1, 172.0F, 1811.0F, -1.0F, 1.0F,
            &rtDW.norm_out_dm);
 
@@ -699,12 +701,12 @@ namespace bfs
     //   Inport: '<Root>/Sensor Data'
     rtDW.DataTypeConversion2 = sensor.inceptor.ch[3];
 
-    // MATLAB Function: '<S499>/remap_with_deadband' incorporates:
+    // MATLAB Function: '<S503>/remap_with_deadband' incorporates:
     //   Constant: '<S10>/Constant2'
-    //   Constant: '<S499>/Constant'
-    //   Constant: '<S499>/Constant1'
-    //   Constant: '<S499>/Constant2'
-    //   Constant: '<S499>/Constant3'
+    //   Constant: '<S503>/Constant'
+    //   Constant: '<S503>/Constant1'
+    //   Constant: '<S503>/Constant2'
+    //   Constant: '<S503>/Constant3'
     remap_with_deadband(rtDW.DataTypeConversion2, 172.0F, 1811.0F, -1.0F, 1.0F,
                         0.1, &rtDW.norm_out);
 
@@ -712,11 +714,11 @@ namespace bfs
     //   Inport: '<Root>/Sensor Data'
     rtDW.DataTypeConversion5 = sensor.inceptor.ch[0];
 
-    // MATLAB Function: '<S498>/remap' incorporates:
-    //   Constant: '<S498>/Constant'
-    //   Constant: '<S498>/Constant1'
-    //   Constant: '<S498>/Constant2'
-    //   Constant: '<S498>/Constant3'
+    // MATLAB Function: '<S502>/remap' incorporates:
+    //   Constant: '<S502>/Constant'
+    //   Constant: '<S502>/Constant1'
+    //   Constant: '<S502>/Constant2'
+    //   Constant: '<S502>/Constant3'
     remap1(rtDW.DataTypeConversion5, 172.0F, 1811.0F, 0.0F, 1.0F,
            &rtDW.norm_out_p);
 
@@ -724,11 +726,11 @@ namespace bfs
     //   Inport: '<Root>/Sensor Data'
     rtDW.DataTypeConversion7 = sensor.inceptor.ch[4];
 
-    // MATLAB Function: '<S495>/remap' incorporates:
-    //   Constant: '<S495>/Constant'
-    //   Constant: '<S495>/Constant1'
-    //   Constant: '<S495>/Constant2'
-    //   Constant: '<S495>/Constant3'
+    // MATLAB Function: '<S499>/remap' incorporates:
+    //   Constant: '<S499>/Constant'
+    //   Constant: '<S499>/Constant1'
+    //   Constant: '<S499>/Constant2'
+    //   Constant: '<S499>/Constant3'
     remap1(rtDW.DataTypeConversion7, 172.0F, 1811.0F, 0.0F, 2.0F,
            &rtDW.norm_out_n);
 
@@ -736,12 +738,12 @@ namespace bfs
     //   Inport: '<Root>/Sensor Data'
     rtDW.DataTypeConversion4 = sensor.inceptor.ch[2];
 
-    // MATLAB Function: '<S496>/remap_with_deadband' incorporates:
+    // MATLAB Function: '<S500>/remap_with_deadband' incorporates:
     //   Constant: '<S10>/Constant'
-    //   Constant: '<S496>/Constant'
-    //   Constant: '<S496>/Constant1'
-    //   Constant: '<S496>/Constant2'
-    //   Constant: '<S496>/Constant3'
+    //   Constant: '<S500>/Constant'
+    //   Constant: '<S500>/Constant1'
+    //   Constant: '<S500>/Constant2'
+    //   Constant: '<S500>/Constant3'
     remap_with_deadband(rtDW.DataTypeConversion4, 172.0F, 1811.0F, -1.0F, 1.0F,
                         0.1, &rtDW.norm_out_o);
 
@@ -749,42 +751,42 @@ namespace bfs
     //   Inport: '<Root>/Sensor Data'
     rtDW.DataTypeConversion3 = sensor.inceptor.ch[1];
 
-    // MATLAB Function: '<S497>/remap_with_deadband' incorporates:
+    // MATLAB Function: '<S501>/remap_with_deadband' incorporates:
     //   Constant: '<S10>/Constant1'
-    //   Constant: '<S497>/Constant'
-    //   Constant: '<S497>/Constant1'
-    //   Constant: '<S497>/Constant2'
-    //   Constant: '<S497>/Constant3'
+    //   Constant: '<S501>/Constant'
+    //   Constant: '<S501>/Constant1'
+    //   Constant: '<S501>/Constant2'
+    //   Constant: '<S501>/Constant3'
     remap_with_deadband(rtDW.DataTypeConversion3, 172.0F, 1811.0F, -1.0F, 1.0F,
                         0.1, &rtDW.norm_out_d);
 
-    // Abs: '<S507>/Abs1'
+    // Abs: '<S511>/Abs1'
     rtDW.Abs1_d = std::abs(rtDW.norm_out_dm);
 
-    // RelationalOperator: '<S515>/Compare' incorporates:
-    //   Constant: '<S515>/Constant'
+    // RelationalOperator: '<S519>/Compare' incorporates:
+    //   Constant: '<S519>/Constant'
     rtDW.Compare = (rtDW.Abs1_d >= 0.98F);
 
-    // Outputs for Enabled SubSystem: '<S507>/e_stop counter' incorporates:
-    //   EnablePort: '<S516>/Enable'
+    // Outputs for Enabled SubSystem: '<S511>/e_stop counter' incorporates:
+    //   EnablePort: '<S520>/Enable'
     if (rtDW.Compare) {
       if (!rtDW.e_stopcounter_MODE) {
-        // InitializeConditions for DiscreteIntegrator: '<S516>/Discrete-Time Integrator'
+        // InitializeConditions for DiscreteIntegrator: '<S520>/Discrete-Time Integrator'
         rtDW.DiscreteTimeIntegrator_DSTATE_i = 0.0F;
         rtDW.e_stopcounter_MODE = true;
       }
 
-      // DiscreteIntegrator: '<S516>/Discrete-Time Integrator'
+      // DiscreteIntegrator: '<S520>/Discrete-Time Integrator'
       rtDW.DiscreteTimeIntegrator_oc = rtDW.DiscreteTimeIntegrator_DSTATE_i;
 
-      // RelationalOperator: '<S517>/Compare' incorporates:
-      //   Constant: '<S517>/Constant'
+      // RelationalOperator: '<S521>/Compare' incorporates:
+      //   Constant: '<S521>/Constant'
       rtDW.Compare_k = (rtDW.DiscreteTimeIntegrator_oc >= 0.5F);
 
-      // Gain: '<S516>/Gain'
+      // Gain: '<S520>/Gain'
       rtDW.Gain_a = 2.0F * rtDW.norm_out_dm;
 
-      // Update for DiscreteIntegrator: '<S516>/Discrete-Time Integrator'
+      // Update for DiscreteIntegrator: '<S520>/Discrete-Time Integrator'
       rtDW.DiscreteTimeIntegrator_DSTATE_i += 0.005F * rtDW.Gain_a;
       if (rtDW.DiscreteTimeIntegrator_DSTATE_i >= 1.0F) {
         rtDW.DiscreteTimeIntegrator_DSTATE_i = 1.0F;
@@ -792,54 +794,54 @@ namespace bfs
         rtDW.DiscreteTimeIntegrator_DSTATE_i = 0.0F;
       }
 
-      // End of Update for DiscreteIntegrator: '<S516>/Discrete-Time Integrator'
+      // End of Update for DiscreteIntegrator: '<S520>/Discrete-Time Integrator'
     } else {
       rtDW.e_stopcounter_MODE = false;
     }
 
-    // End of Outputs for SubSystem: '<S507>/e_stop counter'
+    // End of Outputs for SubSystem: '<S511>/e_stop counter'
 
-    // Logic: '<S506>/NOT' incorporates:
+    // Logic: '<S510>/NOT' incorporates:
     //   Inport: '<Root>/Sensor Data'
     rtDW.NOT = !sensor.inceptor.failsafe;
 
-    // DataTypeConversion: '<S510>/Cast To Single'
+    // DataTypeConversion: '<S514>/Cast To Single'
     rtDW.CastToSingle = rtDW.NOT;
 
-    // Sum: '<S510>/Add' incorporates:
-    //   Constant: '<S510>/Constant'
+    // Sum: '<S514>/Add' incorporates:
+    //   Constant: '<S514>/Constant'
     rtDW.Add = rtDW.CastToSingle + -0.5;
 
-    // Gain: '<S510>/Gain'
+    // Gain: '<S514>/Gain'
     rtDW.Gain = 2.0 * rtDW.Add;
 
-    // Abs: '<S511>/Abs1'
+    // Abs: '<S515>/Abs1'
     rtDW.Abs1 = std::abs(rtDW.Gain);
 
-    // RelationalOperator: '<S512>/Compare' incorporates:
-    //   Constant: '<S512>/Constant'
+    // RelationalOperator: '<S516>/Compare' incorporates:
+    //   Constant: '<S516>/Constant'
     rtDW.Compare_p = (rtDW.Abs1 >= 0.98);
 
-    // Outputs for Enabled SubSystem: '<S511>/e_stop counter' incorporates:
-    //   EnablePort: '<S513>/Enable'
+    // Outputs for Enabled SubSystem: '<S515>/e_stop counter' incorporates:
+    //   EnablePort: '<S517>/Enable'
     if (rtDW.Compare_p) {
       if (!rtDW.e_stopcounter_MODE_d) {
-        // InitializeConditions for DiscreteIntegrator: '<S513>/Discrete-Time Integrator'
+        // InitializeConditions for DiscreteIntegrator: '<S517>/Discrete-Time Integrator'
         rtDW.DiscreteTimeIntegrator_DSTATE = 0.0;
         rtDW.e_stopcounter_MODE_d = true;
       }
 
-      // DiscreteIntegrator: '<S513>/Discrete-Time Integrator'
+      // DiscreteIntegrator: '<S517>/Discrete-Time Integrator'
       rtDW.DiscreteTimeIntegrator = rtDW.DiscreteTimeIntegrator_DSTATE;
 
-      // RelationalOperator: '<S514>/Compare' incorporates:
-      //   Constant: '<S514>/Constant'
+      // RelationalOperator: '<S518>/Compare' incorporates:
+      //   Constant: '<S518>/Constant'
       rtDW.Compare_d5 = (rtDW.DiscreteTimeIntegrator >= 0.5);
 
-      // Gain: '<S513>/Gain'
+      // Gain: '<S517>/Gain'
       rtDW.Gain_d = 2.0 * rtDW.Gain;
 
-      // Update for DiscreteIntegrator: '<S513>/Discrete-Time Integrator'
+      // Update for DiscreteIntegrator: '<S517>/Discrete-Time Integrator'
       rtDW.DiscreteTimeIntegrator_DSTATE += 0.005 * rtDW.Gain_d;
       if (rtDW.DiscreteTimeIntegrator_DSTATE >= 1.0) {
         rtDW.DiscreteTimeIntegrator_DSTATE = 1.0;
@@ -847,95 +849,95 @@ namespace bfs
         rtDW.DiscreteTimeIntegrator_DSTATE = 0.0;
       }
 
-      // End of Update for DiscreteIntegrator: '<S513>/Discrete-Time Integrator'
+      // End of Update for DiscreteIntegrator: '<S517>/Discrete-Time Integrator'
     } else {
       rtDW.e_stopcounter_MODE_d = false;
     }
 
-    // End of Outputs for SubSystem: '<S511>/e_stop counter'
+    // End of Outputs for SubSystem: '<S515>/e_stop counter'
 
-    // Logic: '<S509>/NOT1'
+    // Logic: '<S513>/NOT1'
     rtDW.NOT1 = !rtDW.Compare_d5;
 
     // Logic: '<S15>/OR1'
     rtDW.OR1 = (rtDW.Compare_k || rtDW.NOT1);
 
-    // RelationalOperator: '<S522>/Compare' incorporates:
-    //   Constant: '<S522>/Constant'
+    // RelationalOperator: '<S526>/Compare' incorporates:
+    //   Constant: '<S526>/Constant'
     rtDW.Compare_d = (rtDW.norm_out >= 0.5F);
 
-    // UnitDelay: '<S508>/Unit Delay'
+    // UnitDelay: '<S512>/Unit Delay'
     rtDW.UnitDelay = rtDW.UnitDelay_DSTATE;
 
-    // Abs: '<S508>/Abs'
+    // Abs: '<S512>/Abs'
     rtDW.Abs = std::abs(rtDW.norm_out);
 
-    // RelationalOperator: '<S519>/Compare' incorporates:
-    //   Constant: '<S519>/Constant'
+    // RelationalOperator: '<S523>/Compare' incorporates:
+    //   Constant: '<S523>/Constant'
     rtDW.Compare_g = (rtDW.Abs >= 0.95F);
 
-    // RelationalOperator: '<S521>/Compare' incorporates:
-    //   Constant: '<S521>/Constant'
+    // RelationalOperator: '<S525>/Compare' incorporates:
+    //   Constant: '<S525>/Constant'
     rtDW.Compare_j = (rtDW.norm_out_p <= 0.03F);
 
-    // Logic: '<S508>/AND'
+    // Logic: '<S512>/AND'
     rtDW.AND = (rtDW.Compare_j && rtDW.Compare_g);
 
-    // Outputs for Enabled SubSystem: '<S508>/Enabled Subsystem' incorporates:
-    //   EnablePort: '<S523>/Enable'
+    // Outputs for Enabled SubSystem: '<S512>/Enabled Subsystem' incorporates:
+    //   EnablePort: '<S527>/Enable'
     if (rtDW.AND) {
       if (!rtDW.EnabledSubsystem_MODE) {
-        // InitializeConditions for DiscreteIntegrator: '<S523>/Discrete-Time Integrator'
+        // InitializeConditions for DiscreteIntegrator: '<S527>/Discrete-Time Integrator'
         rtDW.DiscreteTimeIntegrator_DSTATE_m = 0.0F;
         rtDW.EnabledSubsystem_MODE = true;
       }
 
-      // DataTypeConversion: '<S523>/Cast'
+      // DataTypeConversion: '<S527>/Cast'
       rtDW.Cast = static_cast<int8_T>(rtDW.Compare_g);
 
-      // DiscreteIntegrator: '<S523>/Discrete-Time Integrator'
+      // DiscreteIntegrator: '<S527>/Discrete-Time Integrator'
       rtDW.DiscreteTimeIntegrator_o = 0.00250244141F * static_cast<real32_T>
         (rtDW.Cast) + rtDW.DiscreteTimeIntegrator_DSTATE_m;
 
-      // Update for DiscreteIntegrator: '<S523>/Discrete-Time Integrator'
+      // Update for DiscreteIntegrator: '<S527>/Discrete-Time Integrator'
       rtDW.DiscreteTimeIntegrator_DSTATE_m = 0.00250244141F * static_cast<
         real32_T>(rtDW.Cast) + rtDW.DiscreteTimeIntegrator_o;
     } else {
       rtDW.EnabledSubsystem_MODE = false;
     }
 
-    // End of Outputs for SubSystem: '<S508>/Enabled Subsystem'
+    // End of Outputs for SubSystem: '<S512>/Enabled Subsystem'
 
-    // RelationalOperator: '<S520>/Compare' incorporates:
-    //   Constant: '<S520>/Constant'
+    // RelationalOperator: '<S524>/Compare' incorporates:
+    //   Constant: '<S524>/Constant'
     rtDW.Compare_l = (rtDW.DiscreteTimeIntegrator_o >= 3.0F);
 
-    // DataTypeConversion: '<S508>/Cast To Single'
+    // DataTypeConversion: '<S512>/Cast To Single'
     rtDW.CastToSingle_a = rtDW.Compare_l;
 
-    // Sum: '<S508>/Sum'
+    // Sum: '<S512>/Sum'
     rtDW.Sum_p = rtDW.CastToSingle_a - rtDW.UnitDelay;
 
-    // RelationalOperator: '<S518>/Compare' incorporates:
-    //   Constant: '<S518>/Constant'
+    // RelationalOperator: '<S522>/Compare' incorporates:
+    //   Constant: '<S522>/Constant'
     rtDW.Compare_h = (rtDW.Sum_p > 0.0F);
 
-    // Logic: '<S508>/OR'
+    // Logic: '<S512>/OR'
     rtDW.OR = (rtDW.OR1 || rtDW.Compare_h);
 
-    // Outputs for Triggered SubSystem: '<S508>/manual_arming' incorporates:
-    //   TriggerPort: '<S524>/Trigger'
+    // Outputs for Triggered SubSystem: '<S512>/manual_arming' incorporates:
+    //   TriggerPort: '<S528>/Trigger'
     zcEvent = (rtDW.OR && (rtPrevZCX.manual_arming_Trig_ZCE != POS_ZCSIG));
     if (zcEvent) {
-      // SignalConversion generated from: '<S524>/yaw_arm'
+      // SignalConversion generated from: '<S528>/yaw_arm'
       rtDW.yaw_arm = rtDW.Compare_d;
     }
 
     rtPrevZCX.manual_arming_Trig_ZCE = rtDW.OR;
 
-    // End of Outputs for SubSystem: '<S508>/manual_arming'
+    // End of Outputs for SubSystem: '<S512>/manual_arming'
 
-    // Switch: '<S508>/Switch'
+    // Switch: '<S512>/Switch'
     rtDW.Switch_m = ((!rtDW.OR1) && rtDW.yaw_arm);
 
     // Logic: '<S15>/nav_init AND motor_enable' incorporates:
@@ -975,25 +977,25 @@ namespace bfs
       //   Constant: '<S6>/Constant3'
       rtDW.yaw_rate_cmd_radps_l = rtDW.norm_out * 3.14159F;
 
-      // MATLAB Function: '<S372>/remap1' incorporates:
-      //   Constant: '<S372>/Constant4'
-      //   Constant: '<S372>/Constant5'
-      //   Constant: '<S372>/Constant6'
-      //   Constant: '<S372>/Constant7'
+      // MATLAB Function: '<S376>/remap1' incorporates:
+      //   Constant: '<S376>/Constant4'
+      //   Constant: '<S376>/Constant5'
+      //   Constant: '<S376>/Constant6'
+      //   Constant: '<S376>/Constant7'
       remap1(rtDW.norm_out_p, 0.0F, 1.0F, 0.15F, 1.0F, &rtDW.norm_out_i);
 
       // Outputs for Enabled SubSystem: '<Root>/WAYPOINT CONTROLLER1' incorporates:
       //   EnablePort: '<S8>/Enable'
       if (!rtDW.WAYPOINTCONTROLLER1_MODE) {
-        // InitializeConditions for UnitDelay: '<S488>/Delay Input1'
+        // InitializeConditions for UnitDelay: '<S492>/Delay Input1'
         //
-        //  Block description for '<S488>/Delay Input1':
+        //  Block description for '<S492>/Delay Input1':
         //
         //   Store in Global RAM
         rtDW.DelayInput1_DSTATE = -1;
 
         // InitializeConditions for UnitDelay: '<S8>/Unit Delay'
-        rtDW.UnitDelay_DSTATE_o = false;
+        rtDW.UnitDelay_DSTATE_o4 = false;
         rtDW.WAYPOINTCONTROLLER1_MODE = true;
       }
 
@@ -1002,18 +1004,18 @@ namespace bfs
       //   Inport: '<Root>/Telemetry Data'
       rtDW.cur_wp = static_cast<int16_T>(telem.current_waypoint + 1);
 
-      // UnitDelay: '<S488>/Delay Input1'
+      // UnitDelay: '<S492>/Delay Input1'
       //
-      //  Block description for '<S488>/Delay Input1':
+      //  Block description for '<S492>/Delay Input1':
       //
       //   Store in Global RAM
       rtDW.Uk1_ei = rtDW.DelayInput1_DSTATE;
 
-      // RelationalOperator: '<S488>/FixPt Relational Operator'
+      // RelationalOperator: '<S492>/FixPt Relational Operator'
       rtDW.FixPtRelationalOperator = (rtDW.cur_wp != rtDW.Uk1_ei);
 
       // UnitDelay: '<S8>/Unit Delay'
-      rtDW.UnitDelay_o = rtDW.UnitDelay_DSTATE_o;
+      rtDW.UnitDelay_o = rtDW.UnitDelay_DSTATE_o4;
 
       // Logic: '<S8>/OR' incorporates:
       //   Inport: '<Root>/Telemetry Data'
@@ -1021,37 +1023,37 @@ namespace bfs
                      rtDW.UnitDelay_o);
 
       // Outputs for Enabled SubSystem: '<S8>/determine target' incorporates:
-      //   EnablePort: '<S376>/Enable'
+      //   EnablePort: '<S380>/Enable'
       if (rtDW.enable) {
-        // UnitDelay: '<S376>/Unit Delay'
+        // UnitDelay: '<S380>/Unit Delay'
         rtDW.UnitDelay_j[0] = rtDW.UnitDelay_DSTATE_m[0];
         rtDW.UnitDelay_j[1] = rtDW.UnitDelay_DSTATE_m[1];
         rtDW.UnitDelay_j[2] = rtDW.UnitDelay_DSTATE_m[2];
 
-        // Sum: '<S376>/Sum' incorporates:
-        //   Constant: '<S376>/Constant'
+        // Sum: '<S380>/Sum' incorporates:
+        //   Constant: '<S380>/Constant'
         //   Inport: '<Root>/Telemetry Data'
         rtDW.Sum_pz = static_cast<int16_T>(telem.current_waypoint + 1);
 
-        // Selector: '<S376>/Selector1' incorporates:
+        // Selector: '<S380>/Selector1' incorporates:
         //   Inport: '<Root>/Telemetry Data'
         rtDW.Selector1 = telem.flight_plan[rtDW.Sum_pz];
 
-        // Gain: '<S376>/Gain'
+        // Gain: '<S380>/Gain'
         rtDW.Gain_n = 1.0000000000287557E-7 * static_cast<real_T>
           (rtDW.Selector1.x);
 
-        // DataTypeConversion: '<S376>/Cast To Single1'
+        // DataTypeConversion: '<S380>/Cast To Single1'
         rtDW.CastToSingle1 = static_cast<real32_T>(rtDW.Gain_n);
 
-        // Gain: '<S376>/Gain1'
+        // Gain: '<S380>/Gain1'
         rtDW.Gain1 = 1.0000000000287557E-7 * static_cast<real_T>
           (rtDW.Selector1.y);
 
-        // DataTypeConversion: '<S376>/Cast To Single2'
+        // DataTypeConversion: '<S380>/Cast To Single2'
         rtDW.CastToSingle2 = static_cast<real32_T>(rtDW.Gain1);
 
-        // MATLAB Function: '<S376>/determine_current_tar_pos' incorporates:
+        // MATLAB Function: '<S380>/determine_current_tar_pos' incorporates:
         //   Inport: '<Root>/AuxInsData'
         lla_idx_0 = aux_ins.home_lat_rad * 57.295779513082323;
         lla_idx_1 = aux_ins.home_lon_rad * 57.295779513082323;
@@ -1112,9 +1114,9 @@ namespace bfs
           rtDW.cur_target_pos[i] = tmp[i] - b_s_lat;
         }
 
-        // End of MATLAB Function: '<S376>/determine_current_tar_pos'
+        // End of MATLAB Function: '<S380>/determine_current_tar_pos'
 
-        // Update for UnitDelay: '<S376>/Unit Delay'
+        // Update for UnitDelay: '<S380>/Unit Delay'
         rtDW.UnitDelay_DSTATE_m[0] = rtDW.cur_target_pos[0];
         rtDW.UnitDelay_DSTATE_m[1] = rtDW.cur_target_pos[1];
         rtDW.UnitDelay_DSTATE_m[2] = rtDW.cur_target_pos[2];
@@ -1123,106 +1125,106 @@ namespace bfs
       // End of Outputs for SubSystem: '<S8>/determine target'
 
       // Outputs for Enabled SubSystem: '<S8>/WP_NAV' incorporates:
-      //   EnablePort: '<S374>/Enable'
+      //   EnablePort: '<S378>/Enable'
 
-      // Trigonometry: '<S487>/Cos' incorporates:
+      // Trigonometry: '<S491>/Cos' incorporates:
       //   Inport: '<Root>/INS Data'
       rtDW.Cos_g = std::cos(bfs_ins.heading_rad);
 
-      // Trigonometry: '<S487>/Sin' incorporates:
+      // Trigonometry: '<S491>/Sin' incorporates:
       //   Inport: '<Root>/INS Data'
       rtDW.Sin_o = std::sin(bfs_ins.heading_rad);
 
-      // Gain: '<S487>/Gain'
+      // Gain: '<S491>/Gain'
       rtDW.Gain_c = -rtDW.Sin_o;
 
-      // Reshape: '<S487>/Reshape'
+      // Reshape: '<S491>/Reshape'
       rtDW.Reshape_a[0] = rtDW.Cos_g;
       rtDW.Reshape_a[2] = rtDW.Sin_o;
       rtDW.Reshape_a[1] = rtDW.Gain_c;
       rtDW.Reshape_a[3] = rtDW.Cos_g;
 
-      // Sum: '<S381>/Subtract' incorporates:
+      // Sum: '<S385>/Subtract' incorporates:
       //   Inport: '<Root>/AuxInsData'
       rtDW.Subtract[0] = rtDW.cur_target_pos[0] - aux_ins.ned_pos_m[0];
       rtDW.Subtract[1] = rtDW.cur_target_pos[1] - aux_ins.ned_pos_m[1];
       rtDW.Subtract[2] = rtDW.cur_target_pos[2] - aux_ins.ned_pos_m[2];
 
-      // Math: '<S381>/Transpose'
+      // Math: '<S385>/Transpose'
       rtDW.Transpose[0] = rtDW.Subtract[0];
 
-      // Product: '<S381>/MatrixMultiply' incorporates:
-      //   Math: '<S381>/Transpose'
+      // Product: '<S385>/MatrixMultiply' incorporates:
+      //   Math: '<S385>/Transpose'
       c_lat = rtDW.Transpose[0];
       s_lat = rtDW.Subtract[0];
       c_lon = c_lat * s_lat;
 
-      // Math: '<S381>/Transpose'
+      // Math: '<S385>/Transpose'
       rtDW.Transpose[1] = rtDW.Subtract[1];
 
-      // Product: '<S381>/MatrixMultiply' incorporates:
-      //   Math: '<S381>/Transpose'
+      // Product: '<S385>/MatrixMultiply' incorporates:
+      //   Math: '<S385>/Transpose'
       c_lat = rtDW.Transpose[1];
       s_lat = rtDW.Subtract[1];
       c_lon += c_lat * s_lat;
 
-      // Product: '<S381>/MatrixMultiply'
+      // Product: '<S385>/MatrixMultiply'
       rtDW.MatrixMultiply = c_lon;
 
-      // Sqrt: '<S381>/Sqrt'
+      // Sqrt: '<S385>/Sqrt'
       rtDW.Sqrt = std::sqrt(rtDW.MatrixMultiply);
 
-      // Saturate: '<S379>/Saturation'
+      // Saturate: '<S383>/Saturation'
       c_lat = rtDW.Sqrt;
       if (c_lat > 1.0) {
-        // Saturate: '<S379>/Saturation'
+        // Saturate: '<S383>/Saturation'
         rtDW.Saturation = 1.0;
       } else if (c_lat < 0.0) {
-        // Saturate: '<S379>/Saturation'
+        // Saturate: '<S383>/Saturation'
         rtDW.Saturation = 0.0;
       } else {
-        // Saturate: '<S379>/Saturation'
+        // Saturate: '<S383>/Saturation'
         rtDW.Saturation = c_lat;
       }
 
-      // End of Saturate: '<S379>/Saturation'
+      // End of Saturate: '<S383>/Saturation'
 
-      // Product: '<S473>/PProd Out'
+      // Product: '<S477>/PProd Out'
       rtDW.PProdOut = rtDW.Saturation * 0.40000000596046448;
 
-      // RelationalOperator: '<S476>/LowerRelop1'
+      // RelationalOperator: '<S480>/LowerRelop1'
       rtDW.LowerRelop1_j = (rtDW.PProdOut > 0.30000001192092896);
 
-      // Switch: '<S476>/Switch2'
+      // Switch: '<S480>/Switch2'
       if (rtDW.LowerRelop1_j) {
-        // Switch: '<S476>/Switch2' incorporates:
-        //   Constant: '<S379>/Constant1'
+        // Switch: '<S480>/Switch2' incorporates:
+        //   Constant: '<S383>/Constant1'
         rtDW.Switch2_o = 0.30000001192092896;
       } else {
-        // RelationalOperator: '<S476>/UpperRelop'
+        // RelationalOperator: '<S480>/UpperRelop'
         rtDW.UpperRelop_p = false;
 
-        // Switch: '<S476>/Switch'
+        // Switch: '<S480>/Switch'
         rtDW.Switch_f = rtDW.PProdOut;
 
-        // Switch: '<S476>/Switch2'
+        // Switch: '<S480>/Switch2'
         rtDW.Switch2_o = rtDW.Switch_f;
       }
 
-      // End of Switch: '<S476>/Switch2'
+      // End of Switch: '<S480>/Switch2'
 
-      // Trigonometry: '<S381>/Atan2'
+      // Trigonometry: '<S385>/Atan2'
       rtDW.Atan2 = rt_atan2d_snf(rtDW.Subtract[1], rtDW.Subtract[0]);
 
-      // Trigonometry: '<S384>/Cos'
+      // Trigonometry: '<S388>/Cos'
       rtDW.Cos = std::cos(rtDW.Atan2);
 
-      // Product: '<S384>/Product'
+      // Product: '<S388>/Product'
       rtDW.Product = rtDW.Switch2_o * rtDW.Cos;
 
-      // MATLAB Function: '<S378>/deviation_calc' incorporates:
+      // MATLAB Function: '<S382>/deviation_calc' incorporates:
       //   Inport: '<Root>/AuxInsData'
-      //   UnitDelay: '<S376>/Unit Delay'
+      //   UnitDelay: '<S380>/Unit Delay'
       d_c_lat = rt_atan2f_snf(rtDW.cur_target_pos[1] - rtDW.UnitDelay_j[1],
         rtDW.cur_target_pos[0] - rtDW.UnitDelay_j[0]) + 1.57079637F;
       vec_tar_to_prev_idx_0 = rtDW.cur_target_pos[0] - rtDW.UnitDelay_j[0];
@@ -1285,88 +1287,88 @@ namespace bfs
       rtDW.dev_dist_m = d_c_lat * std::sqrt(rtDW.dev_dist_m);
       rtDW.dev_bearing_rad = rt_atan2f_snf(vec_tar_to_prev_idx_0, b_s_lon);
 
-      // End of MATLAB Function: '<S378>/deviation_calc'
+      // End of MATLAB Function: '<S382>/deviation_calc'
 
-      // Product: '<S424>/PProd Out' incorporates:
-      //   Constant: '<S379>/Constant5'
+      // Product: '<S428>/PProd Out' incorporates:
+      //   Constant: '<S383>/Constant5'
       rtDW.PProdOut_o = rtDW.dev_dist_m * 0.5F;
 
-      // RelationalOperator: '<S427>/LowerRelop1' incorporates:
-      //   Constant: '<S379>/Constant6'
+      // RelationalOperator: '<S431>/LowerRelop1' incorporates:
+      //   Constant: '<S383>/Constant6'
       rtDW.LowerRelop1_jy = (rtDW.PProdOut_o > 0.3F);
 
-      // Switch: '<S427>/Switch2'
+      // Switch: '<S431>/Switch2'
       if (rtDW.LowerRelop1_jy) {
-        // Switch: '<S427>/Switch2' incorporates:
-        //   Constant: '<S379>/Constant6'
+        // Switch: '<S431>/Switch2' incorporates:
+        //   Constant: '<S383>/Constant6'
         rtDW.Switch2_l = 0.3F;
       } else {
-        // RelationalOperator: '<S427>/UpperRelop'
+        // RelationalOperator: '<S431>/UpperRelop'
         rtDW.UpperRelop_i = false;
 
-        // Switch: '<S427>/Switch'
+        // Switch: '<S431>/Switch'
         rtDW.Switch_dd = rtDW.PProdOut_o;
 
-        // Switch: '<S427>/Switch2'
+        // Switch: '<S431>/Switch2'
         rtDW.Switch2_l = rtDW.Switch_dd;
       }
 
-      // End of Switch: '<S427>/Switch2'
+      // End of Switch: '<S431>/Switch2'
 
-      // Trigonometry: '<S385>/Cos'
+      // Trigonometry: '<S389>/Cos'
       rtDW.Cos_h = std::cos(rtDW.dev_bearing_rad);
 
-      // Product: '<S385>/Product'
+      // Product: '<S389>/Product'
       rtDW.Product_g5 = rtDW.Switch2_l * rtDW.Cos_h;
 
-      // Sum: '<S379>/Sum'
+      // Sum: '<S383>/Sum'
       rtDW.Sum = rtDW.Product + rtDW.Product_g5;
 
-      // Trigonometry: '<S384>/Sin'
+      // Trigonometry: '<S388>/Sin'
       rtDW.Sin = std::sin(rtDW.Atan2);
 
-      // Product: '<S384>/Product1'
+      // Product: '<S388>/Product1'
       rtDW.Product1 = rtDW.Switch2_o * rtDW.Sin;
 
-      // Trigonometry: '<S385>/Sin'
+      // Trigonometry: '<S389>/Sin'
       rtDW.Sin_d = std::sin(rtDW.dev_bearing_rad);
 
-      // Product: '<S385>/Product1'
+      // Product: '<S389>/Product1'
       rtDW.Product1_h = rtDW.Switch2_l * rtDW.Sin_d;
 
-      // Sum: '<S379>/Sum1'
+      // Sum: '<S383>/Sum1'
       rtDW.Sum1 = rtDW.Product1 + rtDW.Product1_h;
 
-      // SignalConversion generated from: '<S386>/Normalization1'
+      // SignalConversion generated from: '<S390>/Normalization1'
       rtDW.TmpSignalConversionAtNormalizat[0] = rtDW.Sum;
       rtDW.TmpSignalConversionAtNormalizat[1] = rtDW.Sum1;
 
-      // Math: '<S386>/Square'
+      // Math: '<S390>/Square'
       rtDW.Square[0] = rtDW.TmpSignalConversionAtNormalizat[0] *
         rtDW.TmpSignalConversionAtNormalizat[0];
       rtDW.Square[1] = rtDW.TmpSignalConversionAtNormalizat[1] *
         rtDW.TmpSignalConversionAtNormalizat[1];
 
-      // Sum: '<S386>/Sum of Elements'
+      // Sum: '<S390>/Sum of Elements'
       c_lat = rtDW.Square[0];
       c_lat += rtDW.Square[1];
 
-      // Sum: '<S386>/Sum of Elements'
+      // Sum: '<S390>/Sum of Elements'
       rtDW.SumofElements = c_lat;
 
-      // Sqrt: '<S386>/Sqrt'
+      // Sqrt: '<S390>/Sqrt'
       rtDW.Sqrt_p = std::sqrt(rtDW.SumofElements);
 
-      // RelationalOperator: '<S486>/Compare' incorporates:
-      //   Constant: '<S486>/Constant'
+      // RelationalOperator: '<S490>/Compare' incorporates:
+      //   Constant: '<S490>/Constant'
       rtDW.Compare_c = (rtDW.Sqrt_p > 0.3);
 
-      // Switch: '<S386>/Switch'
+      // Switch: '<S390>/Switch'
       if (rtDW.Compare_c) {
         int32_T idx1;
         int32_T idx2;
 
-        // S-Function (sdsp2norm2): '<S386>/Normalization1'
+        // S-Function (sdsp2norm2): '<S390>/Normalization1'
         idx1 = 0;
         idx2 = 0;
         c_lat = 0.0;
@@ -1383,29 +1385,29 @@ namespace bfs
           idx2++;
         }
 
-        // End of S-Function (sdsp2norm2): '<S386>/Normalization1'
+        // End of S-Function (sdsp2norm2): '<S390>/Normalization1'
 
-        // Gain: '<S386>/Gain'
+        // Gain: '<S390>/Gain'
         rtDW.Gain_f[0] = 0.3 * rtDW.Normalization1[0];
 
-        // Switch: '<S386>/Switch'
+        // Switch: '<S390>/Switch'
         rtDW.Switch_d[0] = rtDW.Gain_f[0];
 
-        // Gain: '<S386>/Gain'
+        // Gain: '<S390>/Gain'
         rtDW.Gain_f[1] = 0.3 * rtDW.Normalization1[1];
 
-        // Switch: '<S386>/Switch'
+        // Switch: '<S390>/Switch'
         rtDW.Switch_d[1] = rtDW.Gain_f[1];
       } else {
-        // Switch: '<S386>/Switch'
+        // Switch: '<S390>/Switch'
         rtDW.Switch_d[0] = rtDW.TmpSignalConversionAtNormalizat[0];
         rtDW.Switch_d[1] = rtDW.TmpSignalConversionAtNormalizat[1];
       }
 
-      // End of Switch: '<S386>/Switch'
+      // End of Switch: '<S390>/Switch'
 
-      // Product: '<S387>/Product' incorporates:
-      //   Reshape: '<S487>/Reshape'
+      // Product: '<S391>/Product' incorporates:
+      //   Reshape: '<S491>/Reshape'
       b_s_lat = rtDW.Reshape_a[0];
       d_c_lat = rtDW.Reshape_a[1];
       b_c_lon = rtDW.Reshape_a[2];
@@ -1415,20 +1417,20 @@ namespace bfs
       c_lon = b_s_lat * s_lat;
       c_lon += b_c_lon * c_lat;
 
-      // Product: '<S387>/Product'
+      // Product: '<S391>/Product'
       rtDW.vb_xy[0] = c_lon;
 
-      // Product: '<S387>/Product'
+      // Product: '<S391>/Product'
       s_lat *= d_c_lat;
       s_lat += b_s_lon * c_lat;
 
-      // Product: '<S387>/Product'
+      // Product: '<S391>/Product'
       rtDW.vb_xy[1] = s_lat;
 
-      // SignalConversion generated from: '<S374>/Command out'
+      // SignalConversion generated from: '<S378>/Command out'
       rtDW.ve_z_cmd_mps_p0 = rtDW.norm_out_i;
 
-      // SignalConversion generated from: '<S374>/Command out'
+      // SignalConversion generated from: '<S378>/Command out'
       rtDW.yaw_rate_cmd_radps_c5 = rtDW.yaw_rate_cmd_radps_l;
 
       // End of Outputs for SubSystem: '<S8>/WP_NAV'
@@ -1439,21 +1441,21 @@ namespace bfs
       // SignalConversion generated from: '<S8>/wp_command'
       rtDW.yaw_rate_cmd_radps_c = rtDW.yaw_rate_cmd_radps_c5;
 
-      // Sum: '<S377>/Sum' incorporates:
-      //   Constant: '<S377>/Constant1'
+      // Sum: '<S381>/Sum' incorporates:
+      //   Constant: '<S381>/Constant1'
       //   Inport: '<Root>/Telemetry Data'
       rtDW.Sum_by = static_cast<int16_T>(telem.current_waypoint + 1);
 
-      // Selector: '<S377>/Selector' incorporates:
+      // Selector: '<S381>/Selector' incorporates:
       //   Inport: '<Root>/Telemetry Data'
       rtDW.Selector = telem.flight_plan[rtDW.Sum_by];
 
-      // RelationalOperator: '<S490>/Compare' incorporates:
-      //   Constant: '<S490>/Constant'
+      // RelationalOperator: '<S494>/Compare' incorporates:
+      //   Constant: '<S494>/Constant'
       rtDW.Compare_e = (rtDW.Selector.param1 > 0.5F);
 
-      // MATLAB Function: '<S377>/check_wp_reached' incorporates:
-      //   Constant: '<S377>/Constant'
+      // MATLAB Function: '<S381>/check_wp_reached' incorporates:
+      //   Constant: '<S381>/Constant'
       //   Inport: '<Root>/AuxInsData'
       b_s_lon = 1.29246971E-26F;
       d_c_lat = rtDW.cur_target_pos[0] - static_cast<real32_T>
@@ -1482,17 +1484,17 @@ namespace bfs
       b_s_lat = b_s_lon * std::sqrt(b_s_lat);
       rtDW.reached = ((b_s_lat <= 0.1F) && rtDW.Compare_e);
 
-      // End of MATLAB Function: '<S377>/check_wp_reached'
+      // End of MATLAB Function: '<S381>/check_wp_reached'
 
-      // Update for UnitDelay: '<S488>/Delay Input1'
+      // Update for UnitDelay: '<S492>/Delay Input1'
       //
-      //  Block description for '<S488>/Delay Input1':
+      //  Block description for '<S492>/Delay Input1':
       //
       //   Store in Global RAM
       rtDW.DelayInput1_DSTATE = rtDW.cur_wp;
 
       // Update for UnitDelay: '<S8>/Unit Delay'
-      rtDW.UnitDelay_DSTATE_o = rtDW.reached;
+      rtDW.UnitDelay_DSTATE_o4 = rtDW.reached;
 
       // End of Outputs for SubSystem: '<Root>/WAYPOINT CONTROLLER1'
     } else {
@@ -1527,11 +1529,11 @@ namespace bfs
       //   Constant: '<S5>/Constant4'
       rtDW.vb_y_cmd_mps_a = rtDW.norm_out_d * 0.5F;
 
-      // MATLAB Function: '<S370>/remap1' incorporates:
-      //   Constant: '<S370>/Constant4'
-      //   Constant: '<S370>/Constant5'
-      //   Constant: '<S370>/Constant6'
-      //   Constant: '<S370>/Constant7'
+      // MATLAB Function: '<S374>/remap1' incorporates:
+      //   Constant: '<S374>/Constant4'
+      //   Constant: '<S374>/Constant5'
+      //   Constant: '<S374>/Constant6'
+      //   Constant: '<S374>/Constant7'
       remap1(rtDW.norm_out_p, 0.0F, 1.0F, 0.15F, 1.0F, &rtDW.norm_out_b);
     }
 
@@ -1580,235 +1582,225 @@ namespace bfs
     //   EnablePort: '<S3>/Enable'
     if (rtDW.motor_armedANDmode_1) {
       if (!rtDW.POS_HOLDCONTROLLER_MODE) {
-        // InitializeConditions for UnitDelay: '<S194>/Unit Delay'
+        // InitializeConditions for UnitDelay: '<S198>/Unit Delay'
         rtDW.UnitDelay_DSTATE_gw = false;
 
-        // InitializeConditions for UnitDelay: '<S309>/Delay Input1'
+        // InitializeConditions for UnitDelay: '<S313>/Delay Input1'
         //
-        //  Block description for '<S309>/Delay Input1':
+        //  Block description for '<S313>/Delay Input1':
         //
         //   Store in Global RAM
         rtDW.DelayInput1_DSTATE_p = false;
 
-        // InitializeConditions for UnitDelay: '<S197>/Unit Delay'
+        // InitializeConditions for UnitDelay: '<S201>/Unit Delay'
         rtDW.UnitDelay_DSTATE_b = 0.0F;
 
-        // InitializeConditions for UnitDelay: '<S195>/UD'
+        // InitializeConditions for UnitDelay: '<S199>/UD'
         //
-        //  Block description for '<S195>/UD':
+        //  Block description for '<S199>/UD':
         //
         //   Store in Global RAM
         rtDW.UD_DSTATE_o = 0.0F;
 
-        // InitializeConditions for UnitDelay: '<S198>/Unit Delay'
+        // InitializeConditions for UnitDelay: '<S202>/Unit Delay'
         rtDW.UnitDelay_DSTATE_g = 0.0F;
 
-        // InitializeConditions for DiscreteIntegrator: '<S232>/Integrator'
+        // InitializeConditions for DiscreteIntegrator: '<S236>/Integrator'
         rtDW.Integrator_DSTATE_p = 0.0F;
         rtDW.Integrator_PrevResetState_k = 2;
 
-        // InitializeConditions for UnitDelay: '<S253>/Unit Delay'
+        // InitializeConditions for UnitDelay: '<S257>/Unit Delay'
         rtDW.UnitDelay_DSTATE_e = 0.0F;
 
-        // InitializeConditions for UnitDelay: '<S251>/UD'
+        // InitializeConditions for UnitDelay: '<S255>/UD'
         //
-        //  Block description for '<S251>/UD':
+        //  Block description for '<S255>/UD':
         //
         //   Store in Global RAM
         rtDW.UD_DSTATE_p = 0.0F;
 
-        // InitializeConditions for UnitDelay: '<S254>/Unit Delay'
+        // InitializeConditions for UnitDelay: '<S258>/Unit Delay'
         rtDW.UnitDelay_DSTATE_d = 0.0F;
 
-        // InitializeConditions for DiscreteIntegrator: '<S288>/Integrator'
+        // InitializeConditions for DiscreteIntegrator: '<S292>/Integrator'
         rtDW.Integrator_DSTATE_o = 0.0F;
         rtDW.Integrator_PrevResetState_c = 2;
         rtDW.POS_HOLDCONTROLLER_MODE = true;
       }
 
-      // Trigonometry: '<S191>/Cos' incorporates:
+      // Trigonometry: '<S195>/Cos' incorporates:
       //   Inport: '<Root>/INS Data'
       rtDW.Cos_a = std::cos(bfs_ins.heading_rad);
 
-      // Trigonometry: '<S191>/Sin' incorporates:
+      // Trigonometry: '<S195>/Sin' incorporates:
       //   Inport: '<Root>/INS Data'
       rtDW.Sin_n = std::sin(bfs_ins.heading_rad);
 
-      // Gain: '<S191>/Gain'
+      // Gain: '<S195>/Gain'
       rtDW.Gain_l = -rtDW.Sin_n;
 
-      // Reshape: '<S191>/Reshape'
+      // Reshape: '<S195>/Reshape'
       rtDW.Reshape_g[0] = rtDW.Cos_a;
       rtDW.Reshape_g[2] = rtDW.Sin_n;
       rtDW.Reshape_g[1] = rtDW.Gain_l;
       rtDW.Reshape_g[3] = rtDW.Cos_a;
 
-      // RelationalOperator: '<S307>/Compare' incorporates:
-      //   Constant: '<S307>/Constant'
+      // RelationalOperator: '<S311>/Compare' incorporates:
+      //   Constant: '<S311>/Constant'
       rtDW.Compare_a0 = (rtDW.vb_x_cmd_mps == 0.0);
 
-      // RelationalOperator: '<S308>/Compare' incorporates:
-      //   Constant: '<S308>/Constant'
+      // RelationalOperator: '<S312>/Compare' incorporates:
+      //   Constant: '<S312>/Constant'
       rtDW.Compare_md = (rtDW.vb_y_cmd_mps == 0.0);
 
-      // Logic: '<S194>/AND'
+      // Logic: '<S198>/AND'
       rtDW.AND_e = (rtDW.Compare_a0 && rtDW.Compare_md);
 
-      // UnitDelay: '<S194>/Unit Delay'
+      // UnitDelay: '<S198>/Unit Delay'
       rtDW.UnitDelay_kx = rtDW.UnitDelay_DSTATE_gw;
 
-      // UnitDelay: '<S309>/Delay Input1'
+      // UnitDelay: '<S313>/Delay Input1'
       //
-      //  Block description for '<S309>/Delay Input1':
+      //  Block description for '<S313>/Delay Input1':
       //
       //   Store in Global RAM
       rtDW.Uk1_ev = rtDW.DelayInput1_DSTATE_p;
 
-      // RelationalOperator: '<S309>/FixPt Relational Operator'
+      // RelationalOperator: '<S313>/FixPt Relational Operator'
       rtDW.FixPtRelationalOperator_j = (rtDW.UnitDelay_kx != rtDW.Uk1_ev);
 
-      // Logic: '<S194>/OR'
+      // Logic: '<S198>/OR'
       rtDW.OR_c = (rtDW.AND_e || rtDW.FixPtRelationalOperator_j);
 
-      // Logic: '<S194>/NOT'
+      // Logic: '<S198>/NOT'
       rtDW.NOT_h = !rtDW.OR_c;
 
-      // Outputs for Enabled SubSystem: '<S194>/set_tar_pos when vel_cmd == 0' incorporates:
-      //   EnablePort: '<S311>/Enable'
+      // Outputs for Enabled SubSystem: '<S198>/set_tar_pos when vel_cmd == 0' incorporates:
+      //   EnablePort: '<S315>/Enable'
       if (rtDW.NOT_h) {
-        // SignalConversion generated from: '<S311>/pos_xy_m' incorporates:
+        // SignalConversion generated from: '<S315>/pos_xy_m' incorporates:
         //   Inport: '<Root>/AuxInsData'
         rtDW.pos_xy_m[0] = aux_ins.ned_pos_m[0];
         rtDW.pos_xy_m[1] = aux_ins.ned_pos_m[1];
       }
 
-      // End of Outputs for SubSystem: '<S194>/set_tar_pos when vel_cmd == 0'
+      // End of Outputs for SubSystem: '<S198>/set_tar_pos when vel_cmd == 0'
 
-      // Sum: '<S313>/Subtract' incorporates:
+      // Sum: '<S317>/Subtract' incorporates:
       //   Inport: '<Root>/AuxInsData'
       rtDW.Subtract_o[0] = rtDW.pos_xy_m[0] - aux_ins.ned_pos_m[0];
 
-      // Math: '<S313>/Transpose'
+      // Math: '<S317>/Transpose'
       rtDW.Transpose_o[0] = rtDW.Subtract_o[0];
 
-      // Product: '<S313>/MatrixMultiply' incorporates:
-      //   Math: '<S313>/Transpose'
+      // Product: '<S317>/MatrixMultiply' incorporates:
+      //   Math: '<S317>/Transpose'
       c_lat = rtDW.Transpose_o[0];
       s_lat = rtDW.Subtract_o[0];
       c_lon = c_lat * s_lat;
 
-      // Sum: '<S313>/Subtract' incorporates:
+      // Sum: '<S317>/Subtract' incorporates:
       //   Inport: '<Root>/AuxInsData'
       rtDW.Subtract_o[1] = rtDW.pos_xy_m[1] - aux_ins.ned_pos_m[1];
 
-      // Math: '<S313>/Transpose'
+      // Math: '<S317>/Transpose'
       rtDW.Transpose_o[1] = rtDW.Subtract_o[1];
 
-      // Product: '<S313>/MatrixMultiply' incorporates:
-      //   Math: '<S313>/Transpose'
+      // Product: '<S317>/MatrixMultiply' incorporates:
+      //   Math: '<S317>/Transpose'
       c_lat = rtDW.Transpose_o[1];
       s_lat = rtDW.Subtract_o[1];
       c_lon += c_lat * s_lat;
 
-      // Product: '<S313>/MatrixMultiply'
+      // Product: '<S317>/MatrixMultiply'
       rtDW.MatrixMultiply_i = c_lon;
 
-      // Sqrt: '<S313>/Sqrt'
+      // Sqrt: '<S317>/Sqrt'
       rtDW.Sqrt_p1 = std::sqrt(rtDW.MatrixMultiply_i);
 
-      // Saturate: '<S312>/Saturation'
+      // Saturate: '<S316>/Saturation'
       c_lat = rtDW.Sqrt_p1;
       if (c_lat > 1.0) {
-        // Saturate: '<S312>/Saturation'
+        // Saturate: '<S316>/Saturation'
         rtDW.Saturation_k = 1.0;
       } else if (c_lat < 0.0) {
-        // Saturate: '<S312>/Saturation'
+        // Saturate: '<S316>/Saturation'
         rtDW.Saturation_k = 0.0;
       } else {
-        // Saturate: '<S312>/Saturation'
+        // Saturate: '<S316>/Saturation'
         rtDW.Saturation_k = c_lat;
       }
 
-      // End of Saturate: '<S312>/Saturation'
+      // End of Saturate: '<S316>/Saturation'
 
-      // Product: '<S353>/PProd Out' incorporates:
-      //   Inport: '<Root>/Telemetry Data'
-      rtDW.PProdOut_b = rtDW.Saturation_k * telem.param[3];
+      // Product: '<S357>/PProd Out'
+      rtDW.PProdOut_b = rtDW.Saturation_k * 0.800000011920929;
 
-      // Switch: '<S194>/Switch'
+      // Switch: '<S198>/Switch'
       if (rtDW.NOT_h) {
-        // Switch: '<S194>/Switch'
+        // Switch: '<S198>/Switch'
         rtDW.Switch_db[0] = rtDW.vb_x_cmd_mps;
         rtDW.Switch_db[1] = rtDW.vb_y_cmd_mps;
       } else {
-        // Trigonometry: '<S313>/Atan2'
+        // Trigonometry: '<S317>/Atan2'
         rtDW.Atan2_m = rt_atan2d_snf(rtDW.Subtract_o[1], rtDW.Subtract_o[0]);
 
-        // Trigonometry: '<S315>/Sin'
+        // Trigonometry: '<S319>/Sin'
         rtDW.Sin_f = std::sin(rtDW.Atan2_m);
 
-        // RelationalOperator: '<S356>/LowerRelop1'
+        // RelationalOperator: '<S360>/LowerRelop1'
         rtDW.LowerRelop1_jw = (rtDW.PProdOut_b > 0.5);
 
-        // Switch: '<S356>/Switch2'
+        // Switch: '<S360>/Switch2'
         if (rtDW.LowerRelop1_jw) {
-          // Switch: '<S356>/Switch2' incorporates:
-          //   Constant: '<S312>/Constant1'
+          // Switch: '<S360>/Switch2' incorporates:
+          //   Constant: '<S316>/Constant1'
           rtDW.Switch2_p = 0.5;
         } else {
-          // RelationalOperator: '<S356>/UpperRelop'
-          rtDW.UpperRelop_i3 = (rtDW.PProdOut_b < 0.0);
+          // RelationalOperator: '<S360>/UpperRelop'
+          rtDW.UpperRelop_i3 = false;
 
-          // Switch: '<S356>/Switch'
-          if (rtDW.UpperRelop_i3) {
-            // Switch: '<S356>/Switch' incorporates:
-            //   Constant: '<S312>/Constant'
-            rtDW.Switch_p = 0.0;
-          } else {
-            // Switch: '<S356>/Switch'
-            rtDW.Switch_p = rtDW.PProdOut_b;
-          }
+          // Switch: '<S360>/Switch'
+          rtDW.Switch_p = rtDW.PProdOut_b;
 
-          // End of Switch: '<S356>/Switch'
-
-          // Switch: '<S356>/Switch2'
+          // Switch: '<S360>/Switch2'
           rtDW.Switch2_p = rtDW.Switch_p;
         }
 
-        // End of Switch: '<S356>/Switch2'
+        // End of Switch: '<S360>/Switch2'
 
-        // Product: '<S315>/Product1'
+        // Product: '<S319>/Product1'
         rtDW.Product1_b = rtDW.Switch2_p * rtDW.Sin_f;
 
-        // Trigonometry: '<S315>/Cos'
+        // Trigonometry: '<S319>/Cos'
         rtDW.Cos_m = std::cos(rtDW.Atan2_m);
 
-        // Product: '<S315>/Product'
+        // Product: '<S319>/Product'
         rtDW.Product_g = rtDW.Switch2_p * rtDW.Cos_m;
 
-        // SignalConversion generated from: '<S316>/Product'
+        // SignalConversion generated from: '<S320>/Product'
         rtDW.TmpSignalConversionAtProductInp[0] = rtDW.Product_g;
         rtDW.TmpSignalConversionAtProductInp[1] = rtDW.Product1_b;
 
-        // Trigonometry: '<S366>/Sin' incorporates:
+        // Trigonometry: '<S370>/Sin' incorporates:
         //   Inport: '<Root>/INS Data'
         rtDW.Sin_os = std::sin(bfs_ins.heading_rad);
 
-        // Gain: '<S366>/Gain'
+        // Gain: '<S370>/Gain'
         rtDW.Gain_b = -rtDW.Sin_os;
 
-        // Trigonometry: '<S366>/Cos' incorporates:
+        // Trigonometry: '<S370>/Cos' incorporates:
         //   Inport: '<Root>/INS Data'
         rtDW.Cos_e = std::cos(bfs_ins.heading_rad);
 
-        // Reshape: '<S366>/Reshape'
+        // Reshape: '<S370>/Reshape'
         rtDW.Reshape_au[0] = rtDW.Cos_e;
         rtDW.Reshape_au[2] = rtDW.Sin_os;
         rtDW.Reshape_au[1] = rtDW.Gain_b;
         rtDW.Reshape_au[3] = rtDW.Cos_e;
 
-        // Product: '<S316>/Product' incorporates:
-        //   Reshape: '<S366>/Reshape'
+        // Product: '<S320>/Product' incorporates:
+        //   Reshape: '<S370>/Reshape'
         b_s_lat = rtDW.Reshape_au[0];
         d_c_lat = rtDW.Reshape_au[1];
         b_c_lon = rtDW.Reshape_au[2];
@@ -1818,34 +1810,34 @@ namespace bfs
         c_lon = b_s_lat * s_lat;
         c_lon += b_c_lon * c_lat;
 
-        // Product: '<S316>/Product'
+        // Product: '<S320>/Product'
         rtDW.vb_xy_o[0] = c_lon;
 
-        // DataTypeConversion: '<S194>/Cast To Single'
+        // DataTypeConversion: '<S198>/Cast To Single'
         rtDW.CastToSingle_o[0] = static_cast<real32_T>(rtDW.vb_xy_o[0]);
 
-        // Switch: '<S194>/Switch'
+        // Switch: '<S198>/Switch'
         rtDW.Switch_db[0] = rtDW.CastToSingle_o[0];
 
-        // Product: '<S316>/Product'
+        // Product: '<S320>/Product'
         s_lat *= d_c_lat;
         s_lat += b_s_lon * c_lat;
 
-        // Product: '<S316>/Product'
+        // Product: '<S320>/Product'
         rtDW.vb_xy_o[1] = s_lat;
 
-        // DataTypeConversion: '<S194>/Cast To Single'
+        // DataTypeConversion: '<S198>/Cast To Single'
         rtDW.CastToSingle_o[1] = static_cast<real32_T>(rtDW.vb_xy_o[1]);
 
-        // Switch: '<S194>/Switch'
+        // Switch: '<S198>/Switch'
         rtDW.Switch_db[1] = rtDW.CastToSingle_o[1];
       }
 
-      // End of Switch: '<S194>/Switch'
+      // End of Switch: '<S198>/Switch'
 
-      // Product: '<S190>/Product' incorporates:
+      // Product: '<S194>/Product' incorporates:
       //   Inport: '<Root>/INS Data'
-      //   Reshape: '<S191>/Reshape'
+      //   Reshape: '<S195>/Reshape'
       b_s_lat = rtDW.Reshape_g[0];
       d_c_lat = rtDW.Reshape_g[1];
       b_c_lon = rtDW.Reshape_g[2];
@@ -1855,352 +1847,352 @@ namespace bfs
       b_s_lat *= vec_tar_to_prev_idx_0;
       b_s_lat += b_c_lon * vec_tar_to_cur_idx_0;
 
-      // Product: '<S190>/Product'
+      // Product: '<S194>/Product'
       rtDW.vb_xy_k[0] = b_s_lat;
 
-      // Product: '<S190>/Product'
+      // Product: '<S194>/Product'
       d_c_lat *= vec_tar_to_prev_idx_0;
       d_c_lat += b_s_lon * vec_tar_to_cur_idx_0;
 
-      // Product: '<S190>/Product'
+      // Product: '<S194>/Product'
       rtDW.vb_xy_k[1] = d_c_lat;
 
-      // UnitDelay: '<S197>/Unit Delay'
+      // UnitDelay: '<S201>/Unit Delay'
       rtDW.UnitDelay_e = rtDW.UnitDelay_DSTATE_b;
 
-      // MATLAB Function: '<S197>/MATLAB Function' incorporates:
-      //   Constant: '<S192>/Constant'
-      //   Constant: '<S197>/Constant'
+      // MATLAB Function: '<S201>/MATLAB Function' incorporates:
+      //   Constant: '<S196>/Constant'
+      //   Constant: '<S201>/Constant'
       MATLABFunction(rtDW.UnitDelay_e, rtDW.vb_xy_k[0], 10.0F, 50.0F,
                      &rtDW.filtered_val_l);
 
-      // SampleTimeMath: '<S195>/TSamp'
+      // SampleTimeMath: '<S199>/TSamp'
       //
-      //  About '<S195>/TSamp':
+      //  About '<S199>/TSamp':
       //   y = u * K where K = 1 / ( w * Ts )
       rtDW.TSamp_d = rtDW.filtered_val_l * 200.0F;
 
-      // UnitDelay: '<S195>/UD'
+      // UnitDelay: '<S199>/UD'
       //
-      //  Block description for '<S195>/UD':
+      //  Block description for '<S199>/UD':
       //
       //   Store in Global RAM
       rtDW.Uk1_o = rtDW.UD_DSTATE_o;
 
-      // Sum: '<S195>/Diff'
+      // Sum: '<S199>/Diff'
       //
-      //  Block description for '<S195>/Diff':
+      //  Block description for '<S199>/Diff':
       //
       //   Add in CPU
       rtDW.Diff_fd = rtDW.TSamp_d - rtDW.Uk1_o;
 
-      // Product: '<S192>/Product' incorporates:
-      //   Inport: '<Root>/Telemetry Data'
-      rtDW.Product_j = rtDW.Diff_fd * telem.param[2];
+      // Product: '<S196>/Product' incorporates:
+      //   Constant: '<S196>/Constant4'
+      rtDW.Product_j = rtDW.Diff_fd * 0.01F;
 
-      // UnitDelay: '<S198>/Unit Delay'
+      // UnitDelay: '<S202>/Unit Delay'
       rtDW.UnitDelay_k = rtDW.UnitDelay_DSTATE_g;
 
-      // MATLAB Function: '<S198>/MATLAB Function' incorporates:
-      //   Constant: '<S192>/Constant1'
-      //   Constant: '<S198>/Constant'
+      // MATLAB Function: '<S202>/MATLAB Function' incorporates:
+      //   Constant: '<S196>/Constant1'
+      //   Constant: '<S202>/Constant'
       MATLABFunction_i(rtDW.UnitDelay_k, rtDW.Switch_db[0], 30.0F, 50.0F,
                        &rtDW.filtered_val_p);
 
-      // Sum: '<S192>/Sum'
+      // Sum: '<S196>/Sum'
       rtDW.Sum_h = rtDW.filtered_val_p - rtDW.vb_xy_k[0];
 
-      // Product: '<S237>/PProd Out' incorporates:
-      //   Inport: '<Root>/Telemetry Data'
-      rtDW.PProdOut_e = rtDW.Sum_h * telem.param[0];
+      // Product: '<S241>/PProd Out' incorporates:
+      //   Constant: '<S196>/Constant2'
+      rtDW.PProdOut_e = rtDW.Sum_h * 0.5F;
 
-      // DiscreteIntegrator: '<S232>/Integrator'
+      // DiscreteIntegrator: '<S236>/Integrator'
       if (rtDW.Integrator_PrevResetState_k <= 0) {
         rtDW.Integrator_DSTATE_p = 0.0F;
       }
 
-      // DiscreteIntegrator: '<S232>/Integrator'
+      // DiscreteIntegrator: '<S236>/Integrator'
       rtDW.Integrator_d = rtDW.Integrator_DSTATE_p;
 
-      // Sum: '<S241>/Sum'
+      // Sum: '<S245>/Sum'
       rtDW.Sum_j = rtDW.PProdOut_e + rtDW.Integrator_d;
 
-      // Saturate: '<S239>/Saturation'
+      // Saturate: '<S243>/Saturation'
       b_s_lat = rtDW.Sum_j;
       if (b_s_lat > 0.261799F) {
-        // Saturate: '<S239>/Saturation'
+        // Saturate: '<S243>/Saturation'
         rtDW.Saturation_g = 0.261799F;
       } else if (b_s_lat < -0.261799F) {
-        // Saturate: '<S239>/Saturation'
+        // Saturate: '<S243>/Saturation'
         rtDW.Saturation_g = -0.261799F;
       } else {
-        // Saturate: '<S239>/Saturation'
+        // Saturate: '<S243>/Saturation'
         rtDW.Saturation_g = b_s_lat;
       }
 
-      // End of Saturate: '<S239>/Saturation'
+      // End of Saturate: '<S243>/Saturation'
 
-      // Sum: '<S192>/Sum1'
+      // Sum: '<S196>/Sum1'
       rtDW.Sum1_f = rtDW.Saturation_g - rtDW.Product_j;
 
-      // Saturate: '<S192>/Saturation'
+      // Saturate: '<S196>/Saturation'
       b_s_lat = rtDW.Sum1_f;
       if (b_s_lat > 0.261799F) {
-        // Saturate: '<S192>/Saturation'
+        // Saturate: '<S196>/Saturation'
         rtDW.Saturation_f = 0.261799F;
       } else if (b_s_lat < -0.261799F) {
-        // Saturate: '<S192>/Saturation'
+        // Saturate: '<S196>/Saturation'
         rtDW.Saturation_f = -0.261799F;
       } else {
-        // Saturate: '<S192>/Saturation'
+        // Saturate: '<S196>/Saturation'
         rtDW.Saturation_f = b_s_lat;
       }
 
-      // End of Saturate: '<S192>/Saturation'
+      // End of Saturate: '<S196>/Saturation'
 
-      // Gain: '<S192>/Gain'
+      // Gain: '<S196>/Gain'
       rtDW.Gain_m = -rtDW.Saturation_f;
 
-      // DeadZone: '<S225>/DeadZone'
+      // DeadZone: '<S229>/DeadZone'
       if (rtDW.Sum_j > 0.261799F) {
-        // DeadZone: '<S225>/DeadZone'
+        // DeadZone: '<S229>/DeadZone'
         rtDW.DeadZone_i = rtDW.Sum_j - 0.261799F;
       } else if (rtDW.Sum_j >= -0.261799F) {
-        // DeadZone: '<S225>/DeadZone'
+        // DeadZone: '<S229>/DeadZone'
         rtDW.DeadZone_i = 0.0F;
       } else {
-        // DeadZone: '<S225>/DeadZone'
+        // DeadZone: '<S229>/DeadZone'
         rtDW.DeadZone_i = rtDW.Sum_j - -0.261799F;
       }
 
-      // End of DeadZone: '<S225>/DeadZone'
+      // End of DeadZone: '<S229>/DeadZone'
 
-      // RelationalOperator: '<S223>/Relational Operator' incorporates:
-      //   Constant: '<S223>/Constant5'
+      // RelationalOperator: '<S227>/Relational Operator' incorporates:
+      //   Constant: '<S227>/Constant5'
       rtDW.RelationalOperator_l = (rtDW.DeadZone_i != 0.0F);
 
-      // RelationalOperator: '<S223>/fix for DT propagation issue' incorporates:
-      //   Constant: '<S223>/Constant5'
+      // RelationalOperator: '<S227>/fix for DT propagation issue' incorporates:
+      //   Constant: '<S227>/Constant5'
       rtDW.fixforDTpropagationissue_p = (rtDW.DeadZone_i > 0.0F);
 
-      // Switch: '<S223>/Switch1'
+      // Switch: '<S227>/Switch1'
       if (rtDW.fixforDTpropagationissue_p) {
-        // Switch: '<S223>/Switch1' incorporates:
-        //   Constant: '<S223>/Constant'
+        // Switch: '<S227>/Switch1' incorporates:
+        //   Constant: '<S227>/Constant'
         rtDW.Switch1_l = 1;
       } else {
-        // Switch: '<S223>/Switch1' incorporates:
-        //   Constant: '<S223>/Constant2'
+        // Switch: '<S227>/Switch1' incorporates:
+        //   Constant: '<S227>/Constant2'
         rtDW.Switch1_l = -1;
       }
 
-      // End of Switch: '<S223>/Switch1'
+      // End of Switch: '<S227>/Switch1'
 
-      // Product: '<S229>/IProd Out' incorporates:
-      //   Inport: '<Root>/Telemetry Data'
-      rtDW.IProdOut_e = rtDW.Sum_h * telem.param[1];
+      // Product: '<S233>/IProd Out' incorporates:
+      //   Constant: '<S196>/Constant3'
+      rtDW.IProdOut_e = rtDW.Sum_h * 0.01F;
 
-      // RelationalOperator: '<S223>/fix for DT propagation issue1' incorporates:
-      //   Constant: '<S223>/Constant5'
+      // RelationalOperator: '<S227>/fix for DT propagation issue1' incorporates:
+      //   Constant: '<S227>/Constant5'
       rtDW.fixforDTpropagationissue1_o = (rtDW.IProdOut_e > 0.0F);
 
-      // Switch: '<S223>/Switch2'
+      // Switch: '<S227>/Switch2'
       if (rtDW.fixforDTpropagationissue1_o) {
-        // Switch: '<S223>/Switch2' incorporates:
-        //   Constant: '<S223>/Constant3'
+        // Switch: '<S227>/Switch2' incorporates:
+        //   Constant: '<S227>/Constant3'
         rtDW.Switch2_an = 1;
       } else {
-        // Switch: '<S223>/Switch2' incorporates:
-        //   Constant: '<S223>/Constant4'
+        // Switch: '<S227>/Switch2' incorporates:
+        //   Constant: '<S227>/Constant4'
         rtDW.Switch2_an = -1;
       }
 
-      // End of Switch: '<S223>/Switch2'
+      // End of Switch: '<S227>/Switch2'
 
-      // RelationalOperator: '<S223>/Equal1'
+      // RelationalOperator: '<S227>/Equal1'
       rtDW.Equal1_g = (rtDW.Switch1_l == rtDW.Switch2_an);
 
-      // Logic: '<S223>/AND3'
+      // Logic: '<S227>/AND3'
       rtDW.AND3_p = (rtDW.RelationalOperator_l && rtDW.Equal1_g);
 
-      // Switch: '<S223>/Switch'
+      // Switch: '<S227>/Switch'
       if (rtDW.AND3_p) {
-        // Switch: '<S223>/Switch' incorporates:
-        //   Constant: '<S223>/Constant1'
+        // Switch: '<S227>/Switch' incorporates:
+        //   Constant: '<S227>/Constant1'
         rtDW.Switch_gh = 0.0F;
       } else {
-        // Switch: '<S223>/Switch'
+        // Switch: '<S227>/Switch'
         rtDW.Switch_gh = rtDW.IProdOut_e;
       }
 
-      // End of Switch: '<S223>/Switch'
+      // End of Switch: '<S227>/Switch'
 
-      // UnitDelay: '<S253>/Unit Delay'
+      // UnitDelay: '<S257>/Unit Delay'
       rtDW.UnitDelay_b = rtDW.UnitDelay_DSTATE_e;
 
-      // MATLAB Function: '<S253>/MATLAB Function' incorporates:
-      //   Constant: '<S193>/Constant'
-      //   Constant: '<S253>/Constant'
+      // MATLAB Function: '<S257>/MATLAB Function' incorporates:
+      //   Constant: '<S197>/Constant'
+      //   Constant: '<S257>/Constant'
       MATLABFunction(rtDW.UnitDelay_b, rtDW.vb_xy_k[1], 10.0F, 50.0F,
                      &rtDW.filtered_val_o);
 
-      // SampleTimeMath: '<S251>/TSamp'
+      // SampleTimeMath: '<S255>/TSamp'
       //
-      //  About '<S251>/TSamp':
+      //  About '<S255>/TSamp':
       //   y = u * K where K = 1 / ( w * Ts )
       rtDW.TSamp_a = rtDW.filtered_val_o * 200.0F;
 
-      // UnitDelay: '<S251>/UD'
+      // UnitDelay: '<S255>/UD'
       //
-      //  Block description for '<S251>/UD':
+      //  Block description for '<S255>/UD':
       //
       //   Store in Global RAM
       rtDW.Uk1_h = rtDW.UD_DSTATE_p;
 
-      // Sum: '<S251>/Diff'
+      // Sum: '<S255>/Diff'
       //
-      //  Block description for '<S251>/Diff':
+      //  Block description for '<S255>/Diff':
       //
       //   Add in CPU
       rtDW.Diff_kq = rtDW.TSamp_a - rtDW.Uk1_h;
 
-      // Product: '<S193>/Product' incorporates:
-      //   Inport: '<Root>/Telemetry Data'
-      rtDW.Product_l = rtDW.Diff_kq * telem.param[2];
+      // Product: '<S197>/Product' incorporates:
+      //   Constant: '<S197>/Constant5'
+      rtDW.Product_l = rtDW.Diff_kq * 0.01F;
 
-      // UnitDelay: '<S254>/Unit Delay'
+      // UnitDelay: '<S258>/Unit Delay'
       rtDW.UnitDelay_j2 = rtDW.UnitDelay_DSTATE_d;
 
-      // MATLAB Function: '<S254>/MATLAB Function' incorporates:
-      //   Constant: '<S193>/Constant1'
-      //   Constant: '<S254>/Constant'
+      // MATLAB Function: '<S258>/MATLAB Function' incorporates:
+      //   Constant: '<S197>/Constant1'
+      //   Constant: '<S258>/Constant'
       MATLABFunction_i(rtDW.UnitDelay_j2, rtDW.Switch_db[1], 30.0F, 50.0F,
                        &rtDW.filtered_val);
 
-      // Sum: '<S193>/Sum'
+      // Sum: '<S197>/Sum'
       rtDW.Sum_m = rtDW.filtered_val - rtDW.vb_xy_k[1];
 
-      // Product: '<S293>/PProd Out' incorporates:
-      //   Inport: '<Root>/Telemetry Data'
-      rtDW.PProdOut_g = rtDW.Sum_m * telem.param[0];
+      // Product: '<S297>/PProd Out' incorporates:
+      //   Constant: '<S197>/Constant2'
+      rtDW.PProdOut_g = rtDW.Sum_m * 0.5F;
 
-      // DiscreteIntegrator: '<S288>/Integrator'
+      // DiscreteIntegrator: '<S292>/Integrator'
       if (rtDW.Integrator_PrevResetState_c <= 0) {
         rtDW.Integrator_DSTATE_o = 0.0F;
       }
 
-      // DiscreteIntegrator: '<S288>/Integrator'
+      // DiscreteIntegrator: '<S292>/Integrator'
       rtDW.Integrator_o = rtDW.Integrator_DSTATE_o;
 
-      // Sum: '<S297>/Sum'
+      // Sum: '<S301>/Sum'
       rtDW.Sum_nw = rtDW.PProdOut_g + rtDW.Integrator_o;
 
-      // Saturate: '<S295>/Saturation'
+      // Saturate: '<S299>/Saturation'
       b_s_lat = rtDW.Sum_nw;
       if (b_s_lat > 0.261799F) {
-        // Saturate: '<S295>/Saturation'
+        // Saturate: '<S299>/Saturation'
         rtDW.Saturation_pq = 0.261799F;
       } else if (b_s_lat < -0.261799F) {
-        // Saturate: '<S295>/Saturation'
+        // Saturate: '<S299>/Saturation'
         rtDW.Saturation_pq = -0.261799F;
       } else {
-        // Saturate: '<S295>/Saturation'
+        // Saturate: '<S299>/Saturation'
         rtDW.Saturation_pq = b_s_lat;
       }
 
-      // End of Saturate: '<S295>/Saturation'
+      // End of Saturate: '<S299>/Saturation'
 
-      // Sum: '<S193>/Sum1'
+      // Sum: '<S197>/Sum1'
       rtDW.Sum1_l = rtDW.Saturation_pq - rtDW.Product_l;
 
-      // Saturate: '<S193>/Saturation'
+      // Saturate: '<S197>/Saturation'
       b_s_lat = rtDW.Sum1_l;
       if (b_s_lat > 0.261799F) {
-        // Saturate: '<S193>/Saturation'
+        // Saturate: '<S197>/Saturation'
         rtDW.Saturation_a = 0.261799F;
       } else if (b_s_lat < -0.261799F) {
-        // Saturate: '<S193>/Saturation'
+        // Saturate: '<S197>/Saturation'
         rtDW.Saturation_a = -0.261799F;
       } else {
-        // Saturate: '<S193>/Saturation'
+        // Saturate: '<S197>/Saturation'
         rtDW.Saturation_a = b_s_lat;
       }
 
-      // End of Saturate: '<S193>/Saturation'
+      // End of Saturate: '<S197>/Saturation'
 
-      // DeadZone: '<S281>/DeadZone'
+      // DeadZone: '<S285>/DeadZone'
       if (rtDW.Sum_nw > 0.261799F) {
-        // DeadZone: '<S281>/DeadZone'
+        // DeadZone: '<S285>/DeadZone'
         rtDW.DeadZone_k = rtDW.Sum_nw - 0.261799F;
       } else if (rtDW.Sum_nw >= -0.261799F) {
-        // DeadZone: '<S281>/DeadZone'
+        // DeadZone: '<S285>/DeadZone'
         rtDW.DeadZone_k = 0.0F;
       } else {
-        // DeadZone: '<S281>/DeadZone'
+        // DeadZone: '<S285>/DeadZone'
         rtDW.DeadZone_k = rtDW.Sum_nw - -0.261799F;
       }
 
-      // End of DeadZone: '<S281>/DeadZone'
+      // End of DeadZone: '<S285>/DeadZone'
 
-      // RelationalOperator: '<S279>/Relational Operator' incorporates:
-      //   Constant: '<S279>/Constant5'
+      // RelationalOperator: '<S283>/Relational Operator' incorporates:
+      //   Constant: '<S283>/Constant5'
       rtDW.RelationalOperator_a = (rtDW.DeadZone_k != 0.0F);
 
-      // RelationalOperator: '<S279>/fix for DT propagation issue' incorporates:
-      //   Constant: '<S279>/Constant5'
+      // RelationalOperator: '<S283>/fix for DT propagation issue' incorporates:
+      //   Constant: '<S283>/Constant5'
       rtDW.fixforDTpropagationissue_md = (rtDW.DeadZone_k > 0.0F);
 
-      // Switch: '<S279>/Switch1'
+      // Switch: '<S283>/Switch1'
       if (rtDW.fixforDTpropagationissue_md) {
-        // Switch: '<S279>/Switch1' incorporates:
-        //   Constant: '<S279>/Constant'
+        // Switch: '<S283>/Switch1' incorporates:
+        //   Constant: '<S283>/Constant'
         rtDW.Switch1_a = 1;
       } else {
-        // Switch: '<S279>/Switch1' incorporates:
-        //   Constant: '<S279>/Constant2'
+        // Switch: '<S283>/Switch1' incorporates:
+        //   Constant: '<S283>/Constant2'
         rtDW.Switch1_a = -1;
       }
 
-      // End of Switch: '<S279>/Switch1'
+      // End of Switch: '<S283>/Switch1'
 
-      // Product: '<S285>/IProd Out' incorporates:
-      //   Inport: '<Root>/Telemetry Data'
-      rtDW.IProdOut_eh = rtDW.Sum_m * telem.param[1];
+      // Product: '<S289>/IProd Out' incorporates:
+      //   Constant: '<S197>/Constant3'
+      rtDW.IProdOut_eh = rtDW.Sum_m * 0.01F;
 
-      // RelationalOperator: '<S279>/fix for DT propagation issue1' incorporates:
-      //   Constant: '<S279>/Constant5'
+      // RelationalOperator: '<S283>/fix for DT propagation issue1' incorporates:
+      //   Constant: '<S283>/Constant5'
       rtDW.fixforDTpropagationissue1_a = (rtDW.IProdOut_eh > 0.0F);
 
-      // Switch: '<S279>/Switch2'
+      // Switch: '<S283>/Switch2'
       if (rtDW.fixforDTpropagationissue1_a) {
-        // Switch: '<S279>/Switch2' incorporates:
-        //   Constant: '<S279>/Constant3'
+        // Switch: '<S283>/Switch2' incorporates:
+        //   Constant: '<S283>/Constant3'
         rtDW.Switch2_ei = 1;
       } else {
-        // Switch: '<S279>/Switch2' incorporates:
-        //   Constant: '<S279>/Constant4'
+        // Switch: '<S283>/Switch2' incorporates:
+        //   Constant: '<S283>/Constant4'
         rtDW.Switch2_ei = -1;
       }
 
-      // End of Switch: '<S279>/Switch2'
+      // End of Switch: '<S283>/Switch2'
 
-      // RelationalOperator: '<S279>/Equal1'
+      // RelationalOperator: '<S283>/Equal1'
       rtDW.Equal1_f = (rtDW.Switch1_a == rtDW.Switch2_ei);
 
-      // Logic: '<S279>/AND3'
+      // Logic: '<S283>/AND3'
       rtDW.AND3_g = (rtDW.RelationalOperator_a && rtDW.Equal1_f);
 
-      // Switch: '<S279>/Switch'
+      // Switch: '<S283>/Switch'
       if (rtDW.AND3_g) {
-        // Switch: '<S279>/Switch' incorporates:
-        //   Constant: '<S279>/Constant1'
+        // Switch: '<S283>/Switch' incorporates:
+        //   Constant: '<S283>/Constant1'
         rtDW.Switch_f2 = 0.0F;
       } else {
-        // Switch: '<S279>/Switch'
+        // Switch: '<S283>/Switch'
         rtDW.Switch_f2 = rtDW.IProdOut_eh;
       }
 
-      // End of Switch: '<S279>/Switch'
+      // End of Switch: '<S283>/Switch'
 
       // SignalConversion generated from: '<S3>/Command out'
       rtDW.yaw_rate_cmd_radps_c53 = rtDW.yaw_rate_cmd_radps;
@@ -2208,47 +2200,47 @@ namespace bfs
       // Gain: '<S3>/Gain'
       rtDW.throttle_cc_i = rtDW.ve_z_cmd_mps;
 
-      // Update for UnitDelay: '<S194>/Unit Delay'
+      // Update for UnitDelay: '<S198>/Unit Delay'
       rtDW.UnitDelay_DSTATE_gw = true;
 
-      // Update for UnitDelay: '<S309>/Delay Input1'
+      // Update for UnitDelay: '<S313>/Delay Input1'
       //
-      //  Block description for '<S309>/Delay Input1':
+      //  Block description for '<S313>/Delay Input1':
       //
       //   Store in Global RAM
       rtDW.DelayInput1_DSTATE_p = rtDW.UnitDelay_kx;
 
-      // Update for UnitDelay: '<S197>/Unit Delay'
+      // Update for UnitDelay: '<S201>/Unit Delay'
       rtDW.UnitDelay_DSTATE_b = rtDW.filtered_val_l;
 
-      // Update for UnitDelay: '<S195>/UD'
+      // Update for UnitDelay: '<S199>/UD'
       //
-      //  Block description for '<S195>/UD':
+      //  Block description for '<S199>/UD':
       //
       //   Store in Global RAM
       rtDW.UD_DSTATE_o = rtDW.TSamp_d;
 
-      // Update for UnitDelay: '<S198>/Unit Delay'
+      // Update for UnitDelay: '<S202>/Unit Delay'
       rtDW.UnitDelay_DSTATE_g = rtDW.filtered_val_p;
 
-      // Update for DiscreteIntegrator: '<S232>/Integrator'
+      // Update for DiscreteIntegrator: '<S236>/Integrator'
       rtDW.Integrator_DSTATE_p += 0.005F * rtDW.Switch_gh;
       rtDW.Integrator_PrevResetState_k = 1;
 
-      // Update for UnitDelay: '<S253>/Unit Delay'
+      // Update for UnitDelay: '<S257>/Unit Delay'
       rtDW.UnitDelay_DSTATE_e = rtDW.filtered_val_o;
 
-      // Update for UnitDelay: '<S251>/UD'
+      // Update for UnitDelay: '<S255>/UD'
       //
-      //  Block description for '<S251>/UD':
+      //  Block description for '<S255>/UD':
       //
       //   Store in Global RAM
       rtDW.UD_DSTATE_p = rtDW.TSamp_a;
 
-      // Update for UnitDelay: '<S254>/Unit Delay'
+      // Update for UnitDelay: '<S258>/Unit Delay'
       rtDW.UnitDelay_DSTATE_d = rtDW.filtered_val;
 
-      // Update for DiscreteIntegrator: '<S288>/Integrator'
+      // Update for DiscreteIntegrator: '<S292>/Integrator'
       rtDW.Integrator_DSTATE_o += 0.005F * rtDW.Switch_f2;
       rtDW.Integrator_PrevResetState_c = 1;
     } else {
@@ -2256,6 +2248,9 @@ namespace bfs
     }
 
     // End of Outputs for SubSystem: '<Root>/POS_HOLD CONTROLLER'
+
+    // UnitDelay: '<S80>/Unit Delay'
+    rtDW.UnitDelay_g = rtDW.UnitDelay_DSTATE_k;
 
     // RelationalOperator: '<S12>/Compare' incorporates:
     //   Constant: '<S12>/Constant'
@@ -2267,8 +2262,8 @@ namespace bfs
     // Outputs for Enabled SubSystem: '<Root>/Stab_input_conversion' incorporates:
     //   EnablePort: '<S4>/Enable'
     if (rtDW.motor_armedANDmode_0) {
-      // RelationalOperator: '<S367>/Compare' incorporates:
-      //   Constant: '<S367>/Constant'
+      // RelationalOperator: '<S371>/Compare' incorporates:
+      //   Constant: '<S371>/Constant'
       rtDW.Compare_f = (rtDW.norm_out_p <= 0.03F);
 
       // Gain: '<S4>/Gain'
@@ -2286,11 +2281,11 @@ namespace bfs
       //   Constant: '<S4>/Constant1'
       rtDW.roll_angle_cmd_rad_d = rtDW.norm_out_d * 0.261799F;
 
-      // MATLAB Function: '<S368>/remap1' incorporates:
-      //   Constant: '<S368>/Constant4'
-      //   Constant: '<S368>/Constant5'
-      //   Constant: '<S368>/Constant6'
-      //   Constant: '<S368>/Constant7'
+      // MATLAB Function: '<S372>/remap1' incorporates:
+      //   Constant: '<S372>/Constant4'
+      //   Constant: '<S372>/Constant5'
+      //   Constant: '<S372>/Constant6'
+      //   Constant: '<S372>/Constant7'
       remap1(rtDW.norm_out_p, 0.0F, 1.0F, 0.15F, 1.0F, &rtDW.norm_out_j);
     }
 
@@ -2308,43 +2303,52 @@ namespace bfs
       rtDW.roll_angle_cmd_rad = rtDW.roll_angle_cmd_rad_d;
     }
 
+    // MATLAB Function: '<S80>/MATLAB Function' incorporates:
+    //   Constant: '<S18>/Constant6'
+    //   Constant: '<S80>/Constant'
+    MATLABFunction(rtDW.UnitDelay_g, rtDW.roll_angle_cmd_rad, 10.0F, 200.0F,
+                   &rtDW.filtered_val_g);
+
     // Sum: '<S18>/stab_roll_angle_error_calc' incorporates:
     //   Inport: '<Root>/INS Data'
-    rtDW.roll_angle_error = rtDW.roll_angle_cmd_rad - bfs_ins.roll_rad;
+    rtDW.roll_angle_error = rtDW.filtered_val_g - bfs_ins.roll_rad;
 
     // Product: '<S18>/Product1' incorporates:
     //   Constant: '<S18>/Constant4'
     rtDW.Product1_e = rtDW.roll_angle_error * 7.0F;
 
-    // RelationalOperator: '<S76>/LowerRelop1' incorporates:
+    // RelationalOperator: '<S78>/LowerRelop1' incorporates:
     //   Constant: '<S18>/Constant5'
     rtDW.LowerRelop1 = (rtDW.Product1_e > 3.83972F);
 
-    // Switch: '<S76>/Switch2'
+    // Switch: '<S78>/Switch2'
     if (rtDW.LowerRelop1) {
-      // Switch: '<S76>/Switch2' incorporates:
+      // Switch: '<S78>/Switch2' incorporates:
       //   Constant: '<S18>/Constant5'
       rtDW.Switch2_e = 3.83972F;
     } else {
-      // RelationalOperator: '<S76>/UpperRelop'
+      // RelationalOperator: '<S78>/UpperRelop'
       rtDW.UpperRelop_b = (rtDW.Product1_e < -3.83972F);
 
-      // Switch: '<S76>/Switch'
+      // Switch: '<S78>/Switch'
       if (rtDW.UpperRelop_b) {
-        // Switch: '<S76>/Switch'
+        // Switch: '<S78>/Switch'
         rtDW.Switch_n = -3.83972F;
       } else {
-        // Switch: '<S76>/Switch'
+        // Switch: '<S78>/Switch'
         rtDW.Switch_n = rtDW.Product1_e;
       }
 
-      // End of Switch: '<S76>/Switch'
+      // End of Switch: '<S78>/Switch'
 
-      // Switch: '<S76>/Switch2'
+      // Switch: '<S78>/Switch2'
       rtDW.Switch2_e = rtDW.Switch_n;
     }
 
-    // End of Switch: '<S76>/Switch2'
+    // End of Switch: '<S78>/Switch2'
+
+    // UnitDelay: '<S23>/Unit Delay'
+    rtDW.UnitDelay_i = rtDW.UnitDelay_DSTATE_o;
 
     // Switch generated from: '<Root>/Switch'
     if (rtDW.NOT_o) {
@@ -2355,9 +2359,15 @@ namespace bfs
       rtDW.pitch_angle_cmd_rad = rtDW.pitch_angle_cmd_rad_g;
     }
 
+    // MATLAB Function: '<S23>/MATLAB Function' incorporates:
+    //   Constant: '<S17>/Constant6'
+    //   Constant: '<S23>/Constant'
+    MATLABFunction(rtDW.UnitDelay_i, rtDW.pitch_angle_cmd_rad, 1.0F, 200.0F,
+                   &rtDW.filtered_val_f);
+
     // Sum: '<S17>/stab_pitch_angle_error_calc' incorporates:
     //   Inport: '<Root>/INS Data'
-    rtDW.pitcherror = rtDW.pitch_angle_cmd_rad - bfs_ins.pitch_rad;
+    rtDW.pitcherror = rtDW.filtered_val_f - bfs_ins.pitch_rad;
 
     // Product: '<S17>/Product1' incorporates:
     //   Constant: '<S17>/Constant4'
@@ -2402,107 +2412,107 @@ namespace bfs
       rtDW.yaw_rate_cmd_radps_o = rtDW.yaw_rate_cmd_radps_o5m;
     }
 
-    // RelationalOperator: '<S130>/Compare' incorporates:
-    //   Constant: '<S130>/Constant'
+    // RelationalOperator: '<S134>/Compare' incorporates:
+    //   Constant: '<S134>/Constant'
     rtDW.Compare_mw = (rtDW.yaw_rate_cmd_radps_o == 0.0F);
 
     // Logic: '<S19>/NOT'
     rtDW.NOT_a = !rtDW.Compare_mw;
 
     // Outputs for Enabled SubSystem: '<S19>/set_tar_heading when heading_rate_cmd == 0' incorporates:
-    //   EnablePort: '<S134>/Enable'
+    //   EnablePort: '<S138>/Enable'
     if (rtDW.NOT_a) {
-      // SignalConversion generated from: '<S134>/heading_rad' incorporates:
+      // SignalConversion generated from: '<S138>/heading_rad' incorporates:
       //   Inport: '<Root>/INS Data'
       rtDW.heading_rad = bfs_ins.heading_rad;
 
       // Switch: '<S19>/Switch'
       rtDW.yaw_rate_cmd = rtDW.yaw_rate_cmd_radps_o;
     } else {
-      // Sum: '<S133>/Subtract' incorporates:
+      // Sum: '<S137>/Subtract' incorporates:
       //   Inport: '<Root>/INS Data'
       //   Switch: '<S19>/Switch'
       rtDW.Subtract_c = rtDW.heading_rad - bfs_ins.heading_rad;
 
-      // Abs: '<S133>/Abs' incorporates:
+      // Abs: '<S137>/Abs' incorporates:
       //   Switch: '<S19>/Switch'
       rtDW.Abs_m = std::abs(rtDW.Subtract_c);
 
-      // RelationalOperator: '<S137>/Compare' incorporates:
-      //   Constant: '<S137>/Constant'
+      // RelationalOperator: '<S141>/Compare' incorporates:
+      //   Constant: '<S141>/Constant'
       //   Switch: '<S19>/Switch'
       rtDW.Compare_ma = (rtDW.Abs_m > 3.14159274F);
 
-      // Switch: '<S133>/Switch' incorporates:
+      // Switch: '<S137>/Switch' incorporates:
       //   Switch: '<S19>/Switch'
       if (rtDW.Compare_ma) {
-        // Signum: '<S133>/Sign'
+        // Signum: '<S137>/Sign'
         b_s_lat = rtDW.Subtract_c;
         if (std::isnan(b_s_lat)) {
-          // Signum: '<S133>/Sign'
+          // Signum: '<S137>/Sign'
           rtDW.Sign = b_s_lat;
         } else if (b_s_lat < 0.0F) {
-          // Signum: '<S133>/Sign'
+          // Signum: '<S137>/Sign'
           rtDW.Sign = -1.0F;
         } else {
-          // Signum: '<S133>/Sign'
+          // Signum: '<S137>/Sign'
           rtDW.Sign = (b_s_lat > 0.0F);
         }
 
-        // End of Signum: '<S133>/Sign'
+        // End of Signum: '<S137>/Sign'
 
-        // Product: '<S133>/Product' incorporates:
-        //   Constant: '<S133>/Constant'
+        // Product: '<S137>/Product' incorporates:
+        //   Constant: '<S137>/Constant'
         rtDW.Product_en = rtDW.Sign * 6.28318548F;
 
-        // Sum: '<S133>/Subtract1'
+        // Sum: '<S137>/Subtract1'
         rtDW.Subtract1 = rtDW.Subtract_c - rtDW.Product_en;
 
-        // Switch: '<S133>/Switch'
+        // Switch: '<S137>/Switch'
         rtDW.Switch_e = rtDW.Subtract1;
       } else {
-        // Switch: '<S133>/Switch'
+        // Switch: '<S137>/Switch'
         rtDW.Switch_e = rtDW.Subtract_c;
       }
 
-      // End of Switch: '<S133>/Switch'
+      // End of Switch: '<S137>/Switch'
 
       // Product: '<S19>/Product1' incorporates:
       //   Constant: '<S19>/Constant1'
       //   Switch: '<S19>/Switch'
       rtDW.Product1_n = rtDW.Switch_e * 6.0F;
 
-      // RelationalOperator: '<S132>/LowerRelop1' incorporates:
+      // RelationalOperator: '<S136>/LowerRelop1' incorporates:
       //   Constant: '<S19>/Constant'
       //   Switch: '<S19>/Switch'
       rtDW.LowerRelop1_d = (rtDW.Product1_n > 3.14159);
 
-      // Switch: '<S132>/Switch2' incorporates:
+      // Switch: '<S136>/Switch2' incorporates:
       //   Switch: '<S19>/Switch'
       if (rtDW.LowerRelop1_d) {
-        // Switch: '<S132>/Switch2' incorporates:
+        // Switch: '<S136>/Switch2' incorporates:
         //   Constant: '<S19>/Constant'
         rtDW.Switch2_j = 3.14159F;
       } else {
-        // RelationalOperator: '<S132>/UpperRelop'
+        // RelationalOperator: '<S136>/UpperRelop'
         rtDW.UpperRelop_g = (rtDW.Product1_n < -3.14159);
 
-        // Switch: '<S132>/Switch'
+        // Switch: '<S136>/Switch'
         if (rtDW.UpperRelop_g) {
-          // Switch: '<S132>/Switch'
+          // Switch: '<S136>/Switch'
           rtDW.Switch_j = -3.14159F;
         } else {
-          // Switch: '<S132>/Switch'
+          // Switch: '<S136>/Switch'
           rtDW.Switch_j = rtDW.Product1_n;
         }
 
-        // End of Switch: '<S132>/Switch'
+        // End of Switch: '<S136>/Switch'
 
-        // Switch: '<S132>/Switch2'
+        // Switch: '<S136>/Switch2'
         rtDW.Switch2_j = rtDW.Switch_j;
       }
 
-      // End of Switch: '<S132>/Switch2'
+      // End of Switch: '<S136>/Switch2'
 
       // Switch: '<S19>/Switch'
       rtDW.yaw_rate_cmd = rtDW.Switch2_j;
@@ -2518,11 +2528,11 @@ namespace bfs
     rtDW.aux[3] = rtDW.norm_out;
     rtDW.aux[4] = rtDW.norm_out_dm;
     rtDW.aux[5] = rtDW.norm_out_n;
-    rtDW.aux[6] = rtDW.roll_angle_cmd_rad;
+    rtDW.aux[6] = rtDW.filtered_val_g;
     rtDW.aux[7] = bfs_ins.roll_rad;
     rtDW.aux[8] = rtDW.Switch2_e;
     rtDW.aux[9] = bfs_ins.gyro_radps[0];
-    rtDW.aux[10] = rtDW.pitch_angle_cmd_rad;
+    rtDW.aux[10] = rtDW.filtered_val_f;
     rtDW.aux[11] = bfs_ins.pitch_rad;
     rtDW.aux[12] = rtDW.Switch2_o0;
     rtDW.aux[13] = bfs_ins.gyro_radps[1];
@@ -2564,56 +2574,56 @@ namespace bfs
     //   Inport: '<Root>/INS Data'
     rtDW.roll_angle_error_b = rtDW.Switch2_e - bfs_ins.gyro_radps[0];
 
-    // Product: '<S118>/PProd Out' incorporates:
+    // Product: '<S122>/PProd Out' incorporates:
     //   Constant: '<S18>/Constant2'
     rtDW.PProdOut_p = rtDW.roll_angle_error_b * 0.25F;
 
-    // DiscreteIntegrator: '<S113>/Integrator'
+    // DiscreteIntegrator: '<S117>/Integrator'
     if ((rtDW.Compare_f && (rtDW.Integrator_PrevResetState <= 0)) ||
         ((!rtDW.Compare_f) && (rtDW.Integrator_PrevResetState == 1))) {
       rtDW.Integrator_DSTATE = 0.0F;
     }
 
-    // DiscreteIntegrator: '<S113>/Integrator'
+    // DiscreteIntegrator: '<S117>/Integrator'
     rtDW.Integrator = rtDW.Integrator_DSTATE;
 
-    // Sum: '<S122>/Sum'
+    // Sum: '<S126>/Sum'
     rtDW.Sum_l = rtDW.PProdOut_p + rtDW.Integrator;
 
-    // Saturate: '<S120>/Saturation'
+    // Saturate: '<S124>/Saturation'
     b_s_lat = rtDW.Sum_l;
     if (b_s_lat > 1.0F) {
-      // Saturate: '<S120>/Saturation'
+      // Saturate: '<S124>/Saturation'
       rtDW.Saturation_m = 1.0F;
     } else if (b_s_lat < -1.0F) {
-      // Saturate: '<S120>/Saturation'
+      // Saturate: '<S124>/Saturation'
       rtDW.Saturation_m = -1.0F;
     } else {
-      // Saturate: '<S120>/Saturation'
+      // Saturate: '<S124>/Saturation'
       rtDW.Saturation_m = b_s_lat;
     }
 
-    // End of Saturate: '<S120>/Saturation'
+    // End of Saturate: '<S124>/Saturation'
 
-    // UnitDelay: '<S77>/Unit Delay'
-    rtDW.UnitDelay_i = rtDW.UnitDelay_DSTATE_h;
+    // UnitDelay: '<S79>/Unit Delay'
+    rtDW.UnitDelay_if = rtDW.UnitDelay_DSTATE_h;
 
-    // MATLAB Function: '<S77>/MATLAB Function' incorporates:
+    // MATLAB Function: '<S79>/MATLAB Function' incorporates:
     //   Constant: '<S18>/Constant'
-    //   Constant: '<S77>/Constant'
+    //   Constant: '<S79>/Constant'
     //   Inport: '<Root>/INS Data'
-    MATLABFunction(rtDW.UnitDelay_i, bfs_ins.gyro_radps[0], 10.0F, 200.0F,
+    MATLABFunction(rtDW.UnitDelay_if, bfs_ins.gyro_radps[0], 10.0F, 200.0F,
                    &rtDW.filtered_val_e);
 
-    // SampleTimeMath: '<S75>/TSamp'
+    // SampleTimeMath: '<S77>/TSamp'
     //
-    //  About '<S75>/TSamp':
+    //  About '<S77>/TSamp':
     //   y = u * K where K = 1 / ( w * Ts )
     rtDW.TSamp = rtDW.filtered_val_e * 200.0F;
 
-    // UnitDelay: '<S75>/UD'
+    // UnitDelay: '<S77>/UD'
     //
-    //  Block description for '<S75>/UD':
+    //  Block description for '<S77>/UD':
     //
     //   Store in Global RAM
     rtDW.Uk1 = rtDW.UD_DSTATE;
@@ -2622,36 +2632,36 @@ namespace bfs
     //   Inport: '<Root>/INS Data'
     rtDW.pitcherror_k = rtDW.Switch2_o0 - bfs_ins.gyro_radps[1];
 
-    // Product: '<S63>/PProd Out' incorporates:
+    // Product: '<S65>/PProd Out' incorporates:
     //   Constant: '<S17>/Constant'
     rtDW.PProdOut_i = rtDW.pitcherror_k * 0.25F;
 
-    // DiscreteIntegrator: '<S58>/Integrator'
+    // DiscreteIntegrator: '<S60>/Integrator'
     if ((rtDW.Compare_f && (rtDW.Integrator_PrevResetState_e <= 0)) ||
         ((!rtDW.Compare_f) && (rtDW.Integrator_PrevResetState_e == 1))) {
       rtDW.Integrator_DSTATE_d = 0.0F;
     }
 
-    // DiscreteIntegrator: '<S58>/Integrator'
+    // DiscreteIntegrator: '<S60>/Integrator'
     rtDW.Integrator_g = rtDW.Integrator_DSTATE_d;
 
-    // Sum: '<S67>/Sum'
+    // Sum: '<S69>/Sum'
     rtDW.Sum_lv = rtDW.PProdOut_i + rtDW.Integrator_g;
 
-    // Saturate: '<S65>/Saturation'
+    // Saturate: '<S67>/Saturation'
     b_s_lat = rtDW.Sum_lv;
     if (b_s_lat > 1.0F) {
-      // Saturate: '<S65>/Saturation'
+      // Saturate: '<S67>/Saturation'
       rtDW.Saturation_p = 1.0F;
     } else if (b_s_lat < -1.0F) {
-      // Saturate: '<S65>/Saturation'
+      // Saturate: '<S67>/Saturation'
       rtDW.Saturation_p = -1.0F;
     } else {
-      // Saturate: '<S65>/Saturation'
+      // Saturate: '<S67>/Saturation'
       rtDW.Saturation_p = b_s_lat;
     }
 
-    // End of Saturate: '<S65>/Saturation'
+    // End of Saturate: '<S67>/Saturation'
 
     // UnitDelay: '<S22>/Unit Delay'
     rtDW.UnitDelay_l = rtDW.UnitDelay_DSTATE_c;
@@ -2680,56 +2690,56 @@ namespace bfs
     //   Inport: '<Root>/INS Data'
     rtDW.stab_yaw_rate_error_calc = rtDW.yaw_rate_cmd - bfs_ins.gyro_radps[2];
 
-    // Product: '<S176>/PProd Out' incorporates:
+    // Product: '<S180>/PProd Out' incorporates:
     //   Constant: '<S19>/Constant2'
     rtDW.PProdOut_j = rtDW.stab_yaw_rate_error_calc * 0.3F;
 
-    // DiscreteIntegrator: '<S171>/Integrator'
+    // DiscreteIntegrator: '<S175>/Integrator'
     if ((rtDW.Compare_f && (rtDW.Integrator_PrevResetState_i <= 0)) ||
         ((!rtDW.Compare_f) && (rtDW.Integrator_PrevResetState_i == 1))) {
       rtDW.Integrator_DSTATE_dd = 0.0F;
     }
 
-    // DiscreteIntegrator: '<S171>/Integrator'
+    // DiscreteIntegrator: '<S175>/Integrator'
     rtDW.Integrator_i = rtDW.Integrator_DSTATE_dd;
 
-    // Sum: '<S180>/Sum'
+    // Sum: '<S184>/Sum'
     rtDW.Sum_g = rtDW.PProdOut_j + rtDW.Integrator_i;
 
-    // Saturate: '<S178>/Saturation'
+    // Saturate: '<S182>/Saturation'
     b_s_lat = rtDW.Sum_g;
     if (b_s_lat > 1.0F) {
-      // Saturate: '<S178>/Saturation'
+      // Saturate: '<S182>/Saturation'
       rtDW.Saturation_b = 1.0F;
     } else if (b_s_lat < -1.0F) {
-      // Saturate: '<S178>/Saturation'
+      // Saturate: '<S182>/Saturation'
       rtDW.Saturation_b = -1.0F;
     } else {
-      // Saturate: '<S178>/Saturation'
+      // Saturate: '<S182>/Saturation'
       rtDW.Saturation_b = b_s_lat;
     }
 
-    // End of Saturate: '<S178>/Saturation'
+    // End of Saturate: '<S182>/Saturation'
 
-    // UnitDelay: '<S136>/Unit Delay'
+    // UnitDelay: '<S140>/Unit Delay'
     rtDW.UnitDelay_m = rtDW.UnitDelay_DSTATE_l;
 
-    // MATLAB Function: '<S136>/MATLAB Function' incorporates:
-    //   Constant: '<S136>/Constant'
+    // MATLAB Function: '<S140>/MATLAB Function' incorporates:
+    //   Constant: '<S140>/Constant'
     //   Constant: '<S19>/Constant5'
     //   Inport: '<Root>/INS Data'
     MATLABFunction(rtDW.UnitDelay_m, bfs_ins.gyro_radps[2], 10.0F, 200.0F,
                    &rtDW.filtered_val_k);
 
-    // SampleTimeMath: '<S131>/TSamp'
+    // SampleTimeMath: '<S135>/TSamp'
     //
-    //  About '<S131>/TSamp':
+    //  About '<S135>/TSamp':
     //   y = u * K where K = 1 / ( w * Ts )
     rtDW.TSamp_jb = rtDW.filtered_val_k * 200.0F;
 
-    // UnitDelay: '<S131>/UD'
+    // UnitDelay: '<S135>/UD'
     //
-    //  Block description for '<S131>/UD':
+    //  Block description for '<S135>/UD':
     //
     //   Store in Global RAM
     rtDW.Uk1_e = rtDW.UD_DSTATE_d;
@@ -2741,9 +2751,9 @@ namespace bfs
         // Switch: '<S2>/Switch'
         std::memset(&rtDW.Switch[0], 0, sizeof(real_T) << 3U);
       } else {
-        // Sum: '<S131>/Diff'
+        // Sum: '<S135>/Diff'
         //
-        //  Block description for '<S131>/Diff':
+        //  Block description for '<S135>/Diff':
         //
         //   Add in CPU
         rtDW.Diff = rtDW.TSamp_jb - rtDW.Uk1_e;
@@ -2769,9 +2779,9 @@ namespace bfs
         // Sum: '<S17>/Sum'
         rtDW.Sum_gf = rtDW.Saturation_p - rtDW.Product_c;
 
-        // Sum: '<S75>/Diff'
+        // Sum: '<S77>/Diff'
         //
-        //  Block description for '<S75>/Diff':
+        //  Block description for '<S77>/Diff':
         //
         //   Add in CPU
         rtDW.Diff_k = rtDW.TSamp - rtDW.Uk1;
@@ -2813,14 +2823,14 @@ namespace bfs
 
       // End of Switch: '<S2>/Switch'
       for (int32_T i{0}; i < 8; i++) {
-        // RelationalOperator: '<S189>/UpperRelop' incorporates:
+        // RelationalOperator: '<S193>/UpperRelop' incorporates:
         //   Constant: '<S2>/Constant1'
         //   Switch: '<S2>/Switch'
         rtDW.UpperRelop[i] = (rtDW.Switch[i] < 0.15);
 
-        // Switch: '<S189>/Switch' incorporates:
+        // Switch: '<S193>/Switch' incorporates:
         //   Constant: '<S2>/Constant1'
-        //   RelationalOperator: '<S189>/UpperRelop'
+        //   RelationalOperator: '<S193>/UpperRelop'
         //   Switch: '<S2>/Switch'
         if (rtDW.UpperRelop[i]) {
           rtDW.Switch_k[i] = 0.15;
@@ -2828,27 +2838,27 @@ namespace bfs
           rtDW.Switch_k[i] = rtDW.Switch[i];
         }
 
-        // End of Switch: '<S189>/Switch'
+        // End of Switch: '<S193>/Switch'
 
-        // RelationalOperator: '<S189>/LowerRelop1' incorporates:
+        // RelationalOperator: '<S193>/LowerRelop1' incorporates:
         //   Constant: '<S2>/Constant'
         //   Switch: '<S2>/Switch'
         rtDW.LowerRelop1_n[i] = (rtDW.Switch[i] > 1.0);
 
-        // Switch: '<S189>/Switch2' incorporates:
+        // Switch: '<S193>/Switch2' incorporates:
         //   Constant: '<S2>/Constant'
-        //   RelationalOperator: '<S189>/LowerRelop1'
-        //   Switch: '<S189>/Switch'
+        //   RelationalOperator: '<S193>/LowerRelop1'
+        //   Switch: '<S193>/Switch'
         if (rtDW.LowerRelop1_n[i]) {
           rtDW.Switch2[i] = 1.0;
         } else {
           rtDW.Switch2[i] = rtDW.Switch_k[i];
         }
 
-        // End of Switch: '<S189>/Switch2'
+        // End of Switch: '<S193>/Switch2'
 
         // Switch: '<S16>/emergency_switch' incorporates:
-        //   Switch: '<S189>/Switch2'
+        //   Switch: '<S193>/Switch2'
         rtDW.emergency_switch[i] = rtDW.Switch2[i];
       }
     } else {
@@ -2858,8 +2868,8 @@ namespace bfs
 
     // End of Switch: '<S16>/emergency_switch'
     for (int32_T i{0}; i < 8; i++) {
-      // MATLAB Function: '<S492>/remap' incorporates:
-      //   Constant: '<S492>/Constant1'
+      // MATLAB Function: '<S496>/remap' incorporates:
+      //   Constant: '<S496>/Constant1'
       //   Switch: '<S16>/emergency_switch'
       rtDW.raw_out[i] = static_cast<real32_T>(rtDW.emergency_switch[i]) * 850.0F
         + 1100.0F;
@@ -2891,246 +2901,252 @@ namespace bfs
     // Outport: '<Root>/VmsData'
     *vms = rtDW.BusCreator;
 
-    // DeadZone: '<S164>/DeadZone'
+    // DeadZone: '<S168>/DeadZone'
     if (rtDW.Sum_g > 1.0F) {
-      // DeadZone: '<S164>/DeadZone'
+      // DeadZone: '<S168>/DeadZone'
       rtDW.DeadZone = rtDW.Sum_g - 1.0F;
     } else if (rtDW.Sum_g >= -1.0F) {
-      // DeadZone: '<S164>/DeadZone'
+      // DeadZone: '<S168>/DeadZone'
       rtDW.DeadZone = 0.0F;
     } else {
-      // DeadZone: '<S164>/DeadZone'
+      // DeadZone: '<S168>/DeadZone'
       rtDW.DeadZone = rtDW.Sum_g - -1.0F;
     }
 
-    // End of DeadZone: '<S164>/DeadZone'
+    // End of DeadZone: '<S168>/DeadZone'
 
-    // RelationalOperator: '<S162>/Relational Operator' incorporates:
-    //   Constant: '<S162>/Constant5'
+    // RelationalOperator: '<S166>/Relational Operator' incorporates:
+    //   Constant: '<S166>/Constant5'
     rtDW.RelationalOperator = (rtDW.DeadZone != 0.0F);
 
-    // RelationalOperator: '<S162>/fix for DT propagation issue' incorporates:
-    //   Constant: '<S162>/Constant5'
+    // RelationalOperator: '<S166>/fix for DT propagation issue' incorporates:
+    //   Constant: '<S166>/Constant5'
     rtDW.fixforDTpropagationissue = (rtDW.DeadZone > 0.0F);
 
-    // Switch: '<S162>/Switch1'
+    // Switch: '<S166>/Switch1'
     if (rtDW.fixforDTpropagationissue) {
-      // Switch: '<S162>/Switch1' incorporates:
-      //   Constant: '<S162>/Constant'
+      // Switch: '<S166>/Switch1' incorporates:
+      //   Constant: '<S166>/Constant'
       rtDW.Switch1 = 1;
     } else {
-      // Switch: '<S162>/Switch1' incorporates:
-      //   Constant: '<S162>/Constant2'
+      // Switch: '<S166>/Switch1' incorporates:
+      //   Constant: '<S166>/Constant2'
       rtDW.Switch1 = -1;
     }
 
-    // End of Switch: '<S162>/Switch1'
+    // End of Switch: '<S166>/Switch1'
 
-    // Product: '<S168>/IProd Out' incorporates:
+    // Product: '<S172>/IProd Out' incorporates:
     //   Constant: '<S19>/Constant3'
     rtDW.IProdOut = rtDW.stab_yaw_rate_error_calc * 0.1F;
 
-    // RelationalOperator: '<S162>/fix for DT propagation issue1' incorporates:
-    //   Constant: '<S162>/Constant5'
+    // RelationalOperator: '<S166>/fix for DT propagation issue1' incorporates:
+    //   Constant: '<S166>/Constant5'
     rtDW.fixforDTpropagationissue1 = (rtDW.IProdOut > 0.0F);
 
-    // Switch: '<S162>/Switch2'
+    // Switch: '<S166>/Switch2'
     if (rtDW.fixforDTpropagationissue1) {
-      // Switch: '<S162>/Switch2' incorporates:
-      //   Constant: '<S162>/Constant3'
+      // Switch: '<S166>/Switch2' incorporates:
+      //   Constant: '<S166>/Constant3'
       rtDW.Switch2_a = 1;
     } else {
-      // Switch: '<S162>/Switch2' incorporates:
-      //   Constant: '<S162>/Constant4'
+      // Switch: '<S166>/Switch2' incorporates:
+      //   Constant: '<S166>/Constant4'
       rtDW.Switch2_a = -1;
     }
 
-    // End of Switch: '<S162>/Switch2'
+    // End of Switch: '<S166>/Switch2'
 
-    // RelationalOperator: '<S162>/Equal1'
+    // RelationalOperator: '<S166>/Equal1'
     rtDW.Equal1 = (rtDW.Switch1 == rtDW.Switch2_a);
 
-    // Logic: '<S162>/AND3'
+    // Logic: '<S166>/AND3'
     rtDW.AND3 = (rtDW.RelationalOperator && rtDW.Equal1);
 
-    // Switch: '<S162>/Switch'
+    // Switch: '<S166>/Switch'
     if (rtDW.AND3) {
-      // Switch: '<S162>/Switch' incorporates:
-      //   Constant: '<S162>/Constant1'
+      // Switch: '<S166>/Switch' incorporates:
+      //   Constant: '<S166>/Constant1'
       rtDW.Switch_c = 0.0F;
     } else {
-      // Switch: '<S162>/Switch'
+      // Switch: '<S166>/Switch'
       rtDW.Switch_c = rtDW.IProdOut;
     }
 
-    // End of Switch: '<S162>/Switch'
+    // End of Switch: '<S166>/Switch'
 
-    // DeadZone: '<S51>/DeadZone'
+    // DeadZone: '<S53>/DeadZone'
     if (rtDW.Sum_lv > 1.0F) {
-      // DeadZone: '<S51>/DeadZone'
+      // DeadZone: '<S53>/DeadZone'
       rtDW.DeadZone_j = rtDW.Sum_lv - 1.0F;
     } else if (rtDW.Sum_lv >= -1.0F) {
-      // DeadZone: '<S51>/DeadZone'
+      // DeadZone: '<S53>/DeadZone'
       rtDW.DeadZone_j = 0.0F;
     } else {
-      // DeadZone: '<S51>/DeadZone'
+      // DeadZone: '<S53>/DeadZone'
       rtDW.DeadZone_j = rtDW.Sum_lv - -1.0F;
     }
 
-    // End of DeadZone: '<S51>/DeadZone'
+    // End of DeadZone: '<S53>/DeadZone'
 
-    // RelationalOperator: '<S49>/Relational Operator' incorporates:
-    //   Constant: '<S49>/Constant5'
+    // RelationalOperator: '<S51>/Relational Operator' incorporates:
+    //   Constant: '<S51>/Constant5'
     rtDW.RelationalOperator_o = (rtDW.DeadZone_j != 0.0F);
 
-    // RelationalOperator: '<S49>/fix for DT propagation issue' incorporates:
-    //   Constant: '<S49>/Constant5'
+    // RelationalOperator: '<S51>/fix for DT propagation issue' incorporates:
+    //   Constant: '<S51>/Constant5'
     rtDW.fixforDTpropagationissue_m = (rtDW.DeadZone_j > 0.0F);
 
-    // Switch: '<S49>/Switch1'
+    // Switch: '<S51>/Switch1'
     if (rtDW.fixforDTpropagationissue_m) {
-      // Switch: '<S49>/Switch1' incorporates:
-      //   Constant: '<S49>/Constant'
+      // Switch: '<S51>/Switch1' incorporates:
+      //   Constant: '<S51>/Constant'
       rtDW.Switch1_e = 1;
     } else {
-      // Switch: '<S49>/Switch1' incorporates:
-      //   Constant: '<S49>/Constant2'
+      // Switch: '<S51>/Switch1' incorporates:
+      //   Constant: '<S51>/Constant2'
       rtDW.Switch1_e = -1;
     }
 
-    // End of Switch: '<S49>/Switch1'
+    // End of Switch: '<S51>/Switch1'
 
-    // Product: '<S55>/IProd Out' incorporates:
+    // Product: '<S57>/IProd Out' incorporates:
     //   Constant: '<S17>/Constant1'
     rtDW.IProdOut_c = rtDW.pitcherror_k * 0.2F;
 
-    // RelationalOperator: '<S49>/fix for DT propagation issue1' incorporates:
-    //   Constant: '<S49>/Constant5'
+    // RelationalOperator: '<S51>/fix for DT propagation issue1' incorporates:
+    //   Constant: '<S51>/Constant5'
     rtDW.fixforDTpropagationissue1_d = (rtDW.IProdOut_c > 0.0F);
 
-    // Switch: '<S49>/Switch2'
+    // Switch: '<S51>/Switch2'
     if (rtDW.fixforDTpropagationissue1_d) {
-      // Switch: '<S49>/Switch2' incorporates:
-      //   Constant: '<S49>/Constant3'
+      // Switch: '<S51>/Switch2' incorporates:
+      //   Constant: '<S51>/Constant3'
       rtDW.Switch2_at = 1;
     } else {
-      // Switch: '<S49>/Switch2' incorporates:
-      //   Constant: '<S49>/Constant4'
+      // Switch: '<S51>/Switch2' incorporates:
+      //   Constant: '<S51>/Constant4'
       rtDW.Switch2_at = -1;
     }
 
-    // End of Switch: '<S49>/Switch2'
+    // End of Switch: '<S51>/Switch2'
 
-    // RelationalOperator: '<S49>/Equal1'
+    // RelationalOperator: '<S51>/Equal1'
     rtDW.Equal1_n = (rtDW.Switch1_e == rtDW.Switch2_at);
 
-    // Logic: '<S49>/AND3'
+    // Logic: '<S51>/AND3'
     rtDW.AND3_i = (rtDW.RelationalOperator_o && rtDW.Equal1_n);
 
-    // Switch: '<S49>/Switch'
+    // Switch: '<S51>/Switch'
     if (rtDW.AND3_i) {
-      // Switch: '<S49>/Switch' incorporates:
-      //   Constant: '<S49>/Constant1'
+      // Switch: '<S51>/Switch' incorporates:
+      //   Constant: '<S51>/Constant1'
       rtDW.Switch_g = 0.0F;
     } else {
-      // Switch: '<S49>/Switch'
+      // Switch: '<S51>/Switch'
       rtDW.Switch_g = rtDW.IProdOut_c;
     }
 
-    // End of Switch: '<S49>/Switch'
+    // End of Switch: '<S51>/Switch'
 
-    // DeadZone: '<S106>/DeadZone'
+    // DeadZone: '<S110>/DeadZone'
     if (rtDW.Sum_l > 1.0F) {
-      // DeadZone: '<S106>/DeadZone'
+      // DeadZone: '<S110>/DeadZone'
       rtDW.DeadZone_n = rtDW.Sum_l - 1.0F;
     } else if (rtDW.Sum_l >= -1.0F) {
-      // DeadZone: '<S106>/DeadZone'
+      // DeadZone: '<S110>/DeadZone'
       rtDW.DeadZone_n = 0.0F;
     } else {
-      // DeadZone: '<S106>/DeadZone'
+      // DeadZone: '<S110>/DeadZone'
       rtDW.DeadZone_n = rtDW.Sum_l - -1.0F;
     }
 
-    // End of DeadZone: '<S106>/DeadZone'
+    // End of DeadZone: '<S110>/DeadZone'
 
-    // RelationalOperator: '<S104>/Relational Operator' incorporates:
-    //   Constant: '<S104>/Constant5'
+    // RelationalOperator: '<S108>/Relational Operator' incorporates:
+    //   Constant: '<S108>/Constant5'
     rtDW.RelationalOperator_h = (rtDW.DeadZone_n != 0.0F);
 
-    // RelationalOperator: '<S104>/fix for DT propagation issue' incorporates:
-    //   Constant: '<S104>/Constant5'
+    // RelationalOperator: '<S108>/fix for DT propagation issue' incorporates:
+    //   Constant: '<S108>/Constant5'
     rtDW.fixforDTpropagationissue_k = (rtDW.DeadZone_n > 0.0F);
 
-    // Switch: '<S104>/Switch1'
+    // Switch: '<S108>/Switch1'
     if (rtDW.fixforDTpropagationissue_k) {
-      // Switch: '<S104>/Switch1' incorporates:
-      //   Constant: '<S104>/Constant'
+      // Switch: '<S108>/Switch1' incorporates:
+      //   Constant: '<S108>/Constant'
       rtDW.Switch1_p = 1;
     } else {
-      // Switch: '<S104>/Switch1' incorporates:
-      //   Constant: '<S104>/Constant2'
+      // Switch: '<S108>/Switch1' incorporates:
+      //   Constant: '<S108>/Constant2'
       rtDW.Switch1_p = -1;
     }
 
-    // End of Switch: '<S104>/Switch1'
+    // End of Switch: '<S108>/Switch1'
 
-    // Product: '<S110>/IProd Out' incorporates:
+    // Product: '<S114>/IProd Out' incorporates:
     //   Constant: '<S18>/Constant3'
     rtDW.IProdOut_g = rtDW.roll_angle_error_b * 0.2F;
 
-    // RelationalOperator: '<S104>/fix for DT propagation issue1' incorporates:
-    //   Constant: '<S104>/Constant5'
+    // RelationalOperator: '<S108>/fix for DT propagation issue1' incorporates:
+    //   Constant: '<S108>/Constant5'
     rtDW.fixforDTpropagationissue1_k = (rtDW.IProdOut_g > 0.0F);
 
-    // Switch: '<S104>/Switch2'
+    // Switch: '<S108>/Switch2'
     if (rtDW.fixforDTpropagationissue1_k) {
-      // Switch: '<S104>/Switch2' incorporates:
-      //   Constant: '<S104>/Constant3'
+      // Switch: '<S108>/Switch2' incorporates:
+      //   Constant: '<S108>/Constant3'
       rtDW.Switch2_or = 1;
     } else {
-      // Switch: '<S104>/Switch2' incorporates:
-      //   Constant: '<S104>/Constant4'
+      // Switch: '<S108>/Switch2' incorporates:
+      //   Constant: '<S108>/Constant4'
       rtDW.Switch2_or = -1;
     }
 
-    // End of Switch: '<S104>/Switch2'
+    // End of Switch: '<S108>/Switch2'
 
-    // RelationalOperator: '<S104>/Equal1'
+    // RelationalOperator: '<S108>/Equal1'
     rtDW.Equal1_j = (rtDW.Switch1_p == rtDW.Switch2_or);
 
-    // Logic: '<S104>/AND3'
+    // Logic: '<S108>/AND3'
     rtDW.AND3_e = (rtDW.RelationalOperator_h && rtDW.Equal1_j);
 
-    // Switch: '<S104>/Switch'
+    // Switch: '<S108>/Switch'
     if (rtDW.AND3_e) {
-      // Switch: '<S104>/Switch' incorporates:
-      //   Constant: '<S104>/Constant1'
+      // Switch: '<S108>/Switch' incorporates:
+      //   Constant: '<S108>/Constant1'
       rtDW.Switch_b = 0.0F;
     } else {
-      // Switch: '<S104>/Switch'
+      // Switch: '<S108>/Switch'
       rtDW.Switch_b = rtDW.IProdOut_g;
     }
 
-    // End of Switch: '<S104>/Switch'
+    // End of Switch: '<S108>/Switch'
 
-    // Update for UnitDelay: '<S508>/Unit Delay'
+    // Update for UnitDelay: '<S512>/Unit Delay'
     rtDW.UnitDelay_DSTATE = rtDW.CastToSingle_a;
 
-    // Update for DiscreteIntegrator: '<S113>/Integrator'
+    // Update for UnitDelay: '<S80>/Unit Delay'
+    rtDW.UnitDelay_DSTATE_k = rtDW.filtered_val_g;
+
+    // Update for UnitDelay: '<S23>/Unit Delay'
+    rtDW.UnitDelay_DSTATE_o = rtDW.filtered_val_f;
+
+    // Update for DiscreteIntegrator: '<S117>/Integrator'
     rtDW.Integrator_DSTATE += 0.005F * rtDW.Switch_b;
     rtDW.Integrator_PrevResetState = static_cast<int8_T>(rtDW.Compare_f);
 
-    // Update for UnitDelay: '<S77>/Unit Delay'
+    // Update for UnitDelay: '<S79>/Unit Delay'
     rtDW.UnitDelay_DSTATE_h = rtDW.filtered_val_e;
 
-    // Update for UnitDelay: '<S75>/UD'
+    // Update for UnitDelay: '<S77>/UD'
     //
-    //  Block description for '<S75>/UD':
+    //  Block description for '<S77>/UD':
     //
     //   Store in Global RAM
     rtDW.UD_DSTATE = rtDW.TSamp;
 
-    // Update for DiscreteIntegrator: '<S58>/Integrator'
+    // Update for DiscreteIntegrator: '<S60>/Integrator'
     rtDW.Integrator_DSTATE_d += 0.005F * rtDW.Switch_g;
     rtDW.Integrator_PrevResetState_e = static_cast<int8_T>(rtDW.Compare_f);
 
@@ -3144,16 +3160,16 @@ namespace bfs
     //   Store in Global RAM
     rtDW.UD_DSTATE_l = rtDW.TSamp_j;
 
-    // Update for DiscreteIntegrator: '<S171>/Integrator'
+    // Update for DiscreteIntegrator: '<S175>/Integrator'
     rtDW.Integrator_DSTATE_dd += 0.005F * rtDW.Switch_c;
     rtDW.Integrator_PrevResetState_i = static_cast<int8_T>(rtDW.Compare_f);
 
-    // Update for UnitDelay: '<S136>/Unit Delay'
+    // Update for UnitDelay: '<S140>/Unit Delay'
     rtDW.UnitDelay_DSTATE_l = rtDW.filtered_val_k;
 
-    // Update for UnitDelay: '<S131>/UD'
+    // Update for UnitDelay: '<S135>/UD'
     //
-    //  Block description for '<S131>/UD':
+    //  Block description for '<S135>/UD':
     //
     //   Store in Global RAM
     rtDW.UD_DSTATE_d = rtDW.TSamp_jb;
@@ -3168,19 +3184,19 @@ namespace bfs
     rt_InitInfAndNaN(sizeof(real_T));
     rtPrevZCX.manual_arming_Trig_ZCE = POS_ZCSIG;
 
-    // InitializeConditions for DiscreteIntegrator: '<S113>/Integrator'
+    // InitializeConditions for DiscreteIntegrator: '<S117>/Integrator'
     rtDW.Integrator_PrevResetState = 2;
 
-    // InitializeConditions for DiscreteIntegrator: '<S58>/Integrator'
+    // InitializeConditions for DiscreteIntegrator: '<S60>/Integrator'
     rtDW.Integrator_PrevResetState_e = 2;
 
-    // InitializeConditions for DiscreteIntegrator: '<S171>/Integrator'
+    // InitializeConditions for DiscreteIntegrator: '<S175>/Integrator'
     rtDW.Integrator_PrevResetState_i = 2;
 
     // SystemInitialize for Enabled SubSystem: '<Root>/WAYPOINT CONTROLLER1'
-    // InitializeConditions for UnitDelay: '<S488>/Delay Input1'
+    // InitializeConditions for UnitDelay: '<S492>/Delay Input1'
     //
-    //  Block description for '<S488>/Delay Input1':
+    //  Block description for '<S492>/Delay Input1':
     //
     //   Store in Global RAM
     rtDW.DelayInput1_DSTATE = -1;
@@ -3194,10 +3210,10 @@ namespace bfs
     // End of SystemInitialize for SubSystem: '<Root>/WAYPOINT CONTROLLER1'
 
     // SystemInitialize for Enabled SubSystem: '<Root>/POS_HOLD CONTROLLER'
-    // InitializeConditions for DiscreteIntegrator: '<S232>/Integrator'
+    // InitializeConditions for DiscreteIntegrator: '<S236>/Integrator'
     rtDW.Integrator_PrevResetState_k = 2;
 
-    // InitializeConditions for DiscreteIntegrator: '<S288>/Integrator'
+    // InitializeConditions for DiscreteIntegrator: '<S292>/Integrator'
     rtDW.Integrator_PrevResetState_c = 2;
 
     // End of SystemInitialize for SubSystem: '<Root>/POS_HOLD CONTROLLER'

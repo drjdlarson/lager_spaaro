@@ -201,7 +201,6 @@ void BfsInsRun(SensorData &ref, InsData * const ptr) {
       ekf_.MeasurementUpdate_gnss(ned_vel_, llh_);
       if ((gnss_->fix >= 5)){ //&& (abs(cur_baseline_len_m_ - BASELINE_LEN_M) < 0.1f )){
         ekf_.MeasurementUpdate_moving_base(rel_pos_);
-        MsgInfo("rel pos gnss ran\n");
       }
     }
     ptr->pitch_rad = ekf_.pitch_rad();

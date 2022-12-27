@@ -252,8 +252,8 @@ Aircraft.Control.D_ver_vel_FLTR_CTOFF = 10;
 Aircraft.Control.v_hor_max = 0.5;
 
 % Horizontal speed controller gain
-%Aircraft.Control.P_v_hor = 0.5;
-Aircraft.Control.P_v_hor = 0.4;
+Aircraft.Control.P_v_hor = 0.5;
+%Aircraft.Control.P_v_hor = 0.4;
 Aircraft.Control.I_v_hor = 0.01;
 Aircraft.Control.D_v_hor = 0.01;
 
@@ -265,8 +265,8 @@ Aircraft.Control.P_alt = 1;
 Aircraft.Control.I_alt = 0.1;
 
 %% Distance controller parameters
-%Aircraft.Control.P_xy = 0.8;
-Aircraft.Control.P_xy = 0.6;
+Aircraft.Control.P_xy = 0.8;
+%Aircraft.Control.P_xy = 0.6;
 Aircraft.Control.wp_radius = 0.1;
 
 %% WP controller parameters

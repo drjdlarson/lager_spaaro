@@ -115,8 +115,8 @@ for i = 1:Telem.NUM_RALLY_POINTS
 end
 
 %multirotor_sim();
-% malt();
- super();
+ malt();
+% super();
 
 %% Cleanup
 clear vehicle fh_vehicle op_point op_report op_spec opt i;
