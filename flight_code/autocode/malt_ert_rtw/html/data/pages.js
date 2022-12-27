@@ -1,1 +1,0 @@
-var reportPages = [["Summary","malt_survey.html"],["Subsystem Report","malt_subsystems.html"],["Code Interface Report","malt_interface.html"],["Traceability Report","malt_trace.html"],["Static Code Metrics Report","malt_metrics.html"],["Code Replacements Report","malt_replacements.html"],["Coder Assumptions","malt_coderassumptions.html"]];

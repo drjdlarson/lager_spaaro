@@ -1,0 +1,46 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "/home/tuan/Projects/super/ua_spaaro/flight_code/super_build/_deps/imap-subbuild/CMakeFiles/imap-populate"
+		},
+		{
+			"file" : "/home/tuan/Projects/super/ua_spaaro/flight_code/super_build/_deps/imap-subbuild/CMakeFiles/imap-populate.rule"
+		},
+		{
+			"file" : "/home/tuan/Projects/super/ua_spaaro/flight_code/super_build/_deps/imap-subbuild/CMakeFiles/imap-populate-complete.rule"
+		},
+		{
+			"file" : "/home/tuan/Projects/super/ua_spaaro/flight_code/super_build/_deps/imap-subbuild/imap-populate-prefix/src/imap-populate-stamp/imap-populate-build.rule"
+		},
+		{
+			"file" : "/home/tuan/Projects/super/ua_spaaro/flight_code/super_build/_deps/imap-subbuild/imap-populate-prefix/src/imap-populate-stamp/imap-populate-configure.rule"
+		},
+		{
+			"file" : "/home/tuan/Projects/super/ua_spaaro/flight_code/super_build/_deps/imap-subbuild/imap-populate-prefix/src/imap-populate-stamp/imap-populate-download.rule"
+		},
+		{
+			"file" : "/home/tuan/Projects/super/ua_spaaro/flight_code/super_build/_deps/imap-subbuild/imap-populate-prefix/src/imap-populate-stamp/imap-populate-install.rule"
+		},
+		{
+			"file" : "/home/tuan/Projects/super/ua_spaaro/flight_code/super_build/_deps/imap-subbuild/imap-populate-prefix/src/imap-populate-stamp/imap-populate-mkdir.rule"
+		},
+		{
+			"file" : "/home/tuan/Projects/super/ua_spaaro/flight_code/super_build/_deps/imap-subbuild/imap-populate-prefix/src/imap-populate-stamp/imap-populate-patch.rule"
+		},
+		{
+			"file" : "/home/tuan/Projects/super/ua_spaaro/flight_code/super_build/_deps/imap-subbuild/imap-populate-prefix/src/imap-populate-stamp/imap-populate-test.rule"
+		},
+		{
+			"file" : "/home/tuan/Projects/super/ua_spaaro/flight_code/super_build/_deps/imap-subbuild/imap-populate-prefix/src/imap-populate-stamp/imap-populate-update.rule"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"imap-populate"
+		],
+		"name" : "imap-populate"
+	}
+}

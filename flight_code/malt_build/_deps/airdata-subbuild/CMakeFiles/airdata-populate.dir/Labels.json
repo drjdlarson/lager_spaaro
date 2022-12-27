@@ -1,0 +1,46 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "/home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/_deps/airdata-subbuild/CMakeFiles/airdata-populate"
+		},
+		{
+			"file" : "/home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/_deps/airdata-subbuild/CMakeFiles/airdata-populate.rule"
+		},
+		{
+			"file" : "/home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/_deps/airdata-subbuild/CMakeFiles/airdata-populate-complete.rule"
+		},
+		{
+			"file" : "/home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/_deps/airdata-subbuild/airdata-populate-prefix/src/airdata-populate-stamp/airdata-populate-build.rule"
+		},
+		{
+			"file" : "/home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/_deps/airdata-subbuild/airdata-populate-prefix/src/airdata-populate-stamp/airdata-populate-configure.rule"
+		},
+		{
+			"file" : "/home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/_deps/airdata-subbuild/airdata-populate-prefix/src/airdata-populate-stamp/airdata-populate-download.rule"
+		},
+		{
+			"file" : "/home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/_deps/airdata-subbuild/airdata-populate-prefix/src/airdata-populate-stamp/airdata-populate-install.rule"
+		},
+		{
+			"file" : "/home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/_deps/airdata-subbuild/airdata-populate-prefix/src/airdata-populate-stamp/airdata-populate-mkdir.rule"
+		},
+		{
+			"file" : "/home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/_deps/airdata-subbuild/airdata-populate-prefix/src/airdata-populate-stamp/airdata-populate-patch.rule"
+		},
+		{
+			"file" : "/home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/_deps/airdata-subbuild/airdata-populate-prefix/src/airdata-populate-stamp/airdata-populate-test.rule"
+		},
+		{
+			"file" : "/home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/_deps/airdata-subbuild/airdata-populate-prefix/src/airdata-populate-stamp/airdata-populate-update.rule"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"airdata-populate"
+		],
+		"name" : "airdata-populate"
+	}
+}

@@ -28,7 +28,7 @@
 #include "global_defs.h"
 
 /* Debug */
-bool DEBUG = true;
+bool DEBUG = false;
 /* Aircraft config */
 AircraftConfig config = {
   .sensor = {

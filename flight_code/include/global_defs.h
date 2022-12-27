@@ -308,7 +308,7 @@ struct TelemConfig {
   bfs::AircraftType aircraft_type = bfs::FIXED_WING;
   TelemImuSource imu_source = TELEM_IMU_FMU;
   TelemMagSource mag_source = TELEM_MAG_FMU;
-  TelemGnssSource gnss_source = TELEM_GNSS_EXT_GNSS2;
+  TelemGnssSource gnss_source = TELEM_GNSS_EXT_GNSS1;
   TelemStaticPresSource static_pres_source = TELEM_STATIC_PRES_FMU;
   TelemDiffPresSource diff_pres_source = TELEM_DIFF_PRES_NONE;
   TelemInsSource ins_source = TELEM_INS_BFS;

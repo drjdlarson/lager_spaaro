@@ -1,0 +1,2 @@
+/usr/local/bin/arm-none-eabi-ar qc libvector_nav.a CMakeFiles/vector_nav.dir/src/vn100.cpp.obj CMakeFiles/vector_nav.dir/src/vn200.cpp.obj CMakeFiles/vector_nav.dir/src/vn300.cpp.obj
+/usr/local/bin/arm-none-eabi-ranlib libvector_nav.a

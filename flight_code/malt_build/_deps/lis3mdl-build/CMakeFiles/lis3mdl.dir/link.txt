@@ -1,0 +1,2 @@
+/usr/local/bin/arm-none-eabi-ar qc liblis3mdl.a CMakeFiles/lis3mdl.dir/src/lis3mdl.cpp.obj
+/usr/local/bin/arm-none-eabi-ranlib liblis3mdl.a

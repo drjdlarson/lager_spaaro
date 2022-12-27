@@ -1,0 +1,2 @@
+/usr/local/bin/arm-none-eabi-ar qc libainstein_usd1.a CMakeFiles/ainstein_usd1.dir/src/ainstein_usd1.cpp.obj
+/usr/local/bin/arm-none-eabi-ranlib libainstein_usd1.a

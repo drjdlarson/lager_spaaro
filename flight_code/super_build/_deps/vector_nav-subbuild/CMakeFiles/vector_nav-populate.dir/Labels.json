@@ -1,0 +1,46 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "/home/tuan/Projects/super/ua_spaaro/flight_code/super_build/_deps/vector_nav-subbuild/CMakeFiles/vector_nav-populate"
+		},
+		{
+			"file" : "/home/tuan/Projects/super/ua_spaaro/flight_code/super_build/_deps/vector_nav-subbuild/CMakeFiles/vector_nav-populate.rule"
+		},
+		{
+			"file" : "/home/tuan/Projects/super/ua_spaaro/flight_code/super_build/_deps/vector_nav-subbuild/CMakeFiles/vector_nav-populate-complete.rule"
+		},
+		{
+			"file" : "/home/tuan/Projects/super/ua_spaaro/flight_code/super_build/_deps/vector_nav-subbuild/vector_nav-populate-prefix/src/vector_nav-populate-stamp/vector_nav-populate-build.rule"
+		},
+		{
+			"file" : "/home/tuan/Projects/super/ua_spaaro/flight_code/super_build/_deps/vector_nav-subbuild/vector_nav-populate-prefix/src/vector_nav-populate-stamp/vector_nav-populate-configure.rule"
+		},
+		{
+			"file" : "/home/tuan/Projects/super/ua_spaaro/flight_code/super_build/_deps/vector_nav-subbuild/vector_nav-populate-prefix/src/vector_nav-populate-stamp/vector_nav-populate-download.rule"
+		},
+		{
+			"file" : "/home/tuan/Projects/super/ua_spaaro/flight_code/super_build/_deps/vector_nav-subbuild/vector_nav-populate-prefix/src/vector_nav-populate-stamp/vector_nav-populate-install.rule"
+		},
+		{
+			"file" : "/home/tuan/Projects/super/ua_spaaro/flight_code/super_build/_deps/vector_nav-subbuild/vector_nav-populate-prefix/src/vector_nav-populate-stamp/vector_nav-populate-mkdir.rule"
+		},
+		{
+			"file" : "/home/tuan/Projects/super/ua_spaaro/flight_code/super_build/_deps/vector_nav-subbuild/vector_nav-populate-prefix/src/vector_nav-populate-stamp/vector_nav-populate-patch.rule"
+		},
+		{
+			"file" : "/home/tuan/Projects/super/ua_spaaro/flight_code/super_build/_deps/vector_nav-subbuild/vector_nav-populate-prefix/src/vector_nav-populate-stamp/vector_nav-populate-test.rule"
+		},
+		{
+			"file" : "/home/tuan/Projects/super/ua_spaaro/flight_code/super_build/_deps/vector_nav-subbuild/vector_nav-populate-prefix/src/vector_nav-populate-stamp/vector_nav-populate-update.rule"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"vector_nav-populate"
+		],
+		"name" : "vector_nav-populate"
+	}
+}

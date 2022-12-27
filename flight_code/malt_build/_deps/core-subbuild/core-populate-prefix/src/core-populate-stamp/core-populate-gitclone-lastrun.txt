@@ -1,0 +1,3 @@
+repository='https://github.com/bolderflight/core.git'
+module=''
+tag='origin'

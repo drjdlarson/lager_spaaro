@@ -1,0 +1,2 @@
+/usr/local/bin/arm-none-eabi-ar qc libubx.a CMakeFiles/ubx.dir/src/ubx.cpp.obj
+/usr/local/bin/arm-none-eabi-ranlib libubx.a
