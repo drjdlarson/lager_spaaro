@@ -54,10 +54,10 @@ RM = /usr/local/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/tuan/Projects/super/ua_spaaro/flight_code
+CMAKE_SOURCE_DIR = /home/tuan/Projects/ua_spaaro/flight_code
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build
+CMAKE_BINARY_DIR = /home/tuan/Projects/ua_spaaro/flight_code/malt_build
 
 #=============================================================================
 # Directory level rules for the build root directory
@@ -555,14 +555,14 @@ _deps/vector_nav-build/clean: _deps/vector_nav-build/CMakeFiles/vector_nav.dir/c
 CMakeFiles/flight_upload.dir/all: CMakeFiles/flight.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/flight_upload.dir/build.make CMakeFiles/flight_upload.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/flight_upload.dir/build.make CMakeFiles/flight_upload.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/CMakeFiles --progress-num= "Built target flight_upload"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/tuan/Projects/ua_spaaro/flight_code/malt_build/CMakeFiles --progress-num= "Built target flight_upload"
 .PHONY : CMakeFiles/flight_upload.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/flight_upload.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/CMakeFiles 99
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/tuan/Projects/ua_spaaro/flight_code/malt_build/CMakeFiles 99
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/flight_upload.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/tuan/Projects/ua_spaaro/flight_code/malt_build/CMakeFiles 0
 .PHONY : CMakeFiles/flight_upload.dir/rule
 
 # Convenience name for target.
@@ -581,14 +581,14 @@ CMakeFiles/flight_upload.dir/clean:
 CMakeFiles/flight_hex.dir/all: CMakeFiles/flight.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/flight_hex.dir/build.make CMakeFiles/flight_hex.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/flight_hex.dir/build.make CMakeFiles/flight_hex.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/CMakeFiles --progress-num=60 "Built target flight_hex"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/tuan/Projects/ua_spaaro/flight_code/malt_build/CMakeFiles --progress-num=60 "Built target flight_hex"
 .PHONY : CMakeFiles/flight_hex.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/flight_hex.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/CMakeFiles 100
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/tuan/Projects/ua_spaaro/flight_code/malt_build/CMakeFiles 100
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/flight_hex.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/tuan/Projects/ua_spaaro/flight_code/malt_build/CMakeFiles 0
 .PHONY : CMakeFiles/flight_hex.dir/rule
 
 # Convenience name for target.
@@ -618,14 +618,14 @@ CMakeFiles/flight.dir/all: _deps/mavlink-build/CMakeFiles/mavlink.dir/all
 CMakeFiles/flight.dir/all: _deps/sd-build/CMakeFiles/sd.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/flight.dir/build.make CMakeFiles/flight.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/flight.dir/build.make CMakeFiles/flight.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/CMakeFiles --progress-num=43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59 "Built target flight"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/tuan/Projects/ua_spaaro/flight_code/malt_build/CMakeFiles --progress-num=43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59 "Built target flight"
 .PHONY : CMakeFiles/flight.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/flight.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/CMakeFiles 99
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/tuan/Projects/ua_spaaro/flight_code/malt_build/CMakeFiles 99
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/flight.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/tuan/Projects/ua_spaaro/flight_code/malt_build/CMakeFiles 0
 .PHONY : CMakeFiles/flight.dir/rule
 
 # Convenience name for target.
@@ -644,14 +644,14 @@ CMakeFiles/flight.dir/clean:
 _deps/core-build/CMakeFiles/core.dir/all:
 	$(MAKE) $(MAKESILENT) -f _deps/core-build/CMakeFiles/core.dir/build.make _deps/core-build/CMakeFiles/core.dir/depend
 	$(MAKE) $(MAKESILENT) -f _deps/core-build/CMakeFiles/core.dir/build.make _deps/core-build/CMakeFiles/core.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/CMakeFiles --progress-num=8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42 "Built target core"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/tuan/Projects/ua_spaaro/flight_code/malt_build/CMakeFiles --progress-num=8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42 "Built target core"
 .PHONY : _deps/core-build/CMakeFiles/core.dir/all
 
 # Build rule for subdir invocation for target.
 _deps/core-build/CMakeFiles/core.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/CMakeFiles 35
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/tuan/Projects/ua_spaaro/flight_code/malt_build/CMakeFiles 35
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 _deps/core-build/CMakeFiles/core.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/tuan/Projects/ua_spaaro/flight_code/malt_build/CMakeFiles 0
 .PHONY : _deps/core-build/CMakeFiles/core.dir/rule
 
 # Convenience name for target.
@@ -670,14 +670,14 @@ _deps/core-build/CMakeFiles/core.dir/clean:
 _deps/invensense_imu-build/CMakeFiles/invensense_imu.dir/all: _deps/core-build/CMakeFiles/core.dir/all
 	$(MAKE) $(MAKESILENT) -f _deps/invensense_imu-build/CMakeFiles/invensense_imu.dir/build.make _deps/invensense_imu-build/CMakeFiles/invensense_imu.dir/depend
 	$(MAKE) $(MAKESILENT) -f _deps/invensense_imu-build/CMakeFiles/invensense_imu.dir/build.make _deps/invensense_imu-build/CMakeFiles/invensense_imu.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/CMakeFiles --progress-num=61,62,63 "Built target invensense_imu"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/tuan/Projects/ua_spaaro/flight_code/malt_build/CMakeFiles --progress-num=61,62,63 "Built target invensense_imu"
 .PHONY : _deps/invensense_imu-build/CMakeFiles/invensense_imu.dir/all
 
 # Build rule for subdir invocation for target.
 _deps/invensense_imu-build/CMakeFiles/invensense_imu.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/CMakeFiles 38
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/tuan/Projects/ua_spaaro/flight_code/malt_build/CMakeFiles 38
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 _deps/invensense_imu-build/CMakeFiles/invensense_imu.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/tuan/Projects/ua_spaaro/flight_code/malt_build/CMakeFiles 0
 .PHONY : _deps/invensense_imu-build/CMakeFiles/invensense_imu.dir/rule
 
 # Convenience name for target.
@@ -696,14 +696,14 @@ _deps/invensense_imu-build/CMakeFiles/invensense_imu.dir/clean:
 _deps/bme280-build/CMakeFiles/bme280.dir/all: _deps/core-build/CMakeFiles/core.dir/all
 	$(MAKE) $(MAKESILENT) -f _deps/bme280-build/CMakeFiles/bme280.dir/build.make _deps/bme280-build/CMakeFiles/bme280.dir/depend
 	$(MAKE) $(MAKESILENT) -f _deps/bme280-build/CMakeFiles/bme280.dir/build.make _deps/bme280-build/CMakeFiles/bme280.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/CMakeFiles --progress-num=3,4,5 "Built target bme280"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/tuan/Projects/ua_spaaro/flight_code/malt_build/CMakeFiles --progress-num=3,4,5 "Built target bme280"
 .PHONY : _deps/bme280-build/CMakeFiles/bme280.dir/all
 
 # Build rule for subdir invocation for target.
 _deps/bme280-build/CMakeFiles/bme280.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/CMakeFiles 38
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/tuan/Projects/ua_spaaro/flight_code/malt_build/CMakeFiles 38
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 _deps/bme280-build/CMakeFiles/bme280.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/tuan/Projects/ua_spaaro/flight_code/malt_build/CMakeFiles 0
 .PHONY : _deps/bme280-build/CMakeFiles/bme280.dir/rule
 
 # Convenience name for target.
@@ -722,14 +722,14 @@ _deps/bme280-build/CMakeFiles/bme280.dir/clean:
 _deps/bmp3-build/CMakeFiles/bmp3.dir/all: _deps/core-build/CMakeFiles/core.dir/all
 	$(MAKE) $(MAKESILENT) -f _deps/bmp3-build/CMakeFiles/bmp3.dir/build.make _deps/bmp3-build/CMakeFiles/bmp3.dir/depend
 	$(MAKE) $(MAKESILENT) -f _deps/bmp3-build/CMakeFiles/bmp3.dir/build.make _deps/bmp3-build/CMakeFiles/bmp3.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/CMakeFiles --progress-num=6,7 "Built target bmp3"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/tuan/Projects/ua_spaaro/flight_code/malt_build/CMakeFiles --progress-num=6,7 "Built target bmp3"
 .PHONY : _deps/bmp3-build/CMakeFiles/bmp3.dir/all
 
 # Build rule for subdir invocation for target.
 _deps/bmp3-build/CMakeFiles/bmp3.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/CMakeFiles 37
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/tuan/Projects/ua_spaaro/flight_code/malt_build/CMakeFiles 37
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 _deps/bmp3-build/CMakeFiles/bmp3.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/tuan/Projects/ua_spaaro/flight_code/malt_build/CMakeFiles 0
 .PHONY : _deps/bmp3-build/CMakeFiles/bmp3.dir/rule
 
 # Convenience name for target.
@@ -748,14 +748,14 @@ _deps/bmp3-build/CMakeFiles/bmp3.dir/clean:
 _deps/lis3mdl-build/CMakeFiles/lis3mdl.dir/all: _deps/core-build/CMakeFiles/core.dir/all
 	$(MAKE) $(MAKESILENT) -f _deps/lis3mdl-build/CMakeFiles/lis3mdl.dir/build.make _deps/lis3mdl-build/CMakeFiles/lis3mdl.dir/depend
 	$(MAKE) $(MAKESILENT) -f _deps/lis3mdl-build/CMakeFiles/lis3mdl.dir/build.make _deps/lis3mdl-build/CMakeFiles/lis3mdl.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/CMakeFiles --progress-num=64,65 "Built target lis3mdl"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/tuan/Projects/ua_spaaro/flight_code/malt_build/CMakeFiles --progress-num=64,65 "Built target lis3mdl"
 .PHONY : _deps/lis3mdl-build/CMakeFiles/lis3mdl.dir/all
 
 # Build rule for subdir invocation for target.
 _deps/lis3mdl-build/CMakeFiles/lis3mdl.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/CMakeFiles 37
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/tuan/Projects/ua_spaaro/flight_code/malt_build/CMakeFiles 37
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 _deps/lis3mdl-build/CMakeFiles/lis3mdl.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/tuan/Projects/ua_spaaro/flight_code/malt_build/CMakeFiles 0
 .PHONY : _deps/lis3mdl-build/CMakeFiles/lis3mdl.dir/rule
 
 # Convenience name for target.
@@ -774,14 +774,14 @@ _deps/lis3mdl-build/CMakeFiles/lis3mdl.dir/clean:
 _deps/ams5915-build/CMakeFiles/ams5915.dir/all: _deps/core-build/CMakeFiles/core.dir/all
 	$(MAKE) $(MAKESILENT) -f _deps/ams5915-build/CMakeFiles/ams5915.dir/build.make _deps/ams5915-build/CMakeFiles/ams5915.dir/depend
 	$(MAKE) $(MAKESILENT) -f _deps/ams5915-build/CMakeFiles/ams5915.dir/build.make _deps/ams5915-build/CMakeFiles/ams5915.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/CMakeFiles --progress-num=2 "Built target ams5915"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/tuan/Projects/ua_spaaro/flight_code/malt_build/CMakeFiles --progress-num=2 "Built target ams5915"
 .PHONY : _deps/ams5915-build/CMakeFiles/ams5915.dir/all
 
 # Build rule for subdir invocation for target.
 _deps/ams5915-build/CMakeFiles/ams5915.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/CMakeFiles 36
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/tuan/Projects/ua_spaaro/flight_code/malt_build/CMakeFiles 36
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 _deps/ams5915-build/CMakeFiles/ams5915.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/tuan/Projects/ua_spaaro/flight_code/malt_build/CMakeFiles 0
 .PHONY : _deps/ams5915-build/CMakeFiles/ams5915.dir/rule
 
 # Convenience name for target.
@@ -800,14 +800,14 @@ _deps/ams5915-build/CMakeFiles/ams5915.dir/clean:
 _deps/ubx-build/CMakeFiles/ubx.dir/all: _deps/core-build/CMakeFiles/core.dir/all
 	$(MAKE) $(MAKESILENT) -f _deps/ubx-build/CMakeFiles/ubx.dir/build.make _deps/ubx-build/CMakeFiles/ubx.dir/depend
 	$(MAKE) $(MAKESILENT) -f _deps/ubx-build/CMakeFiles/ubx.dir/build.make _deps/ubx-build/CMakeFiles/ubx.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/CMakeFiles --progress-num=96,97 "Built target ubx"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/tuan/Projects/ua_spaaro/flight_code/malt_build/CMakeFiles --progress-num=96,97 "Built target ubx"
 .PHONY : _deps/ubx-build/CMakeFiles/ubx.dir/all
 
 # Build rule for subdir invocation for target.
 _deps/ubx-build/CMakeFiles/ubx.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/CMakeFiles 37
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/tuan/Projects/ua_spaaro/flight_code/malt_build/CMakeFiles 37
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 _deps/ubx-build/CMakeFiles/ubx.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/tuan/Projects/ua_spaaro/flight_code/malt_build/CMakeFiles 0
 .PHONY : _deps/ubx-build/CMakeFiles/ubx.dir/rule
 
 # Convenience name for target.
@@ -826,14 +826,14 @@ _deps/ubx-build/CMakeFiles/ubx.dir/clean:
 _deps/ainstein_usd1-build/CMakeFiles/ainstein_usd1.dir/all: _deps/core-build/CMakeFiles/core.dir/all
 	$(MAKE) $(MAKESILENT) -f _deps/ainstein_usd1-build/CMakeFiles/ainstein_usd1.dir/build.make _deps/ainstein_usd1-build/CMakeFiles/ainstein_usd1.dir/depend
 	$(MAKE) $(MAKESILENT) -f _deps/ainstein_usd1-build/CMakeFiles/ainstein_usd1.dir/build.make _deps/ainstein_usd1-build/CMakeFiles/ainstein_usd1.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/CMakeFiles --progress-num=1 "Built target ainstein_usd1"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/tuan/Projects/ua_spaaro/flight_code/malt_build/CMakeFiles --progress-num=1 "Built target ainstein_usd1"
 .PHONY : _deps/ainstein_usd1-build/CMakeFiles/ainstein_usd1.dir/all
 
 # Build rule for subdir invocation for target.
 _deps/ainstein_usd1-build/CMakeFiles/ainstein_usd1.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/CMakeFiles 36
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/tuan/Projects/ua_spaaro/flight_code/malt_build/CMakeFiles 36
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 _deps/ainstein_usd1-build/CMakeFiles/ainstein_usd1.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/tuan/Projects/ua_spaaro/flight_code/malt_build/CMakeFiles 0
 .PHONY : _deps/ainstein_usd1-build/CMakeFiles/ainstein_usd1.dir/rule
 
 # Convenience name for target.
@@ -852,14 +852,14 @@ _deps/ainstein_usd1-build/CMakeFiles/ainstein_usd1.dir/clean:
 _deps/sbus-build/CMakeFiles/sbus.dir/all: _deps/core-build/CMakeFiles/core.dir/all
 	$(MAKE) $(MAKESILENT) -f _deps/sbus-build/CMakeFiles/sbus.dir/build.make _deps/sbus-build/CMakeFiles/sbus.dir/depend
 	$(MAKE) $(MAKESILENT) -f _deps/sbus-build/CMakeFiles/sbus.dir/build.make _deps/sbus-build/CMakeFiles/sbus.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/CMakeFiles --progress-num=69,70 "Built target sbus"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/tuan/Projects/ua_spaaro/flight_code/malt_build/CMakeFiles --progress-num=69,70 "Built target sbus"
 .PHONY : _deps/sbus-build/CMakeFiles/sbus.dir/all
 
 # Build rule for subdir invocation for target.
 _deps/sbus-build/CMakeFiles/sbus.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/CMakeFiles 37
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/tuan/Projects/ua_spaaro/flight_code/malt_build/CMakeFiles 37
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 _deps/sbus-build/CMakeFiles/sbus.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/tuan/Projects/ua_spaaro/flight_code/malt_build/CMakeFiles 0
 .PHONY : _deps/sbus-build/CMakeFiles/sbus.dir/rule
 
 # Convenience name for target.
@@ -878,14 +878,14 @@ _deps/sbus-build/CMakeFiles/sbus.dir/clean:
 _deps/vector_nav-build/CMakeFiles/vector_nav.dir/all: _deps/core-build/CMakeFiles/core.dir/all
 	$(MAKE) $(MAKESILENT) -f _deps/vector_nav-build/CMakeFiles/vector_nav.dir/build.make _deps/vector_nav-build/CMakeFiles/vector_nav.dir/depend
 	$(MAKE) $(MAKESILENT) -f _deps/vector_nav-build/CMakeFiles/vector_nav.dir/build.make _deps/vector_nav-build/CMakeFiles/vector_nav.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/CMakeFiles --progress-num=98,99,100 "Built target vector_nav"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/tuan/Projects/ua_spaaro/flight_code/malt_build/CMakeFiles --progress-num=98,99,100 "Built target vector_nav"
 .PHONY : _deps/vector_nav-build/CMakeFiles/vector_nav.dir/all
 
 # Build rule for subdir invocation for target.
 _deps/vector_nav-build/CMakeFiles/vector_nav.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/CMakeFiles 38
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/tuan/Projects/ua_spaaro/flight_code/malt_build/CMakeFiles 38
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 _deps/vector_nav-build/CMakeFiles/vector_nav.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/tuan/Projects/ua_spaaro/flight_code/malt_build/CMakeFiles 0
 .PHONY : _deps/vector_nav-build/CMakeFiles/vector_nav.dir/rule
 
 # Convenience name for target.
@@ -904,14 +904,14 @@ _deps/vector_nav-build/CMakeFiles/vector_nav.dir/clean:
 _deps/mavlink-build/CMakeFiles/mavlink.dir/all: _deps/core-build/CMakeFiles/core.dir/all
 	$(MAKE) $(MAKESILENT) -f _deps/mavlink-build/CMakeFiles/mavlink.dir/build.make _deps/mavlink-build/CMakeFiles/mavlink.dir/depend
 	$(MAKE) $(MAKESILENT) -f _deps/mavlink-build/CMakeFiles/mavlink.dir/build.make _deps/mavlink-build/CMakeFiles/mavlink.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/CMakeFiles --progress-num=66,67,68 "Built target mavlink"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/tuan/Projects/ua_spaaro/flight_code/malt_build/CMakeFiles --progress-num=66,67,68 "Built target mavlink"
 .PHONY : _deps/mavlink-build/CMakeFiles/mavlink.dir/all
 
 # Build rule for subdir invocation for target.
 _deps/mavlink-build/CMakeFiles/mavlink.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/CMakeFiles 38
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/tuan/Projects/ua_spaaro/flight_code/malt_build/CMakeFiles 38
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 _deps/mavlink-build/CMakeFiles/mavlink.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/tuan/Projects/ua_spaaro/flight_code/malt_build/CMakeFiles 0
 .PHONY : _deps/mavlink-build/CMakeFiles/mavlink.dir/rule
 
 # Convenience name for target.
@@ -930,14 +930,14 @@ _deps/mavlink-build/CMakeFiles/mavlink.dir/clean:
 _deps/sd-build/CMakeFiles/sd.dir/all: _deps/core-build/CMakeFiles/core.dir/all
 	$(MAKE) $(MAKESILENT) -f _deps/sd-build/CMakeFiles/sd.dir/build.make _deps/sd-build/CMakeFiles/sd.dir/depend
 	$(MAKE) $(MAKESILENT) -f _deps/sd-build/CMakeFiles/sd.dir/build.make _deps/sd-build/CMakeFiles/sd.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/CMakeFiles --progress-num=71,72,73,74,75,76,77,78,79,80,81,82,83,84,85,86,87,88,89,90,91,92,93,94,95 "Built target sd"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/tuan/Projects/ua_spaaro/flight_code/malt_build/CMakeFiles --progress-num=71,72,73,74,75,76,77,78,79,80,81,82,83,84,85,86,87,88,89,90,91,92,93,94,95 "Built target sd"
 .PHONY : _deps/sd-build/CMakeFiles/sd.dir/all
 
 # Build rule for subdir invocation for target.
 _deps/sd-build/CMakeFiles/sd.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/CMakeFiles 60
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/tuan/Projects/ua_spaaro/flight_code/malt_build/CMakeFiles 60
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 _deps/sd-build/CMakeFiles/sd.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/tuan/Projects/ua_spaaro/flight_code/malt_build/CMakeFiles 0
 .PHONY : _deps/sd-build/CMakeFiles/sd.dir/rule
 
 # Convenience name for target.

@@ -57,10 +57,10 @@ RM = /usr/local/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/tuan/Projects/super/ua_spaaro/flight_code
+CMAKE_SOURCE_DIR = /home/tuan/Projects/ua_spaaro/flight_code
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build
+CMAKE_BINARY_DIR = /home/tuan/Projects/ua_spaaro/flight_code/malt_build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -87,14 +87,14 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(CMAKE_COMMAND) -E cmake_progress_start /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/CMakeFiles /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/_deps/vector_nav-build//CMakeFiles/progress.marks
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 _deps/vector_nav-build/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/CMakeFiles 0
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(CMAKE_COMMAND) -E cmake_progress_start /home/tuan/Projects/ua_spaaro/flight_code/malt_build/CMakeFiles /home/tuan/Projects/ua_spaaro/flight_code/malt_build/_deps/vector_nav-build//CMakeFiles/progress.marks
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 _deps/vector_nav-build/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/tuan/Projects/ua_spaaro/flight_code/malt_build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 _deps/vector_nav-build/clean
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 _deps/vector_nav-build/clean
 .PHONY : clean
 
 # The main clean target
@@ -103,22 +103,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 _deps/vector_nav-build/preinstall
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 _deps/vector_nav-build/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 _deps/vector_nav-build/preinstall
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 _deps/vector_nav-build/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 _deps/vector_nav-build/CMakeFiles/vector_nav.dir/rule:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 _deps/vector_nav-build/CMakeFiles/vector_nav.dir/rule
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 _deps/vector_nav-build/CMakeFiles/vector_nav.dir/rule
 .PHONY : _deps/vector_nav-build/CMakeFiles/vector_nav.dir/rule
 
 # Convenience name for target.
@@ -127,7 +127,7 @@ vector_nav: _deps/vector_nav-build/CMakeFiles/vector_nav.dir/rule
 
 # fast build rule for target.
 vector_nav/fast:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/vector_nav-build/CMakeFiles/vector_nav.dir/build.make _deps/vector_nav-build/CMakeFiles/vector_nav.dir/build
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/vector_nav-build/CMakeFiles/vector_nav.dir/build.make _deps/vector_nav-build/CMakeFiles/vector_nav.dir/build
 .PHONY : vector_nav/fast
 
 src/vn100.obj: src/vn100.cpp.obj
@@ -135,7 +135,7 @@ src/vn100.obj: src/vn100.cpp.obj
 
 # target to build an object file
 src/vn100.cpp.obj:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/vector_nav-build/CMakeFiles/vector_nav.dir/build.make _deps/vector_nav-build/CMakeFiles/vector_nav.dir/src/vn100.cpp.obj
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/vector_nav-build/CMakeFiles/vector_nav.dir/build.make _deps/vector_nav-build/CMakeFiles/vector_nav.dir/src/vn100.cpp.obj
 .PHONY : src/vn100.cpp.obj
 
 src/vn100.i: src/vn100.cpp.i
@@ -143,7 +143,7 @@ src/vn100.i: src/vn100.cpp.i
 
 # target to preprocess a source file
 src/vn100.cpp.i:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/vector_nav-build/CMakeFiles/vector_nav.dir/build.make _deps/vector_nav-build/CMakeFiles/vector_nav.dir/src/vn100.cpp.i
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/vector_nav-build/CMakeFiles/vector_nav.dir/build.make _deps/vector_nav-build/CMakeFiles/vector_nav.dir/src/vn100.cpp.i
 .PHONY : src/vn100.cpp.i
 
 src/vn100.s: src/vn100.cpp.s
@@ -151,7 +151,7 @@ src/vn100.s: src/vn100.cpp.s
 
 # target to generate assembly for a file
 src/vn100.cpp.s:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/vector_nav-build/CMakeFiles/vector_nav.dir/build.make _deps/vector_nav-build/CMakeFiles/vector_nav.dir/src/vn100.cpp.s
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/vector_nav-build/CMakeFiles/vector_nav.dir/build.make _deps/vector_nav-build/CMakeFiles/vector_nav.dir/src/vn100.cpp.s
 .PHONY : src/vn100.cpp.s
 
 src/vn200.obj: src/vn200.cpp.obj
@@ -159,7 +159,7 @@ src/vn200.obj: src/vn200.cpp.obj
 
 # target to build an object file
 src/vn200.cpp.obj:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/vector_nav-build/CMakeFiles/vector_nav.dir/build.make _deps/vector_nav-build/CMakeFiles/vector_nav.dir/src/vn200.cpp.obj
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/vector_nav-build/CMakeFiles/vector_nav.dir/build.make _deps/vector_nav-build/CMakeFiles/vector_nav.dir/src/vn200.cpp.obj
 .PHONY : src/vn200.cpp.obj
 
 src/vn200.i: src/vn200.cpp.i
@@ -167,7 +167,7 @@ src/vn200.i: src/vn200.cpp.i
 
 # target to preprocess a source file
 src/vn200.cpp.i:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/vector_nav-build/CMakeFiles/vector_nav.dir/build.make _deps/vector_nav-build/CMakeFiles/vector_nav.dir/src/vn200.cpp.i
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/vector_nav-build/CMakeFiles/vector_nav.dir/build.make _deps/vector_nav-build/CMakeFiles/vector_nav.dir/src/vn200.cpp.i
 .PHONY : src/vn200.cpp.i
 
 src/vn200.s: src/vn200.cpp.s
@@ -175,7 +175,7 @@ src/vn200.s: src/vn200.cpp.s
 
 # target to generate assembly for a file
 src/vn200.cpp.s:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/vector_nav-build/CMakeFiles/vector_nav.dir/build.make _deps/vector_nav-build/CMakeFiles/vector_nav.dir/src/vn200.cpp.s
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/vector_nav-build/CMakeFiles/vector_nav.dir/build.make _deps/vector_nav-build/CMakeFiles/vector_nav.dir/src/vn200.cpp.s
 .PHONY : src/vn200.cpp.s
 
 src/vn300.obj: src/vn300.cpp.obj
@@ -183,7 +183,7 @@ src/vn300.obj: src/vn300.cpp.obj
 
 # target to build an object file
 src/vn300.cpp.obj:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/vector_nav-build/CMakeFiles/vector_nav.dir/build.make _deps/vector_nav-build/CMakeFiles/vector_nav.dir/src/vn300.cpp.obj
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/vector_nav-build/CMakeFiles/vector_nav.dir/build.make _deps/vector_nav-build/CMakeFiles/vector_nav.dir/src/vn300.cpp.obj
 .PHONY : src/vn300.cpp.obj
 
 src/vn300.i: src/vn300.cpp.i
@@ -191,7 +191,7 @@ src/vn300.i: src/vn300.cpp.i
 
 # target to preprocess a source file
 src/vn300.cpp.i:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/vector_nav-build/CMakeFiles/vector_nav.dir/build.make _deps/vector_nav-build/CMakeFiles/vector_nav.dir/src/vn300.cpp.i
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/vector_nav-build/CMakeFiles/vector_nav.dir/build.make _deps/vector_nav-build/CMakeFiles/vector_nav.dir/src/vn300.cpp.i
 .PHONY : src/vn300.cpp.i
 
 src/vn300.s: src/vn300.cpp.s
@@ -199,7 +199,7 @@ src/vn300.s: src/vn300.cpp.s
 
 # target to generate assembly for a file
 src/vn300.cpp.s:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/vector_nav-build/CMakeFiles/vector_nav.dir/build.make _deps/vector_nav-build/CMakeFiles/vector_nav.dir/src/vn300.cpp.s
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/vector_nav-build/CMakeFiles/vector_nav.dir/build.make _deps/vector_nav-build/CMakeFiles/vector_nav.dir/src/vn300.cpp.s
 .PHONY : src/vn300.cpp.s
 
 # Help Target
@@ -231,6 +231,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

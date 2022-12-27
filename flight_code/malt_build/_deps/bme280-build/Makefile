@@ -57,10 +57,10 @@ RM = /usr/local/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/tuan/Projects/super/ua_spaaro/flight_code
+CMAKE_SOURCE_DIR = /home/tuan/Projects/ua_spaaro/flight_code
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build
+CMAKE_BINARY_DIR = /home/tuan/Projects/ua_spaaro/flight_code/malt_build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -87,14 +87,14 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(CMAKE_COMMAND) -E cmake_progress_start /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/CMakeFiles /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/_deps/bme280-build//CMakeFiles/progress.marks
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 _deps/bme280-build/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/CMakeFiles 0
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(CMAKE_COMMAND) -E cmake_progress_start /home/tuan/Projects/ua_spaaro/flight_code/malt_build/CMakeFiles /home/tuan/Projects/ua_spaaro/flight_code/malt_build/_deps/bme280-build//CMakeFiles/progress.marks
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 _deps/bme280-build/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/tuan/Projects/ua_spaaro/flight_code/malt_build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 _deps/bme280-build/clean
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 _deps/bme280-build/clean
 .PHONY : clean
 
 # The main clean target
@@ -103,22 +103,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 _deps/bme280-build/preinstall
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 _deps/bme280-build/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 _deps/bme280-build/preinstall
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 _deps/bme280-build/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 _deps/bme280-build/CMakeFiles/bme280.dir/rule:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 _deps/bme280-build/CMakeFiles/bme280.dir/rule
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 _deps/bme280-build/CMakeFiles/bme280.dir/rule
 .PHONY : _deps/bme280-build/CMakeFiles/bme280.dir/rule
 
 # Convenience name for target.
@@ -127,7 +127,7 @@ bme280: _deps/bme280-build/CMakeFiles/bme280.dir/rule
 
 # fast build rule for target.
 bme280/fast:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/bme280-build/CMakeFiles/bme280.dir/build.make _deps/bme280-build/CMakeFiles/bme280.dir/build
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/bme280-build/CMakeFiles/bme280.dir/build.make _deps/bme280-build/CMakeFiles/bme280.dir/build
 .PHONY : bme280/fast
 
 src/bme280.obj: src/bme280.cpp.obj
@@ -135,7 +135,7 @@ src/bme280.obj: src/bme280.cpp.obj
 
 # target to build an object file
 src/bme280.cpp.obj:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/bme280-build/CMakeFiles/bme280.dir/build.make _deps/bme280-build/CMakeFiles/bme280.dir/src/bme280.cpp.obj
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/bme280-build/CMakeFiles/bme280.dir/build.make _deps/bme280-build/CMakeFiles/bme280.dir/src/bme280.cpp.obj
 .PHONY : src/bme280.cpp.obj
 
 src/bme280.i: src/bme280.cpp.i
@@ -143,7 +143,7 @@ src/bme280.i: src/bme280.cpp.i
 
 # target to preprocess a source file
 src/bme280.cpp.i:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/bme280-build/CMakeFiles/bme280.dir/build.make _deps/bme280-build/CMakeFiles/bme280.dir/src/bme280.cpp.i
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/bme280-build/CMakeFiles/bme280.dir/build.make _deps/bme280-build/CMakeFiles/bme280.dir/src/bme280.cpp.i
 .PHONY : src/bme280.cpp.i
 
 src/bme280.s: src/bme280.cpp.s
@@ -151,7 +151,7 @@ src/bme280.s: src/bme280.cpp.s
 
 # target to generate assembly for a file
 src/bme280.cpp.s:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/bme280-build/CMakeFiles/bme280.dir/build.make _deps/bme280-build/CMakeFiles/bme280.dir/src/bme280.cpp.s
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/bme280-build/CMakeFiles/bme280.dir/build.make _deps/bme280-build/CMakeFiles/bme280.dir/src/bme280.cpp.s
 .PHONY : src/bme280.cpp.s
 
 src/bst/bme280.obj: src/bst/bme280.c.obj
@@ -159,7 +159,7 @@ src/bst/bme280.obj: src/bst/bme280.c.obj
 
 # target to build an object file
 src/bst/bme280.c.obj:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/bme280-build/CMakeFiles/bme280.dir/build.make _deps/bme280-build/CMakeFiles/bme280.dir/src/bst/bme280.c.obj
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/bme280-build/CMakeFiles/bme280.dir/build.make _deps/bme280-build/CMakeFiles/bme280.dir/src/bst/bme280.c.obj
 .PHONY : src/bst/bme280.c.obj
 
 src/bst/bme280.i: src/bst/bme280.c.i
@@ -167,7 +167,7 @@ src/bst/bme280.i: src/bst/bme280.c.i
 
 # target to preprocess a source file
 src/bst/bme280.c.i:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/bme280-build/CMakeFiles/bme280.dir/build.make _deps/bme280-build/CMakeFiles/bme280.dir/src/bst/bme280.c.i
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/bme280-build/CMakeFiles/bme280.dir/build.make _deps/bme280-build/CMakeFiles/bme280.dir/src/bst/bme280.c.i
 .PHONY : src/bst/bme280.c.i
 
 src/bst/bme280.s: src/bst/bme280.c.s
@@ -175,7 +175,7 @@ src/bst/bme280.s: src/bst/bme280.c.s
 
 # target to generate assembly for a file
 src/bst/bme280.c.s:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/bme280-build/CMakeFiles/bme280.dir/build.make _deps/bme280-build/CMakeFiles/bme280.dir/src/bst/bme280.c.s
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/bme280-build/CMakeFiles/bme280.dir/build.make _deps/bme280-build/CMakeFiles/bme280.dir/src/bst/bme280.c.s
 .PHONY : src/bst/bme280.c.s
 
 # Help Target
@@ -204,6 +204,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

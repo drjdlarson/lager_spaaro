@@ -57,10 +57,10 @@ RM = /usr/local/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/tuan/Projects/super/ua_spaaro/flight_code
+CMAKE_SOURCE_DIR = /home/tuan/Projects/ua_spaaro/flight_code
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build
+CMAKE_BINARY_DIR = /home/tuan/Projects/ua_spaaro/flight_code/malt_build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -87,14 +87,14 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(CMAKE_COMMAND) -E cmake_progress_start /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/CMakeFiles /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/_deps/sd-build//CMakeFiles/progress.marks
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 _deps/sd-build/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/CMakeFiles 0
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(CMAKE_COMMAND) -E cmake_progress_start /home/tuan/Projects/ua_spaaro/flight_code/malt_build/CMakeFiles /home/tuan/Projects/ua_spaaro/flight_code/malt_build/_deps/sd-build//CMakeFiles/progress.marks
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 _deps/sd-build/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/tuan/Projects/ua_spaaro/flight_code/malt_build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 _deps/sd-build/clean
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 _deps/sd-build/clean
 .PHONY : clean
 
 # The main clean target
@@ -103,22 +103,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 _deps/sd-build/preinstall
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 _deps/sd-build/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 _deps/sd-build/preinstall
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 _deps/sd-build/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 _deps/sd-build/CMakeFiles/sd.dir/rule:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 _deps/sd-build/CMakeFiles/sd.dir/rule
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 _deps/sd-build/CMakeFiles/sd.dir/rule
 .PHONY : _deps/sd-build/CMakeFiles/sd.dir/rule
 
 # Convenience name for target.
@@ -127,7 +127,7 @@ sd: _deps/sd-build/CMakeFiles/sd.dir/rule
 
 # fast build rule for target.
 sd/fast:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/sd-build/CMakeFiles/sd.dir/build.make _deps/sd-build/CMakeFiles/sd.dir/build
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/sd-build/CMakeFiles/sd.dir/build.make _deps/sd-build/CMakeFiles/sd.dir/build
 .PHONY : sd/fast
 
 src/sd/ExFatLib/ExFatDbg.obj: src/sd/ExFatLib/ExFatDbg.cpp.obj
@@ -135,7 +135,7 @@ src/sd/ExFatLib/ExFatDbg.obj: src/sd/ExFatLib/ExFatDbg.cpp.obj
 
 # target to build an object file
 src/sd/ExFatLib/ExFatDbg.cpp.obj:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/sd-build/CMakeFiles/sd.dir/build.make _deps/sd-build/CMakeFiles/sd.dir/src/sd/ExFatLib/ExFatDbg.cpp.obj
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/sd-build/CMakeFiles/sd.dir/build.make _deps/sd-build/CMakeFiles/sd.dir/src/sd/ExFatLib/ExFatDbg.cpp.obj
 .PHONY : src/sd/ExFatLib/ExFatDbg.cpp.obj
 
 src/sd/ExFatLib/ExFatDbg.i: src/sd/ExFatLib/ExFatDbg.cpp.i
@@ -143,7 +143,7 @@ src/sd/ExFatLib/ExFatDbg.i: src/sd/ExFatLib/ExFatDbg.cpp.i
 
 # target to preprocess a source file
 src/sd/ExFatLib/ExFatDbg.cpp.i:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/sd-build/CMakeFiles/sd.dir/build.make _deps/sd-build/CMakeFiles/sd.dir/src/sd/ExFatLib/ExFatDbg.cpp.i
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/sd-build/CMakeFiles/sd.dir/build.make _deps/sd-build/CMakeFiles/sd.dir/src/sd/ExFatLib/ExFatDbg.cpp.i
 .PHONY : src/sd/ExFatLib/ExFatDbg.cpp.i
 
 src/sd/ExFatLib/ExFatDbg.s: src/sd/ExFatLib/ExFatDbg.cpp.s
@@ -151,7 +151,7 @@ src/sd/ExFatLib/ExFatDbg.s: src/sd/ExFatLib/ExFatDbg.cpp.s
 
 # target to generate assembly for a file
 src/sd/ExFatLib/ExFatDbg.cpp.s:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/sd-build/CMakeFiles/sd.dir/build.make _deps/sd-build/CMakeFiles/sd.dir/src/sd/ExFatLib/ExFatDbg.cpp.s
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/sd-build/CMakeFiles/sd.dir/build.make _deps/sd-build/CMakeFiles/sd.dir/src/sd/ExFatLib/ExFatDbg.cpp.s
 .PHONY : src/sd/ExFatLib/ExFatDbg.cpp.s
 
 src/sd/ExFatLib/ExFatFile.obj: src/sd/ExFatLib/ExFatFile.cpp.obj
@@ -159,7 +159,7 @@ src/sd/ExFatLib/ExFatFile.obj: src/sd/ExFatLib/ExFatFile.cpp.obj
 
 # target to build an object file
 src/sd/ExFatLib/ExFatFile.cpp.obj:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/sd-build/CMakeFiles/sd.dir/build.make _deps/sd-build/CMakeFiles/sd.dir/src/sd/ExFatLib/ExFatFile.cpp.obj
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/sd-build/CMakeFiles/sd.dir/build.make _deps/sd-build/CMakeFiles/sd.dir/src/sd/ExFatLib/ExFatFile.cpp.obj
 .PHONY : src/sd/ExFatLib/ExFatFile.cpp.obj
 
 src/sd/ExFatLib/ExFatFile.i: src/sd/ExFatLib/ExFatFile.cpp.i
@@ -167,7 +167,7 @@ src/sd/ExFatLib/ExFatFile.i: src/sd/ExFatLib/ExFatFile.cpp.i
 
 # target to preprocess a source file
 src/sd/ExFatLib/ExFatFile.cpp.i:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/sd-build/CMakeFiles/sd.dir/build.make _deps/sd-build/CMakeFiles/sd.dir/src/sd/ExFatLib/ExFatFile.cpp.i
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/sd-build/CMakeFiles/sd.dir/build.make _deps/sd-build/CMakeFiles/sd.dir/src/sd/ExFatLib/ExFatFile.cpp.i
 .PHONY : src/sd/ExFatLib/ExFatFile.cpp.i
 
 src/sd/ExFatLib/ExFatFile.s: src/sd/ExFatLib/ExFatFile.cpp.s
@@ -175,7 +175,7 @@ src/sd/ExFatLib/ExFatFile.s: src/sd/ExFatLib/ExFatFile.cpp.s
 
 # target to generate assembly for a file
 src/sd/ExFatLib/ExFatFile.cpp.s:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/sd-build/CMakeFiles/sd.dir/build.make _deps/sd-build/CMakeFiles/sd.dir/src/sd/ExFatLib/ExFatFile.cpp.s
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/sd-build/CMakeFiles/sd.dir/build.make _deps/sd-build/CMakeFiles/sd.dir/src/sd/ExFatLib/ExFatFile.cpp.s
 .PHONY : src/sd/ExFatLib/ExFatFile.cpp.s
 
 src/sd/ExFatLib/ExFatFilePrint.obj: src/sd/ExFatLib/ExFatFilePrint.cpp.obj
@@ -183,7 +183,7 @@ src/sd/ExFatLib/ExFatFilePrint.obj: src/sd/ExFatLib/ExFatFilePrint.cpp.obj
 
 # target to build an object file
 src/sd/ExFatLib/ExFatFilePrint.cpp.obj:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/sd-build/CMakeFiles/sd.dir/build.make _deps/sd-build/CMakeFiles/sd.dir/src/sd/ExFatLib/ExFatFilePrint.cpp.obj
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/sd-build/CMakeFiles/sd.dir/build.make _deps/sd-build/CMakeFiles/sd.dir/src/sd/ExFatLib/ExFatFilePrint.cpp.obj
 .PHONY : src/sd/ExFatLib/ExFatFilePrint.cpp.obj
 
 src/sd/ExFatLib/ExFatFilePrint.i: src/sd/ExFatLib/ExFatFilePrint.cpp.i
@@ -191,7 +191,7 @@ src/sd/ExFatLib/ExFatFilePrint.i: src/sd/ExFatLib/ExFatFilePrint.cpp.i
 
 # target to preprocess a source file
 src/sd/ExFatLib/ExFatFilePrint.cpp.i:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/sd-build/CMakeFiles/sd.dir/build.make _deps/sd-build/CMakeFiles/sd.dir/src/sd/ExFatLib/ExFatFilePrint.cpp.i
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/sd-build/CMakeFiles/sd.dir/build.make _deps/sd-build/CMakeFiles/sd.dir/src/sd/ExFatLib/ExFatFilePrint.cpp.i
 .PHONY : src/sd/ExFatLib/ExFatFilePrint.cpp.i
 
 src/sd/ExFatLib/ExFatFilePrint.s: src/sd/ExFatLib/ExFatFilePrint.cpp.s
@@ -199,7 +199,7 @@ src/sd/ExFatLib/ExFatFilePrint.s: src/sd/ExFatLib/ExFatFilePrint.cpp.s
 
 # target to generate assembly for a file
 src/sd/ExFatLib/ExFatFilePrint.cpp.s:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/sd-build/CMakeFiles/sd.dir/build.make _deps/sd-build/CMakeFiles/sd.dir/src/sd/ExFatLib/ExFatFilePrint.cpp.s
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/sd-build/CMakeFiles/sd.dir/build.make _deps/sd-build/CMakeFiles/sd.dir/src/sd/ExFatLib/ExFatFilePrint.cpp.s
 .PHONY : src/sd/ExFatLib/ExFatFilePrint.cpp.s
 
 src/sd/ExFatLib/ExFatFileWrite.obj: src/sd/ExFatLib/ExFatFileWrite.cpp.obj
@@ -207,7 +207,7 @@ src/sd/ExFatLib/ExFatFileWrite.obj: src/sd/ExFatLib/ExFatFileWrite.cpp.obj
 
 # target to build an object file
 src/sd/ExFatLib/ExFatFileWrite.cpp.obj:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/sd-build/CMakeFiles/sd.dir/build.make _deps/sd-build/CMakeFiles/sd.dir/src/sd/ExFatLib/ExFatFileWrite.cpp.obj
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/sd-build/CMakeFiles/sd.dir/build.make _deps/sd-build/CMakeFiles/sd.dir/src/sd/ExFatLib/ExFatFileWrite.cpp.obj
 .PHONY : src/sd/ExFatLib/ExFatFileWrite.cpp.obj
 
 src/sd/ExFatLib/ExFatFileWrite.i: src/sd/ExFatLib/ExFatFileWrite.cpp.i
@@ -215,7 +215,7 @@ src/sd/ExFatLib/ExFatFileWrite.i: src/sd/ExFatLib/ExFatFileWrite.cpp.i
 
 # target to preprocess a source file
 src/sd/ExFatLib/ExFatFileWrite.cpp.i:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/sd-build/CMakeFiles/sd.dir/build.make _deps/sd-build/CMakeFiles/sd.dir/src/sd/ExFatLib/ExFatFileWrite.cpp.i
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/sd-build/CMakeFiles/sd.dir/build.make _deps/sd-build/CMakeFiles/sd.dir/src/sd/ExFatLib/ExFatFileWrite.cpp.i
 .PHONY : src/sd/ExFatLib/ExFatFileWrite.cpp.i
 
 src/sd/ExFatLib/ExFatFileWrite.s: src/sd/ExFatLib/ExFatFileWrite.cpp.s
@@ -223,7 +223,7 @@ src/sd/ExFatLib/ExFatFileWrite.s: src/sd/ExFatLib/ExFatFileWrite.cpp.s
 
 # target to generate assembly for a file
 src/sd/ExFatLib/ExFatFileWrite.cpp.s:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/sd-build/CMakeFiles/sd.dir/build.make _deps/sd-build/CMakeFiles/sd.dir/src/sd/ExFatLib/ExFatFileWrite.cpp.s
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/sd-build/CMakeFiles/sd.dir/build.make _deps/sd-build/CMakeFiles/sd.dir/src/sd/ExFatLib/ExFatFileWrite.cpp.s
 .PHONY : src/sd/ExFatLib/ExFatFileWrite.cpp.s
 
 src/sd/ExFatLib/ExFatFormatter.obj: src/sd/ExFatLib/ExFatFormatter.cpp.obj
@@ -231,7 +231,7 @@ src/sd/ExFatLib/ExFatFormatter.obj: src/sd/ExFatLib/ExFatFormatter.cpp.obj
 
 # target to build an object file
 src/sd/ExFatLib/ExFatFormatter.cpp.obj:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/sd-build/CMakeFiles/sd.dir/build.make _deps/sd-build/CMakeFiles/sd.dir/src/sd/ExFatLib/ExFatFormatter.cpp.obj
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/sd-build/CMakeFiles/sd.dir/build.make _deps/sd-build/CMakeFiles/sd.dir/src/sd/ExFatLib/ExFatFormatter.cpp.obj
 .PHONY : src/sd/ExFatLib/ExFatFormatter.cpp.obj
 
 src/sd/ExFatLib/ExFatFormatter.i: src/sd/ExFatLib/ExFatFormatter.cpp.i
@@ -239,7 +239,7 @@ src/sd/ExFatLib/ExFatFormatter.i: src/sd/ExFatLib/ExFatFormatter.cpp.i
 
 # target to preprocess a source file
 src/sd/ExFatLib/ExFatFormatter.cpp.i:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/sd-build/CMakeFiles/sd.dir/build.make _deps/sd-build/CMakeFiles/sd.dir/src/sd/ExFatLib/ExFatFormatter.cpp.i
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/sd-build/CMakeFiles/sd.dir/build.make _deps/sd-build/CMakeFiles/sd.dir/src/sd/ExFatLib/ExFatFormatter.cpp.i
 .PHONY : src/sd/ExFatLib/ExFatFormatter.cpp.i
 
 src/sd/ExFatLib/ExFatFormatter.s: src/sd/ExFatLib/ExFatFormatter.cpp.s
@@ -247,7 +247,7 @@ src/sd/ExFatLib/ExFatFormatter.s: src/sd/ExFatLib/ExFatFormatter.cpp.s
 
 # target to generate assembly for a file
 src/sd/ExFatLib/ExFatFormatter.cpp.s:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/sd-build/CMakeFiles/sd.dir/build.make _deps/sd-build/CMakeFiles/sd.dir/src/sd/ExFatLib/ExFatFormatter.cpp.s
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/sd-build/CMakeFiles/sd.dir/build.make _deps/sd-build/CMakeFiles/sd.dir/src/sd/ExFatLib/ExFatFormatter.cpp.s
 .PHONY : src/sd/ExFatLib/ExFatFormatter.cpp.s
 
 src/sd/ExFatLib/ExFatPartition.obj: src/sd/ExFatLib/ExFatPartition.cpp.obj
@@ -255,7 +255,7 @@ src/sd/ExFatLib/ExFatPartition.obj: src/sd/ExFatLib/ExFatPartition.cpp.obj
 
 # target to build an object file
 src/sd/ExFatLib/ExFatPartition.cpp.obj:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/sd-build/CMakeFiles/sd.dir/build.make _deps/sd-build/CMakeFiles/sd.dir/src/sd/ExFatLib/ExFatPartition.cpp.obj
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/sd-build/CMakeFiles/sd.dir/build.make _deps/sd-build/CMakeFiles/sd.dir/src/sd/ExFatLib/ExFatPartition.cpp.obj
 .PHONY : src/sd/ExFatLib/ExFatPartition.cpp.obj
 
 src/sd/ExFatLib/ExFatPartition.i: src/sd/ExFatLib/ExFatPartition.cpp.i
@@ -263,7 +263,7 @@ src/sd/ExFatLib/ExFatPartition.i: src/sd/ExFatLib/ExFatPartition.cpp.i
 
 # target to preprocess a source file
 src/sd/ExFatLib/ExFatPartition.cpp.i:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/sd-build/CMakeFiles/sd.dir/build.make _deps/sd-build/CMakeFiles/sd.dir/src/sd/ExFatLib/ExFatPartition.cpp.i
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/sd-build/CMakeFiles/sd.dir/build.make _deps/sd-build/CMakeFiles/sd.dir/src/sd/ExFatLib/ExFatPartition.cpp.i
 .PHONY : src/sd/ExFatLib/ExFatPartition.cpp.i
 
 src/sd/ExFatLib/ExFatPartition.s: src/sd/ExFatLib/ExFatPartition.cpp.s
@@ -271,7 +271,7 @@ src/sd/ExFatLib/ExFatPartition.s: src/sd/ExFatLib/ExFatPartition.cpp.s
 
 # target to generate assembly for a file
 src/sd/ExFatLib/ExFatPartition.cpp.s:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/sd-build/CMakeFiles/sd.dir/build.make _deps/sd-build/CMakeFiles/sd.dir/src/sd/ExFatLib/ExFatPartition.cpp.s
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/sd-build/CMakeFiles/sd.dir/build.make _deps/sd-build/CMakeFiles/sd.dir/src/sd/ExFatLib/ExFatPartition.cpp.s
 .PHONY : src/sd/ExFatLib/ExFatPartition.cpp.s
 
 src/sd/ExFatLib/ExFatVolume.obj: src/sd/ExFatLib/ExFatVolume.cpp.obj
@@ -279,7 +279,7 @@ src/sd/ExFatLib/ExFatVolume.obj: src/sd/ExFatLib/ExFatVolume.cpp.obj
 
 # target to build an object file
 src/sd/ExFatLib/ExFatVolume.cpp.obj:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/sd-build/CMakeFiles/sd.dir/build.make _deps/sd-build/CMakeFiles/sd.dir/src/sd/ExFatLib/ExFatVolume.cpp.obj
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/sd-build/CMakeFiles/sd.dir/build.make _deps/sd-build/CMakeFiles/sd.dir/src/sd/ExFatLib/ExFatVolume.cpp.obj
 .PHONY : src/sd/ExFatLib/ExFatVolume.cpp.obj
 
 src/sd/ExFatLib/ExFatVolume.i: src/sd/ExFatLib/ExFatVolume.cpp.i
@@ -287,7 +287,7 @@ src/sd/ExFatLib/ExFatVolume.i: src/sd/ExFatLib/ExFatVolume.cpp.i
 
 # target to preprocess a source file
 src/sd/ExFatLib/ExFatVolume.cpp.i:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/sd-build/CMakeFiles/sd.dir/build.make _deps/sd-build/CMakeFiles/sd.dir/src/sd/ExFatLib/ExFatVolume.cpp.i
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/sd-build/CMakeFiles/sd.dir/build.make _deps/sd-build/CMakeFiles/sd.dir/src/sd/ExFatLib/ExFatVolume.cpp.i
 .PHONY : src/sd/ExFatLib/ExFatVolume.cpp.i
 
 src/sd/ExFatLib/ExFatVolume.s: src/sd/ExFatLib/ExFatVolume.cpp.s
@@ -295,7 +295,7 @@ src/sd/ExFatLib/ExFatVolume.s: src/sd/ExFatLib/ExFatVolume.cpp.s
 
 # target to generate assembly for a file
 src/sd/ExFatLib/ExFatVolume.cpp.s:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/sd-build/CMakeFiles/sd.dir/build.make _deps/sd-build/CMakeFiles/sd.dir/src/sd/ExFatLib/ExFatVolume.cpp.s
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/sd-build/CMakeFiles/sd.dir/build.make _deps/sd-build/CMakeFiles/sd.dir/src/sd/ExFatLib/ExFatVolume.cpp.s
 .PHONY : src/sd/ExFatLib/ExFatVolume.cpp.s
 
 src/sd/ExFatLib/upcase.obj: src/sd/ExFatLib/upcase.cpp.obj
@@ -303,7 +303,7 @@ src/sd/ExFatLib/upcase.obj: src/sd/ExFatLib/upcase.cpp.obj
 
 # target to build an object file
 src/sd/ExFatLib/upcase.cpp.obj:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/sd-build/CMakeFiles/sd.dir/build.make _deps/sd-build/CMakeFiles/sd.dir/src/sd/ExFatLib/upcase.cpp.obj
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/sd-build/CMakeFiles/sd.dir/build.make _deps/sd-build/CMakeFiles/sd.dir/src/sd/ExFatLib/upcase.cpp.obj
 .PHONY : src/sd/ExFatLib/upcase.cpp.obj
 
 src/sd/ExFatLib/upcase.i: src/sd/ExFatLib/upcase.cpp.i
@@ -311,7 +311,7 @@ src/sd/ExFatLib/upcase.i: src/sd/ExFatLib/upcase.cpp.i
 
 # target to preprocess a source file
 src/sd/ExFatLib/upcase.cpp.i:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/sd-build/CMakeFiles/sd.dir/build.make _deps/sd-build/CMakeFiles/sd.dir/src/sd/ExFatLib/upcase.cpp.i
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/sd-build/CMakeFiles/sd.dir/build.make _deps/sd-build/CMakeFiles/sd.dir/src/sd/ExFatLib/upcase.cpp.i
 .PHONY : src/sd/ExFatLib/upcase.cpp.i
 
 src/sd/ExFatLib/upcase.s: src/sd/ExFatLib/upcase.cpp.s
@@ -319,7 +319,7 @@ src/sd/ExFatLib/upcase.s: src/sd/ExFatLib/upcase.cpp.s
 
 # target to generate assembly for a file
 src/sd/ExFatLib/upcase.cpp.s:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/sd-build/CMakeFiles/sd.dir/build.make _deps/sd-build/CMakeFiles/sd.dir/src/sd/ExFatLib/upcase.cpp.s
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/sd-build/CMakeFiles/sd.dir/build.make _deps/sd-build/CMakeFiles/sd.dir/src/sd/ExFatLib/upcase.cpp.s
 .PHONY : src/sd/ExFatLib/upcase.cpp.s
 
 src/sd/FatLib/FatDbg.obj: src/sd/FatLib/FatDbg.cpp.obj
@@ -327,7 +327,7 @@ src/sd/FatLib/FatDbg.obj: src/sd/FatLib/FatDbg.cpp.obj
 
 # target to build an object file
 src/sd/FatLib/FatDbg.cpp.obj:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/sd-build/CMakeFiles/sd.dir/build.make _deps/sd-build/CMakeFiles/sd.dir/src/sd/FatLib/FatDbg.cpp.obj
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/sd-build/CMakeFiles/sd.dir/build.make _deps/sd-build/CMakeFiles/sd.dir/src/sd/FatLib/FatDbg.cpp.obj
 .PHONY : src/sd/FatLib/FatDbg.cpp.obj
 
 src/sd/FatLib/FatDbg.i: src/sd/FatLib/FatDbg.cpp.i
@@ -335,7 +335,7 @@ src/sd/FatLib/FatDbg.i: src/sd/FatLib/FatDbg.cpp.i
 
 # target to preprocess a source file
 src/sd/FatLib/FatDbg.cpp.i:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/sd-build/CMakeFiles/sd.dir/build.make _deps/sd-build/CMakeFiles/sd.dir/src/sd/FatLib/FatDbg.cpp.i
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/sd-build/CMakeFiles/sd.dir/build.make _deps/sd-build/CMakeFiles/sd.dir/src/sd/FatLib/FatDbg.cpp.i
 .PHONY : src/sd/FatLib/FatDbg.cpp.i
 
 src/sd/FatLib/FatDbg.s: src/sd/FatLib/FatDbg.cpp.s
@@ -343,7 +343,7 @@ src/sd/FatLib/FatDbg.s: src/sd/FatLib/FatDbg.cpp.s
 
 # target to generate assembly for a file
 src/sd/FatLib/FatDbg.cpp.s:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/sd-build/CMakeFiles/sd.dir/build.make _deps/sd-build/CMakeFiles/sd.dir/src/sd/FatLib/FatDbg.cpp.s
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/sd-build/CMakeFiles/sd.dir/build.make _deps/sd-build/CMakeFiles/sd.dir/src/sd/FatLib/FatDbg.cpp.s
 .PHONY : src/sd/FatLib/FatDbg.cpp.s
 
 src/sd/FatLib/FatFile.obj: src/sd/FatLib/FatFile.cpp.obj
@@ -351,7 +351,7 @@ src/sd/FatLib/FatFile.obj: src/sd/FatLib/FatFile.cpp.obj
 
 # target to build an object file
 src/sd/FatLib/FatFile.cpp.obj:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/sd-build/CMakeFiles/sd.dir/build.make _deps/sd-build/CMakeFiles/sd.dir/src/sd/FatLib/FatFile.cpp.obj
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/sd-build/CMakeFiles/sd.dir/build.make _deps/sd-build/CMakeFiles/sd.dir/src/sd/FatLib/FatFile.cpp.obj
 .PHONY : src/sd/FatLib/FatFile.cpp.obj
 
 src/sd/FatLib/FatFile.i: src/sd/FatLib/FatFile.cpp.i
@@ -359,7 +359,7 @@ src/sd/FatLib/FatFile.i: src/sd/FatLib/FatFile.cpp.i
 
 # target to preprocess a source file
 src/sd/FatLib/FatFile.cpp.i:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/sd-build/CMakeFiles/sd.dir/build.make _deps/sd-build/CMakeFiles/sd.dir/src/sd/FatLib/FatFile.cpp.i
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/sd-build/CMakeFiles/sd.dir/build.make _deps/sd-build/CMakeFiles/sd.dir/src/sd/FatLib/FatFile.cpp.i
 .PHONY : src/sd/FatLib/FatFile.cpp.i
 
 src/sd/FatLib/FatFile.s: src/sd/FatLib/FatFile.cpp.s
@@ -367,7 +367,7 @@ src/sd/FatLib/FatFile.s: src/sd/FatLib/FatFile.cpp.s
 
 # target to generate assembly for a file
 src/sd/FatLib/FatFile.cpp.s:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/sd-build/CMakeFiles/sd.dir/build.make _deps/sd-build/CMakeFiles/sd.dir/src/sd/FatLib/FatFile.cpp.s
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/sd-build/CMakeFiles/sd.dir/build.make _deps/sd-build/CMakeFiles/sd.dir/src/sd/FatLib/FatFile.cpp.s
 .PHONY : src/sd/FatLib/FatFile.cpp.s
 
 src/sd/FatLib/FatFileLFN.obj: src/sd/FatLib/FatFileLFN.cpp.obj
@@ -375,7 +375,7 @@ src/sd/FatLib/FatFileLFN.obj: src/sd/FatLib/FatFileLFN.cpp.obj
 
 # target to build an object file
 src/sd/FatLib/FatFileLFN.cpp.obj:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/sd-build/CMakeFiles/sd.dir/build.make _deps/sd-build/CMakeFiles/sd.dir/src/sd/FatLib/FatFileLFN.cpp.obj
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/sd-build/CMakeFiles/sd.dir/build.make _deps/sd-build/CMakeFiles/sd.dir/src/sd/FatLib/FatFileLFN.cpp.obj
 .PHONY : src/sd/FatLib/FatFileLFN.cpp.obj
 
 src/sd/FatLib/FatFileLFN.i: src/sd/FatLib/FatFileLFN.cpp.i
@@ -383,7 +383,7 @@ src/sd/FatLib/FatFileLFN.i: src/sd/FatLib/FatFileLFN.cpp.i
 
 # target to preprocess a source file
 src/sd/FatLib/FatFileLFN.cpp.i:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/sd-build/CMakeFiles/sd.dir/build.make _deps/sd-build/CMakeFiles/sd.dir/src/sd/FatLib/FatFileLFN.cpp.i
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/sd-build/CMakeFiles/sd.dir/build.make _deps/sd-build/CMakeFiles/sd.dir/src/sd/FatLib/FatFileLFN.cpp.i
 .PHONY : src/sd/FatLib/FatFileLFN.cpp.i
 
 src/sd/FatLib/FatFileLFN.s: src/sd/FatLib/FatFileLFN.cpp.s
@@ -391,7 +391,7 @@ src/sd/FatLib/FatFileLFN.s: src/sd/FatLib/FatFileLFN.cpp.s
 
 # target to generate assembly for a file
 src/sd/FatLib/FatFileLFN.cpp.s:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/sd-build/CMakeFiles/sd.dir/build.make _deps/sd-build/CMakeFiles/sd.dir/src/sd/FatLib/FatFileLFN.cpp.s
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/sd-build/CMakeFiles/sd.dir/build.make _deps/sd-build/CMakeFiles/sd.dir/src/sd/FatLib/FatFileLFN.cpp.s
 .PHONY : src/sd/FatLib/FatFileLFN.cpp.s
 
 src/sd/FatLib/FatFilePrint.obj: src/sd/FatLib/FatFilePrint.cpp.obj
@@ -399,7 +399,7 @@ src/sd/FatLib/FatFilePrint.obj: src/sd/FatLib/FatFilePrint.cpp.obj
 
 # target to build an object file
 src/sd/FatLib/FatFilePrint.cpp.obj:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/sd-build/CMakeFiles/sd.dir/build.make _deps/sd-build/CMakeFiles/sd.dir/src/sd/FatLib/FatFilePrint.cpp.obj
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/sd-build/CMakeFiles/sd.dir/build.make _deps/sd-build/CMakeFiles/sd.dir/src/sd/FatLib/FatFilePrint.cpp.obj
 .PHONY : src/sd/FatLib/FatFilePrint.cpp.obj
 
 src/sd/FatLib/FatFilePrint.i: src/sd/FatLib/FatFilePrint.cpp.i
@@ -407,7 +407,7 @@ src/sd/FatLib/FatFilePrint.i: src/sd/FatLib/FatFilePrint.cpp.i
 
 # target to preprocess a source file
 src/sd/FatLib/FatFilePrint.cpp.i:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/sd-build/CMakeFiles/sd.dir/build.make _deps/sd-build/CMakeFiles/sd.dir/src/sd/FatLib/FatFilePrint.cpp.i
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/sd-build/CMakeFiles/sd.dir/build.make _deps/sd-build/CMakeFiles/sd.dir/src/sd/FatLib/FatFilePrint.cpp.i
 .PHONY : src/sd/FatLib/FatFilePrint.cpp.i
 
 src/sd/FatLib/FatFilePrint.s: src/sd/FatLib/FatFilePrint.cpp.s
@@ -415,7 +415,7 @@ src/sd/FatLib/FatFilePrint.s: src/sd/FatLib/FatFilePrint.cpp.s
 
 # target to generate assembly for a file
 src/sd/FatLib/FatFilePrint.cpp.s:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/sd-build/CMakeFiles/sd.dir/build.make _deps/sd-build/CMakeFiles/sd.dir/src/sd/FatLib/FatFilePrint.cpp.s
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/sd-build/CMakeFiles/sd.dir/build.make _deps/sd-build/CMakeFiles/sd.dir/src/sd/FatLib/FatFilePrint.cpp.s
 .PHONY : src/sd/FatLib/FatFilePrint.cpp.s
 
 src/sd/FatLib/FatFileSFN.obj: src/sd/FatLib/FatFileSFN.cpp.obj
@@ -423,7 +423,7 @@ src/sd/FatLib/FatFileSFN.obj: src/sd/FatLib/FatFileSFN.cpp.obj
 
 # target to build an object file
 src/sd/FatLib/FatFileSFN.cpp.obj:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/sd-build/CMakeFiles/sd.dir/build.make _deps/sd-build/CMakeFiles/sd.dir/src/sd/FatLib/FatFileSFN.cpp.obj
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/sd-build/CMakeFiles/sd.dir/build.make _deps/sd-build/CMakeFiles/sd.dir/src/sd/FatLib/FatFileSFN.cpp.obj
 .PHONY : src/sd/FatLib/FatFileSFN.cpp.obj
 
 src/sd/FatLib/FatFileSFN.i: src/sd/FatLib/FatFileSFN.cpp.i
@@ -431,7 +431,7 @@ src/sd/FatLib/FatFileSFN.i: src/sd/FatLib/FatFileSFN.cpp.i
 
 # target to preprocess a source file
 src/sd/FatLib/FatFileSFN.cpp.i:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/sd-build/CMakeFiles/sd.dir/build.make _deps/sd-build/CMakeFiles/sd.dir/src/sd/FatLib/FatFileSFN.cpp.i
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/sd-build/CMakeFiles/sd.dir/build.make _deps/sd-build/CMakeFiles/sd.dir/src/sd/FatLib/FatFileSFN.cpp.i
 .PHONY : src/sd/FatLib/FatFileSFN.cpp.i
 
 src/sd/FatLib/FatFileSFN.s: src/sd/FatLib/FatFileSFN.cpp.s
@@ -439,7 +439,7 @@ src/sd/FatLib/FatFileSFN.s: src/sd/FatLib/FatFileSFN.cpp.s
 
 # target to generate assembly for a file
 src/sd/FatLib/FatFileSFN.cpp.s:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/sd-build/CMakeFiles/sd.dir/build.make _deps/sd-build/CMakeFiles/sd.dir/src/sd/FatLib/FatFileSFN.cpp.s
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/sd-build/CMakeFiles/sd.dir/build.make _deps/sd-build/CMakeFiles/sd.dir/src/sd/FatLib/FatFileSFN.cpp.s
 .PHONY : src/sd/FatLib/FatFileSFN.cpp.s
 
 src/sd/FatLib/FatFormatter.obj: src/sd/FatLib/FatFormatter.cpp.obj
@@ -447,7 +447,7 @@ src/sd/FatLib/FatFormatter.obj: src/sd/FatLib/FatFormatter.cpp.obj
 
 # target to build an object file
 src/sd/FatLib/FatFormatter.cpp.obj:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/sd-build/CMakeFiles/sd.dir/build.make _deps/sd-build/CMakeFiles/sd.dir/src/sd/FatLib/FatFormatter.cpp.obj
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/sd-build/CMakeFiles/sd.dir/build.make _deps/sd-build/CMakeFiles/sd.dir/src/sd/FatLib/FatFormatter.cpp.obj
 .PHONY : src/sd/FatLib/FatFormatter.cpp.obj
 
 src/sd/FatLib/FatFormatter.i: src/sd/FatLib/FatFormatter.cpp.i
@@ -455,7 +455,7 @@ src/sd/FatLib/FatFormatter.i: src/sd/FatLib/FatFormatter.cpp.i
 
 # target to preprocess a source file
 src/sd/FatLib/FatFormatter.cpp.i:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/sd-build/CMakeFiles/sd.dir/build.make _deps/sd-build/CMakeFiles/sd.dir/src/sd/FatLib/FatFormatter.cpp.i
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/sd-build/CMakeFiles/sd.dir/build.make _deps/sd-build/CMakeFiles/sd.dir/src/sd/FatLib/FatFormatter.cpp.i
 .PHONY : src/sd/FatLib/FatFormatter.cpp.i
 
 src/sd/FatLib/FatFormatter.s: src/sd/FatLib/FatFormatter.cpp.s
@@ -463,7 +463,7 @@ src/sd/FatLib/FatFormatter.s: src/sd/FatLib/FatFormatter.cpp.s
 
 # target to generate assembly for a file
 src/sd/FatLib/FatFormatter.cpp.s:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/sd-build/CMakeFiles/sd.dir/build.make _deps/sd-build/CMakeFiles/sd.dir/src/sd/FatLib/FatFormatter.cpp.s
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/sd-build/CMakeFiles/sd.dir/build.make _deps/sd-build/CMakeFiles/sd.dir/src/sd/FatLib/FatFormatter.cpp.s
 .PHONY : src/sd/FatLib/FatFormatter.cpp.s
 
 src/sd/FatLib/FatPartition.obj: src/sd/FatLib/FatPartition.cpp.obj
@@ -471,7 +471,7 @@ src/sd/FatLib/FatPartition.obj: src/sd/FatLib/FatPartition.cpp.obj
 
 # target to build an object file
 src/sd/FatLib/FatPartition.cpp.obj:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/sd-build/CMakeFiles/sd.dir/build.make _deps/sd-build/CMakeFiles/sd.dir/src/sd/FatLib/FatPartition.cpp.obj
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/sd-build/CMakeFiles/sd.dir/build.make _deps/sd-build/CMakeFiles/sd.dir/src/sd/FatLib/FatPartition.cpp.obj
 .PHONY : src/sd/FatLib/FatPartition.cpp.obj
 
 src/sd/FatLib/FatPartition.i: src/sd/FatLib/FatPartition.cpp.i
@@ -479,7 +479,7 @@ src/sd/FatLib/FatPartition.i: src/sd/FatLib/FatPartition.cpp.i
 
 # target to preprocess a source file
 src/sd/FatLib/FatPartition.cpp.i:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/sd-build/CMakeFiles/sd.dir/build.make _deps/sd-build/CMakeFiles/sd.dir/src/sd/FatLib/FatPartition.cpp.i
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/sd-build/CMakeFiles/sd.dir/build.make _deps/sd-build/CMakeFiles/sd.dir/src/sd/FatLib/FatPartition.cpp.i
 .PHONY : src/sd/FatLib/FatPartition.cpp.i
 
 src/sd/FatLib/FatPartition.s: src/sd/FatLib/FatPartition.cpp.s
@@ -487,7 +487,7 @@ src/sd/FatLib/FatPartition.s: src/sd/FatLib/FatPartition.cpp.s
 
 # target to generate assembly for a file
 src/sd/FatLib/FatPartition.cpp.s:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/sd-build/CMakeFiles/sd.dir/build.make _deps/sd-build/CMakeFiles/sd.dir/src/sd/FatLib/FatPartition.cpp.s
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/sd-build/CMakeFiles/sd.dir/build.make _deps/sd-build/CMakeFiles/sd.dir/src/sd/FatLib/FatPartition.cpp.s
 .PHONY : src/sd/FatLib/FatPartition.cpp.s
 
 src/sd/FatLib/FatVolume.obj: src/sd/FatLib/FatVolume.cpp.obj
@@ -495,7 +495,7 @@ src/sd/FatLib/FatVolume.obj: src/sd/FatLib/FatVolume.cpp.obj
 
 # target to build an object file
 src/sd/FatLib/FatVolume.cpp.obj:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/sd-build/CMakeFiles/sd.dir/build.make _deps/sd-build/CMakeFiles/sd.dir/src/sd/FatLib/FatVolume.cpp.obj
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/sd-build/CMakeFiles/sd.dir/build.make _deps/sd-build/CMakeFiles/sd.dir/src/sd/FatLib/FatVolume.cpp.obj
 .PHONY : src/sd/FatLib/FatVolume.cpp.obj
 
 src/sd/FatLib/FatVolume.i: src/sd/FatLib/FatVolume.cpp.i
@@ -503,7 +503,7 @@ src/sd/FatLib/FatVolume.i: src/sd/FatLib/FatVolume.cpp.i
 
 # target to preprocess a source file
 src/sd/FatLib/FatVolume.cpp.i:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/sd-build/CMakeFiles/sd.dir/build.make _deps/sd-build/CMakeFiles/sd.dir/src/sd/FatLib/FatVolume.cpp.i
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/sd-build/CMakeFiles/sd.dir/build.make _deps/sd-build/CMakeFiles/sd.dir/src/sd/FatLib/FatVolume.cpp.i
 .PHONY : src/sd/FatLib/FatVolume.cpp.i
 
 src/sd/FatLib/FatVolume.s: src/sd/FatLib/FatVolume.cpp.s
@@ -511,7 +511,7 @@ src/sd/FatLib/FatVolume.s: src/sd/FatLib/FatVolume.cpp.s
 
 # target to generate assembly for a file
 src/sd/FatLib/FatVolume.cpp.s:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/sd-build/CMakeFiles/sd.dir/build.make _deps/sd-build/CMakeFiles/sd.dir/src/sd/FatLib/FatVolume.cpp.s
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/sd-build/CMakeFiles/sd.dir/build.make _deps/sd-build/CMakeFiles/sd.dir/src/sd/FatLib/FatVolume.cpp.s
 .PHONY : src/sd/FatLib/FatVolume.cpp.s
 
 src/sd/FreeStack.obj: src/sd/FreeStack.cpp.obj
@@ -519,7 +519,7 @@ src/sd/FreeStack.obj: src/sd/FreeStack.cpp.obj
 
 # target to build an object file
 src/sd/FreeStack.cpp.obj:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/sd-build/CMakeFiles/sd.dir/build.make _deps/sd-build/CMakeFiles/sd.dir/src/sd/FreeStack.cpp.obj
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/sd-build/CMakeFiles/sd.dir/build.make _deps/sd-build/CMakeFiles/sd.dir/src/sd/FreeStack.cpp.obj
 .PHONY : src/sd/FreeStack.cpp.obj
 
 src/sd/FreeStack.i: src/sd/FreeStack.cpp.i
@@ -527,7 +527,7 @@ src/sd/FreeStack.i: src/sd/FreeStack.cpp.i
 
 # target to preprocess a source file
 src/sd/FreeStack.cpp.i:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/sd-build/CMakeFiles/sd.dir/build.make _deps/sd-build/CMakeFiles/sd.dir/src/sd/FreeStack.cpp.i
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/sd-build/CMakeFiles/sd.dir/build.make _deps/sd-build/CMakeFiles/sd.dir/src/sd/FreeStack.cpp.i
 .PHONY : src/sd/FreeStack.cpp.i
 
 src/sd/FreeStack.s: src/sd/FreeStack.cpp.s
@@ -535,7 +535,7 @@ src/sd/FreeStack.s: src/sd/FreeStack.cpp.s
 
 # target to generate assembly for a file
 src/sd/FreeStack.cpp.s:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/sd-build/CMakeFiles/sd.dir/build.make _deps/sd-build/CMakeFiles/sd.dir/src/sd/FreeStack.cpp.s
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/sd-build/CMakeFiles/sd.dir/build.make _deps/sd-build/CMakeFiles/sd.dir/src/sd/FreeStack.cpp.s
 .PHONY : src/sd/FreeStack.cpp.s
 
 src/sd/MinimumSerial.obj: src/sd/MinimumSerial.cpp.obj
@@ -543,7 +543,7 @@ src/sd/MinimumSerial.obj: src/sd/MinimumSerial.cpp.obj
 
 # target to build an object file
 src/sd/MinimumSerial.cpp.obj:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/sd-build/CMakeFiles/sd.dir/build.make _deps/sd-build/CMakeFiles/sd.dir/src/sd/MinimumSerial.cpp.obj
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/sd-build/CMakeFiles/sd.dir/build.make _deps/sd-build/CMakeFiles/sd.dir/src/sd/MinimumSerial.cpp.obj
 .PHONY : src/sd/MinimumSerial.cpp.obj
 
 src/sd/MinimumSerial.i: src/sd/MinimumSerial.cpp.i
@@ -551,7 +551,7 @@ src/sd/MinimumSerial.i: src/sd/MinimumSerial.cpp.i
 
 # target to preprocess a source file
 src/sd/MinimumSerial.cpp.i:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/sd-build/CMakeFiles/sd.dir/build.make _deps/sd-build/CMakeFiles/sd.dir/src/sd/MinimumSerial.cpp.i
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/sd-build/CMakeFiles/sd.dir/build.make _deps/sd-build/CMakeFiles/sd.dir/src/sd/MinimumSerial.cpp.i
 .PHONY : src/sd/MinimumSerial.cpp.i
 
 src/sd/MinimumSerial.s: src/sd/MinimumSerial.cpp.s
@@ -559,7 +559,7 @@ src/sd/MinimumSerial.s: src/sd/MinimumSerial.cpp.s
 
 # target to generate assembly for a file
 src/sd/MinimumSerial.cpp.s:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/sd-build/CMakeFiles/sd.dir/build.make _deps/sd-build/CMakeFiles/sd.dir/src/sd/MinimumSerial.cpp.s
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/sd-build/CMakeFiles/sd.dir/build.make _deps/sd-build/CMakeFiles/sd.dir/src/sd/MinimumSerial.cpp.s
 .PHONY : src/sd/MinimumSerial.cpp.s
 
 src/sd/SdCard/SdCardInfo.obj: src/sd/SdCard/SdCardInfo.cpp.obj
@@ -567,7 +567,7 @@ src/sd/SdCard/SdCardInfo.obj: src/sd/SdCard/SdCardInfo.cpp.obj
 
 # target to build an object file
 src/sd/SdCard/SdCardInfo.cpp.obj:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/sd-build/CMakeFiles/sd.dir/build.make _deps/sd-build/CMakeFiles/sd.dir/src/sd/SdCard/SdCardInfo.cpp.obj
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/sd-build/CMakeFiles/sd.dir/build.make _deps/sd-build/CMakeFiles/sd.dir/src/sd/SdCard/SdCardInfo.cpp.obj
 .PHONY : src/sd/SdCard/SdCardInfo.cpp.obj
 
 src/sd/SdCard/SdCardInfo.i: src/sd/SdCard/SdCardInfo.cpp.i
@@ -575,7 +575,7 @@ src/sd/SdCard/SdCardInfo.i: src/sd/SdCard/SdCardInfo.cpp.i
 
 # target to preprocess a source file
 src/sd/SdCard/SdCardInfo.cpp.i:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/sd-build/CMakeFiles/sd.dir/build.make _deps/sd-build/CMakeFiles/sd.dir/src/sd/SdCard/SdCardInfo.cpp.i
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/sd-build/CMakeFiles/sd.dir/build.make _deps/sd-build/CMakeFiles/sd.dir/src/sd/SdCard/SdCardInfo.cpp.i
 .PHONY : src/sd/SdCard/SdCardInfo.cpp.i
 
 src/sd/SdCard/SdCardInfo.s: src/sd/SdCard/SdCardInfo.cpp.s
@@ -583,7 +583,7 @@ src/sd/SdCard/SdCardInfo.s: src/sd/SdCard/SdCardInfo.cpp.s
 
 # target to generate assembly for a file
 src/sd/SdCard/SdCardInfo.cpp.s:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/sd-build/CMakeFiles/sd.dir/build.make _deps/sd-build/CMakeFiles/sd.dir/src/sd/SdCard/SdCardInfo.cpp.s
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/sd-build/CMakeFiles/sd.dir/build.make _deps/sd-build/CMakeFiles/sd.dir/src/sd/SdCard/SdCardInfo.cpp.s
 .PHONY : src/sd/SdCard/SdCardInfo.cpp.s
 
 src/sd/SdCard/SdSpiCard.obj: src/sd/SdCard/SdSpiCard.cpp.obj
@@ -591,7 +591,7 @@ src/sd/SdCard/SdSpiCard.obj: src/sd/SdCard/SdSpiCard.cpp.obj
 
 # target to build an object file
 src/sd/SdCard/SdSpiCard.cpp.obj:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/sd-build/CMakeFiles/sd.dir/build.make _deps/sd-build/CMakeFiles/sd.dir/src/sd/SdCard/SdSpiCard.cpp.obj
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/sd-build/CMakeFiles/sd.dir/build.make _deps/sd-build/CMakeFiles/sd.dir/src/sd/SdCard/SdSpiCard.cpp.obj
 .PHONY : src/sd/SdCard/SdSpiCard.cpp.obj
 
 src/sd/SdCard/SdSpiCard.i: src/sd/SdCard/SdSpiCard.cpp.i
@@ -599,7 +599,7 @@ src/sd/SdCard/SdSpiCard.i: src/sd/SdCard/SdSpiCard.cpp.i
 
 # target to preprocess a source file
 src/sd/SdCard/SdSpiCard.cpp.i:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/sd-build/CMakeFiles/sd.dir/build.make _deps/sd-build/CMakeFiles/sd.dir/src/sd/SdCard/SdSpiCard.cpp.i
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/sd-build/CMakeFiles/sd.dir/build.make _deps/sd-build/CMakeFiles/sd.dir/src/sd/SdCard/SdSpiCard.cpp.i
 .PHONY : src/sd/SdCard/SdSpiCard.cpp.i
 
 src/sd/SdCard/SdSpiCard.s: src/sd/SdCard/SdSpiCard.cpp.s
@@ -607,7 +607,7 @@ src/sd/SdCard/SdSpiCard.s: src/sd/SdCard/SdSpiCard.cpp.s
 
 # target to generate assembly for a file
 src/sd/SdCard/SdSpiCard.cpp.s:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/sd-build/CMakeFiles/sd.dir/build.make _deps/sd-build/CMakeFiles/sd.dir/src/sd/SdCard/SdSpiCard.cpp.s
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/sd-build/CMakeFiles/sd.dir/build.make _deps/sd-build/CMakeFiles/sd.dir/src/sd/SdCard/SdSpiCard.cpp.s
 .PHONY : src/sd/SdCard/SdSpiCard.cpp.s
 
 src/sd/SdCard/SdioTeensy.obj: src/sd/SdCard/SdioTeensy.cpp.obj
@@ -615,7 +615,7 @@ src/sd/SdCard/SdioTeensy.obj: src/sd/SdCard/SdioTeensy.cpp.obj
 
 # target to build an object file
 src/sd/SdCard/SdioTeensy.cpp.obj:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/sd-build/CMakeFiles/sd.dir/build.make _deps/sd-build/CMakeFiles/sd.dir/src/sd/SdCard/SdioTeensy.cpp.obj
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/sd-build/CMakeFiles/sd.dir/build.make _deps/sd-build/CMakeFiles/sd.dir/src/sd/SdCard/SdioTeensy.cpp.obj
 .PHONY : src/sd/SdCard/SdioTeensy.cpp.obj
 
 src/sd/SdCard/SdioTeensy.i: src/sd/SdCard/SdioTeensy.cpp.i
@@ -623,7 +623,7 @@ src/sd/SdCard/SdioTeensy.i: src/sd/SdCard/SdioTeensy.cpp.i
 
 # target to preprocess a source file
 src/sd/SdCard/SdioTeensy.cpp.i:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/sd-build/CMakeFiles/sd.dir/build.make _deps/sd-build/CMakeFiles/sd.dir/src/sd/SdCard/SdioTeensy.cpp.i
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/sd-build/CMakeFiles/sd.dir/build.make _deps/sd-build/CMakeFiles/sd.dir/src/sd/SdCard/SdioTeensy.cpp.i
 .PHONY : src/sd/SdCard/SdioTeensy.cpp.i
 
 src/sd/SdCard/SdioTeensy.s: src/sd/SdCard/SdioTeensy.cpp.s
@@ -631,7 +631,7 @@ src/sd/SdCard/SdioTeensy.s: src/sd/SdCard/SdioTeensy.cpp.s
 
 # target to generate assembly for a file
 src/sd/SdCard/SdioTeensy.cpp.s:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/sd-build/CMakeFiles/sd.dir/build.make _deps/sd-build/CMakeFiles/sd.dir/src/sd/SdCard/SdioTeensy.cpp.s
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/sd-build/CMakeFiles/sd.dir/build.make _deps/sd-build/CMakeFiles/sd.dir/src/sd/SdCard/SdioTeensy.cpp.s
 .PHONY : src/sd/SdCard/SdioTeensy.cpp.s
 
 src/sd/SpiDriver/SdSpiChipSelect.obj: src/sd/SpiDriver/SdSpiChipSelect.cpp.obj
@@ -639,7 +639,7 @@ src/sd/SpiDriver/SdSpiChipSelect.obj: src/sd/SpiDriver/SdSpiChipSelect.cpp.obj
 
 # target to build an object file
 src/sd/SpiDriver/SdSpiChipSelect.cpp.obj:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/sd-build/CMakeFiles/sd.dir/build.make _deps/sd-build/CMakeFiles/sd.dir/src/sd/SpiDriver/SdSpiChipSelect.cpp.obj
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/sd-build/CMakeFiles/sd.dir/build.make _deps/sd-build/CMakeFiles/sd.dir/src/sd/SpiDriver/SdSpiChipSelect.cpp.obj
 .PHONY : src/sd/SpiDriver/SdSpiChipSelect.cpp.obj
 
 src/sd/SpiDriver/SdSpiChipSelect.i: src/sd/SpiDriver/SdSpiChipSelect.cpp.i
@@ -647,7 +647,7 @@ src/sd/SpiDriver/SdSpiChipSelect.i: src/sd/SpiDriver/SdSpiChipSelect.cpp.i
 
 # target to preprocess a source file
 src/sd/SpiDriver/SdSpiChipSelect.cpp.i:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/sd-build/CMakeFiles/sd.dir/build.make _deps/sd-build/CMakeFiles/sd.dir/src/sd/SpiDriver/SdSpiChipSelect.cpp.i
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/sd-build/CMakeFiles/sd.dir/build.make _deps/sd-build/CMakeFiles/sd.dir/src/sd/SpiDriver/SdSpiChipSelect.cpp.i
 .PHONY : src/sd/SpiDriver/SdSpiChipSelect.cpp.i
 
 src/sd/SpiDriver/SdSpiChipSelect.s: src/sd/SpiDriver/SdSpiChipSelect.cpp.s
@@ -655,7 +655,7 @@ src/sd/SpiDriver/SdSpiChipSelect.s: src/sd/SpiDriver/SdSpiChipSelect.cpp.s
 
 # target to generate assembly for a file
 src/sd/SpiDriver/SdSpiChipSelect.cpp.s:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/sd-build/CMakeFiles/sd.dir/build.make _deps/sd-build/CMakeFiles/sd.dir/src/sd/SpiDriver/SdSpiChipSelect.cpp.s
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/sd-build/CMakeFiles/sd.dir/build.make _deps/sd-build/CMakeFiles/sd.dir/src/sd/SpiDriver/SdSpiChipSelect.cpp.s
 .PHONY : src/sd/SpiDriver/SdSpiChipSelect.cpp.s
 
 src/sd/SpiDriver/SdSpiTeensy3.obj: src/sd/SpiDriver/SdSpiTeensy3.cpp.obj
@@ -663,7 +663,7 @@ src/sd/SpiDriver/SdSpiTeensy3.obj: src/sd/SpiDriver/SdSpiTeensy3.cpp.obj
 
 # target to build an object file
 src/sd/SpiDriver/SdSpiTeensy3.cpp.obj:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/sd-build/CMakeFiles/sd.dir/build.make _deps/sd-build/CMakeFiles/sd.dir/src/sd/SpiDriver/SdSpiTeensy3.cpp.obj
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/sd-build/CMakeFiles/sd.dir/build.make _deps/sd-build/CMakeFiles/sd.dir/src/sd/SpiDriver/SdSpiTeensy3.cpp.obj
 .PHONY : src/sd/SpiDriver/SdSpiTeensy3.cpp.obj
 
 src/sd/SpiDriver/SdSpiTeensy3.i: src/sd/SpiDriver/SdSpiTeensy3.cpp.i
@@ -671,7 +671,7 @@ src/sd/SpiDriver/SdSpiTeensy3.i: src/sd/SpiDriver/SdSpiTeensy3.cpp.i
 
 # target to preprocess a source file
 src/sd/SpiDriver/SdSpiTeensy3.cpp.i:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/sd-build/CMakeFiles/sd.dir/build.make _deps/sd-build/CMakeFiles/sd.dir/src/sd/SpiDriver/SdSpiTeensy3.cpp.i
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/sd-build/CMakeFiles/sd.dir/build.make _deps/sd-build/CMakeFiles/sd.dir/src/sd/SpiDriver/SdSpiTeensy3.cpp.i
 .PHONY : src/sd/SpiDriver/SdSpiTeensy3.cpp.i
 
 src/sd/SpiDriver/SdSpiTeensy3.s: src/sd/SpiDriver/SdSpiTeensy3.cpp.s
@@ -679,7 +679,7 @@ src/sd/SpiDriver/SdSpiTeensy3.s: src/sd/SpiDriver/SdSpiTeensy3.cpp.s
 
 # target to generate assembly for a file
 src/sd/SpiDriver/SdSpiTeensy3.cpp.s:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/sd-build/CMakeFiles/sd.dir/build.make _deps/sd-build/CMakeFiles/sd.dir/src/sd/SpiDriver/SdSpiTeensy3.cpp.s
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/sd-build/CMakeFiles/sd.dir/build.make _deps/sd-build/CMakeFiles/sd.dir/src/sd/SpiDriver/SdSpiTeensy3.cpp.s
 .PHONY : src/sd/SpiDriver/SdSpiTeensy3.cpp.s
 
 src/sd/common/FmtNumber.obj: src/sd/common/FmtNumber.cpp.obj
@@ -687,7 +687,7 @@ src/sd/common/FmtNumber.obj: src/sd/common/FmtNumber.cpp.obj
 
 # target to build an object file
 src/sd/common/FmtNumber.cpp.obj:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/sd-build/CMakeFiles/sd.dir/build.make _deps/sd-build/CMakeFiles/sd.dir/src/sd/common/FmtNumber.cpp.obj
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/sd-build/CMakeFiles/sd.dir/build.make _deps/sd-build/CMakeFiles/sd.dir/src/sd/common/FmtNumber.cpp.obj
 .PHONY : src/sd/common/FmtNumber.cpp.obj
 
 src/sd/common/FmtNumber.i: src/sd/common/FmtNumber.cpp.i
@@ -695,7 +695,7 @@ src/sd/common/FmtNumber.i: src/sd/common/FmtNumber.cpp.i
 
 # target to preprocess a source file
 src/sd/common/FmtNumber.cpp.i:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/sd-build/CMakeFiles/sd.dir/build.make _deps/sd-build/CMakeFiles/sd.dir/src/sd/common/FmtNumber.cpp.i
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/sd-build/CMakeFiles/sd.dir/build.make _deps/sd-build/CMakeFiles/sd.dir/src/sd/common/FmtNumber.cpp.i
 .PHONY : src/sd/common/FmtNumber.cpp.i
 
 src/sd/common/FmtNumber.s: src/sd/common/FmtNumber.cpp.s
@@ -703,7 +703,7 @@ src/sd/common/FmtNumber.s: src/sd/common/FmtNumber.cpp.s
 
 # target to generate assembly for a file
 src/sd/common/FmtNumber.cpp.s:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/sd-build/CMakeFiles/sd.dir/build.make _deps/sd-build/CMakeFiles/sd.dir/src/sd/common/FmtNumber.cpp.s
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/sd-build/CMakeFiles/sd.dir/build.make _deps/sd-build/CMakeFiles/sd.dir/src/sd/common/FmtNumber.cpp.s
 .PHONY : src/sd/common/FmtNumber.cpp.s
 
 src/sd/common/FsCache.obj: src/sd/common/FsCache.cpp.obj
@@ -711,7 +711,7 @@ src/sd/common/FsCache.obj: src/sd/common/FsCache.cpp.obj
 
 # target to build an object file
 src/sd/common/FsCache.cpp.obj:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/sd-build/CMakeFiles/sd.dir/build.make _deps/sd-build/CMakeFiles/sd.dir/src/sd/common/FsCache.cpp.obj
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/sd-build/CMakeFiles/sd.dir/build.make _deps/sd-build/CMakeFiles/sd.dir/src/sd/common/FsCache.cpp.obj
 .PHONY : src/sd/common/FsCache.cpp.obj
 
 src/sd/common/FsCache.i: src/sd/common/FsCache.cpp.i
@@ -719,7 +719,7 @@ src/sd/common/FsCache.i: src/sd/common/FsCache.cpp.i
 
 # target to preprocess a source file
 src/sd/common/FsCache.cpp.i:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/sd-build/CMakeFiles/sd.dir/build.make _deps/sd-build/CMakeFiles/sd.dir/src/sd/common/FsCache.cpp.i
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/sd-build/CMakeFiles/sd.dir/build.make _deps/sd-build/CMakeFiles/sd.dir/src/sd/common/FsCache.cpp.i
 .PHONY : src/sd/common/FsCache.cpp.i
 
 src/sd/common/FsCache.s: src/sd/common/FsCache.cpp.s
@@ -727,7 +727,7 @@ src/sd/common/FsCache.s: src/sd/common/FsCache.cpp.s
 
 # target to generate assembly for a file
 src/sd/common/FsCache.cpp.s:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/sd-build/CMakeFiles/sd.dir/build.make _deps/sd-build/CMakeFiles/sd.dir/src/sd/common/FsCache.cpp.s
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/sd-build/CMakeFiles/sd.dir/build.make _deps/sd-build/CMakeFiles/sd.dir/src/sd/common/FsCache.cpp.s
 .PHONY : src/sd/common/FsCache.cpp.s
 
 src/sd/common/FsDateTime.obj: src/sd/common/FsDateTime.cpp.obj
@@ -735,7 +735,7 @@ src/sd/common/FsDateTime.obj: src/sd/common/FsDateTime.cpp.obj
 
 # target to build an object file
 src/sd/common/FsDateTime.cpp.obj:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/sd-build/CMakeFiles/sd.dir/build.make _deps/sd-build/CMakeFiles/sd.dir/src/sd/common/FsDateTime.cpp.obj
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/sd-build/CMakeFiles/sd.dir/build.make _deps/sd-build/CMakeFiles/sd.dir/src/sd/common/FsDateTime.cpp.obj
 .PHONY : src/sd/common/FsDateTime.cpp.obj
 
 src/sd/common/FsDateTime.i: src/sd/common/FsDateTime.cpp.i
@@ -743,7 +743,7 @@ src/sd/common/FsDateTime.i: src/sd/common/FsDateTime.cpp.i
 
 # target to preprocess a source file
 src/sd/common/FsDateTime.cpp.i:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/sd-build/CMakeFiles/sd.dir/build.make _deps/sd-build/CMakeFiles/sd.dir/src/sd/common/FsDateTime.cpp.i
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/sd-build/CMakeFiles/sd.dir/build.make _deps/sd-build/CMakeFiles/sd.dir/src/sd/common/FsDateTime.cpp.i
 .PHONY : src/sd/common/FsDateTime.cpp.i
 
 src/sd/common/FsDateTime.s: src/sd/common/FsDateTime.cpp.s
@@ -751,7 +751,7 @@ src/sd/common/FsDateTime.s: src/sd/common/FsDateTime.cpp.s
 
 # target to generate assembly for a file
 src/sd/common/FsDateTime.cpp.s:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/sd-build/CMakeFiles/sd.dir/build.make _deps/sd-build/CMakeFiles/sd.dir/src/sd/common/FsDateTime.cpp.s
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/sd-build/CMakeFiles/sd.dir/build.make _deps/sd-build/CMakeFiles/sd.dir/src/sd/common/FsDateTime.cpp.s
 .PHONY : src/sd/common/FsDateTime.cpp.s
 
 src/sd/common/FsStructs.obj: src/sd/common/FsStructs.cpp.obj
@@ -759,7 +759,7 @@ src/sd/common/FsStructs.obj: src/sd/common/FsStructs.cpp.obj
 
 # target to build an object file
 src/sd/common/FsStructs.cpp.obj:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/sd-build/CMakeFiles/sd.dir/build.make _deps/sd-build/CMakeFiles/sd.dir/src/sd/common/FsStructs.cpp.obj
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/sd-build/CMakeFiles/sd.dir/build.make _deps/sd-build/CMakeFiles/sd.dir/src/sd/common/FsStructs.cpp.obj
 .PHONY : src/sd/common/FsStructs.cpp.obj
 
 src/sd/common/FsStructs.i: src/sd/common/FsStructs.cpp.i
@@ -767,7 +767,7 @@ src/sd/common/FsStructs.i: src/sd/common/FsStructs.cpp.i
 
 # target to preprocess a source file
 src/sd/common/FsStructs.cpp.i:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/sd-build/CMakeFiles/sd.dir/build.make _deps/sd-build/CMakeFiles/sd.dir/src/sd/common/FsStructs.cpp.i
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/sd-build/CMakeFiles/sd.dir/build.make _deps/sd-build/CMakeFiles/sd.dir/src/sd/common/FsStructs.cpp.i
 .PHONY : src/sd/common/FsStructs.cpp.i
 
 src/sd/common/FsStructs.s: src/sd/common/FsStructs.cpp.s
@@ -775,7 +775,7 @@ src/sd/common/FsStructs.s: src/sd/common/FsStructs.cpp.s
 
 # target to generate assembly for a file
 src/sd/common/FsStructs.cpp.s:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/sd-build/CMakeFiles/sd.dir/build.make _deps/sd-build/CMakeFiles/sd.dir/src/sd/common/FsStructs.cpp.s
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/sd-build/CMakeFiles/sd.dir/build.make _deps/sd-build/CMakeFiles/sd.dir/src/sd/common/FsStructs.cpp.s
 .PHONY : src/sd/common/FsStructs.cpp.s
 
 src/sd/common/PrintBasic.obj: src/sd/common/PrintBasic.cpp.obj
@@ -783,7 +783,7 @@ src/sd/common/PrintBasic.obj: src/sd/common/PrintBasic.cpp.obj
 
 # target to build an object file
 src/sd/common/PrintBasic.cpp.obj:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/sd-build/CMakeFiles/sd.dir/build.make _deps/sd-build/CMakeFiles/sd.dir/src/sd/common/PrintBasic.cpp.obj
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/sd-build/CMakeFiles/sd.dir/build.make _deps/sd-build/CMakeFiles/sd.dir/src/sd/common/PrintBasic.cpp.obj
 .PHONY : src/sd/common/PrintBasic.cpp.obj
 
 src/sd/common/PrintBasic.i: src/sd/common/PrintBasic.cpp.i
@@ -791,7 +791,7 @@ src/sd/common/PrintBasic.i: src/sd/common/PrintBasic.cpp.i
 
 # target to preprocess a source file
 src/sd/common/PrintBasic.cpp.i:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/sd-build/CMakeFiles/sd.dir/build.make _deps/sd-build/CMakeFiles/sd.dir/src/sd/common/PrintBasic.cpp.i
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/sd-build/CMakeFiles/sd.dir/build.make _deps/sd-build/CMakeFiles/sd.dir/src/sd/common/PrintBasic.cpp.i
 .PHONY : src/sd/common/PrintBasic.cpp.i
 
 src/sd/common/PrintBasic.s: src/sd/common/PrintBasic.cpp.s
@@ -799,7 +799,7 @@ src/sd/common/PrintBasic.s: src/sd/common/PrintBasic.cpp.s
 
 # target to generate assembly for a file
 src/sd/common/PrintBasic.cpp.s:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/sd-build/CMakeFiles/sd.dir/build.make _deps/sd-build/CMakeFiles/sd.dir/src/sd/common/PrintBasic.cpp.s
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/sd-build/CMakeFiles/sd.dir/build.make _deps/sd-build/CMakeFiles/sd.dir/src/sd/common/PrintBasic.cpp.s
 .PHONY : src/sd/common/PrintBasic.cpp.s
 
 src/sd/common/SysCallBareUno.obj: src/sd/common/SysCallBareUno.cpp.obj
@@ -807,7 +807,7 @@ src/sd/common/SysCallBareUno.obj: src/sd/common/SysCallBareUno.cpp.obj
 
 # target to build an object file
 src/sd/common/SysCallBareUno.cpp.obj:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/sd-build/CMakeFiles/sd.dir/build.make _deps/sd-build/CMakeFiles/sd.dir/src/sd/common/SysCallBareUno.cpp.obj
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/sd-build/CMakeFiles/sd.dir/build.make _deps/sd-build/CMakeFiles/sd.dir/src/sd/common/SysCallBareUno.cpp.obj
 .PHONY : src/sd/common/SysCallBareUno.cpp.obj
 
 src/sd/common/SysCallBareUno.i: src/sd/common/SysCallBareUno.cpp.i
@@ -815,7 +815,7 @@ src/sd/common/SysCallBareUno.i: src/sd/common/SysCallBareUno.cpp.i
 
 # target to preprocess a source file
 src/sd/common/SysCallBareUno.cpp.i:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/sd-build/CMakeFiles/sd.dir/build.make _deps/sd-build/CMakeFiles/sd.dir/src/sd/common/SysCallBareUno.cpp.i
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/sd-build/CMakeFiles/sd.dir/build.make _deps/sd-build/CMakeFiles/sd.dir/src/sd/common/SysCallBareUno.cpp.i
 .PHONY : src/sd/common/SysCallBareUno.cpp.i
 
 src/sd/common/SysCallBareUno.s: src/sd/common/SysCallBareUno.cpp.s
@@ -823,7 +823,7 @@ src/sd/common/SysCallBareUno.s: src/sd/common/SysCallBareUno.cpp.s
 
 # target to generate assembly for a file
 src/sd/common/SysCallBareUno.cpp.s:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/sd-build/CMakeFiles/sd.dir/build.make _deps/sd-build/CMakeFiles/sd.dir/src/sd/common/SysCallBareUno.cpp.s
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/sd-build/CMakeFiles/sd.dir/build.make _deps/sd-build/CMakeFiles/sd.dir/src/sd/common/SysCallBareUno.cpp.s
 .PHONY : src/sd/common/SysCallBareUno.cpp.s
 
 src/sd/iostream/StdioStream.obj: src/sd/iostream/StdioStream.cpp.obj
@@ -831,7 +831,7 @@ src/sd/iostream/StdioStream.obj: src/sd/iostream/StdioStream.cpp.obj
 
 # target to build an object file
 src/sd/iostream/StdioStream.cpp.obj:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/sd-build/CMakeFiles/sd.dir/build.make _deps/sd-build/CMakeFiles/sd.dir/src/sd/iostream/StdioStream.cpp.obj
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/sd-build/CMakeFiles/sd.dir/build.make _deps/sd-build/CMakeFiles/sd.dir/src/sd/iostream/StdioStream.cpp.obj
 .PHONY : src/sd/iostream/StdioStream.cpp.obj
 
 src/sd/iostream/StdioStream.i: src/sd/iostream/StdioStream.cpp.i
@@ -839,7 +839,7 @@ src/sd/iostream/StdioStream.i: src/sd/iostream/StdioStream.cpp.i
 
 # target to preprocess a source file
 src/sd/iostream/StdioStream.cpp.i:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/sd-build/CMakeFiles/sd.dir/build.make _deps/sd-build/CMakeFiles/sd.dir/src/sd/iostream/StdioStream.cpp.i
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/sd-build/CMakeFiles/sd.dir/build.make _deps/sd-build/CMakeFiles/sd.dir/src/sd/iostream/StdioStream.cpp.i
 .PHONY : src/sd/iostream/StdioStream.cpp.i
 
 src/sd/iostream/StdioStream.s: src/sd/iostream/StdioStream.cpp.s
@@ -847,7 +847,7 @@ src/sd/iostream/StdioStream.s: src/sd/iostream/StdioStream.cpp.s
 
 # target to generate assembly for a file
 src/sd/iostream/StdioStream.cpp.s:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/sd-build/CMakeFiles/sd.dir/build.make _deps/sd-build/CMakeFiles/sd.dir/src/sd/iostream/StdioStream.cpp.s
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/sd-build/CMakeFiles/sd.dir/build.make _deps/sd-build/CMakeFiles/sd.dir/src/sd/iostream/StdioStream.cpp.s
 .PHONY : src/sd/iostream/StdioStream.cpp.s
 
 src/sd/iostream/StreamBaseClass.obj: src/sd/iostream/StreamBaseClass.cpp.obj
@@ -855,7 +855,7 @@ src/sd/iostream/StreamBaseClass.obj: src/sd/iostream/StreamBaseClass.cpp.obj
 
 # target to build an object file
 src/sd/iostream/StreamBaseClass.cpp.obj:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/sd-build/CMakeFiles/sd.dir/build.make _deps/sd-build/CMakeFiles/sd.dir/src/sd/iostream/StreamBaseClass.cpp.obj
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/sd-build/CMakeFiles/sd.dir/build.make _deps/sd-build/CMakeFiles/sd.dir/src/sd/iostream/StreamBaseClass.cpp.obj
 .PHONY : src/sd/iostream/StreamBaseClass.cpp.obj
 
 src/sd/iostream/StreamBaseClass.i: src/sd/iostream/StreamBaseClass.cpp.i
@@ -863,7 +863,7 @@ src/sd/iostream/StreamBaseClass.i: src/sd/iostream/StreamBaseClass.cpp.i
 
 # target to preprocess a source file
 src/sd/iostream/StreamBaseClass.cpp.i:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/sd-build/CMakeFiles/sd.dir/build.make _deps/sd-build/CMakeFiles/sd.dir/src/sd/iostream/StreamBaseClass.cpp.i
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/sd-build/CMakeFiles/sd.dir/build.make _deps/sd-build/CMakeFiles/sd.dir/src/sd/iostream/StreamBaseClass.cpp.i
 .PHONY : src/sd/iostream/StreamBaseClass.cpp.i
 
 src/sd/iostream/StreamBaseClass.s: src/sd/iostream/StreamBaseClass.cpp.s
@@ -871,7 +871,7 @@ src/sd/iostream/StreamBaseClass.s: src/sd/iostream/StreamBaseClass.cpp.s
 
 # target to generate assembly for a file
 src/sd/iostream/StreamBaseClass.cpp.s:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/sd-build/CMakeFiles/sd.dir/build.make _deps/sd-build/CMakeFiles/sd.dir/src/sd/iostream/StreamBaseClass.cpp.s
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/sd-build/CMakeFiles/sd.dir/build.make _deps/sd-build/CMakeFiles/sd.dir/src/sd/iostream/StreamBaseClass.cpp.s
 .PHONY : src/sd/iostream/StreamBaseClass.cpp.s
 
 src/sd/iostream/istream.obj: src/sd/iostream/istream.cpp.obj
@@ -879,7 +879,7 @@ src/sd/iostream/istream.obj: src/sd/iostream/istream.cpp.obj
 
 # target to build an object file
 src/sd/iostream/istream.cpp.obj:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/sd-build/CMakeFiles/sd.dir/build.make _deps/sd-build/CMakeFiles/sd.dir/src/sd/iostream/istream.cpp.obj
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/sd-build/CMakeFiles/sd.dir/build.make _deps/sd-build/CMakeFiles/sd.dir/src/sd/iostream/istream.cpp.obj
 .PHONY : src/sd/iostream/istream.cpp.obj
 
 src/sd/iostream/istream.i: src/sd/iostream/istream.cpp.i
@@ -887,7 +887,7 @@ src/sd/iostream/istream.i: src/sd/iostream/istream.cpp.i
 
 # target to preprocess a source file
 src/sd/iostream/istream.cpp.i:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/sd-build/CMakeFiles/sd.dir/build.make _deps/sd-build/CMakeFiles/sd.dir/src/sd/iostream/istream.cpp.i
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/sd-build/CMakeFiles/sd.dir/build.make _deps/sd-build/CMakeFiles/sd.dir/src/sd/iostream/istream.cpp.i
 .PHONY : src/sd/iostream/istream.cpp.i
 
 src/sd/iostream/istream.s: src/sd/iostream/istream.cpp.s
@@ -895,7 +895,7 @@ src/sd/iostream/istream.s: src/sd/iostream/istream.cpp.s
 
 # target to generate assembly for a file
 src/sd/iostream/istream.cpp.s:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/sd-build/CMakeFiles/sd.dir/build.make _deps/sd-build/CMakeFiles/sd.dir/src/sd/iostream/istream.cpp.s
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/sd-build/CMakeFiles/sd.dir/build.make _deps/sd-build/CMakeFiles/sd.dir/src/sd/iostream/istream.cpp.s
 .PHONY : src/sd/iostream/istream.cpp.s
 
 src/sd/iostream/ostream.obj: src/sd/iostream/ostream.cpp.obj
@@ -903,7 +903,7 @@ src/sd/iostream/ostream.obj: src/sd/iostream/ostream.cpp.obj
 
 # target to build an object file
 src/sd/iostream/ostream.cpp.obj:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/sd-build/CMakeFiles/sd.dir/build.make _deps/sd-build/CMakeFiles/sd.dir/src/sd/iostream/ostream.cpp.obj
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/sd-build/CMakeFiles/sd.dir/build.make _deps/sd-build/CMakeFiles/sd.dir/src/sd/iostream/ostream.cpp.obj
 .PHONY : src/sd/iostream/ostream.cpp.obj
 
 src/sd/iostream/ostream.i: src/sd/iostream/ostream.cpp.i
@@ -911,7 +911,7 @@ src/sd/iostream/ostream.i: src/sd/iostream/ostream.cpp.i
 
 # target to preprocess a source file
 src/sd/iostream/ostream.cpp.i:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/sd-build/CMakeFiles/sd.dir/build.make _deps/sd-build/CMakeFiles/sd.dir/src/sd/iostream/ostream.cpp.i
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/sd-build/CMakeFiles/sd.dir/build.make _deps/sd-build/CMakeFiles/sd.dir/src/sd/iostream/ostream.cpp.i
 .PHONY : src/sd/iostream/ostream.cpp.i
 
 src/sd/iostream/ostream.s: src/sd/iostream/ostream.cpp.s
@@ -919,7 +919,7 @@ src/sd/iostream/ostream.s: src/sd/iostream/ostream.cpp.s
 
 # target to generate assembly for a file
 src/sd/iostream/ostream.cpp.s:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/sd-build/CMakeFiles/sd.dir/build.make _deps/sd-build/CMakeFiles/sd.dir/src/sd/iostream/ostream.cpp.s
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/sd-build/CMakeFiles/sd.dir/build.make _deps/sd-build/CMakeFiles/sd.dir/src/sd/iostream/ostream.cpp.s
 .PHONY : src/sd/iostream/ostream.cpp.s
 
 # Help Target
@@ -1041,6 +1041,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

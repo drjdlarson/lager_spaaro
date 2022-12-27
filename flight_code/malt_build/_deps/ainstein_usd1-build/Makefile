@@ -57,10 +57,10 @@ RM = /usr/local/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/tuan/Projects/super/ua_spaaro/flight_code
+CMAKE_SOURCE_DIR = /home/tuan/Projects/ua_spaaro/flight_code
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build
+CMAKE_BINARY_DIR = /home/tuan/Projects/ua_spaaro/flight_code/malt_build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -87,14 +87,14 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(CMAKE_COMMAND) -E cmake_progress_start /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/CMakeFiles /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/_deps/ainstein_usd1-build//CMakeFiles/progress.marks
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 _deps/ainstein_usd1-build/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/CMakeFiles 0
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(CMAKE_COMMAND) -E cmake_progress_start /home/tuan/Projects/ua_spaaro/flight_code/malt_build/CMakeFiles /home/tuan/Projects/ua_spaaro/flight_code/malt_build/_deps/ainstein_usd1-build//CMakeFiles/progress.marks
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 _deps/ainstein_usd1-build/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/tuan/Projects/ua_spaaro/flight_code/malt_build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 _deps/ainstein_usd1-build/clean
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 _deps/ainstein_usd1-build/clean
 .PHONY : clean
 
 # The main clean target
@@ -103,22 +103,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 _deps/ainstein_usd1-build/preinstall
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 _deps/ainstein_usd1-build/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 _deps/ainstein_usd1-build/preinstall
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 _deps/ainstein_usd1-build/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 _deps/ainstein_usd1-build/CMakeFiles/ainstein_usd1.dir/rule:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 _deps/ainstein_usd1-build/CMakeFiles/ainstein_usd1.dir/rule
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 _deps/ainstein_usd1-build/CMakeFiles/ainstein_usd1.dir/rule
 .PHONY : _deps/ainstein_usd1-build/CMakeFiles/ainstein_usd1.dir/rule
 
 # Convenience name for target.
@@ -127,7 +127,7 @@ ainstein_usd1: _deps/ainstein_usd1-build/CMakeFiles/ainstein_usd1.dir/rule
 
 # fast build rule for target.
 ainstein_usd1/fast:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/ainstein_usd1-build/CMakeFiles/ainstein_usd1.dir/build.make _deps/ainstein_usd1-build/CMakeFiles/ainstein_usd1.dir/build
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/ainstein_usd1-build/CMakeFiles/ainstein_usd1.dir/build.make _deps/ainstein_usd1-build/CMakeFiles/ainstein_usd1.dir/build
 .PHONY : ainstein_usd1/fast
 
 src/ainstein_usd1.obj: src/ainstein_usd1.cpp.obj
@@ -135,7 +135,7 @@ src/ainstein_usd1.obj: src/ainstein_usd1.cpp.obj
 
 # target to build an object file
 src/ainstein_usd1.cpp.obj:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/ainstein_usd1-build/CMakeFiles/ainstein_usd1.dir/build.make _deps/ainstein_usd1-build/CMakeFiles/ainstein_usd1.dir/src/ainstein_usd1.cpp.obj
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/ainstein_usd1-build/CMakeFiles/ainstein_usd1.dir/build.make _deps/ainstein_usd1-build/CMakeFiles/ainstein_usd1.dir/src/ainstein_usd1.cpp.obj
 .PHONY : src/ainstein_usd1.cpp.obj
 
 src/ainstein_usd1.i: src/ainstein_usd1.cpp.i
@@ -143,7 +143,7 @@ src/ainstein_usd1.i: src/ainstein_usd1.cpp.i
 
 # target to preprocess a source file
 src/ainstein_usd1.cpp.i:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/ainstein_usd1-build/CMakeFiles/ainstein_usd1.dir/build.make _deps/ainstein_usd1-build/CMakeFiles/ainstein_usd1.dir/src/ainstein_usd1.cpp.i
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/ainstein_usd1-build/CMakeFiles/ainstein_usd1.dir/build.make _deps/ainstein_usd1-build/CMakeFiles/ainstein_usd1.dir/src/ainstein_usd1.cpp.i
 .PHONY : src/ainstein_usd1.cpp.i
 
 src/ainstein_usd1.s: src/ainstein_usd1.cpp.s
@@ -151,7 +151,7 @@ src/ainstein_usd1.s: src/ainstein_usd1.cpp.s
 
 # target to generate assembly for a file
 src/ainstein_usd1.cpp.s:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/ainstein_usd1-build/CMakeFiles/ainstein_usd1.dir/build.make _deps/ainstein_usd1-build/CMakeFiles/ainstein_usd1.dir/src/ainstein_usd1.cpp.s
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/ainstein_usd1-build/CMakeFiles/ainstein_usd1.dir/build.make _deps/ainstein_usd1-build/CMakeFiles/ainstein_usd1.dir/src/ainstein_usd1.cpp.s
 .PHONY : src/ainstein_usd1.cpp.s
 
 # Help Target
@@ -177,6 +177,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

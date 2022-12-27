@@ -57,10 +57,10 @@ RM = /usr/local/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/tuan/Projects/super/ua_spaaro/flight_code
+CMAKE_SOURCE_DIR = /home/tuan/Projects/ua_spaaro/flight_code
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build
+CMAKE_BINARY_DIR = /home/tuan/Projects/ua_spaaro/flight_code/malt_build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -87,14 +87,14 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(CMAKE_COMMAND) -E cmake_progress_start /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/CMakeFiles /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/_deps/core-build//CMakeFiles/progress.marks
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 _deps/core-build/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/CMakeFiles 0
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(CMAKE_COMMAND) -E cmake_progress_start /home/tuan/Projects/ua_spaaro/flight_code/malt_build/CMakeFiles /home/tuan/Projects/ua_spaaro/flight_code/malt_build/_deps/core-build//CMakeFiles/progress.marks
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 _deps/core-build/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/tuan/Projects/ua_spaaro/flight_code/malt_build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 _deps/core-build/clean
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 _deps/core-build/clean
 .PHONY : clean
 
 # The main clean target
@@ -103,22 +103,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 _deps/core-build/preinstall
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 _deps/core-build/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 _deps/core-build/preinstall
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 _deps/core-build/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 _deps/core-build/CMakeFiles/core.dir/rule:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 _deps/core-build/CMakeFiles/core.dir/rule
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 _deps/core-build/CMakeFiles/core.dir/rule
 .PHONY : _deps/core-build/CMakeFiles/core.dir/rule
 
 # Convenience name for target.
@@ -127,7 +127,7 @@ core: _deps/core-build/CMakeFiles/core.dir/rule
 
 # fast build rule for target.
 core/fast:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/core-build/CMakeFiles/core.dir/build.make _deps/core-build/CMakeFiles/core.dir/build
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/core-build/CMakeFiles/core.dir/build.make _deps/core-build/CMakeFiles/core.dir/build
 .PHONY : core/fast
 
 src/core/teensy4x/DMAChannel.obj: src/core/teensy4x/DMAChannel.cpp.obj
@@ -135,7 +135,7 @@ src/core/teensy4x/DMAChannel.obj: src/core/teensy4x/DMAChannel.cpp.obj
 
 # target to build an object file
 src/core/teensy4x/DMAChannel.cpp.obj:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/core-build/CMakeFiles/core.dir/build.make _deps/core-build/CMakeFiles/core.dir/src/core/teensy4x/DMAChannel.cpp.obj
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/core-build/CMakeFiles/core.dir/build.make _deps/core-build/CMakeFiles/core.dir/src/core/teensy4x/DMAChannel.cpp.obj
 .PHONY : src/core/teensy4x/DMAChannel.cpp.obj
 
 src/core/teensy4x/DMAChannel.i: src/core/teensy4x/DMAChannel.cpp.i
@@ -143,7 +143,7 @@ src/core/teensy4x/DMAChannel.i: src/core/teensy4x/DMAChannel.cpp.i
 
 # target to preprocess a source file
 src/core/teensy4x/DMAChannel.cpp.i:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/core-build/CMakeFiles/core.dir/build.make _deps/core-build/CMakeFiles/core.dir/src/core/teensy4x/DMAChannel.cpp.i
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/core-build/CMakeFiles/core.dir/build.make _deps/core-build/CMakeFiles/core.dir/src/core/teensy4x/DMAChannel.cpp.i
 .PHONY : src/core/teensy4x/DMAChannel.cpp.i
 
 src/core/teensy4x/DMAChannel.s: src/core/teensy4x/DMAChannel.cpp.s
@@ -151,7 +151,7 @@ src/core/teensy4x/DMAChannel.s: src/core/teensy4x/DMAChannel.cpp.s
 
 # target to generate assembly for a file
 src/core/teensy4x/DMAChannel.cpp.s:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/core-build/CMakeFiles/core.dir/build.make _deps/core-build/CMakeFiles/core.dir/src/core/teensy4x/DMAChannel.cpp.s
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/core-build/CMakeFiles/core.dir/build.make _deps/core-build/CMakeFiles/core.dir/src/core/teensy4x/DMAChannel.cpp.s
 .PHONY : src/core/teensy4x/DMAChannel.cpp.s
 
 src/core/teensy4x/EventResponder.obj: src/core/teensy4x/EventResponder.cpp.obj
@@ -159,7 +159,7 @@ src/core/teensy4x/EventResponder.obj: src/core/teensy4x/EventResponder.cpp.obj
 
 # target to build an object file
 src/core/teensy4x/EventResponder.cpp.obj:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/core-build/CMakeFiles/core.dir/build.make _deps/core-build/CMakeFiles/core.dir/src/core/teensy4x/EventResponder.cpp.obj
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/core-build/CMakeFiles/core.dir/build.make _deps/core-build/CMakeFiles/core.dir/src/core/teensy4x/EventResponder.cpp.obj
 .PHONY : src/core/teensy4x/EventResponder.cpp.obj
 
 src/core/teensy4x/EventResponder.i: src/core/teensy4x/EventResponder.cpp.i
@@ -167,7 +167,7 @@ src/core/teensy4x/EventResponder.i: src/core/teensy4x/EventResponder.cpp.i
 
 # target to preprocess a source file
 src/core/teensy4x/EventResponder.cpp.i:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/core-build/CMakeFiles/core.dir/build.make _deps/core-build/CMakeFiles/core.dir/src/core/teensy4x/EventResponder.cpp.i
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/core-build/CMakeFiles/core.dir/build.make _deps/core-build/CMakeFiles/core.dir/src/core/teensy4x/EventResponder.cpp.i
 .PHONY : src/core/teensy4x/EventResponder.cpp.i
 
 src/core/teensy4x/EventResponder.s: src/core/teensy4x/EventResponder.cpp.s
@@ -175,7 +175,7 @@ src/core/teensy4x/EventResponder.s: src/core/teensy4x/EventResponder.cpp.s
 
 # target to generate assembly for a file
 src/core/teensy4x/EventResponder.cpp.s:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/core-build/CMakeFiles/core.dir/build.make _deps/core-build/CMakeFiles/core.dir/src/core/teensy4x/EventResponder.cpp.s
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/core-build/CMakeFiles/core.dir/build.make _deps/core-build/CMakeFiles/core.dir/src/core/teensy4x/EventResponder.cpp.s
 .PHONY : src/core/teensy4x/EventResponder.cpp.s
 
 src/core/teensy4x/HardwareSerial.obj: src/core/teensy4x/HardwareSerial.cpp.obj
@@ -183,7 +183,7 @@ src/core/teensy4x/HardwareSerial.obj: src/core/teensy4x/HardwareSerial.cpp.obj
 
 # target to build an object file
 src/core/teensy4x/HardwareSerial.cpp.obj:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/core-build/CMakeFiles/core.dir/build.make _deps/core-build/CMakeFiles/core.dir/src/core/teensy4x/HardwareSerial.cpp.obj
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/core-build/CMakeFiles/core.dir/build.make _deps/core-build/CMakeFiles/core.dir/src/core/teensy4x/HardwareSerial.cpp.obj
 .PHONY : src/core/teensy4x/HardwareSerial.cpp.obj
 
 src/core/teensy4x/HardwareSerial.i: src/core/teensy4x/HardwareSerial.cpp.i
@@ -191,7 +191,7 @@ src/core/teensy4x/HardwareSerial.i: src/core/teensy4x/HardwareSerial.cpp.i
 
 # target to preprocess a source file
 src/core/teensy4x/HardwareSerial.cpp.i:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/core-build/CMakeFiles/core.dir/build.make _deps/core-build/CMakeFiles/core.dir/src/core/teensy4x/HardwareSerial.cpp.i
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/core-build/CMakeFiles/core.dir/build.make _deps/core-build/CMakeFiles/core.dir/src/core/teensy4x/HardwareSerial.cpp.i
 .PHONY : src/core/teensy4x/HardwareSerial.cpp.i
 
 src/core/teensy4x/HardwareSerial.s: src/core/teensy4x/HardwareSerial.cpp.s
@@ -199,7 +199,7 @@ src/core/teensy4x/HardwareSerial.s: src/core/teensy4x/HardwareSerial.cpp.s
 
 # target to generate assembly for a file
 src/core/teensy4x/HardwareSerial.cpp.s:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/core-build/CMakeFiles/core.dir/build.make _deps/core-build/CMakeFiles/core.dir/src/core/teensy4x/HardwareSerial.cpp.s
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/core-build/CMakeFiles/core.dir/build.make _deps/core-build/CMakeFiles/core.dir/src/core/teensy4x/HardwareSerial.cpp.s
 .PHONY : src/core/teensy4x/HardwareSerial.cpp.s
 
 src/core/teensy4x/HardwareSerial1.obj: src/core/teensy4x/HardwareSerial1.cpp.obj
@@ -207,7 +207,7 @@ src/core/teensy4x/HardwareSerial1.obj: src/core/teensy4x/HardwareSerial1.cpp.obj
 
 # target to build an object file
 src/core/teensy4x/HardwareSerial1.cpp.obj:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/core-build/CMakeFiles/core.dir/build.make _deps/core-build/CMakeFiles/core.dir/src/core/teensy4x/HardwareSerial1.cpp.obj
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/core-build/CMakeFiles/core.dir/build.make _deps/core-build/CMakeFiles/core.dir/src/core/teensy4x/HardwareSerial1.cpp.obj
 .PHONY : src/core/teensy4x/HardwareSerial1.cpp.obj
 
 src/core/teensy4x/HardwareSerial1.i: src/core/teensy4x/HardwareSerial1.cpp.i
@@ -215,7 +215,7 @@ src/core/teensy4x/HardwareSerial1.i: src/core/teensy4x/HardwareSerial1.cpp.i
 
 # target to preprocess a source file
 src/core/teensy4x/HardwareSerial1.cpp.i:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/core-build/CMakeFiles/core.dir/build.make _deps/core-build/CMakeFiles/core.dir/src/core/teensy4x/HardwareSerial1.cpp.i
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/core-build/CMakeFiles/core.dir/build.make _deps/core-build/CMakeFiles/core.dir/src/core/teensy4x/HardwareSerial1.cpp.i
 .PHONY : src/core/teensy4x/HardwareSerial1.cpp.i
 
 src/core/teensy4x/HardwareSerial1.s: src/core/teensy4x/HardwareSerial1.cpp.s
@@ -223,7 +223,7 @@ src/core/teensy4x/HardwareSerial1.s: src/core/teensy4x/HardwareSerial1.cpp.s
 
 # target to generate assembly for a file
 src/core/teensy4x/HardwareSerial1.cpp.s:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/core-build/CMakeFiles/core.dir/build.make _deps/core-build/CMakeFiles/core.dir/src/core/teensy4x/HardwareSerial1.cpp.s
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/core-build/CMakeFiles/core.dir/build.make _deps/core-build/CMakeFiles/core.dir/src/core/teensy4x/HardwareSerial1.cpp.s
 .PHONY : src/core/teensy4x/HardwareSerial1.cpp.s
 
 src/core/teensy4x/HardwareSerial2.obj: src/core/teensy4x/HardwareSerial2.cpp.obj
@@ -231,7 +231,7 @@ src/core/teensy4x/HardwareSerial2.obj: src/core/teensy4x/HardwareSerial2.cpp.obj
 
 # target to build an object file
 src/core/teensy4x/HardwareSerial2.cpp.obj:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/core-build/CMakeFiles/core.dir/build.make _deps/core-build/CMakeFiles/core.dir/src/core/teensy4x/HardwareSerial2.cpp.obj
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/core-build/CMakeFiles/core.dir/build.make _deps/core-build/CMakeFiles/core.dir/src/core/teensy4x/HardwareSerial2.cpp.obj
 .PHONY : src/core/teensy4x/HardwareSerial2.cpp.obj
 
 src/core/teensy4x/HardwareSerial2.i: src/core/teensy4x/HardwareSerial2.cpp.i
@@ -239,7 +239,7 @@ src/core/teensy4x/HardwareSerial2.i: src/core/teensy4x/HardwareSerial2.cpp.i
 
 # target to preprocess a source file
 src/core/teensy4x/HardwareSerial2.cpp.i:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/core-build/CMakeFiles/core.dir/build.make _deps/core-build/CMakeFiles/core.dir/src/core/teensy4x/HardwareSerial2.cpp.i
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/core-build/CMakeFiles/core.dir/build.make _deps/core-build/CMakeFiles/core.dir/src/core/teensy4x/HardwareSerial2.cpp.i
 .PHONY : src/core/teensy4x/HardwareSerial2.cpp.i
 
 src/core/teensy4x/HardwareSerial2.s: src/core/teensy4x/HardwareSerial2.cpp.s
@@ -247,7 +247,7 @@ src/core/teensy4x/HardwareSerial2.s: src/core/teensy4x/HardwareSerial2.cpp.s
 
 # target to generate assembly for a file
 src/core/teensy4x/HardwareSerial2.cpp.s:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/core-build/CMakeFiles/core.dir/build.make _deps/core-build/CMakeFiles/core.dir/src/core/teensy4x/HardwareSerial2.cpp.s
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/core-build/CMakeFiles/core.dir/build.make _deps/core-build/CMakeFiles/core.dir/src/core/teensy4x/HardwareSerial2.cpp.s
 .PHONY : src/core/teensy4x/HardwareSerial2.cpp.s
 
 src/core/teensy4x/HardwareSerial3.obj: src/core/teensy4x/HardwareSerial3.cpp.obj
@@ -255,7 +255,7 @@ src/core/teensy4x/HardwareSerial3.obj: src/core/teensy4x/HardwareSerial3.cpp.obj
 
 # target to build an object file
 src/core/teensy4x/HardwareSerial3.cpp.obj:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/core-build/CMakeFiles/core.dir/build.make _deps/core-build/CMakeFiles/core.dir/src/core/teensy4x/HardwareSerial3.cpp.obj
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/core-build/CMakeFiles/core.dir/build.make _deps/core-build/CMakeFiles/core.dir/src/core/teensy4x/HardwareSerial3.cpp.obj
 .PHONY : src/core/teensy4x/HardwareSerial3.cpp.obj
 
 src/core/teensy4x/HardwareSerial3.i: src/core/teensy4x/HardwareSerial3.cpp.i
@@ -263,7 +263,7 @@ src/core/teensy4x/HardwareSerial3.i: src/core/teensy4x/HardwareSerial3.cpp.i
 
 # target to preprocess a source file
 src/core/teensy4x/HardwareSerial3.cpp.i:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/core-build/CMakeFiles/core.dir/build.make _deps/core-build/CMakeFiles/core.dir/src/core/teensy4x/HardwareSerial3.cpp.i
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/core-build/CMakeFiles/core.dir/build.make _deps/core-build/CMakeFiles/core.dir/src/core/teensy4x/HardwareSerial3.cpp.i
 .PHONY : src/core/teensy4x/HardwareSerial3.cpp.i
 
 src/core/teensy4x/HardwareSerial3.s: src/core/teensy4x/HardwareSerial3.cpp.s
@@ -271,7 +271,7 @@ src/core/teensy4x/HardwareSerial3.s: src/core/teensy4x/HardwareSerial3.cpp.s
 
 # target to generate assembly for a file
 src/core/teensy4x/HardwareSerial3.cpp.s:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/core-build/CMakeFiles/core.dir/build.make _deps/core-build/CMakeFiles/core.dir/src/core/teensy4x/HardwareSerial3.cpp.s
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/core-build/CMakeFiles/core.dir/build.make _deps/core-build/CMakeFiles/core.dir/src/core/teensy4x/HardwareSerial3.cpp.s
 .PHONY : src/core/teensy4x/HardwareSerial3.cpp.s
 
 src/core/teensy4x/HardwareSerial4.obj: src/core/teensy4x/HardwareSerial4.cpp.obj
@@ -279,7 +279,7 @@ src/core/teensy4x/HardwareSerial4.obj: src/core/teensy4x/HardwareSerial4.cpp.obj
 
 # target to build an object file
 src/core/teensy4x/HardwareSerial4.cpp.obj:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/core-build/CMakeFiles/core.dir/build.make _deps/core-build/CMakeFiles/core.dir/src/core/teensy4x/HardwareSerial4.cpp.obj
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/core-build/CMakeFiles/core.dir/build.make _deps/core-build/CMakeFiles/core.dir/src/core/teensy4x/HardwareSerial4.cpp.obj
 .PHONY : src/core/teensy4x/HardwareSerial4.cpp.obj
 
 src/core/teensy4x/HardwareSerial4.i: src/core/teensy4x/HardwareSerial4.cpp.i
@@ -287,7 +287,7 @@ src/core/teensy4x/HardwareSerial4.i: src/core/teensy4x/HardwareSerial4.cpp.i
 
 # target to preprocess a source file
 src/core/teensy4x/HardwareSerial4.cpp.i:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/core-build/CMakeFiles/core.dir/build.make _deps/core-build/CMakeFiles/core.dir/src/core/teensy4x/HardwareSerial4.cpp.i
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/core-build/CMakeFiles/core.dir/build.make _deps/core-build/CMakeFiles/core.dir/src/core/teensy4x/HardwareSerial4.cpp.i
 .PHONY : src/core/teensy4x/HardwareSerial4.cpp.i
 
 src/core/teensy4x/HardwareSerial4.s: src/core/teensy4x/HardwareSerial4.cpp.s
@@ -295,7 +295,7 @@ src/core/teensy4x/HardwareSerial4.s: src/core/teensy4x/HardwareSerial4.cpp.s
 
 # target to generate assembly for a file
 src/core/teensy4x/HardwareSerial4.cpp.s:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/core-build/CMakeFiles/core.dir/build.make _deps/core-build/CMakeFiles/core.dir/src/core/teensy4x/HardwareSerial4.cpp.s
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/core-build/CMakeFiles/core.dir/build.make _deps/core-build/CMakeFiles/core.dir/src/core/teensy4x/HardwareSerial4.cpp.s
 .PHONY : src/core/teensy4x/HardwareSerial4.cpp.s
 
 src/core/teensy4x/HardwareSerial5.obj: src/core/teensy4x/HardwareSerial5.cpp.obj
@@ -303,7 +303,7 @@ src/core/teensy4x/HardwareSerial5.obj: src/core/teensy4x/HardwareSerial5.cpp.obj
 
 # target to build an object file
 src/core/teensy4x/HardwareSerial5.cpp.obj:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/core-build/CMakeFiles/core.dir/build.make _deps/core-build/CMakeFiles/core.dir/src/core/teensy4x/HardwareSerial5.cpp.obj
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/core-build/CMakeFiles/core.dir/build.make _deps/core-build/CMakeFiles/core.dir/src/core/teensy4x/HardwareSerial5.cpp.obj
 .PHONY : src/core/teensy4x/HardwareSerial5.cpp.obj
 
 src/core/teensy4x/HardwareSerial5.i: src/core/teensy4x/HardwareSerial5.cpp.i
@@ -311,7 +311,7 @@ src/core/teensy4x/HardwareSerial5.i: src/core/teensy4x/HardwareSerial5.cpp.i
 
 # target to preprocess a source file
 src/core/teensy4x/HardwareSerial5.cpp.i:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/core-build/CMakeFiles/core.dir/build.make _deps/core-build/CMakeFiles/core.dir/src/core/teensy4x/HardwareSerial5.cpp.i
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/core-build/CMakeFiles/core.dir/build.make _deps/core-build/CMakeFiles/core.dir/src/core/teensy4x/HardwareSerial5.cpp.i
 .PHONY : src/core/teensy4x/HardwareSerial5.cpp.i
 
 src/core/teensy4x/HardwareSerial5.s: src/core/teensy4x/HardwareSerial5.cpp.s
@@ -319,7 +319,7 @@ src/core/teensy4x/HardwareSerial5.s: src/core/teensy4x/HardwareSerial5.cpp.s
 
 # target to generate assembly for a file
 src/core/teensy4x/HardwareSerial5.cpp.s:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/core-build/CMakeFiles/core.dir/build.make _deps/core-build/CMakeFiles/core.dir/src/core/teensy4x/HardwareSerial5.cpp.s
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/core-build/CMakeFiles/core.dir/build.make _deps/core-build/CMakeFiles/core.dir/src/core/teensy4x/HardwareSerial5.cpp.s
 .PHONY : src/core/teensy4x/HardwareSerial5.cpp.s
 
 src/core/teensy4x/HardwareSerial6.obj: src/core/teensy4x/HardwareSerial6.cpp.obj
@@ -327,7 +327,7 @@ src/core/teensy4x/HardwareSerial6.obj: src/core/teensy4x/HardwareSerial6.cpp.obj
 
 # target to build an object file
 src/core/teensy4x/HardwareSerial6.cpp.obj:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/core-build/CMakeFiles/core.dir/build.make _deps/core-build/CMakeFiles/core.dir/src/core/teensy4x/HardwareSerial6.cpp.obj
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/core-build/CMakeFiles/core.dir/build.make _deps/core-build/CMakeFiles/core.dir/src/core/teensy4x/HardwareSerial6.cpp.obj
 .PHONY : src/core/teensy4x/HardwareSerial6.cpp.obj
 
 src/core/teensy4x/HardwareSerial6.i: src/core/teensy4x/HardwareSerial6.cpp.i
@@ -335,7 +335,7 @@ src/core/teensy4x/HardwareSerial6.i: src/core/teensy4x/HardwareSerial6.cpp.i
 
 # target to preprocess a source file
 src/core/teensy4x/HardwareSerial6.cpp.i:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/core-build/CMakeFiles/core.dir/build.make _deps/core-build/CMakeFiles/core.dir/src/core/teensy4x/HardwareSerial6.cpp.i
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/core-build/CMakeFiles/core.dir/build.make _deps/core-build/CMakeFiles/core.dir/src/core/teensy4x/HardwareSerial6.cpp.i
 .PHONY : src/core/teensy4x/HardwareSerial6.cpp.i
 
 src/core/teensy4x/HardwareSerial6.s: src/core/teensy4x/HardwareSerial6.cpp.s
@@ -343,7 +343,7 @@ src/core/teensy4x/HardwareSerial6.s: src/core/teensy4x/HardwareSerial6.cpp.s
 
 # target to generate assembly for a file
 src/core/teensy4x/HardwareSerial6.cpp.s:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/core-build/CMakeFiles/core.dir/build.make _deps/core-build/CMakeFiles/core.dir/src/core/teensy4x/HardwareSerial6.cpp.s
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/core-build/CMakeFiles/core.dir/build.make _deps/core-build/CMakeFiles/core.dir/src/core/teensy4x/HardwareSerial6.cpp.s
 .PHONY : src/core/teensy4x/HardwareSerial6.cpp.s
 
 src/core/teensy4x/HardwareSerial7.obj: src/core/teensy4x/HardwareSerial7.cpp.obj
@@ -351,7 +351,7 @@ src/core/teensy4x/HardwareSerial7.obj: src/core/teensy4x/HardwareSerial7.cpp.obj
 
 # target to build an object file
 src/core/teensy4x/HardwareSerial7.cpp.obj:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/core-build/CMakeFiles/core.dir/build.make _deps/core-build/CMakeFiles/core.dir/src/core/teensy4x/HardwareSerial7.cpp.obj
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/core-build/CMakeFiles/core.dir/build.make _deps/core-build/CMakeFiles/core.dir/src/core/teensy4x/HardwareSerial7.cpp.obj
 .PHONY : src/core/teensy4x/HardwareSerial7.cpp.obj
 
 src/core/teensy4x/HardwareSerial7.i: src/core/teensy4x/HardwareSerial7.cpp.i
@@ -359,7 +359,7 @@ src/core/teensy4x/HardwareSerial7.i: src/core/teensy4x/HardwareSerial7.cpp.i
 
 # target to preprocess a source file
 src/core/teensy4x/HardwareSerial7.cpp.i:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/core-build/CMakeFiles/core.dir/build.make _deps/core-build/CMakeFiles/core.dir/src/core/teensy4x/HardwareSerial7.cpp.i
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/core-build/CMakeFiles/core.dir/build.make _deps/core-build/CMakeFiles/core.dir/src/core/teensy4x/HardwareSerial7.cpp.i
 .PHONY : src/core/teensy4x/HardwareSerial7.cpp.i
 
 src/core/teensy4x/HardwareSerial7.s: src/core/teensy4x/HardwareSerial7.cpp.s
@@ -367,7 +367,7 @@ src/core/teensy4x/HardwareSerial7.s: src/core/teensy4x/HardwareSerial7.cpp.s
 
 # target to generate assembly for a file
 src/core/teensy4x/HardwareSerial7.cpp.s:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/core-build/CMakeFiles/core.dir/build.make _deps/core-build/CMakeFiles/core.dir/src/core/teensy4x/HardwareSerial7.cpp.s
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/core-build/CMakeFiles/core.dir/build.make _deps/core-build/CMakeFiles/core.dir/src/core/teensy4x/HardwareSerial7.cpp.s
 .PHONY : src/core/teensy4x/HardwareSerial7.cpp.s
 
 src/core/teensy4x/HardwareSerial8.obj: src/core/teensy4x/HardwareSerial8.cpp.obj
@@ -375,7 +375,7 @@ src/core/teensy4x/HardwareSerial8.obj: src/core/teensy4x/HardwareSerial8.cpp.obj
 
 # target to build an object file
 src/core/teensy4x/HardwareSerial8.cpp.obj:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/core-build/CMakeFiles/core.dir/build.make _deps/core-build/CMakeFiles/core.dir/src/core/teensy4x/HardwareSerial8.cpp.obj
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/core-build/CMakeFiles/core.dir/build.make _deps/core-build/CMakeFiles/core.dir/src/core/teensy4x/HardwareSerial8.cpp.obj
 .PHONY : src/core/teensy4x/HardwareSerial8.cpp.obj
 
 src/core/teensy4x/HardwareSerial8.i: src/core/teensy4x/HardwareSerial8.cpp.i
@@ -383,7 +383,7 @@ src/core/teensy4x/HardwareSerial8.i: src/core/teensy4x/HardwareSerial8.cpp.i
 
 # target to preprocess a source file
 src/core/teensy4x/HardwareSerial8.cpp.i:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/core-build/CMakeFiles/core.dir/build.make _deps/core-build/CMakeFiles/core.dir/src/core/teensy4x/HardwareSerial8.cpp.i
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/core-build/CMakeFiles/core.dir/build.make _deps/core-build/CMakeFiles/core.dir/src/core/teensy4x/HardwareSerial8.cpp.i
 .PHONY : src/core/teensy4x/HardwareSerial8.cpp.i
 
 src/core/teensy4x/HardwareSerial8.s: src/core/teensy4x/HardwareSerial8.cpp.s
@@ -391,7 +391,7 @@ src/core/teensy4x/HardwareSerial8.s: src/core/teensy4x/HardwareSerial8.cpp.s
 
 # target to generate assembly for a file
 src/core/teensy4x/HardwareSerial8.cpp.s:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/core-build/CMakeFiles/core.dir/build.make _deps/core-build/CMakeFiles/core.dir/src/core/teensy4x/HardwareSerial8.cpp.s
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/core-build/CMakeFiles/core.dir/build.make _deps/core-build/CMakeFiles/core.dir/src/core/teensy4x/HardwareSerial8.cpp.s
 .PHONY : src/core/teensy4x/HardwareSerial8.cpp.s
 
 src/core/teensy4x/IntervalTimer.obj: src/core/teensy4x/IntervalTimer.cpp.obj
@@ -399,7 +399,7 @@ src/core/teensy4x/IntervalTimer.obj: src/core/teensy4x/IntervalTimer.cpp.obj
 
 # target to build an object file
 src/core/teensy4x/IntervalTimer.cpp.obj:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/core-build/CMakeFiles/core.dir/build.make _deps/core-build/CMakeFiles/core.dir/src/core/teensy4x/IntervalTimer.cpp.obj
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/core-build/CMakeFiles/core.dir/build.make _deps/core-build/CMakeFiles/core.dir/src/core/teensy4x/IntervalTimer.cpp.obj
 .PHONY : src/core/teensy4x/IntervalTimer.cpp.obj
 
 src/core/teensy4x/IntervalTimer.i: src/core/teensy4x/IntervalTimer.cpp.i
@@ -407,7 +407,7 @@ src/core/teensy4x/IntervalTimer.i: src/core/teensy4x/IntervalTimer.cpp.i
 
 # target to preprocess a source file
 src/core/teensy4x/IntervalTimer.cpp.i:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/core-build/CMakeFiles/core.dir/build.make _deps/core-build/CMakeFiles/core.dir/src/core/teensy4x/IntervalTimer.cpp.i
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/core-build/CMakeFiles/core.dir/build.make _deps/core-build/CMakeFiles/core.dir/src/core/teensy4x/IntervalTimer.cpp.i
 .PHONY : src/core/teensy4x/IntervalTimer.cpp.i
 
 src/core/teensy4x/IntervalTimer.s: src/core/teensy4x/IntervalTimer.cpp.s
@@ -415,7 +415,7 @@ src/core/teensy4x/IntervalTimer.s: src/core/teensy4x/IntervalTimer.cpp.s
 
 # target to generate assembly for a file
 src/core/teensy4x/IntervalTimer.cpp.s:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/core-build/CMakeFiles/core.dir/build.make _deps/core-build/CMakeFiles/core.dir/src/core/teensy4x/IntervalTimer.cpp.s
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/core-build/CMakeFiles/core.dir/build.make _deps/core-build/CMakeFiles/core.dir/src/core/teensy4x/IntervalTimer.cpp.s
 .PHONY : src/core/teensy4x/IntervalTimer.cpp.s
 
 src/core/teensy4x/Print.obj: src/core/teensy4x/Print.cpp.obj
@@ -423,7 +423,7 @@ src/core/teensy4x/Print.obj: src/core/teensy4x/Print.cpp.obj
 
 # target to build an object file
 src/core/teensy4x/Print.cpp.obj:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/core-build/CMakeFiles/core.dir/build.make _deps/core-build/CMakeFiles/core.dir/src/core/teensy4x/Print.cpp.obj
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/core-build/CMakeFiles/core.dir/build.make _deps/core-build/CMakeFiles/core.dir/src/core/teensy4x/Print.cpp.obj
 .PHONY : src/core/teensy4x/Print.cpp.obj
 
 src/core/teensy4x/Print.i: src/core/teensy4x/Print.cpp.i
@@ -431,7 +431,7 @@ src/core/teensy4x/Print.i: src/core/teensy4x/Print.cpp.i
 
 # target to preprocess a source file
 src/core/teensy4x/Print.cpp.i:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/core-build/CMakeFiles/core.dir/build.make _deps/core-build/CMakeFiles/core.dir/src/core/teensy4x/Print.cpp.i
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/core-build/CMakeFiles/core.dir/build.make _deps/core-build/CMakeFiles/core.dir/src/core/teensy4x/Print.cpp.i
 .PHONY : src/core/teensy4x/Print.cpp.i
 
 src/core/teensy4x/Print.s: src/core/teensy4x/Print.cpp.s
@@ -439,7 +439,7 @@ src/core/teensy4x/Print.s: src/core/teensy4x/Print.cpp.s
 
 # target to generate assembly for a file
 src/core/teensy4x/Print.cpp.s:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/core-build/CMakeFiles/core.dir/build.make _deps/core-build/CMakeFiles/core.dir/src/core/teensy4x/Print.cpp.s
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/core-build/CMakeFiles/core.dir/build.make _deps/core-build/CMakeFiles/core.dir/src/core/teensy4x/Print.cpp.s
 .PHONY : src/core/teensy4x/Print.cpp.s
 
 src/core/teensy4x/SPI.obj: src/core/teensy4x/SPI.cpp.obj
@@ -447,7 +447,7 @@ src/core/teensy4x/SPI.obj: src/core/teensy4x/SPI.cpp.obj
 
 # target to build an object file
 src/core/teensy4x/SPI.cpp.obj:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/core-build/CMakeFiles/core.dir/build.make _deps/core-build/CMakeFiles/core.dir/src/core/teensy4x/SPI.cpp.obj
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/core-build/CMakeFiles/core.dir/build.make _deps/core-build/CMakeFiles/core.dir/src/core/teensy4x/SPI.cpp.obj
 .PHONY : src/core/teensy4x/SPI.cpp.obj
 
 src/core/teensy4x/SPI.i: src/core/teensy4x/SPI.cpp.i
@@ -455,7 +455,7 @@ src/core/teensy4x/SPI.i: src/core/teensy4x/SPI.cpp.i
 
 # target to preprocess a source file
 src/core/teensy4x/SPI.cpp.i:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/core-build/CMakeFiles/core.dir/build.make _deps/core-build/CMakeFiles/core.dir/src/core/teensy4x/SPI.cpp.i
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/core-build/CMakeFiles/core.dir/build.make _deps/core-build/CMakeFiles/core.dir/src/core/teensy4x/SPI.cpp.i
 .PHONY : src/core/teensy4x/SPI.cpp.i
 
 src/core/teensy4x/SPI.s: src/core/teensy4x/SPI.cpp.s
@@ -463,7 +463,7 @@ src/core/teensy4x/SPI.s: src/core/teensy4x/SPI.cpp.s
 
 # target to generate assembly for a file
 src/core/teensy4x/SPI.cpp.s:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/core-build/CMakeFiles/core.dir/build.make _deps/core-build/CMakeFiles/core.dir/src/core/teensy4x/SPI.cpp.s
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/core-build/CMakeFiles/core.dir/build.make _deps/core-build/CMakeFiles/core.dir/src/core/teensy4x/SPI.cpp.s
 .PHONY : src/core/teensy4x/SPI.cpp.s
 
 src/core/teensy4x/Stream.obj: src/core/teensy4x/Stream.cpp.obj
@@ -471,7 +471,7 @@ src/core/teensy4x/Stream.obj: src/core/teensy4x/Stream.cpp.obj
 
 # target to build an object file
 src/core/teensy4x/Stream.cpp.obj:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/core-build/CMakeFiles/core.dir/build.make _deps/core-build/CMakeFiles/core.dir/src/core/teensy4x/Stream.cpp.obj
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/core-build/CMakeFiles/core.dir/build.make _deps/core-build/CMakeFiles/core.dir/src/core/teensy4x/Stream.cpp.obj
 .PHONY : src/core/teensy4x/Stream.cpp.obj
 
 src/core/teensy4x/Stream.i: src/core/teensy4x/Stream.cpp.i
@@ -479,7 +479,7 @@ src/core/teensy4x/Stream.i: src/core/teensy4x/Stream.cpp.i
 
 # target to preprocess a source file
 src/core/teensy4x/Stream.cpp.i:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/core-build/CMakeFiles/core.dir/build.make _deps/core-build/CMakeFiles/core.dir/src/core/teensy4x/Stream.cpp.i
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/core-build/CMakeFiles/core.dir/build.make _deps/core-build/CMakeFiles/core.dir/src/core/teensy4x/Stream.cpp.i
 .PHONY : src/core/teensy4x/Stream.cpp.i
 
 src/core/teensy4x/Stream.s: src/core/teensy4x/Stream.cpp.s
@@ -487,7 +487,7 @@ src/core/teensy4x/Stream.s: src/core/teensy4x/Stream.cpp.s
 
 # target to generate assembly for a file
 src/core/teensy4x/Stream.cpp.s:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/core-build/CMakeFiles/core.dir/build.make _deps/core-build/CMakeFiles/core.dir/src/core/teensy4x/Stream.cpp.s
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/core-build/CMakeFiles/core.dir/build.make _deps/core-build/CMakeFiles/core.dir/src/core/teensy4x/Stream.cpp.s
 .PHONY : src/core/teensy4x/Stream.cpp.s
 
 src/core/teensy4x/WireIMXRT.obj: src/core/teensy4x/WireIMXRT.cpp.obj
@@ -495,7 +495,7 @@ src/core/teensy4x/WireIMXRT.obj: src/core/teensy4x/WireIMXRT.cpp.obj
 
 # target to build an object file
 src/core/teensy4x/WireIMXRT.cpp.obj:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/core-build/CMakeFiles/core.dir/build.make _deps/core-build/CMakeFiles/core.dir/src/core/teensy4x/WireIMXRT.cpp.obj
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/core-build/CMakeFiles/core.dir/build.make _deps/core-build/CMakeFiles/core.dir/src/core/teensy4x/WireIMXRT.cpp.obj
 .PHONY : src/core/teensy4x/WireIMXRT.cpp.obj
 
 src/core/teensy4x/WireIMXRT.i: src/core/teensy4x/WireIMXRT.cpp.i
@@ -503,7 +503,7 @@ src/core/teensy4x/WireIMXRT.i: src/core/teensy4x/WireIMXRT.cpp.i
 
 # target to preprocess a source file
 src/core/teensy4x/WireIMXRT.cpp.i:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/core-build/CMakeFiles/core.dir/build.make _deps/core-build/CMakeFiles/core.dir/src/core/teensy4x/WireIMXRT.cpp.i
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/core-build/CMakeFiles/core.dir/build.make _deps/core-build/CMakeFiles/core.dir/src/core/teensy4x/WireIMXRT.cpp.i
 .PHONY : src/core/teensy4x/WireIMXRT.cpp.i
 
 src/core/teensy4x/WireIMXRT.s: src/core/teensy4x/WireIMXRT.cpp.s
@@ -511,7 +511,7 @@ src/core/teensy4x/WireIMXRT.s: src/core/teensy4x/WireIMXRT.cpp.s
 
 # target to generate assembly for a file
 src/core/teensy4x/WireIMXRT.cpp.s:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/core-build/CMakeFiles/core.dir/build.make _deps/core-build/CMakeFiles/core.dir/src/core/teensy4x/WireIMXRT.cpp.s
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/core-build/CMakeFiles/core.dir/build.make _deps/core-build/CMakeFiles/core.dir/src/core/teensy4x/WireIMXRT.cpp.s
 .PHONY : src/core/teensy4x/WireIMXRT.cpp.s
 
 src/core/teensy4x/analog.obj: src/core/teensy4x/analog.c.obj
@@ -519,7 +519,7 @@ src/core/teensy4x/analog.obj: src/core/teensy4x/analog.c.obj
 
 # target to build an object file
 src/core/teensy4x/analog.c.obj:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/core-build/CMakeFiles/core.dir/build.make _deps/core-build/CMakeFiles/core.dir/src/core/teensy4x/analog.c.obj
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/core-build/CMakeFiles/core.dir/build.make _deps/core-build/CMakeFiles/core.dir/src/core/teensy4x/analog.c.obj
 .PHONY : src/core/teensy4x/analog.c.obj
 
 src/core/teensy4x/analog.i: src/core/teensy4x/analog.c.i
@@ -527,7 +527,7 @@ src/core/teensy4x/analog.i: src/core/teensy4x/analog.c.i
 
 # target to preprocess a source file
 src/core/teensy4x/analog.c.i:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/core-build/CMakeFiles/core.dir/build.make _deps/core-build/CMakeFiles/core.dir/src/core/teensy4x/analog.c.i
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/core-build/CMakeFiles/core.dir/build.make _deps/core-build/CMakeFiles/core.dir/src/core/teensy4x/analog.c.i
 .PHONY : src/core/teensy4x/analog.c.i
 
 src/core/teensy4x/analog.s: src/core/teensy4x/analog.c.s
@@ -535,7 +535,7 @@ src/core/teensy4x/analog.s: src/core/teensy4x/analog.c.s
 
 # target to generate assembly for a file
 src/core/teensy4x/analog.c.s:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/core-build/CMakeFiles/core.dir/build.make _deps/core-build/CMakeFiles/core.dir/src/core/teensy4x/analog.c.s
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/core-build/CMakeFiles/core.dir/build.make _deps/core-build/CMakeFiles/core.dir/src/core/teensy4x/analog.c.s
 .PHONY : src/core/teensy4x/analog.c.s
 
 src/core/teensy4x/bootdata.obj: src/core/teensy4x/bootdata.c.obj
@@ -543,7 +543,7 @@ src/core/teensy4x/bootdata.obj: src/core/teensy4x/bootdata.c.obj
 
 # target to build an object file
 src/core/teensy4x/bootdata.c.obj:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/core-build/CMakeFiles/core.dir/build.make _deps/core-build/CMakeFiles/core.dir/src/core/teensy4x/bootdata.c.obj
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/core-build/CMakeFiles/core.dir/build.make _deps/core-build/CMakeFiles/core.dir/src/core/teensy4x/bootdata.c.obj
 .PHONY : src/core/teensy4x/bootdata.c.obj
 
 src/core/teensy4x/bootdata.i: src/core/teensy4x/bootdata.c.i
@@ -551,7 +551,7 @@ src/core/teensy4x/bootdata.i: src/core/teensy4x/bootdata.c.i
 
 # target to preprocess a source file
 src/core/teensy4x/bootdata.c.i:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/core-build/CMakeFiles/core.dir/build.make _deps/core-build/CMakeFiles/core.dir/src/core/teensy4x/bootdata.c.i
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/core-build/CMakeFiles/core.dir/build.make _deps/core-build/CMakeFiles/core.dir/src/core/teensy4x/bootdata.c.i
 .PHONY : src/core/teensy4x/bootdata.c.i
 
 src/core/teensy4x/bootdata.s: src/core/teensy4x/bootdata.c.s
@@ -559,7 +559,7 @@ src/core/teensy4x/bootdata.s: src/core/teensy4x/bootdata.c.s
 
 # target to generate assembly for a file
 src/core/teensy4x/bootdata.c.s:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/core-build/CMakeFiles/core.dir/build.make _deps/core-build/CMakeFiles/core.dir/src/core/teensy4x/bootdata.c.s
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/core-build/CMakeFiles/core.dir/build.make _deps/core-build/CMakeFiles/core.dir/src/core/teensy4x/bootdata.c.s
 .PHONY : src/core/teensy4x/bootdata.c.s
 
 src/core/teensy4x/clockspeed.obj: src/core/teensy4x/clockspeed.c.obj
@@ -567,7 +567,7 @@ src/core/teensy4x/clockspeed.obj: src/core/teensy4x/clockspeed.c.obj
 
 # target to build an object file
 src/core/teensy4x/clockspeed.c.obj:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/core-build/CMakeFiles/core.dir/build.make _deps/core-build/CMakeFiles/core.dir/src/core/teensy4x/clockspeed.c.obj
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/core-build/CMakeFiles/core.dir/build.make _deps/core-build/CMakeFiles/core.dir/src/core/teensy4x/clockspeed.c.obj
 .PHONY : src/core/teensy4x/clockspeed.c.obj
 
 src/core/teensy4x/clockspeed.i: src/core/teensy4x/clockspeed.c.i
@@ -575,7 +575,7 @@ src/core/teensy4x/clockspeed.i: src/core/teensy4x/clockspeed.c.i
 
 # target to preprocess a source file
 src/core/teensy4x/clockspeed.c.i:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/core-build/CMakeFiles/core.dir/build.make _deps/core-build/CMakeFiles/core.dir/src/core/teensy4x/clockspeed.c.i
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/core-build/CMakeFiles/core.dir/build.make _deps/core-build/CMakeFiles/core.dir/src/core/teensy4x/clockspeed.c.i
 .PHONY : src/core/teensy4x/clockspeed.c.i
 
 src/core/teensy4x/clockspeed.s: src/core/teensy4x/clockspeed.c.s
@@ -583,7 +583,7 @@ src/core/teensy4x/clockspeed.s: src/core/teensy4x/clockspeed.c.s
 
 # target to generate assembly for a file
 src/core/teensy4x/clockspeed.c.s:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/core-build/CMakeFiles/core.dir/build.make _deps/core-build/CMakeFiles/core.dir/src/core/teensy4x/clockspeed.c.s
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/core-build/CMakeFiles/core.dir/build.make _deps/core-build/CMakeFiles/core.dir/src/core/teensy4x/clockspeed.c.s
 .PHONY : src/core/teensy4x/clockspeed.c.s
 
 src/core/teensy4x/debugprintf.obj: src/core/teensy4x/debugprintf.c.obj
@@ -591,7 +591,7 @@ src/core/teensy4x/debugprintf.obj: src/core/teensy4x/debugprintf.c.obj
 
 # target to build an object file
 src/core/teensy4x/debugprintf.c.obj:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/core-build/CMakeFiles/core.dir/build.make _deps/core-build/CMakeFiles/core.dir/src/core/teensy4x/debugprintf.c.obj
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/core-build/CMakeFiles/core.dir/build.make _deps/core-build/CMakeFiles/core.dir/src/core/teensy4x/debugprintf.c.obj
 .PHONY : src/core/teensy4x/debugprintf.c.obj
 
 src/core/teensy4x/debugprintf.i: src/core/teensy4x/debugprintf.c.i
@@ -599,7 +599,7 @@ src/core/teensy4x/debugprintf.i: src/core/teensy4x/debugprintf.c.i
 
 # target to preprocess a source file
 src/core/teensy4x/debugprintf.c.i:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/core-build/CMakeFiles/core.dir/build.make _deps/core-build/CMakeFiles/core.dir/src/core/teensy4x/debugprintf.c.i
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/core-build/CMakeFiles/core.dir/build.make _deps/core-build/CMakeFiles/core.dir/src/core/teensy4x/debugprintf.c.i
 .PHONY : src/core/teensy4x/debugprintf.c.i
 
 src/core/teensy4x/debugprintf.s: src/core/teensy4x/debugprintf.c.s
@@ -607,7 +607,7 @@ src/core/teensy4x/debugprintf.s: src/core/teensy4x/debugprintf.c.s
 
 # target to generate assembly for a file
 src/core/teensy4x/debugprintf.c.s:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/core-build/CMakeFiles/core.dir/build.make _deps/core-build/CMakeFiles/core.dir/src/core/teensy4x/debugprintf.c.s
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/core-build/CMakeFiles/core.dir/build.make _deps/core-build/CMakeFiles/core.dir/src/core/teensy4x/debugprintf.c.s
 .PHONY : src/core/teensy4x/debugprintf.c.s
 
 src/core/teensy4x/delay.obj: src/core/teensy4x/delay.c.obj
@@ -615,7 +615,7 @@ src/core/teensy4x/delay.obj: src/core/teensy4x/delay.c.obj
 
 # target to build an object file
 src/core/teensy4x/delay.c.obj:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/core-build/CMakeFiles/core.dir/build.make _deps/core-build/CMakeFiles/core.dir/src/core/teensy4x/delay.c.obj
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/core-build/CMakeFiles/core.dir/build.make _deps/core-build/CMakeFiles/core.dir/src/core/teensy4x/delay.c.obj
 .PHONY : src/core/teensy4x/delay.c.obj
 
 src/core/teensy4x/delay.i: src/core/teensy4x/delay.c.i
@@ -623,7 +623,7 @@ src/core/teensy4x/delay.i: src/core/teensy4x/delay.c.i
 
 # target to preprocess a source file
 src/core/teensy4x/delay.c.i:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/core-build/CMakeFiles/core.dir/build.make _deps/core-build/CMakeFiles/core.dir/src/core/teensy4x/delay.c.i
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/core-build/CMakeFiles/core.dir/build.make _deps/core-build/CMakeFiles/core.dir/src/core/teensy4x/delay.c.i
 .PHONY : src/core/teensy4x/delay.c.i
 
 src/core/teensy4x/delay.s: src/core/teensy4x/delay.c.s
@@ -631,7 +631,7 @@ src/core/teensy4x/delay.s: src/core/teensy4x/delay.c.s
 
 # target to generate assembly for a file
 src/core/teensy4x/delay.c.s:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/core-build/CMakeFiles/core.dir/build.make _deps/core-build/CMakeFiles/core.dir/src/core/teensy4x/delay.c.s
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/core-build/CMakeFiles/core.dir/build.make _deps/core-build/CMakeFiles/core.dir/src/core/teensy4x/delay.c.s
 .PHONY : src/core/teensy4x/delay.c.s
 
 src/core/teensy4x/digital.obj: src/core/teensy4x/digital.c.obj
@@ -639,7 +639,7 @@ src/core/teensy4x/digital.obj: src/core/teensy4x/digital.c.obj
 
 # target to build an object file
 src/core/teensy4x/digital.c.obj:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/core-build/CMakeFiles/core.dir/build.make _deps/core-build/CMakeFiles/core.dir/src/core/teensy4x/digital.c.obj
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/core-build/CMakeFiles/core.dir/build.make _deps/core-build/CMakeFiles/core.dir/src/core/teensy4x/digital.c.obj
 .PHONY : src/core/teensy4x/digital.c.obj
 
 src/core/teensy4x/digital.i: src/core/teensy4x/digital.c.i
@@ -647,7 +647,7 @@ src/core/teensy4x/digital.i: src/core/teensy4x/digital.c.i
 
 # target to preprocess a source file
 src/core/teensy4x/digital.c.i:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/core-build/CMakeFiles/core.dir/build.make _deps/core-build/CMakeFiles/core.dir/src/core/teensy4x/digital.c.i
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/core-build/CMakeFiles/core.dir/build.make _deps/core-build/CMakeFiles/core.dir/src/core/teensy4x/digital.c.i
 .PHONY : src/core/teensy4x/digital.c.i
 
 src/core/teensy4x/digital.s: src/core/teensy4x/digital.c.s
@@ -655,7 +655,7 @@ src/core/teensy4x/digital.s: src/core/teensy4x/digital.c.s
 
 # target to generate assembly for a file
 src/core/teensy4x/digital.c.s:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/core-build/CMakeFiles/core.dir/build.make _deps/core-build/CMakeFiles/core.dir/src/core/teensy4x/digital.c.s
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/core-build/CMakeFiles/core.dir/build.make _deps/core-build/CMakeFiles/core.dir/src/core/teensy4x/digital.c.s
 .PHONY : src/core/teensy4x/digital.c.s
 
 src/core/teensy4x/eeprom.obj: src/core/teensy4x/eeprom.c.obj
@@ -663,7 +663,7 @@ src/core/teensy4x/eeprom.obj: src/core/teensy4x/eeprom.c.obj
 
 # target to build an object file
 src/core/teensy4x/eeprom.c.obj:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/core-build/CMakeFiles/core.dir/build.make _deps/core-build/CMakeFiles/core.dir/src/core/teensy4x/eeprom.c.obj
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/core-build/CMakeFiles/core.dir/build.make _deps/core-build/CMakeFiles/core.dir/src/core/teensy4x/eeprom.c.obj
 .PHONY : src/core/teensy4x/eeprom.c.obj
 
 src/core/teensy4x/eeprom.i: src/core/teensy4x/eeprom.c.i
@@ -671,7 +671,7 @@ src/core/teensy4x/eeprom.i: src/core/teensy4x/eeprom.c.i
 
 # target to preprocess a source file
 src/core/teensy4x/eeprom.c.i:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/core-build/CMakeFiles/core.dir/build.make _deps/core-build/CMakeFiles/core.dir/src/core/teensy4x/eeprom.c.i
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/core-build/CMakeFiles/core.dir/build.make _deps/core-build/CMakeFiles/core.dir/src/core/teensy4x/eeprom.c.i
 .PHONY : src/core/teensy4x/eeprom.c.i
 
 src/core/teensy4x/eeprom.s: src/core/teensy4x/eeprom.c.s
@@ -679,7 +679,7 @@ src/core/teensy4x/eeprom.s: src/core/teensy4x/eeprom.c.s
 
 # target to generate assembly for a file
 src/core/teensy4x/eeprom.c.s:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/core-build/CMakeFiles/core.dir/build.make _deps/core-build/CMakeFiles/core.dir/src/core/teensy4x/eeprom.c.s
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/core-build/CMakeFiles/core.dir/build.make _deps/core-build/CMakeFiles/core.dir/src/core/teensy4x/eeprom.c.s
 .PHONY : src/core/teensy4x/eeprom.c.s
 
 src/core/teensy4x/interrupt.obj: src/core/teensy4x/interrupt.c.obj
@@ -687,7 +687,7 @@ src/core/teensy4x/interrupt.obj: src/core/teensy4x/interrupt.c.obj
 
 # target to build an object file
 src/core/teensy4x/interrupt.c.obj:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/core-build/CMakeFiles/core.dir/build.make _deps/core-build/CMakeFiles/core.dir/src/core/teensy4x/interrupt.c.obj
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/core-build/CMakeFiles/core.dir/build.make _deps/core-build/CMakeFiles/core.dir/src/core/teensy4x/interrupt.c.obj
 .PHONY : src/core/teensy4x/interrupt.c.obj
 
 src/core/teensy4x/interrupt.i: src/core/teensy4x/interrupt.c.i
@@ -695,7 +695,7 @@ src/core/teensy4x/interrupt.i: src/core/teensy4x/interrupt.c.i
 
 # target to preprocess a source file
 src/core/teensy4x/interrupt.c.i:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/core-build/CMakeFiles/core.dir/build.make _deps/core-build/CMakeFiles/core.dir/src/core/teensy4x/interrupt.c.i
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/core-build/CMakeFiles/core.dir/build.make _deps/core-build/CMakeFiles/core.dir/src/core/teensy4x/interrupt.c.i
 .PHONY : src/core/teensy4x/interrupt.c.i
 
 src/core/teensy4x/interrupt.s: src/core/teensy4x/interrupt.c.s
@@ -703,7 +703,7 @@ src/core/teensy4x/interrupt.s: src/core/teensy4x/interrupt.c.s
 
 # target to generate assembly for a file
 src/core/teensy4x/interrupt.c.s:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/core-build/CMakeFiles/core.dir/build.make _deps/core-build/CMakeFiles/core.dir/src/core/teensy4x/interrupt.c.s
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/core-build/CMakeFiles/core.dir/build.make _deps/core-build/CMakeFiles/core.dir/src/core/teensy4x/interrupt.c.s
 .PHONY : src/core/teensy4x/interrupt.c.s
 
 src/core/teensy4x/micros64.obj: src/core/teensy4x/micros64.c.obj
@@ -711,7 +711,7 @@ src/core/teensy4x/micros64.obj: src/core/teensy4x/micros64.c.obj
 
 # target to build an object file
 src/core/teensy4x/micros64.c.obj:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/core-build/CMakeFiles/core.dir/build.make _deps/core-build/CMakeFiles/core.dir/src/core/teensy4x/micros64.c.obj
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/core-build/CMakeFiles/core.dir/build.make _deps/core-build/CMakeFiles/core.dir/src/core/teensy4x/micros64.c.obj
 .PHONY : src/core/teensy4x/micros64.c.obj
 
 src/core/teensy4x/micros64.i: src/core/teensy4x/micros64.c.i
@@ -719,7 +719,7 @@ src/core/teensy4x/micros64.i: src/core/teensy4x/micros64.c.i
 
 # target to preprocess a source file
 src/core/teensy4x/micros64.c.i:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/core-build/CMakeFiles/core.dir/build.make _deps/core-build/CMakeFiles/core.dir/src/core/teensy4x/micros64.c.i
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/core-build/CMakeFiles/core.dir/build.make _deps/core-build/CMakeFiles/core.dir/src/core/teensy4x/micros64.c.i
 .PHONY : src/core/teensy4x/micros64.c.i
 
 src/core/teensy4x/micros64.s: src/core/teensy4x/micros64.c.s
@@ -727,7 +727,7 @@ src/core/teensy4x/micros64.s: src/core/teensy4x/micros64.c.s
 
 # target to generate assembly for a file
 src/core/teensy4x/micros64.c.s:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/core-build/CMakeFiles/core.dir/build.make _deps/core-build/CMakeFiles/core.dir/src/core/teensy4x/micros64.c.s
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/core-build/CMakeFiles/core.dir/build.make _deps/core-build/CMakeFiles/core.dir/src/core/teensy4x/micros64.c.s
 .PHONY : src/core/teensy4x/micros64.c.s
 
 src/core/teensy4x/nonstd.obj: src/core/teensy4x/nonstd.c.obj
@@ -735,7 +735,7 @@ src/core/teensy4x/nonstd.obj: src/core/teensy4x/nonstd.c.obj
 
 # target to build an object file
 src/core/teensy4x/nonstd.c.obj:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/core-build/CMakeFiles/core.dir/build.make _deps/core-build/CMakeFiles/core.dir/src/core/teensy4x/nonstd.c.obj
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/core-build/CMakeFiles/core.dir/build.make _deps/core-build/CMakeFiles/core.dir/src/core/teensy4x/nonstd.c.obj
 .PHONY : src/core/teensy4x/nonstd.c.obj
 
 src/core/teensy4x/nonstd.i: src/core/teensy4x/nonstd.c.i
@@ -743,7 +743,7 @@ src/core/teensy4x/nonstd.i: src/core/teensy4x/nonstd.c.i
 
 # target to preprocess a source file
 src/core/teensy4x/nonstd.c.i:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/core-build/CMakeFiles/core.dir/build.make _deps/core-build/CMakeFiles/core.dir/src/core/teensy4x/nonstd.c.i
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/core-build/CMakeFiles/core.dir/build.make _deps/core-build/CMakeFiles/core.dir/src/core/teensy4x/nonstd.c.i
 .PHONY : src/core/teensy4x/nonstd.c.i
 
 src/core/teensy4x/nonstd.s: src/core/teensy4x/nonstd.c.s
@@ -751,7 +751,7 @@ src/core/teensy4x/nonstd.s: src/core/teensy4x/nonstd.c.s
 
 # target to generate assembly for a file
 src/core/teensy4x/nonstd.c.s:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/core-build/CMakeFiles/core.dir/build.make _deps/core-build/CMakeFiles/core.dir/src/core/teensy4x/nonstd.c.s
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/core-build/CMakeFiles/core.dir/build.make _deps/core-build/CMakeFiles/core.dir/src/core/teensy4x/nonstd.c.s
 .PHONY : src/core/teensy4x/nonstd.c.s
 
 src/core/teensy4x/pwm.obj: src/core/teensy4x/pwm.c.obj
@@ -759,7 +759,7 @@ src/core/teensy4x/pwm.obj: src/core/teensy4x/pwm.c.obj
 
 # target to build an object file
 src/core/teensy4x/pwm.c.obj:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/core-build/CMakeFiles/core.dir/build.make _deps/core-build/CMakeFiles/core.dir/src/core/teensy4x/pwm.c.obj
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/core-build/CMakeFiles/core.dir/build.make _deps/core-build/CMakeFiles/core.dir/src/core/teensy4x/pwm.c.obj
 .PHONY : src/core/teensy4x/pwm.c.obj
 
 src/core/teensy4x/pwm.i: src/core/teensy4x/pwm.c.i
@@ -767,7 +767,7 @@ src/core/teensy4x/pwm.i: src/core/teensy4x/pwm.c.i
 
 # target to preprocess a source file
 src/core/teensy4x/pwm.c.i:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/core-build/CMakeFiles/core.dir/build.make _deps/core-build/CMakeFiles/core.dir/src/core/teensy4x/pwm.c.i
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/core-build/CMakeFiles/core.dir/build.make _deps/core-build/CMakeFiles/core.dir/src/core/teensy4x/pwm.c.i
 .PHONY : src/core/teensy4x/pwm.c.i
 
 src/core/teensy4x/pwm.s: src/core/teensy4x/pwm.c.s
@@ -775,7 +775,7 @@ src/core/teensy4x/pwm.s: src/core/teensy4x/pwm.c.s
 
 # target to generate assembly for a file
 src/core/teensy4x/pwm.c.s:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/core-build/CMakeFiles/core.dir/build.make _deps/core-build/CMakeFiles/core.dir/src/core/teensy4x/pwm.c.s
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/core-build/CMakeFiles/core.dir/build.make _deps/core-build/CMakeFiles/core.dir/src/core/teensy4x/pwm.c.s
 .PHONY : src/core/teensy4x/pwm.c.s
 
 src/core/teensy4x/rtc.obj: src/core/teensy4x/rtc.c.obj
@@ -783,7 +783,7 @@ src/core/teensy4x/rtc.obj: src/core/teensy4x/rtc.c.obj
 
 # target to build an object file
 src/core/teensy4x/rtc.c.obj:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/core-build/CMakeFiles/core.dir/build.make _deps/core-build/CMakeFiles/core.dir/src/core/teensy4x/rtc.c.obj
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/core-build/CMakeFiles/core.dir/build.make _deps/core-build/CMakeFiles/core.dir/src/core/teensy4x/rtc.c.obj
 .PHONY : src/core/teensy4x/rtc.c.obj
 
 src/core/teensy4x/rtc.i: src/core/teensy4x/rtc.c.i
@@ -791,7 +791,7 @@ src/core/teensy4x/rtc.i: src/core/teensy4x/rtc.c.i
 
 # target to preprocess a source file
 src/core/teensy4x/rtc.c.i:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/core-build/CMakeFiles/core.dir/build.make _deps/core-build/CMakeFiles/core.dir/src/core/teensy4x/rtc.c.i
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/core-build/CMakeFiles/core.dir/build.make _deps/core-build/CMakeFiles/core.dir/src/core/teensy4x/rtc.c.i
 .PHONY : src/core/teensy4x/rtc.c.i
 
 src/core/teensy4x/rtc.s: src/core/teensy4x/rtc.c.s
@@ -799,7 +799,7 @@ src/core/teensy4x/rtc.s: src/core/teensy4x/rtc.c.s
 
 # target to generate assembly for a file
 src/core/teensy4x/rtc.c.s:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/core-build/CMakeFiles/core.dir/build.make _deps/core-build/CMakeFiles/core.dir/src/core/teensy4x/rtc.c.s
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/core-build/CMakeFiles/core.dir/build.make _deps/core-build/CMakeFiles/core.dir/src/core/teensy4x/rtc.c.s
 .PHONY : src/core/teensy4x/rtc.c.s
 
 src/core/teensy4x/serialEvent.obj: src/core/teensy4x/serialEvent.cpp.obj
@@ -807,7 +807,7 @@ src/core/teensy4x/serialEvent.obj: src/core/teensy4x/serialEvent.cpp.obj
 
 # target to build an object file
 src/core/teensy4x/serialEvent.cpp.obj:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/core-build/CMakeFiles/core.dir/build.make _deps/core-build/CMakeFiles/core.dir/src/core/teensy4x/serialEvent.cpp.obj
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/core-build/CMakeFiles/core.dir/build.make _deps/core-build/CMakeFiles/core.dir/src/core/teensy4x/serialEvent.cpp.obj
 .PHONY : src/core/teensy4x/serialEvent.cpp.obj
 
 src/core/teensy4x/serialEvent.i: src/core/teensy4x/serialEvent.cpp.i
@@ -815,7 +815,7 @@ src/core/teensy4x/serialEvent.i: src/core/teensy4x/serialEvent.cpp.i
 
 # target to preprocess a source file
 src/core/teensy4x/serialEvent.cpp.i:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/core-build/CMakeFiles/core.dir/build.make _deps/core-build/CMakeFiles/core.dir/src/core/teensy4x/serialEvent.cpp.i
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/core-build/CMakeFiles/core.dir/build.make _deps/core-build/CMakeFiles/core.dir/src/core/teensy4x/serialEvent.cpp.i
 .PHONY : src/core/teensy4x/serialEvent.cpp.i
 
 src/core/teensy4x/serialEvent.s: src/core/teensy4x/serialEvent.cpp.s
@@ -823,7 +823,7 @@ src/core/teensy4x/serialEvent.s: src/core/teensy4x/serialEvent.cpp.s
 
 # target to generate assembly for a file
 src/core/teensy4x/serialEvent.cpp.s:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/core-build/CMakeFiles/core.dir/build.make _deps/core-build/CMakeFiles/core.dir/src/core/teensy4x/serialEvent.cpp.s
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/core-build/CMakeFiles/core.dir/build.make _deps/core-build/CMakeFiles/core.dir/src/core/teensy4x/serialEvent.cpp.s
 .PHONY : src/core/teensy4x/serialEvent.cpp.s
 
 src/core/teensy4x/serialEvent1.obj: src/core/teensy4x/serialEvent1.cpp.obj
@@ -831,7 +831,7 @@ src/core/teensy4x/serialEvent1.obj: src/core/teensy4x/serialEvent1.cpp.obj
 
 # target to build an object file
 src/core/teensy4x/serialEvent1.cpp.obj:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/core-build/CMakeFiles/core.dir/build.make _deps/core-build/CMakeFiles/core.dir/src/core/teensy4x/serialEvent1.cpp.obj
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/core-build/CMakeFiles/core.dir/build.make _deps/core-build/CMakeFiles/core.dir/src/core/teensy4x/serialEvent1.cpp.obj
 .PHONY : src/core/teensy4x/serialEvent1.cpp.obj
 
 src/core/teensy4x/serialEvent1.i: src/core/teensy4x/serialEvent1.cpp.i
@@ -839,7 +839,7 @@ src/core/teensy4x/serialEvent1.i: src/core/teensy4x/serialEvent1.cpp.i
 
 # target to preprocess a source file
 src/core/teensy4x/serialEvent1.cpp.i:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/core-build/CMakeFiles/core.dir/build.make _deps/core-build/CMakeFiles/core.dir/src/core/teensy4x/serialEvent1.cpp.i
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/core-build/CMakeFiles/core.dir/build.make _deps/core-build/CMakeFiles/core.dir/src/core/teensy4x/serialEvent1.cpp.i
 .PHONY : src/core/teensy4x/serialEvent1.cpp.i
 
 src/core/teensy4x/serialEvent1.s: src/core/teensy4x/serialEvent1.cpp.s
@@ -847,7 +847,7 @@ src/core/teensy4x/serialEvent1.s: src/core/teensy4x/serialEvent1.cpp.s
 
 # target to generate assembly for a file
 src/core/teensy4x/serialEvent1.cpp.s:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/core-build/CMakeFiles/core.dir/build.make _deps/core-build/CMakeFiles/core.dir/src/core/teensy4x/serialEvent1.cpp.s
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/core-build/CMakeFiles/core.dir/build.make _deps/core-build/CMakeFiles/core.dir/src/core/teensy4x/serialEvent1.cpp.s
 .PHONY : src/core/teensy4x/serialEvent1.cpp.s
 
 src/core/teensy4x/serialEvent2.obj: src/core/teensy4x/serialEvent2.cpp.obj
@@ -855,7 +855,7 @@ src/core/teensy4x/serialEvent2.obj: src/core/teensy4x/serialEvent2.cpp.obj
 
 # target to build an object file
 src/core/teensy4x/serialEvent2.cpp.obj:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/core-build/CMakeFiles/core.dir/build.make _deps/core-build/CMakeFiles/core.dir/src/core/teensy4x/serialEvent2.cpp.obj
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/core-build/CMakeFiles/core.dir/build.make _deps/core-build/CMakeFiles/core.dir/src/core/teensy4x/serialEvent2.cpp.obj
 .PHONY : src/core/teensy4x/serialEvent2.cpp.obj
 
 src/core/teensy4x/serialEvent2.i: src/core/teensy4x/serialEvent2.cpp.i
@@ -863,7 +863,7 @@ src/core/teensy4x/serialEvent2.i: src/core/teensy4x/serialEvent2.cpp.i
 
 # target to preprocess a source file
 src/core/teensy4x/serialEvent2.cpp.i:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/core-build/CMakeFiles/core.dir/build.make _deps/core-build/CMakeFiles/core.dir/src/core/teensy4x/serialEvent2.cpp.i
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/core-build/CMakeFiles/core.dir/build.make _deps/core-build/CMakeFiles/core.dir/src/core/teensy4x/serialEvent2.cpp.i
 .PHONY : src/core/teensy4x/serialEvent2.cpp.i
 
 src/core/teensy4x/serialEvent2.s: src/core/teensy4x/serialEvent2.cpp.s
@@ -871,7 +871,7 @@ src/core/teensy4x/serialEvent2.s: src/core/teensy4x/serialEvent2.cpp.s
 
 # target to generate assembly for a file
 src/core/teensy4x/serialEvent2.cpp.s:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/core-build/CMakeFiles/core.dir/build.make _deps/core-build/CMakeFiles/core.dir/src/core/teensy4x/serialEvent2.cpp.s
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/core-build/CMakeFiles/core.dir/build.make _deps/core-build/CMakeFiles/core.dir/src/core/teensy4x/serialEvent2.cpp.s
 .PHONY : src/core/teensy4x/serialEvent2.cpp.s
 
 src/core/teensy4x/serialEvent3.obj: src/core/teensy4x/serialEvent3.cpp.obj
@@ -879,7 +879,7 @@ src/core/teensy4x/serialEvent3.obj: src/core/teensy4x/serialEvent3.cpp.obj
 
 # target to build an object file
 src/core/teensy4x/serialEvent3.cpp.obj:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/core-build/CMakeFiles/core.dir/build.make _deps/core-build/CMakeFiles/core.dir/src/core/teensy4x/serialEvent3.cpp.obj
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/core-build/CMakeFiles/core.dir/build.make _deps/core-build/CMakeFiles/core.dir/src/core/teensy4x/serialEvent3.cpp.obj
 .PHONY : src/core/teensy4x/serialEvent3.cpp.obj
 
 src/core/teensy4x/serialEvent3.i: src/core/teensy4x/serialEvent3.cpp.i
@@ -887,7 +887,7 @@ src/core/teensy4x/serialEvent3.i: src/core/teensy4x/serialEvent3.cpp.i
 
 # target to preprocess a source file
 src/core/teensy4x/serialEvent3.cpp.i:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/core-build/CMakeFiles/core.dir/build.make _deps/core-build/CMakeFiles/core.dir/src/core/teensy4x/serialEvent3.cpp.i
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/core-build/CMakeFiles/core.dir/build.make _deps/core-build/CMakeFiles/core.dir/src/core/teensy4x/serialEvent3.cpp.i
 .PHONY : src/core/teensy4x/serialEvent3.cpp.i
 
 src/core/teensy4x/serialEvent3.s: src/core/teensy4x/serialEvent3.cpp.s
@@ -895,7 +895,7 @@ src/core/teensy4x/serialEvent3.s: src/core/teensy4x/serialEvent3.cpp.s
 
 # target to generate assembly for a file
 src/core/teensy4x/serialEvent3.cpp.s:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/core-build/CMakeFiles/core.dir/build.make _deps/core-build/CMakeFiles/core.dir/src/core/teensy4x/serialEvent3.cpp.s
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/core-build/CMakeFiles/core.dir/build.make _deps/core-build/CMakeFiles/core.dir/src/core/teensy4x/serialEvent3.cpp.s
 .PHONY : src/core/teensy4x/serialEvent3.cpp.s
 
 src/core/teensy4x/serialEvent4.obj: src/core/teensy4x/serialEvent4.cpp.obj
@@ -903,7 +903,7 @@ src/core/teensy4x/serialEvent4.obj: src/core/teensy4x/serialEvent4.cpp.obj
 
 # target to build an object file
 src/core/teensy4x/serialEvent4.cpp.obj:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/core-build/CMakeFiles/core.dir/build.make _deps/core-build/CMakeFiles/core.dir/src/core/teensy4x/serialEvent4.cpp.obj
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/core-build/CMakeFiles/core.dir/build.make _deps/core-build/CMakeFiles/core.dir/src/core/teensy4x/serialEvent4.cpp.obj
 .PHONY : src/core/teensy4x/serialEvent4.cpp.obj
 
 src/core/teensy4x/serialEvent4.i: src/core/teensy4x/serialEvent4.cpp.i
@@ -911,7 +911,7 @@ src/core/teensy4x/serialEvent4.i: src/core/teensy4x/serialEvent4.cpp.i
 
 # target to preprocess a source file
 src/core/teensy4x/serialEvent4.cpp.i:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/core-build/CMakeFiles/core.dir/build.make _deps/core-build/CMakeFiles/core.dir/src/core/teensy4x/serialEvent4.cpp.i
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/core-build/CMakeFiles/core.dir/build.make _deps/core-build/CMakeFiles/core.dir/src/core/teensy4x/serialEvent4.cpp.i
 .PHONY : src/core/teensy4x/serialEvent4.cpp.i
 
 src/core/teensy4x/serialEvent4.s: src/core/teensy4x/serialEvent4.cpp.s
@@ -919,7 +919,7 @@ src/core/teensy4x/serialEvent4.s: src/core/teensy4x/serialEvent4.cpp.s
 
 # target to generate assembly for a file
 src/core/teensy4x/serialEvent4.cpp.s:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/core-build/CMakeFiles/core.dir/build.make _deps/core-build/CMakeFiles/core.dir/src/core/teensy4x/serialEvent4.cpp.s
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/core-build/CMakeFiles/core.dir/build.make _deps/core-build/CMakeFiles/core.dir/src/core/teensy4x/serialEvent4.cpp.s
 .PHONY : src/core/teensy4x/serialEvent4.cpp.s
 
 src/core/teensy4x/serialEvent5.obj: src/core/teensy4x/serialEvent5.cpp.obj
@@ -927,7 +927,7 @@ src/core/teensy4x/serialEvent5.obj: src/core/teensy4x/serialEvent5.cpp.obj
 
 # target to build an object file
 src/core/teensy4x/serialEvent5.cpp.obj:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/core-build/CMakeFiles/core.dir/build.make _deps/core-build/CMakeFiles/core.dir/src/core/teensy4x/serialEvent5.cpp.obj
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/core-build/CMakeFiles/core.dir/build.make _deps/core-build/CMakeFiles/core.dir/src/core/teensy4x/serialEvent5.cpp.obj
 .PHONY : src/core/teensy4x/serialEvent5.cpp.obj
 
 src/core/teensy4x/serialEvent5.i: src/core/teensy4x/serialEvent5.cpp.i
@@ -935,7 +935,7 @@ src/core/teensy4x/serialEvent5.i: src/core/teensy4x/serialEvent5.cpp.i
 
 # target to preprocess a source file
 src/core/teensy4x/serialEvent5.cpp.i:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/core-build/CMakeFiles/core.dir/build.make _deps/core-build/CMakeFiles/core.dir/src/core/teensy4x/serialEvent5.cpp.i
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/core-build/CMakeFiles/core.dir/build.make _deps/core-build/CMakeFiles/core.dir/src/core/teensy4x/serialEvent5.cpp.i
 .PHONY : src/core/teensy4x/serialEvent5.cpp.i
 
 src/core/teensy4x/serialEvent5.s: src/core/teensy4x/serialEvent5.cpp.s
@@ -943,7 +943,7 @@ src/core/teensy4x/serialEvent5.s: src/core/teensy4x/serialEvent5.cpp.s
 
 # target to generate assembly for a file
 src/core/teensy4x/serialEvent5.cpp.s:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/core-build/CMakeFiles/core.dir/build.make _deps/core-build/CMakeFiles/core.dir/src/core/teensy4x/serialEvent5.cpp.s
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/core-build/CMakeFiles/core.dir/build.make _deps/core-build/CMakeFiles/core.dir/src/core/teensy4x/serialEvent5.cpp.s
 .PHONY : src/core/teensy4x/serialEvent5.cpp.s
 
 src/core/teensy4x/serialEvent6.obj: src/core/teensy4x/serialEvent6.cpp.obj
@@ -951,7 +951,7 @@ src/core/teensy4x/serialEvent6.obj: src/core/teensy4x/serialEvent6.cpp.obj
 
 # target to build an object file
 src/core/teensy4x/serialEvent6.cpp.obj:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/core-build/CMakeFiles/core.dir/build.make _deps/core-build/CMakeFiles/core.dir/src/core/teensy4x/serialEvent6.cpp.obj
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/core-build/CMakeFiles/core.dir/build.make _deps/core-build/CMakeFiles/core.dir/src/core/teensy4x/serialEvent6.cpp.obj
 .PHONY : src/core/teensy4x/serialEvent6.cpp.obj
 
 src/core/teensy4x/serialEvent6.i: src/core/teensy4x/serialEvent6.cpp.i
@@ -959,7 +959,7 @@ src/core/teensy4x/serialEvent6.i: src/core/teensy4x/serialEvent6.cpp.i
 
 # target to preprocess a source file
 src/core/teensy4x/serialEvent6.cpp.i:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/core-build/CMakeFiles/core.dir/build.make _deps/core-build/CMakeFiles/core.dir/src/core/teensy4x/serialEvent6.cpp.i
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/core-build/CMakeFiles/core.dir/build.make _deps/core-build/CMakeFiles/core.dir/src/core/teensy4x/serialEvent6.cpp.i
 .PHONY : src/core/teensy4x/serialEvent6.cpp.i
 
 src/core/teensy4x/serialEvent6.s: src/core/teensy4x/serialEvent6.cpp.s
@@ -967,7 +967,7 @@ src/core/teensy4x/serialEvent6.s: src/core/teensy4x/serialEvent6.cpp.s
 
 # target to generate assembly for a file
 src/core/teensy4x/serialEvent6.cpp.s:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/core-build/CMakeFiles/core.dir/build.make _deps/core-build/CMakeFiles/core.dir/src/core/teensy4x/serialEvent6.cpp.s
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/core-build/CMakeFiles/core.dir/build.make _deps/core-build/CMakeFiles/core.dir/src/core/teensy4x/serialEvent6.cpp.s
 .PHONY : src/core/teensy4x/serialEvent6.cpp.s
 
 src/core/teensy4x/serialEvent7.obj: src/core/teensy4x/serialEvent7.cpp.obj
@@ -975,7 +975,7 @@ src/core/teensy4x/serialEvent7.obj: src/core/teensy4x/serialEvent7.cpp.obj
 
 # target to build an object file
 src/core/teensy4x/serialEvent7.cpp.obj:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/core-build/CMakeFiles/core.dir/build.make _deps/core-build/CMakeFiles/core.dir/src/core/teensy4x/serialEvent7.cpp.obj
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/core-build/CMakeFiles/core.dir/build.make _deps/core-build/CMakeFiles/core.dir/src/core/teensy4x/serialEvent7.cpp.obj
 .PHONY : src/core/teensy4x/serialEvent7.cpp.obj
 
 src/core/teensy4x/serialEvent7.i: src/core/teensy4x/serialEvent7.cpp.i
@@ -983,7 +983,7 @@ src/core/teensy4x/serialEvent7.i: src/core/teensy4x/serialEvent7.cpp.i
 
 # target to preprocess a source file
 src/core/teensy4x/serialEvent7.cpp.i:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/core-build/CMakeFiles/core.dir/build.make _deps/core-build/CMakeFiles/core.dir/src/core/teensy4x/serialEvent7.cpp.i
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/core-build/CMakeFiles/core.dir/build.make _deps/core-build/CMakeFiles/core.dir/src/core/teensy4x/serialEvent7.cpp.i
 .PHONY : src/core/teensy4x/serialEvent7.cpp.i
 
 src/core/teensy4x/serialEvent7.s: src/core/teensy4x/serialEvent7.cpp.s
@@ -991,7 +991,7 @@ src/core/teensy4x/serialEvent7.s: src/core/teensy4x/serialEvent7.cpp.s
 
 # target to generate assembly for a file
 src/core/teensy4x/serialEvent7.cpp.s:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/core-build/CMakeFiles/core.dir/build.make _deps/core-build/CMakeFiles/core.dir/src/core/teensy4x/serialEvent7.cpp.s
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/core-build/CMakeFiles/core.dir/build.make _deps/core-build/CMakeFiles/core.dir/src/core/teensy4x/serialEvent7.cpp.s
 .PHONY : src/core/teensy4x/serialEvent7.cpp.s
 
 src/core/teensy4x/serialEvent8.obj: src/core/teensy4x/serialEvent8.cpp.obj
@@ -999,7 +999,7 @@ src/core/teensy4x/serialEvent8.obj: src/core/teensy4x/serialEvent8.cpp.obj
 
 # target to build an object file
 src/core/teensy4x/serialEvent8.cpp.obj:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/core-build/CMakeFiles/core.dir/build.make _deps/core-build/CMakeFiles/core.dir/src/core/teensy4x/serialEvent8.cpp.obj
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/core-build/CMakeFiles/core.dir/build.make _deps/core-build/CMakeFiles/core.dir/src/core/teensy4x/serialEvent8.cpp.obj
 .PHONY : src/core/teensy4x/serialEvent8.cpp.obj
 
 src/core/teensy4x/serialEvent8.i: src/core/teensy4x/serialEvent8.cpp.i
@@ -1007,7 +1007,7 @@ src/core/teensy4x/serialEvent8.i: src/core/teensy4x/serialEvent8.cpp.i
 
 # target to preprocess a source file
 src/core/teensy4x/serialEvent8.cpp.i:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/core-build/CMakeFiles/core.dir/build.make _deps/core-build/CMakeFiles/core.dir/src/core/teensy4x/serialEvent8.cpp.i
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/core-build/CMakeFiles/core.dir/build.make _deps/core-build/CMakeFiles/core.dir/src/core/teensy4x/serialEvent8.cpp.i
 .PHONY : src/core/teensy4x/serialEvent8.cpp.i
 
 src/core/teensy4x/serialEvent8.s: src/core/teensy4x/serialEvent8.cpp.s
@@ -1015,7 +1015,7 @@ src/core/teensy4x/serialEvent8.s: src/core/teensy4x/serialEvent8.cpp.s
 
 # target to generate assembly for a file
 src/core/teensy4x/serialEvent8.cpp.s:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/core-build/CMakeFiles/core.dir/build.make _deps/core-build/CMakeFiles/core.dir/src/core/teensy4x/serialEvent8.cpp.s
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/core-build/CMakeFiles/core.dir/build.make _deps/core-build/CMakeFiles/core.dir/src/core/teensy4x/serialEvent8.cpp.s
 .PHONY : src/core/teensy4x/serialEvent8.cpp.s
 
 src/core/teensy4x/serialEventUSB1.obj: src/core/teensy4x/serialEventUSB1.cpp.obj
@@ -1023,7 +1023,7 @@ src/core/teensy4x/serialEventUSB1.obj: src/core/teensy4x/serialEventUSB1.cpp.obj
 
 # target to build an object file
 src/core/teensy4x/serialEventUSB1.cpp.obj:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/core-build/CMakeFiles/core.dir/build.make _deps/core-build/CMakeFiles/core.dir/src/core/teensy4x/serialEventUSB1.cpp.obj
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/core-build/CMakeFiles/core.dir/build.make _deps/core-build/CMakeFiles/core.dir/src/core/teensy4x/serialEventUSB1.cpp.obj
 .PHONY : src/core/teensy4x/serialEventUSB1.cpp.obj
 
 src/core/teensy4x/serialEventUSB1.i: src/core/teensy4x/serialEventUSB1.cpp.i
@@ -1031,7 +1031,7 @@ src/core/teensy4x/serialEventUSB1.i: src/core/teensy4x/serialEventUSB1.cpp.i
 
 # target to preprocess a source file
 src/core/teensy4x/serialEventUSB1.cpp.i:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/core-build/CMakeFiles/core.dir/build.make _deps/core-build/CMakeFiles/core.dir/src/core/teensy4x/serialEventUSB1.cpp.i
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/core-build/CMakeFiles/core.dir/build.make _deps/core-build/CMakeFiles/core.dir/src/core/teensy4x/serialEventUSB1.cpp.i
 .PHONY : src/core/teensy4x/serialEventUSB1.cpp.i
 
 src/core/teensy4x/serialEventUSB1.s: src/core/teensy4x/serialEventUSB1.cpp.s
@@ -1039,7 +1039,7 @@ src/core/teensy4x/serialEventUSB1.s: src/core/teensy4x/serialEventUSB1.cpp.s
 
 # target to generate assembly for a file
 src/core/teensy4x/serialEventUSB1.cpp.s:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/core-build/CMakeFiles/core.dir/build.make _deps/core-build/CMakeFiles/core.dir/src/core/teensy4x/serialEventUSB1.cpp.s
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/core-build/CMakeFiles/core.dir/build.make _deps/core-build/CMakeFiles/core.dir/src/core/teensy4x/serialEventUSB1.cpp.s
 .PHONY : src/core/teensy4x/serialEventUSB1.cpp.s
 
 src/core/teensy4x/serialEventUSB2.obj: src/core/teensy4x/serialEventUSB2.cpp.obj
@@ -1047,7 +1047,7 @@ src/core/teensy4x/serialEventUSB2.obj: src/core/teensy4x/serialEventUSB2.cpp.obj
 
 # target to build an object file
 src/core/teensy4x/serialEventUSB2.cpp.obj:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/core-build/CMakeFiles/core.dir/build.make _deps/core-build/CMakeFiles/core.dir/src/core/teensy4x/serialEventUSB2.cpp.obj
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/core-build/CMakeFiles/core.dir/build.make _deps/core-build/CMakeFiles/core.dir/src/core/teensy4x/serialEventUSB2.cpp.obj
 .PHONY : src/core/teensy4x/serialEventUSB2.cpp.obj
 
 src/core/teensy4x/serialEventUSB2.i: src/core/teensy4x/serialEventUSB2.cpp.i
@@ -1055,7 +1055,7 @@ src/core/teensy4x/serialEventUSB2.i: src/core/teensy4x/serialEventUSB2.cpp.i
 
 # target to preprocess a source file
 src/core/teensy4x/serialEventUSB2.cpp.i:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/core-build/CMakeFiles/core.dir/build.make _deps/core-build/CMakeFiles/core.dir/src/core/teensy4x/serialEventUSB2.cpp.i
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/core-build/CMakeFiles/core.dir/build.make _deps/core-build/CMakeFiles/core.dir/src/core/teensy4x/serialEventUSB2.cpp.i
 .PHONY : src/core/teensy4x/serialEventUSB2.cpp.i
 
 src/core/teensy4x/serialEventUSB2.s: src/core/teensy4x/serialEventUSB2.cpp.s
@@ -1063,7 +1063,7 @@ src/core/teensy4x/serialEventUSB2.s: src/core/teensy4x/serialEventUSB2.cpp.s
 
 # target to generate assembly for a file
 src/core/teensy4x/serialEventUSB2.cpp.s:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/core-build/CMakeFiles/core.dir/build.make _deps/core-build/CMakeFiles/core.dir/src/core/teensy4x/serialEventUSB2.cpp.s
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/core-build/CMakeFiles/core.dir/build.make _deps/core-build/CMakeFiles/core.dir/src/core/teensy4x/serialEventUSB2.cpp.s
 .PHONY : src/core/teensy4x/serialEventUSB2.cpp.s
 
 src/core/teensy4x/startup.obj: src/core/teensy4x/startup.c.obj
@@ -1071,7 +1071,7 @@ src/core/teensy4x/startup.obj: src/core/teensy4x/startup.c.obj
 
 # target to build an object file
 src/core/teensy4x/startup.c.obj:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/core-build/CMakeFiles/core.dir/build.make _deps/core-build/CMakeFiles/core.dir/src/core/teensy4x/startup.c.obj
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/core-build/CMakeFiles/core.dir/build.make _deps/core-build/CMakeFiles/core.dir/src/core/teensy4x/startup.c.obj
 .PHONY : src/core/teensy4x/startup.c.obj
 
 src/core/teensy4x/startup.i: src/core/teensy4x/startup.c.i
@@ -1079,7 +1079,7 @@ src/core/teensy4x/startup.i: src/core/teensy4x/startup.c.i
 
 # target to preprocess a source file
 src/core/teensy4x/startup.c.i:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/core-build/CMakeFiles/core.dir/build.make _deps/core-build/CMakeFiles/core.dir/src/core/teensy4x/startup.c.i
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/core-build/CMakeFiles/core.dir/build.make _deps/core-build/CMakeFiles/core.dir/src/core/teensy4x/startup.c.i
 .PHONY : src/core/teensy4x/startup.c.i
 
 src/core/teensy4x/startup.s: src/core/teensy4x/startup.c.s
@@ -1087,7 +1087,7 @@ src/core/teensy4x/startup.s: src/core/teensy4x/startup.c.s
 
 # target to generate assembly for a file
 src/core/teensy4x/startup.c.s:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/core-build/CMakeFiles/core.dir/build.make _deps/core-build/CMakeFiles/core.dir/src/core/teensy4x/startup.c.s
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/core-build/CMakeFiles/core.dir/build.make _deps/core-build/CMakeFiles/core.dir/src/core/teensy4x/startup.c.s
 .PHONY : src/core/teensy4x/startup.c.s
 
 src/core/teensy4x/tempmon.obj: src/core/teensy4x/tempmon.c.obj
@@ -1095,7 +1095,7 @@ src/core/teensy4x/tempmon.obj: src/core/teensy4x/tempmon.c.obj
 
 # target to build an object file
 src/core/teensy4x/tempmon.c.obj:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/core-build/CMakeFiles/core.dir/build.make _deps/core-build/CMakeFiles/core.dir/src/core/teensy4x/tempmon.c.obj
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/core-build/CMakeFiles/core.dir/build.make _deps/core-build/CMakeFiles/core.dir/src/core/teensy4x/tempmon.c.obj
 .PHONY : src/core/teensy4x/tempmon.c.obj
 
 src/core/teensy4x/tempmon.i: src/core/teensy4x/tempmon.c.i
@@ -1103,7 +1103,7 @@ src/core/teensy4x/tempmon.i: src/core/teensy4x/tempmon.c.i
 
 # target to preprocess a source file
 src/core/teensy4x/tempmon.c.i:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/core-build/CMakeFiles/core.dir/build.make _deps/core-build/CMakeFiles/core.dir/src/core/teensy4x/tempmon.c.i
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/core-build/CMakeFiles/core.dir/build.make _deps/core-build/CMakeFiles/core.dir/src/core/teensy4x/tempmon.c.i
 .PHONY : src/core/teensy4x/tempmon.c.i
 
 src/core/teensy4x/tempmon.s: src/core/teensy4x/tempmon.c.s
@@ -1111,7 +1111,7 @@ src/core/teensy4x/tempmon.s: src/core/teensy4x/tempmon.c.s
 
 # target to generate assembly for a file
 src/core/teensy4x/tempmon.c.s:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/core-build/CMakeFiles/core.dir/build.make _deps/core-build/CMakeFiles/core.dir/src/core/teensy4x/tempmon.c.s
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/core-build/CMakeFiles/core.dir/build.make _deps/core-build/CMakeFiles/core.dir/src/core/teensy4x/tempmon.c.s
 .PHONY : src/core/teensy4x/tempmon.c.s
 
 src/core/teensy4x/usb.obj: src/core/teensy4x/usb.c.obj
@@ -1119,7 +1119,7 @@ src/core/teensy4x/usb.obj: src/core/teensy4x/usb.c.obj
 
 # target to build an object file
 src/core/teensy4x/usb.c.obj:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/core-build/CMakeFiles/core.dir/build.make _deps/core-build/CMakeFiles/core.dir/src/core/teensy4x/usb.c.obj
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/core-build/CMakeFiles/core.dir/build.make _deps/core-build/CMakeFiles/core.dir/src/core/teensy4x/usb.c.obj
 .PHONY : src/core/teensy4x/usb.c.obj
 
 src/core/teensy4x/usb.i: src/core/teensy4x/usb.c.i
@@ -1127,7 +1127,7 @@ src/core/teensy4x/usb.i: src/core/teensy4x/usb.c.i
 
 # target to preprocess a source file
 src/core/teensy4x/usb.c.i:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/core-build/CMakeFiles/core.dir/build.make _deps/core-build/CMakeFiles/core.dir/src/core/teensy4x/usb.c.i
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/core-build/CMakeFiles/core.dir/build.make _deps/core-build/CMakeFiles/core.dir/src/core/teensy4x/usb.c.i
 .PHONY : src/core/teensy4x/usb.c.i
 
 src/core/teensy4x/usb.s: src/core/teensy4x/usb.c.s
@@ -1135,7 +1135,7 @@ src/core/teensy4x/usb.s: src/core/teensy4x/usb.c.s
 
 # target to generate assembly for a file
 src/core/teensy4x/usb.c.s:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/core-build/CMakeFiles/core.dir/build.make _deps/core-build/CMakeFiles/core.dir/src/core/teensy4x/usb.c.s
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/core-build/CMakeFiles/core.dir/build.make _deps/core-build/CMakeFiles/core.dir/src/core/teensy4x/usb.c.s
 .PHONY : src/core/teensy4x/usb.c.s
 
 src/core/teensy4x/usb_desc.obj: src/core/teensy4x/usb_desc.c.obj
@@ -1143,7 +1143,7 @@ src/core/teensy4x/usb_desc.obj: src/core/teensy4x/usb_desc.c.obj
 
 # target to build an object file
 src/core/teensy4x/usb_desc.c.obj:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/core-build/CMakeFiles/core.dir/build.make _deps/core-build/CMakeFiles/core.dir/src/core/teensy4x/usb_desc.c.obj
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/core-build/CMakeFiles/core.dir/build.make _deps/core-build/CMakeFiles/core.dir/src/core/teensy4x/usb_desc.c.obj
 .PHONY : src/core/teensy4x/usb_desc.c.obj
 
 src/core/teensy4x/usb_desc.i: src/core/teensy4x/usb_desc.c.i
@@ -1151,7 +1151,7 @@ src/core/teensy4x/usb_desc.i: src/core/teensy4x/usb_desc.c.i
 
 # target to preprocess a source file
 src/core/teensy4x/usb_desc.c.i:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/core-build/CMakeFiles/core.dir/build.make _deps/core-build/CMakeFiles/core.dir/src/core/teensy4x/usb_desc.c.i
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/core-build/CMakeFiles/core.dir/build.make _deps/core-build/CMakeFiles/core.dir/src/core/teensy4x/usb_desc.c.i
 .PHONY : src/core/teensy4x/usb_desc.c.i
 
 src/core/teensy4x/usb_desc.s: src/core/teensy4x/usb_desc.c.s
@@ -1159,7 +1159,7 @@ src/core/teensy4x/usb_desc.s: src/core/teensy4x/usb_desc.c.s
 
 # target to generate assembly for a file
 src/core/teensy4x/usb_desc.c.s:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/core-build/CMakeFiles/core.dir/build.make _deps/core-build/CMakeFiles/core.dir/src/core/teensy4x/usb_desc.c.s
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/core-build/CMakeFiles/core.dir/build.make _deps/core-build/CMakeFiles/core.dir/src/core/teensy4x/usb_desc.c.s
 .PHONY : src/core/teensy4x/usb_desc.c.s
 
 src/core/teensy4x/usb_inst.obj: src/core/teensy4x/usb_inst.cpp.obj
@@ -1167,7 +1167,7 @@ src/core/teensy4x/usb_inst.obj: src/core/teensy4x/usb_inst.cpp.obj
 
 # target to build an object file
 src/core/teensy4x/usb_inst.cpp.obj:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/core-build/CMakeFiles/core.dir/build.make _deps/core-build/CMakeFiles/core.dir/src/core/teensy4x/usb_inst.cpp.obj
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/core-build/CMakeFiles/core.dir/build.make _deps/core-build/CMakeFiles/core.dir/src/core/teensy4x/usb_inst.cpp.obj
 .PHONY : src/core/teensy4x/usb_inst.cpp.obj
 
 src/core/teensy4x/usb_inst.i: src/core/teensy4x/usb_inst.cpp.i
@@ -1175,7 +1175,7 @@ src/core/teensy4x/usb_inst.i: src/core/teensy4x/usb_inst.cpp.i
 
 # target to preprocess a source file
 src/core/teensy4x/usb_inst.cpp.i:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/core-build/CMakeFiles/core.dir/build.make _deps/core-build/CMakeFiles/core.dir/src/core/teensy4x/usb_inst.cpp.i
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/core-build/CMakeFiles/core.dir/build.make _deps/core-build/CMakeFiles/core.dir/src/core/teensy4x/usb_inst.cpp.i
 .PHONY : src/core/teensy4x/usb_inst.cpp.i
 
 src/core/teensy4x/usb_inst.s: src/core/teensy4x/usb_inst.cpp.s
@@ -1183,7 +1183,7 @@ src/core/teensy4x/usb_inst.s: src/core/teensy4x/usb_inst.cpp.s
 
 # target to generate assembly for a file
 src/core/teensy4x/usb_inst.cpp.s:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/core-build/CMakeFiles/core.dir/build.make _deps/core-build/CMakeFiles/core.dir/src/core/teensy4x/usb_inst.cpp.s
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/core-build/CMakeFiles/core.dir/build.make _deps/core-build/CMakeFiles/core.dir/src/core/teensy4x/usb_inst.cpp.s
 .PHONY : src/core/teensy4x/usb_inst.cpp.s
 
 src/core/teensy4x/usb_serial.obj: src/core/teensy4x/usb_serial.c.obj
@@ -1191,7 +1191,7 @@ src/core/teensy4x/usb_serial.obj: src/core/teensy4x/usb_serial.c.obj
 
 # target to build an object file
 src/core/teensy4x/usb_serial.c.obj:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/core-build/CMakeFiles/core.dir/build.make _deps/core-build/CMakeFiles/core.dir/src/core/teensy4x/usb_serial.c.obj
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/core-build/CMakeFiles/core.dir/build.make _deps/core-build/CMakeFiles/core.dir/src/core/teensy4x/usb_serial.c.obj
 .PHONY : src/core/teensy4x/usb_serial.c.obj
 
 src/core/teensy4x/usb_serial.i: src/core/teensy4x/usb_serial.c.i
@@ -1199,7 +1199,7 @@ src/core/teensy4x/usb_serial.i: src/core/teensy4x/usb_serial.c.i
 
 # target to preprocess a source file
 src/core/teensy4x/usb_serial.c.i:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/core-build/CMakeFiles/core.dir/build.make _deps/core-build/CMakeFiles/core.dir/src/core/teensy4x/usb_serial.c.i
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/core-build/CMakeFiles/core.dir/build.make _deps/core-build/CMakeFiles/core.dir/src/core/teensy4x/usb_serial.c.i
 .PHONY : src/core/teensy4x/usb_serial.c.i
 
 src/core/teensy4x/usb_serial.s: src/core/teensy4x/usb_serial.c.s
@@ -1207,7 +1207,7 @@ src/core/teensy4x/usb_serial.s: src/core/teensy4x/usb_serial.c.s
 
 # target to generate assembly for a file
 src/core/teensy4x/usb_serial.c.s:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/core-build/CMakeFiles/core.dir/build.make _deps/core-build/CMakeFiles/core.dir/src/core/teensy4x/usb_serial.c.s
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/core-build/CMakeFiles/core.dir/build.make _deps/core-build/CMakeFiles/core.dir/src/core/teensy4x/usb_serial.c.s
 .PHONY : src/core/teensy4x/usb_serial.c.s
 
 src/core/teensy4x/yield.obj: src/core/teensy4x/yield.cpp.obj
@@ -1215,7 +1215,7 @@ src/core/teensy4x/yield.obj: src/core/teensy4x/yield.cpp.obj
 
 # target to build an object file
 src/core/teensy4x/yield.cpp.obj:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/core-build/CMakeFiles/core.dir/build.make _deps/core-build/CMakeFiles/core.dir/src/core/teensy4x/yield.cpp.obj
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/core-build/CMakeFiles/core.dir/build.make _deps/core-build/CMakeFiles/core.dir/src/core/teensy4x/yield.cpp.obj
 .PHONY : src/core/teensy4x/yield.cpp.obj
 
 src/core/teensy4x/yield.i: src/core/teensy4x/yield.cpp.i
@@ -1223,7 +1223,7 @@ src/core/teensy4x/yield.i: src/core/teensy4x/yield.cpp.i
 
 # target to preprocess a source file
 src/core/teensy4x/yield.cpp.i:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/core-build/CMakeFiles/core.dir/build.make _deps/core-build/CMakeFiles/core.dir/src/core/teensy4x/yield.cpp.i
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/core-build/CMakeFiles/core.dir/build.make _deps/core-build/CMakeFiles/core.dir/src/core/teensy4x/yield.cpp.i
 .PHONY : src/core/teensy4x/yield.cpp.i
 
 src/core/teensy4x/yield.s: src/core/teensy4x/yield.cpp.s
@@ -1231,7 +1231,7 @@ src/core/teensy4x/yield.s: src/core/teensy4x/yield.cpp.s
 
 # target to generate assembly for a file
 src/core/teensy4x/yield.cpp.s:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/core-build/CMakeFiles/core.dir/build.make _deps/core-build/CMakeFiles/core.dir/src/core/teensy4x/yield.cpp.s
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/core-build/CMakeFiles/core.dir/build.make _deps/core-build/CMakeFiles/core.dir/src/core/teensy4x/yield.cpp.s
 .PHONY : src/core/teensy4x/yield.cpp.s
 
 # Help Target
@@ -1392,6 +1392,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

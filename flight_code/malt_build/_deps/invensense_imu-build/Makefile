@@ -57,10 +57,10 @@ RM = /usr/local/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/tuan/Projects/super/ua_spaaro/flight_code
+CMAKE_SOURCE_DIR = /home/tuan/Projects/ua_spaaro/flight_code
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build
+CMAKE_BINARY_DIR = /home/tuan/Projects/ua_spaaro/flight_code/malt_build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -87,14 +87,14 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(CMAKE_COMMAND) -E cmake_progress_start /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/CMakeFiles /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/_deps/invensense_imu-build//CMakeFiles/progress.marks
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 _deps/invensense_imu-build/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/CMakeFiles 0
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(CMAKE_COMMAND) -E cmake_progress_start /home/tuan/Projects/ua_spaaro/flight_code/malt_build/CMakeFiles /home/tuan/Projects/ua_spaaro/flight_code/malt_build/_deps/invensense_imu-build//CMakeFiles/progress.marks
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 _deps/invensense_imu-build/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/tuan/Projects/ua_spaaro/flight_code/malt_build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 _deps/invensense_imu-build/clean
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 _deps/invensense_imu-build/clean
 .PHONY : clean
 
 # The main clean target
@@ -103,22 +103,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 _deps/invensense_imu-build/preinstall
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 _deps/invensense_imu-build/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 _deps/invensense_imu-build/preinstall
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 _deps/invensense_imu-build/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 _deps/invensense_imu-build/CMakeFiles/invensense_imu.dir/rule:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 _deps/invensense_imu-build/CMakeFiles/invensense_imu.dir/rule
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 _deps/invensense_imu-build/CMakeFiles/invensense_imu.dir/rule
 .PHONY : _deps/invensense_imu-build/CMakeFiles/invensense_imu.dir/rule
 
 # Convenience name for target.
@@ -127,7 +127,7 @@ invensense_imu: _deps/invensense_imu-build/CMakeFiles/invensense_imu.dir/rule
 
 # fast build rule for target.
 invensense_imu/fast:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/invensense_imu-build/CMakeFiles/invensense_imu.dir/build.make _deps/invensense_imu-build/CMakeFiles/invensense_imu.dir/build
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/invensense_imu-build/CMakeFiles/invensense_imu.dir/build.make _deps/invensense_imu-build/CMakeFiles/invensense_imu.dir/build
 .PHONY : invensense_imu/fast
 
 src/invensense_imu.obj: src/invensense_imu.cpp.obj
@@ -135,7 +135,7 @@ src/invensense_imu.obj: src/invensense_imu.cpp.obj
 
 # target to build an object file
 src/invensense_imu.cpp.obj:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/invensense_imu-build/CMakeFiles/invensense_imu.dir/build.make _deps/invensense_imu-build/CMakeFiles/invensense_imu.dir/src/invensense_imu.cpp.obj
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/invensense_imu-build/CMakeFiles/invensense_imu.dir/build.make _deps/invensense_imu-build/CMakeFiles/invensense_imu.dir/src/invensense_imu.cpp.obj
 .PHONY : src/invensense_imu.cpp.obj
 
 src/invensense_imu.i: src/invensense_imu.cpp.i
@@ -143,7 +143,7 @@ src/invensense_imu.i: src/invensense_imu.cpp.i
 
 # target to preprocess a source file
 src/invensense_imu.cpp.i:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/invensense_imu-build/CMakeFiles/invensense_imu.dir/build.make _deps/invensense_imu-build/CMakeFiles/invensense_imu.dir/src/invensense_imu.cpp.i
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/invensense_imu-build/CMakeFiles/invensense_imu.dir/build.make _deps/invensense_imu-build/CMakeFiles/invensense_imu.dir/src/invensense_imu.cpp.i
 .PHONY : src/invensense_imu.cpp.i
 
 src/invensense_imu.s: src/invensense_imu.cpp.s
@@ -151,7 +151,7 @@ src/invensense_imu.s: src/invensense_imu.cpp.s
 
 # target to generate assembly for a file
 src/invensense_imu.cpp.s:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/invensense_imu-build/CMakeFiles/invensense_imu.dir/build.make _deps/invensense_imu-build/CMakeFiles/invensense_imu.dir/src/invensense_imu.cpp.s
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/invensense_imu-build/CMakeFiles/invensense_imu.dir/build.make _deps/invensense_imu-build/CMakeFiles/invensense_imu.dir/src/invensense_imu.cpp.s
 .PHONY : src/invensense_imu.cpp.s
 
 src/mpu6500.obj: src/mpu6500.cpp.obj
@@ -159,7 +159,7 @@ src/mpu6500.obj: src/mpu6500.cpp.obj
 
 # target to build an object file
 src/mpu6500.cpp.obj:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/invensense_imu-build/CMakeFiles/invensense_imu.dir/build.make _deps/invensense_imu-build/CMakeFiles/invensense_imu.dir/src/mpu6500.cpp.obj
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/invensense_imu-build/CMakeFiles/invensense_imu.dir/build.make _deps/invensense_imu-build/CMakeFiles/invensense_imu.dir/src/mpu6500.cpp.obj
 .PHONY : src/mpu6500.cpp.obj
 
 src/mpu6500.i: src/mpu6500.cpp.i
@@ -167,7 +167,7 @@ src/mpu6500.i: src/mpu6500.cpp.i
 
 # target to preprocess a source file
 src/mpu6500.cpp.i:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/invensense_imu-build/CMakeFiles/invensense_imu.dir/build.make _deps/invensense_imu-build/CMakeFiles/invensense_imu.dir/src/mpu6500.cpp.i
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/invensense_imu-build/CMakeFiles/invensense_imu.dir/build.make _deps/invensense_imu-build/CMakeFiles/invensense_imu.dir/src/mpu6500.cpp.i
 .PHONY : src/mpu6500.cpp.i
 
 src/mpu6500.s: src/mpu6500.cpp.s
@@ -175,7 +175,7 @@ src/mpu6500.s: src/mpu6500.cpp.s
 
 # target to generate assembly for a file
 src/mpu6500.cpp.s:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/invensense_imu-build/CMakeFiles/invensense_imu.dir/build.make _deps/invensense_imu-build/CMakeFiles/invensense_imu.dir/src/mpu6500.cpp.s
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/invensense_imu-build/CMakeFiles/invensense_imu.dir/build.make _deps/invensense_imu-build/CMakeFiles/invensense_imu.dir/src/mpu6500.cpp.s
 .PHONY : src/mpu6500.cpp.s
 
 src/mpu9250.obj: src/mpu9250.cpp.obj
@@ -183,7 +183,7 @@ src/mpu9250.obj: src/mpu9250.cpp.obj
 
 # target to build an object file
 src/mpu9250.cpp.obj:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/invensense_imu-build/CMakeFiles/invensense_imu.dir/build.make _deps/invensense_imu-build/CMakeFiles/invensense_imu.dir/src/mpu9250.cpp.obj
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/invensense_imu-build/CMakeFiles/invensense_imu.dir/build.make _deps/invensense_imu-build/CMakeFiles/invensense_imu.dir/src/mpu9250.cpp.obj
 .PHONY : src/mpu9250.cpp.obj
 
 src/mpu9250.i: src/mpu9250.cpp.i
@@ -191,7 +191,7 @@ src/mpu9250.i: src/mpu9250.cpp.i
 
 # target to preprocess a source file
 src/mpu9250.cpp.i:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/invensense_imu-build/CMakeFiles/invensense_imu.dir/build.make _deps/invensense_imu-build/CMakeFiles/invensense_imu.dir/src/mpu9250.cpp.i
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/invensense_imu-build/CMakeFiles/invensense_imu.dir/build.make _deps/invensense_imu-build/CMakeFiles/invensense_imu.dir/src/mpu9250.cpp.i
 .PHONY : src/mpu9250.cpp.i
 
 src/mpu9250.s: src/mpu9250.cpp.s
@@ -199,7 +199,7 @@ src/mpu9250.s: src/mpu9250.cpp.s
 
 # target to generate assembly for a file
 src/mpu9250.cpp.s:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/invensense_imu-build/CMakeFiles/invensense_imu.dir/build.make _deps/invensense_imu-build/CMakeFiles/invensense_imu.dir/src/mpu9250.cpp.s
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(MAKE) $(MAKESILENT) -f _deps/invensense_imu-build/CMakeFiles/invensense_imu.dir/build.make _deps/invensense_imu-build/CMakeFiles/invensense_imu.dir/src/mpu9250.cpp.s
 .PHONY : src/mpu9250.cpp.s
 
 # Help Target
@@ -231,6 +231,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/tuan/Projects/super/ua_spaaro/flight_code/malt_build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/tuan/Projects/ua_spaaro/flight_code/malt_build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

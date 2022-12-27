@@ -15,7 +15,7 @@ include(ExternalProject)
 ExternalProject_Add(mavlink-populate
                      "UPDATE_DISCONNECTED" "False"
                     SOURCE_DIR          "/home/tuan/Projects/mavlink"
-                    BINARY_DIR          "/home/tuan/Projects/super/ua_spaaro/flight_code/malt_build/_deps/mavlink-build"
+                    BINARY_DIR          "/home/tuan/Projects/ua_spaaro/flight_code/malt_build/_deps/mavlink-build"
                     CONFIGURE_COMMAND   ""
                     BUILD_COMMAND       ""
                     INSTALL_COMMAND     ""
