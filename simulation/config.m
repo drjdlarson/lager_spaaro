@@ -12,10 +12,19 @@
  vehicle = 'malt';
 % vehicle = 'super';
 % FMU-R version
-% fmu_version = "v1";
-% fmu_version = "v2-beta";
-% fmu_version = "v2";
- fmu_version = "mini";
+if strcmpi(vehicle, 'malt')
+    fmu_version = "mini";
+elseif strcmpi(vehicle, 'super')
+    fmu_version = "v2";
+elseif strcmpi(vehicle, 'ale')
+    fmu_version = "v1";
+elseif strcmpi(vehicle, 'session')
+    fmu_version = "v2";
+else
+    ME = MException("UASpaaro:noSuchVehicle", sprintf("No vehicle %s", vehicle));
+    throw(ME);
+end
+
 
 %% Target trim conditions
 % Latitude and longitude [deg]
