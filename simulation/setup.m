@@ -127,13 +127,19 @@ end
 %% Setup configuration set
 if(strcmp(vehicle, 'ale'))
     ale_config = ale_model_confg();
+elseif(strcmpi(vehicle, 'session'))
+    session_config = session_model_config();
 end
 
 %% Select sim
-if any(strcmp(vehicle, {'super', 'malt'})
+if any(strcmp(vehicle, {'super', 'malt'}))
     multirotor_sim();
 elseif any(strcmpi(vehicle, {'ale'}))
     ground_sim();
+elseif any(strcmpi(vehicle, {'session'}))
+    quadplane_sim();
+else
+    warning("No simulation defined for vehicle: %s", vehicle);
 end
 
 %% Cleanup

@@ -9,16 +9,15 @@
 %% Definitions
 % Vehicle
 % vehicle = 'sig_kadet';
- vehicle = 'malt';
+% vehicle = 'malt';
+vehicle = 'session';
 % vehicle = 'super';
 % FMU-R version
 if strcmpi(vehicle, 'malt')
     fmu_version = "mini";
-elseif strcmpi(vehicle, 'super')
-    fmu_version = "v2";
 elseif strcmpi(vehicle, 'ale')
     fmu_version = "v1";
-elseif strcmpi(vehicle, 'session')
+elseif any(strcmpi(vehicle, {'session', 'super'}))
     fmu_version = "v2";
 else
     ME = MException("UASpaaro:noSuchVehicle", sprintf("No vehicle %s", vehicle));
