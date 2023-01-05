@@ -1,2 +1,0 @@
-/usr/local/bin/arm-none-eabi-ar qc libmavlink.a CMakeFiles/mavlink.dir/src/heartbeat.cpp.obj CMakeFiles/mavlink.dir/src/telemetry.cpp.obj CMakeFiles/mavlink.dir/src/mission.cpp.obj CMakeFiles/mavlink.dir/src/rtcm.cpp.obj
-/usr/local/bin/arm-none-eabi-ranlib libmavlink.a

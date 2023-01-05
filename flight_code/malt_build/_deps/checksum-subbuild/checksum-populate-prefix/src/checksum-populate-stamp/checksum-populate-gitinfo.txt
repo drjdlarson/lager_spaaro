@@ -1,3 +1,0 @@
-repository='https://github.com/bolderflight/checksum.git'
-module=''
-tag='origin'

@@ -1,3 +1,0 @@
-/home/tuan/Projects/super/ua_spaaro/flight_code/super_build/_deps/navigation-subbuild/CMakeFiles/rebuild_cache.dir
-/home/tuan/Projects/super/ua_spaaro/flight_code/super_build/_deps/navigation-subbuild/CMakeFiles/edit_cache.dir
-/home/tuan/Projects/super/ua_spaaro/flight_code/super_build/_deps/navigation-subbuild/CMakeFiles/navigation-populate.dir

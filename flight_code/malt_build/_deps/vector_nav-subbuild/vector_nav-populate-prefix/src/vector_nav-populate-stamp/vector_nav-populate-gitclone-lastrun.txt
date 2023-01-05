@@ -1,3 +1,0 @@
-repository='https://github.com/bolderflight/vector-nav.git'
-module=''
-tag='origin'

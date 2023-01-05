@@ -1,3 +1,0 @@
-repository='https://github.com/bolderflight/sd.git'
-module=''
-tag='origin'
