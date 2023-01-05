@@ -133,7 +133,7 @@ end
 if any(strcmp(vehicle, {'super', 'malt'})
     multirotor_sim();
 elseif any(strcmpi(vehicle, {'ale'}))
-%     ground_sim();
+    ground_sim();
 end
 
 %% Cleanup
