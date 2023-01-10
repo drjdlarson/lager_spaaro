@@ -1,3 +1,0 @@
-repository='https://github.com/bolderflight/logger.git'
-module=''
-tag='origin'

@@ -163,9 +163,9 @@ FetchContent_Declare(
   mavlink
   #GIT_REPOSITORY https://github.com/bolderflight/mavlink.git
   #GIT_TAG v4.8.6
-  #GIT_REPOSITORY git@github.com:TL-4319/mavlink.git
-  #GIT_TAG f07b807bbcc6bf53cbfe8b1393194632a26e443b
-  SOURCE_DIR /home/tuan/Projects/mavlink
+  GIT_REPOSITORY git@github.com:TL-4319/mavlink.git
+  GIT_TAG 72c01c703e5d3318402dd2f17b210aa97b3eaed4
+  #SOURCE_DIR /home/tuan/Projects/mavlink
 )
 FetchContent_MakeAvailable(mavlink)
 FetchContent_Declare(
@@ -196,9 +196,9 @@ FetchContent_Declare(
   navigation
   #GIT_REPOSITORY https://github.com/bolderflight/navigation.git
   #GIT_TAG v4.0.1
-  #GIT_REPOSITORY git@github.com:TL-4319/navigation.git
-  #GIT_TAG cd7c42a5549fb8bc90b34a74639e404b5fba328f
-  SOURCE_DIR /home/tuan/Projects/navigation
+  GIT_REPOSITORY git@github.com:TL-4319/navigation.git
+  GIT_TAG 4c3d0f03c969c05c788325735805ad118a1778f3
+  #SOURCE_DIR /home/tuan/Projects/navigation
 )
 FetchContent_MakeAvailable(navigation)
 FetchContent_Declare(
@@ -340,7 +340,7 @@ target_link_libraries(flight
     pwm
     imap
 )
-target_compile_options(flight PUBLIC -std=c++20)
+target_compile_options(flight PUBLIC -std=c++20 -O3 -fstack-usage -Wl,--print-memory-usage)
 # Add hex and upload targets
 include(${mcu_support_SOURCE_DIR}/cmake/flash_mcu.cmake)
 FlashMcu(flight ${MCU} ${mcu_support_SOURCE_DIR})

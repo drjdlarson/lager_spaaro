@@ -237,15 +237,17 @@ Aircraft.Control.P_roll_angle = 7;
 %% Vertical speed controller parameters
 Aircraft.Control.est_hover_thr = 0.75;
 % Vertical speed limit [m/s]
-Aircraft.Control.v_z_up_max = 0.2;
-Aircraft.Control.v_z_down_max = 0.2; %minimum of -1 m/s
+Aircraft.Control.v_z_max = 0.4;
 % Vertical speed controller gain
-Aircraft.Control.P_v_z = 0.4;
-Aircraft.Control.I_v_z = 0;
-Aircraft.Control.D_v_z = 0;
+Aircraft.Control.P_v_z = 0.6;
+Aircraft.Control.I_v_z = 0.2;
+Aircraft.Control.D_v_z = 0.07;
 
 % Ver speed D Controller LPFT cutoff frequency [Hz]
-Aircraft.Control.D_ver_vel_FLTR_CTOFF = 10;
+Aircraft.Control.D_ver_vel_FLTR_CTOFF = 1;
+
+% Throttle cc LPFT cutoff frequency [Hz]
+Aircraft.Control.throttle_cc_FLTR_CTOFF = 1;
 
 %% Translational speed controller parameters
 % Horizontal spped limit [m/s]
@@ -260,8 +262,7 @@ Aircraft.Control.D_v_hor = 0.01;
 Aircraft.Control.D_hor_vel_FLTR_CTOFF = 10;
 
 %% Altitude controller parameters
-Aircraft.Control.P_alt = 1;
-Aircraft.Control.I_alt = 0.1;
+Aircraft.Control.P_alt = 0.7;
 
 %% Distance controller parameters
 Aircraft.Control.P_xy = 0.8;

@@ -59,6 +59,7 @@ GnssData *gnss_;
 PresData *static_pres_, *diff_pres_;
 AdcData *adc_;
 InsData *ins_;
+AuxInsData *aux_ins_;
 /* Effector */
 std::array<int16_t, 16> effector_;
 int NUM_SBUS = std::min(static_cast<std::size_t>(NUM_SBUS_CH),
@@ -358,6 +359,7 @@ void TelemUpdate(AircraftData &data, TelemData * const ptr) {
       case TELEM_INS_VECTOR_NAV: {
         if (data.sensor.vector_nav_imu.installed) {
           ins_ = &data.vector_nav_ins;
+          aux_ins_ = &data.aux_ins;
         } else {
           MsgError("Telem INS source set to VectorNav, which is not installed");
         }
@@ -366,6 +368,7 @@ void TelemUpdate(AircraftData &data, TelemData * const ptr) {
       #endif
       case TELEM_INS_BFS: {
         ins_ = &data.bfs_ins;
+        aux_ins_ = &data.aux_ins;
         break;
       }
     }
@@ -444,6 +447,11 @@ void TelemUpdate(AircraftData &data, TelemData * const ptr) {
   // telem_.nav_north_pos_m(data.nav.ned_pos_m[0]);
   // telem_.nav_east_pos_m(data.nav.ned_pos_m[1]);
   // telem_.nav_down_pos_m(data.nav.ned_pos_m[2]);
+  telem_.nav_alt_agl_m(-aux_ins_->ned_pos_m[2]);
+  telem_.nav_north_pos_m(aux_ins_->ned_pos_m[0]);
+  telem_.nav_east_pos_m(aux_ins_->ned_pos_m[1]);
+  telem_.nav_down_pos_m(aux_ins_->ned_pos_m[2]);
+  telem_.nav_alt_msl_m(ins_->alt_wgs84_m);
   telem_.nav_north_vel_mps(ins_->ned_vel_mps[0]);
   telem_.nav_east_vel_mps(ins_->ned_vel_mps[1]);
   telem_.nav_down_vel_mps(ins_->ned_vel_mps[2]);
