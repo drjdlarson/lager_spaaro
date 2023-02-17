@@ -132,7 +132,7 @@ FetchContent_MakeAvailable(ams5915)
 FetchContent_Declare(
   ubx
   GIT_REPOSITORY https://github.com/bolderflight/ublox.git
-  GIT_TAG v6.0.5
+  GIT_TAG v6.0.6
 )
 FetchContent_MakeAvailable(ubx)
 FetchContent_Declare(
@@ -161,10 +161,10 @@ FetchContent_Declare(
 FetchContent_MakeAvailable(pwm)
 FetchContent_Declare(
   mavlink
-  #GIT_REPOSITORY https://github.com/bolderflight/mavlink.git
-  #GIT_TAG v4.8.6
-  GIT_REPOSITORY git@github.com:TL-4319/mavlink.git
-  GIT_TAG 72c01c703e5d3318402dd2f17b210aa97b3eaed4
+  GIT_REPOSITORY https://github.com/bolderflight/mavlink.git
+  GIT_TAG v4.8.9
+  #GIT_REPOSITORY git@github.com:TL-4319/mavlink.git
+  #GIT_TAG 72c01c703e5d3318402dd2f17b210aa97b3eaed4
   #SOURCE_DIR /home/tuan/Projects/mavlink
 )
 FetchContent_MakeAvailable(mavlink)
@@ -196,9 +196,9 @@ FetchContent_Declare(
   navigation
   #GIT_REPOSITORY https://github.com/bolderflight/navigation.git
   #GIT_TAG v4.0.1
-  GIT_REPOSITORY git@github.com:TL-4319/navigation.git
-  GIT_TAG 4c3d0f03c969c05c788325735805ad118a1778f3
-  #SOURCE_DIR /home/tuan/Projects/navigation
+  #GIT_REPOSITORY git@github.com:TL-4319/navigation.git
+  #GIT_TAG 4c3d0f03c969c05c788325735805ad118a1778f3
+  SOURCE_DIR /home/tuan/Projects/navigation
 )
 FetchContent_MakeAvailable(navigation)
 FetchContent_Declare(

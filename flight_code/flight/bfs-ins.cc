@@ -39,7 +39,7 @@ static constexpr int8_t MIN_SAT_ = 7;
 ImuData *imu_;
 MagData *mag_;
 GnssData *gnss_;
-bfs::Lpf2p<float> ax_, ay_, az_, gx_, gy_, gz_, hx_, hy_, hz_;
+bfs::Iir<float> ax_, ay_, az_, gx_, gy_, gz_, hx_, hy_, hz_;
 Eigen::Vector3f accel_mps2_, gyro_radps_, mag_ut_, ned_vel_, rel_pos_;
 Eigen::Vector3d llh_;
 bfs::Ekf15State ekf_;

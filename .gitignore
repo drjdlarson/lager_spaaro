@@ -14,4 +14,4 @@ build*/
 *.slxc
 
 # ignore log
-**/log
+**/log 
