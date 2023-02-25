@@ -162,7 +162,7 @@ FetchContent_MakeAvailable(pwm)
 FetchContent_Declare(
   mavlink
   GIT_REPOSITORY https://github.com/bolderflight/mavlink.git
-  GIT_TAG v4.8.9
+  GIT_TAG v4.8.10
   #GIT_REPOSITORY git@github.com:TL-4319/mavlink.git
   #GIT_TAG 72c01c703e5d3318402dd2f17b210aa97b3eaed4
   #SOURCE_DIR /home/tuan/Projects/mavlink
@@ -233,10 +233,8 @@ FetchContent_Declare(
 FetchContent_MakeAvailable(units)
 FetchContent_Declare(
   filter
-  #GIT_REPOSITORY https://github.com/bolderflight/filter.git
-  #GIT_TAG v3.1.0
-  GIT_REPOSITORY git@github.com:TL-4319/filter.git
-  GIT_TAG v1.0.3
+  GIT_REPOSITORY https://github.com/bolderflight/filter.git
+  GIT_TAG v3.2.0
 )
 FetchContent_MakeAvailable(filter)
 FetchContent_Declare(
@@ -340,7 +338,7 @@ target_link_libraries(flight
     pwm
     imap
 )
-target_compile_options(flight PUBLIC -std=c++20 -O3 -fstack-usage -Wl,--print-memory-usage)
+target_compile_options(flight PUBLIC -std=c++20)
 # Add hex and upload targets
 include(${mcu_support_SOURCE_DIR}/cmake/flash_mcu.cmake)
 FlashMcu(flight ${MCU} ${mcu_support_SOURCE_DIR})

@@ -358,8 +358,8 @@ void TelemUpdate(AircraftData &data, TelemData * const ptr) {
           defined(__FMU_R_V2_BETA__)
       case TELEM_INS_VECTOR_NAV: {
         if (data.sensor.vector_nav_imu.installed) {
-          ins_ = &data.vector_nav_ins;
-          aux_ins_ = &data.aux_ins;
+          ins_ = &data.state_est.vector_nav_ins;
+          aux_ins_ = &data.state_est.aux_ins;
         } else {
           MsgError("Telem INS source set to VectorNav, which is not installed");
         }
@@ -367,12 +367,12 @@ void TelemUpdate(AircraftData &data, TelemData * const ptr) {
       }
       #endif
       case TELEM_INS_BFS: {
-        ins_ = &data.bfs_ins;
-        aux_ins_ = &data.aux_ins;
+        ins_ = &data.state_est.bfs_ins;
+        aux_ins_ = &data.state_est.aux_ins;
         break;
       }
     }
-    adc_ = &data.adc;
+    adc_ = &data.state_est.adc;
     telem_initialized_ = true;
   }
   /* System data */

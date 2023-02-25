@@ -40,7 +40,7 @@ ImuData *imu_;
 MagData *mag_;
 GnssData *gnss_;
 bfs::Iir<float> ax_, ay_, az_, gx_, gy_, gz_, hx_, hy_, hz_;
-Eigen::Vector3f accel_mps2_, gyro_radps_, mag_ut_, ned_vel_, rel_pos_;
+Eigen::Vector3f accel_mps2_, gyro_radps_, mag_ut_, ned_vel_, rel_pos_ned_;
 Eigen::Vector3d llh_;
 bfs::Ekf15State ekf_;
 float BASELINE_LEN_M = 0.0f;
@@ -50,8 +50,8 @@ uint8_t init_counter_ = 0;
 
 void BfsInsInit(const InsConfig &ref) {
   cfg_ = ref;
-  ekf_.gnss_pos_ne_std_m(0.05f);
-  ekf_.gnss_pos_d_std_m(0.1f);
+  //ekf_.gnss_pos_ne_std_m(0.05f);
+  //ekf_.gnss_pos_d_std_m(0.1f);
   BASELINE_LEN_M = cfg_.antenna_baseline_m.norm();
 }
 
@@ -160,11 +160,11 @@ void BfsInsRun(SensorData &ref, InsData * const ptr) {
       llh_[0] = gnss_->lat_rad;
       llh_[1] = gnss_->lon_rad;
       llh_[2] = gnss_->alt_wgs84_m;
-      rel_pos_ [0] = float(gnss_->rel_pos_ned_m[0]);
-      rel_pos_ [1] = float(gnss_->rel_pos_ned_m[1]);
-      rel_pos_ [2] = float(gnss_->rel_pos_ned_m[2]);
+      rel_pos_ned_ [0] = float(gnss_->rel_pos_ned_m[0]);
+      rel_pos_ned_ [1] = float(gnss_->rel_pos_ned_m[1]);
+      rel_pos_ned_ [2] = float(gnss_->rel_pos_ned_m[2]);
       ekf_.Initialize(accel_mps2_, gyro_radps_, mag_ut_,
-                      ned_vel_, llh_, rel_pos_, cfg_.hardcoded_heading);
+                      ned_vel_, llh_, rel_pos_ned_, cfg_.hardcoded_heading);
       /* Init DLPF */
       gx_.Init(cfg_.gyro_cutoff_hz, FRAME_RATE_HZ, ekf_.gyro_radps()[0]);
       gy_.Init(cfg_.gyro_cutoff_hz, FRAME_RATE_HZ, ekf_.gyro_radps()[1]);
@@ -194,13 +194,13 @@ void BfsInsRun(SensorData &ref, InsData * const ptr) {
       llh_[0] = gnss_->lat_rad;
       llh_[1] = gnss_->lon_rad;
       llh_[2] = gnss_->alt_wgs84_m;
-      rel_pos_ [0] = float(gnss_->rel_pos_ned_m[0]);
-      rel_pos_ [1] = float(gnss_->rel_pos_ned_m[1]);
-      rel_pos_ [2] = float(gnss_->rel_pos_ned_m[2]);
-      cur_baseline_len_m_ = rel_pos_.norm();
+      rel_pos_ned_ [0] = float(gnss_->rel_pos_ned_m[0]);
+      rel_pos_ned_ [1] = float(gnss_->rel_pos_ned_m[1]);
+      rel_pos_ned_ [2] = float(gnss_->rel_pos_ned_m[2]);
+      cur_baseline_len_m_ = rel_pos_ned_.norm();
       ekf_.MeasurementUpdate_gnss(ned_vel_, llh_);
       if ((gnss_->fix >= 5) && (abs(cur_baseline_len_m_ - BASELINE_LEN_M) < 0.1f )){
-        ekf_.MeasurementUpdate_moving_base(rel_pos_);
+        ekf_.MeasurementUpdate_moving_base(rel_pos_ned_);
       }
     }
     ptr->pitch_rad = ekf_.pitch_rad();
