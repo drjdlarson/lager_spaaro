@@ -23,9 +23,19 @@ addpath(genpath('models'));
 addpath(genpath('vms'));
 
 %% Specify root folders for autocode and cache
+% clear all cached code
+cacheBase = sprintf('../flight_code/build_%s', lower(vehicle));
+cacheFolder = [cacheBase '/slprj'];
+codeGenFolder = '../flight_code/autocode';
+if exist(cacheBase, 'dir')
+    rmdir(cacheBase, 's');
+end
+if exist(codeGenFolder, 'dir')
+    rmdir(codeGenFolder, 's');
+end
 Simulink.fileGenControl('set', ...
-    'CacheFolder', '../flight_code/build/slprj', ...
-    'CodeGenFolder', '../flight_code/autocode', ...
+    'CacheFolder', cacheFolder, ...
+    'CodeGenFolder', codeGenFolder, ...
     'CodeGenFolderStructure', ...
     Simulink.filegen.CodeGenFolderStructure.ModelSpecific, ...
     'createDir', true);
@@ -114,9 +124,18 @@ for i = 1:Telem.NUM_RALLY_POINTS
     Telem.Rally(i).z = single(0);
 end
 
-%multirotor_sim();
-%malt();
-super();
+
+%% Setup configuration set
+if(strcmp(vehicle, 'ale'))
+    ale_config = ale_model_confg();
+end
+
+%% Select sim
+if any(strcmp(vehicle, {'super', 'malt'})
+    multirotor_sim();
+elseif any(strcmpi(vehicle, {'ale'}))
+    ground_sim();
+end
 
 %% Cleanup
 clear vehicle fh_vehicle op_point op_report op_spec opt i;
