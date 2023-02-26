@@ -85,8 +85,6 @@ void run() {
   TelemUpdate(data, &data.telem);
   /* Frame duration */
   SysFrameEnd();
-  MsgInfo(std::to_string(data.vms.mode).c_str());
-  MsgInfo("\n");
 }
 
 int main() {

@@ -36,12 +36,12 @@
 /* Control sizes */
 inline constexpr std::size_t NUM_AUX_VAR = 24;
 /* Telem sizes */
-inline constexpr std::size_t NUM_UTM_MSG = 5;
+inline constexpr std::size_t NUM_UTM_MSG = 1;
 inline constexpr std::size_t NUM_TELEM_PARAMS = 24;
 #if defined(__FMU_R_MINI_V1__) || defined(__FMU_R_V2__) || \
     defined(__FMU_R_V2_BETA__)
-inline constexpr std::size_t NUM_FLIGHT_PLAN_POINTS = 200;
-inline constexpr std::size_t NUM_FENCE_POINTS = 50;
+inline constexpr std::size_t NUM_FLIGHT_PLAN_POINTS = 500;
+inline constexpr std::size_t NUM_FENCE_POINTS = 100;
 inline constexpr std::size_t NUM_RALLY_POINTS = 10;
 #else
 inline constexpr std::size_t NUM_FLIGHT_PLAN_POINTS = 100;
