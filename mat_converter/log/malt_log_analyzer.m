@@ -129,8 +129,12 @@ grid minor
 axis equal
 
 figure(6)
-plot (sys_time_s, dis_err)
-yline(0.1)
+plot (sys_time_s, vms_pwm_cmd0,'DisplayName','1')
+hold on
+plot (sys_time_s, vms_pwm_cmd1,'DisplayName','2')
+plot (sys_time_s, vms_pwm_cmd2,'DisplayName','3')
+plot (sys_time_s, vms_pwm_cmd3,'DisplayName','4')
+legend()
 
 
 

@@ -9,8 +9,8 @@
 %% Definitions
 % Vehicle
 % vehicle = 'sig_kadet';
-%vehicle = 'malt';
-vehicle = 'super';
+vehicle = 'malt';
+%vehicle = 'super';
 % FMU-R version
 
 if strcmpi(vehicle, 'malt')
@@ -26,6 +26,8 @@ else
     throw(ME);
 end
 
+% VMS Only flag
+vms_only = true;
 %% Target trim conditions
 % Latitude and longitude [deg]
 Target.lat_deg = 35.691544;

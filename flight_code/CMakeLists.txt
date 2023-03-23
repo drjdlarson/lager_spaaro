@@ -163,9 +163,8 @@ FetchContent_Declare(
   mavlink
   #GIT_REPOSITORY https://github.com/bolderflight/mavlink.git
   #GIT_TAG v4.8.10
-  #GIT_REPOSITORY git@github.com:TL-4319/mavlink.git
-  #GIT_TAG 72c01c703e5d3318402dd2f17b210aa97b3eaed4
-  SOURCE_DIR /home/tuan/Projects/mavlink
+  GIT_REPOSITORY git@github.com:TL-4319/mavlink.git
+  GIT_TAG v1.0.2
 )
 FetchContent_MakeAvailable(mavlink)
 FetchContent_Declare(
