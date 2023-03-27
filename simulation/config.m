@@ -10,7 +10,7 @@
 % Vehicle
 % vehicle = 'sig_kadet';
 vehicle = 'malt';
-%vehicle = 'super';
+% vehicle = 'super';
 % FMU-R version
 
 if strcmpi(vehicle, 'malt')

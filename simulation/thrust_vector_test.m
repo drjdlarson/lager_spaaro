@@ -5,7 +5,7 @@ clc
 %% Generate truth data
 inertial_z = [0; 0; 1];
 thrust_vector_body = [0; 0; -9.81];
-truth_ypr = [deg2rad(0) deg2rad(20) deg2rad(-20)];
+truth_ypr = [deg2rad(0) deg2rad(30) deg2rad(-25)];
 truth_ypr_deg = truth_ypr * 180/pi;
 rotMatZYX = eul2rotm(truth_ypr);
 thrust_vector_inertial = rotMatZYX * thrust_vector_body;
@@ -16,7 +16,7 @@ thrust_vector_inertial_limited = limit_tilt(thrust_vector_inertial, 25);
 
 
 test_psi = deg2rad(180);
-[test_phi, test_theta] = calc_tilt(thrust_vector_inertial_limited/norm(thrust_vector_inertial_limited), test_psi);
+[test_phi, test_theta] = calc_tilt(thrust_vector_inertial_limited, test_psi);
 
 test_ypr = [test_psi, test_theta,test_phi];
 quaternion_test = quaternion(test_ypr,"euler","ZYX","frame");
@@ -66,7 +66,7 @@ function limited_vector = limit_tilt (thrust_vector_raw, angle_lim_deg)
         limited_vector = thrust_vector_raw;
     else
         a_z_new = thrust_vector_raw(3); 
-        r = abs(a_z_new * tand(angle_lim_deg));
+        r = abs(a_z_new * tand(angle_lim_deg)); % Can also precompute tand(angle_lim_deg)
         sqrt_temp = sqrt(thrust_vector_raw(1)^2 + thrust_vector_raw(2)^2);
         cos_phi = thrust_vector_raw(2) / sqrt_temp;
         sin_phi = thrust_vector_raw(1) / sqrt_temp;
@@ -88,6 +88,7 @@ function [phi_rad, theta_rad] = calc_tilt (thrust_vector_ned, psi_rad)
     %           phi_rad, theta_rad - calculated pitch and roll angle
     %           requires for the thrust vector to match with the commanded
     %           inertial vector
+    thrust_vector_ned = thrust_vector_ned/norm(thrust_vector_ned);
     cpsi = cos(psi_rad);
     spsi = sin(psi_rad);
     theta_num = cpsi * thrust_vector_ned(1) + spsi * thrust_vector_ned(2);
@@ -100,3 +101,4 @@ function [phi_rad, theta_rad] = calc_tilt (thrust_vector_ned, psi_rad)
     phi_denum = spsi * thrust_vector_ned(1) - cpsi * thrust_vector_ned(2);
     phi_rad = atan2(phi_denum, phi_num) + pi;
 end
+
