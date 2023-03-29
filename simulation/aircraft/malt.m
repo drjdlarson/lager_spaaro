@@ -179,7 +179,7 @@ Aircraft.Control.motor_spin_min = 0.15;
 
 % Motor maximum throttle
 % Prevent motor from spining at max to reduce current draw on the top end
-Aircraft.Control.motor_spin_max = 0.9;
+Aircraft.Control.motor_spin_max = 0.95;
 
 
 %% Yaw rate controller parameters
@@ -233,6 +233,16 @@ Aircraft.Control.roll_angle_lim = 0.261799;  %~15deg
 
 % Roll cmd controller gains
 Aircraft.Control.P_roll_angle = 7;
+
+%% Outer to inner loop conversion
+% Max G by the drone 
+Aircraft.Control.max_g_thr = 1.8;
+
+% Min G by the drone
+Aircraft.Control.min_g_thr = 0.1;
+
+% Max tilt angle
+Aircraft.Control.max_tilt_rad = deg2rad(25);
 
 %% Vertical speed controller parameters
 Aircraft.Control.est_hover_thr = 0.75;

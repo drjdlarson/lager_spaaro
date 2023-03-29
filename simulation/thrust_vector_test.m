@@ -2,21 +2,34 @@ close all
 clear
 clc
 
+%TODO: 
+% Zero case
+% positive accel case verification
+
+max_body_accel = -1.8;
+
 %% Generate truth data
 inertial_z = [0; 0; 1];
-thrust_vector_body = [0; 0; -9.81];
-truth_ypr = [deg2rad(0) deg2rad(30) deg2rad(-25)];
+thrust_vector_body = [0; 0; -1.7];
+truth_ypr = [deg2rad(0) deg2rad(-10) deg2rad(0)];
 truth_ypr_deg = truth_ypr * 180/pi;
 rotMatZYX = eul2rotm(truth_ypr);
 thrust_vector_inertial = rotMatZYX * thrust_vector_body;
+commanded_acc = thrust_vector_inertial;
+commanded_acc(3) = commanded_acc(3) + 1;
 quaternion_truth = quaternion(truth_ypr,"euler","ZYX","frame");
 
 %% Apply tilt limit
-thrust_vector_inertial_limited = limit_tilt(thrust_vector_inertial, 25);
+thrust_vector_inertial_thrust_limited = limit_thrust(thrust_vector_inertial, 1.8);
+limited_thrust = norm(thrust_vector_inertial_thrust_limited);
 
+thrust_vector_inertial_tilt_limited = limit_tilt(thrust_vector_inertial_thrust_limited,25);
+tilt_limited_thrust = norm(thrust_vector_inertial_tilt_limited);
+tilt_angle = acos(dot(thrust_vector_inertial_tilt_limited/norm(thrust_vector_inertial_tilt_limited),[0 0 -1]));
+tilt_angle = rad2deg(tilt_angle);
 
 test_psi = deg2rad(180);
-[test_phi, test_theta] = calc_tilt(thrust_vector_inertial_limited, test_psi);
+[test_phi, test_theta] = calc_tilt(thrust_vector_inertial_tilt_limited, test_psi);
 
 test_ypr = [test_psi, test_theta,test_phi];
 quaternion_test = quaternion(test_ypr,"euler","ZYX","frame");
@@ -25,12 +38,16 @@ thrust_vector_inertial_test = test_rotMatZYX * thrust_vector_body/norm(thrust_ve
 
 f = figure();
 plot3 ([0,thrust_vector_inertial(1)],[0,thrust_vector_inertial(2)],...
-    [0,thrust_vector_inertial(3)],'blue')
+    [0,thrust_vector_inertial(3)],'blue--o','LineWidth',2)
 hold on
-plot3 ([0,thrust_vector_inertial_limited(1)],[0,thrust_vector_inertial_limited(2)],...
-    [0,thrust_vector_inertial_limited(3)],'g')
-plot3 ([0,thrust_vector_inertial_test(1)],[0,thrust_vector_inertial_test(2)],...
-    [0,thrust_vector_inertial_test(3)],'r')
+plot3 ([0,thrust_vector_inertial_thrust_limited(1)],[0,thrust_vector_inertial_thrust_limited(2)],...
+    [0,thrust_vector_inertial_thrust_limited(3)],'g*','LineWidth',3)
+plot3 ([0,thrust_vector_inertial_tilt_limited(1)],[0,thrust_vector_inertial_tilt_limited(2)],...
+    [0,thrust_vector_inertial_tilt_limited(3)],'c','LineWidth',2)
+%plot3 ([0,thrust_vector_inertial_test(1)],[0,thrust_vector_inertial_test(2)],...
+%    [0,thrust_vector_inertial_test(3)],'r')
+plot3 ([0,thrust_vector_inertial(1)],[0,thrust_vector_inertial(2)],...
+    [0,thrust_vector_inertial(3) + 1],'blue','LineWidth',1)
 plot3 ([0,0],[0,0],[-100, 100],'k--')
 plot3 ([-100, 100],[0,0],[0,0],'k--')
 plot3 ([0, 0],[-100,100],[0,0],'k--')
@@ -39,11 +56,11 @@ ylabel("y")
 zlabel("z")
 f.CurrentAxes.ZDir = 'Reverse';
 f.CurrentAxes.YDir = 'Reverse';
-xlim([-10 10])
-ylim([-10 10])
-zlim([-10 0])
 grid on
 grid minor
+xlim([-4 4])
+ylim([-4 4])
+zlim([-4 4])
 
 figure()
 poseplot(quaternion_truth, [0 0 0])
@@ -52,6 +69,28 @@ poseplot(quaternion_test, [0 0 0])
 xlabel("X")
 ylabel("Y")
 zlabel("Z")
+
+function limited_vector = limit_thrust(thrust_vector_raw, max_thrust)
+    % Limit the acceleration command to the max thrust achievable by the
+    % aircraft. Should prioritize vertical thrust
+    % Input:
+    %           thrust_vector_raw - raw acceleration command
+    %           max_thrust - max thrust by aircraft. In term of G
+    limited_vector = thrust_vector_raw;
+    mag = norm(thrust_vector_raw);
+    % Ignore if the acc_cmd is already achieble
+    if mag < max_thrust
+        limited_vector = thrust_vector_raw;
+    else
+        if thrust_vector_raw(3) < -max_thrust
+            limited_vector(3) = -max_thrust;
+        end
+        hor_acc = sqrt(max_thrust^2 - limited_vector(3)^2);
+        limited_vector(1) = thrust_vector_raw(1) * hor_acc/mag;
+        limited_vector(2) = thrust_vector_raw(2) * hor_acc/mag;
+    end
+
+end
 
 function limited_vector = limit_tilt (thrust_vector_raw, angle_lim_deg)
     % Modify the acceleration command so that the tilt is within limit

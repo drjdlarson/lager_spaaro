@@ -39,7 +39,7 @@ static constexpr int8_t MIN_SAT_ = 7;
 ImuData *imu_;
 MagData *mag_;
 GnssData *gnss_;
-bfs::Iir<float> ax_, ay_, az_, gx_, gy_, gz_, hx_, hy_, hz_;
+bfs::Lpf2p<float> ax_, ay_, az_, gx_, gy_, gz_, hx_, hy_, hz_;
 Eigen::Vector3f accel_mps2_, gyro_radps_, mag_ut_, ned_vel_, rel_pos_ned_;
 Eigen::Vector3d llh_;
 bfs::Ekf15State ekf_;
@@ -50,8 +50,8 @@ uint8_t init_counter_ = 0;
 
 void BfsInsInit(const InsConfig &ref) {
   cfg_ = ref;
-  //ekf_.gnss_pos_ne_std_m(0.05f);
-  //ekf_.gnss_pos_d_std_m(0.1f);
+  ekf_.gnss_pos_ne_std_m(0.05f);
+  ekf_.gnss_pos_d_std_m(0.1f);
   BASELINE_LEN_M = cfg_.antenna_baseline_m.norm();
 }
 

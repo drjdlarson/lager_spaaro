@@ -29,6 +29,7 @@
 #include "mavlink.h"
 #include "checksum.h"
 #include "flight/msg.h"
+#include "flight/datalog.h"
 
 namespace {
 /* MavLink object */
@@ -509,6 +510,9 @@ void TelemUpdate(AircraftData &data, TelemData * const ptr) {
   }
   /* Flight plan */
   ptr->waypoints_updated = telem_.mission_updated();
+  if (telem_.mission_updated()){
+    WaypointWrite(data);
+  }
   ptr->current_waypoint = telem_.active_mission_item();
   ptr->num_waypoints = telem_.num_mission_items();
   /* Fence */
