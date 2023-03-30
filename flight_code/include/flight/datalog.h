@@ -32,6 +32,5 @@ void DatalogInit();
 void DatalogAdd(const AircraftData &ref);
 void DatalogClose();
 void DatalogFlush();
-void WaypointWrite(const AircraftData &ref);
 
 #endif  // FLIGHT_CODE_INCLUDE_FLIGHT_DATALOG_H_

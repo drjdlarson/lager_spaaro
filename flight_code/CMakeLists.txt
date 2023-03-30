@@ -337,7 +337,7 @@ target_link_libraries(flight
     pwm
     imap
 )
-target_compile_options(flight PUBLIC -std=c++20)
+target_compile_options(flight PUBLIC -std=c++20 -o -O3)
 # Add hex and upload targets
 include(${mcu_support_SOURCE_DIR}/cmake/flash_mcu.cmake)
 FlashMcu(flight ${MCU} ${mcu_support_SOURCE_DIR})

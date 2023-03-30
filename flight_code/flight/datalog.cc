@@ -554,13 +554,3 @@ void DatalogClose() {
 void DatalogFlush() {
   logger_.Flush();
 }
-
-void WaypointWrite(const AircraftData &ref){
-  // Add waypoint to SD card for persistent mission
-  File32 wpfile_ = sd_.open("waypoints.txt", O_RDWR | O_CREAT);
-  for (uint16_t i = 0; i < NUM_FLIGHT_PLAN_POINTS; i++){
-    // Try converting flight plan parameters into a textfile. Could be csv ot tsv. Note: might not be compatible with .waypoints
-    wpfile_.write("Hi\n");
-  }
-  wpfile_.close();
-}
