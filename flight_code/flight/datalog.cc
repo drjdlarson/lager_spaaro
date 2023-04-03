@@ -29,6 +29,7 @@
 #include "framing.h"
 #include "../../common/datalog_fmu.h"
 #include "units.h"
+#include "flight/telem.h"
 
 namespace {
 /* Datalog file name */
@@ -556,11 +557,79 @@ void DatalogFlush() {
 }
 
 void WaypointWrite(const AircraftData &ref){
-  // Add waypoint to SD card for persistent mission
-  File32 wpfile_ = sd_.open("waypoints.txt", O_RDWR | O_CREAT);
-  for (uint16_t i = 0; i < NUM_FLIGHT_PLAN_POINTS; i++){
-    // Try converting flight plan parameters into a textfile. Could be csv ot tsv. Note: might not be compatible with .waypoints
-    wpfile_.write("Hi\n");
+  /* 
+  Add waypoint to SD card for persistent mission
+  Write all parameters in chunks of 4 bytes
+  */
+  sd_.remove("waypoints.txt");
+  File32 wpfile_ = sd_.open("waypoints.txt", O_WRITE | O_CREAT);
+  wp_param_type wp_param_;
+  wp_param_.i = ref.telem.num_waypoints;
+  write_union(wp_param_.bytes, wpfile_);
+  for (uint16_t i = 0; i < ref.telem.num_waypoints; i++){
+    // WP frame
+    wp_param_.i = ref.telem.flight_plan[i].frame;
+    write_union(wp_param_.bytes, wpfile_);
+    // WP cmd
+    wp_param_.i = ref.telem.flight_plan[i].cmd;
+    write_union(wp_param_.bytes, wpfile_);
+    // WP x
+    wp_param_.i = ref.telem.flight_plan[i].x;
+    write_union(wp_param_.bytes, wpfile_);
+    // WP y
+    wp_param_.i = ref.telem.flight_plan[i].y;
+    write_union(wp_param_.bytes, wpfile_);
+    // WP z
+    wp_param_.f = ref.telem.flight_plan[i].z;
+    write_union(wp_param_.bytes, wpfile_);
   }
   wpfile_.close();
+}
+
+void WaypointRead(TelemData * const ptr){
+  MsgInfo("Updating waypoints with saved flight plan...");
+  File32 wpfile_ = sd_.open("waypoints.txt", O_READ);
+  if (!wpfile_){
+    MsgInfo("No waypoint file preloaded. Upload waypoint to generate waypoint file.\n");
+    return;
+  }
+  wp_param_type cur_chunk_;
+  read_union(&cur_chunk_, wpfile_);
+  uint16_t num_waypoints = cur_chunk_.i;
+  ptr->waypoints_updated = true;
+  ptr->current_waypoint = 1;
+  ptr->num_waypoints = num_waypoints;
+  for (uint16_t i = 0; i < num_waypoints; i++){
+    read_union(&cur_chunk_, wpfile_);
+    ptr->flight_plan[i].frame = cur_chunk_.i;
+    read_union(&cur_chunk_, wpfile_);
+    ptr->flight_plan[i].cmd = cur_chunk_.i;
+    read_union(&cur_chunk_, wpfile_);
+    ptr->flight_plan[i].x = cur_chunk_.i;
+    read_union(&cur_chunk_, wpfile_);
+    ptr->flight_plan[i].y = cur_chunk_.i;
+    read_union(&cur_chunk_, wpfile_);
+    ptr->flight_plan[i].z = cur_chunk_.f;
+  }
+  wpfile_.close();
+  Telem_Mission_Update(ptr->num_waypoints);
+  MsgInfo("done.\n");
+}
+
+void write_union(uint8_t byte[4], File32 &file_){
+  /*
+  Function to write 4 bytes to a file. For convenience
+  */
+  for (uint8_t i = 0; i<4; i++){
+    file_.write(byte[i]);
+  }
+}
+
+void read_union(wp_param_type * const ptr, File32 &file_){
+  /*
+  Function to read 4 bytes from a file and append that to the union byte_array.
+  */
+  for (int8_t i = 0; i<4; i++){
+    ptr->bytes[i] = file_.read();
+  }
 }

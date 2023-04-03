@@ -115,6 +115,9 @@ int main() {
   TelemInit(config.telem, &data.telem);
   /* Init datalog */
   DatalogInit();
+  WaypointRead(&data.telem);
+  std::string dbg = std::to_string(data.telem.num_waypoints);
+  MsgInfo(dbg.c_str());
   /* Attach data ready interrupt */
   attachInterrupt(IMU_DRDY, run, RISING);\
   while (1) {
