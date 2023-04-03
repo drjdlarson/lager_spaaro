@@ -512,10 +512,17 @@ void TelemUpdate(AircraftData &data, TelemData * const ptr) {
   ptr->waypoints_updated = telem_.mission_updated();
   ptr->current_waypoint = telem_.active_mission_item();
   ptr->num_waypoints = telem_.num_mission_items();
+  if(ptr->waypoints_updated){
+    WaypointWrite(data);
+  }
   /* Fence */
   ptr->fence_updated = telem_.fence_updated();
   ptr->num_fence_items = telem_.num_fence_items();
   /* Rally */
   ptr->rally_points_updated = telem_.rally_points_updated();
   ptr->num_rally_points = telem_.num_rally_points();
+}
+
+void Telem_Mission_Update(uint8_t mission_num){
+  telem_.num_mission_items(mission_num);
 }
