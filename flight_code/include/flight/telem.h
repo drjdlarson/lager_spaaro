@@ -30,6 +30,6 @@
 
 void TelemInit(const TelemConfig &cfg, TelemData * const ptr);
 void TelemUpdate(AircraftData &data, TelemData * const ptr);
-void Telem_Mission_Update (uint8_t mission_num);
+void Mission_Num_Update (uint8_t mission_num);
 
 #endif  // FLIGHT_CODE_INCLUDE_FLIGHT_TELEM_H_

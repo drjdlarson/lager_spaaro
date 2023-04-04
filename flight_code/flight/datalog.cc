@@ -597,7 +597,7 @@ void WaypointRead(TelemData * const ptr){
   read_union(&cur_chunk_, wpfile_);
   uint16_t num_waypoints = cur_chunk_.i;
   ptr->waypoints_updated = true;
-  ptr->current_waypoint = 1;
+  ptr->current_waypoint = 0;
   ptr->num_waypoints = num_waypoints;
   for (uint16_t i = 0; i < num_waypoints; i++){
     read_union(&cur_chunk_, wpfile_);
@@ -612,7 +612,7 @@ void WaypointRead(TelemData * const ptr){
     ptr->flight_plan[i].z = cur_chunk_.f;
   }
   wpfile_.close();
-  Telem_Mission_Update(ptr->num_waypoints);
+  Mission_Num_Update(ptr->num_waypoints);
   MsgInfo("done.\n");
 }
 

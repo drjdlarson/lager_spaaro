@@ -523,6 +523,6 @@ void TelemUpdate(AircraftData &data, TelemData * const ptr) {
   ptr->num_rally_points = telem_.num_rally_points();
 }
 
-void Telem_Mission_Update(uint8_t mission_num){
+void Mission_Num_Update(uint8_t mission_num){
   telem_.num_mission_items(mission_num);
 }
