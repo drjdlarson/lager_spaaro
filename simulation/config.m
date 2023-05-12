@@ -10,8 +10,9 @@
 % Vehicle
 % vehicle = 'sig_kadet';
 % vehicle = 'malt';
-vehicle = 'session';
+% vehicle = 'session';
 % vehicle = 'super';
+
 % FMU-R version
 if strcmpi(vehicle, 'malt')
     fmu_version = "mini";
@@ -26,6 +27,7 @@ end
 
 
 %% Target trim conditions
+
 % Latitude and longitude [deg]
 Target.lat_deg = 35.691544;
 Target.lon_deg = -105.944183;
