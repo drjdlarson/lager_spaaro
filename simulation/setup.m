@@ -131,19 +131,21 @@ if(strcmp(vehicle, 'ale'))
 end
 
 %% Select sim
-if (vms_only)
-    if strcmp(vehicle,'malt')
-        malt();
-    elseif strcmp(vehicle,'super')
-        super()
-    end
-    
-else
-    if any(strcmp(vehicle, {'super', 'malt'}))
-        multirotor_sim();
-    elseif any(strcmpi(vehicle, {'ale'}))
-        ground_sim();
-    end
-end
+% if (vms_only)
+%     if strcmp(vehicle,'malt')
+%         malt();
+%     elseif strcmp(vehicle,'super')
+%         super()
+%     end
+%     
+% else
+%     if any(strcmp(vehicle, {'super', 'malt'}))
+%         multirotor_sim();
+%     elseif any(strcmpi(vehicle, {'ale'}))
+%         ground_sim();
+%     end
+% end
+double_integrator_sim();
+
 %% Cleanup
 clear vehicle fh_vehicle op_point op_report op_spec opt i;

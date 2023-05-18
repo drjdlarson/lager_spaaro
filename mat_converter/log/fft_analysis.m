@@ -2,7 +2,7 @@ close all;
 clear;
 clc;
 
-load malt189.mat
+load malt0.mat
 
 raw_gyro = [fmu_imu_gyro_x_radps, fmu_imu_gyro_y_radps,fmu_imu_gyro_z_radps];
 raw_acc = [fmu_imu_accel_x_mps2, fmu_imu_accel_y_mps2, fmu_imu_accel_z_mps2];

@@ -2,7 +2,7 @@ close all
 clear
 clc
 
-load malt189.mat;
+load malt0.mat;
 
 figure(1)
 subplot(3,1,1)
@@ -115,7 +115,7 @@ wp = [1 1 .5;
       4 1 .5;
       4 2 .5;
       1 2 .5];
-start_ind = 2000;
+start_ind = 9500;
 lla = [rad2deg(bfs_ins_lat_rad(start_ind:end)), rad2deg(bfs_ins_lon_rad(start_ind:end)), bfs_ins_alt_wgs84_m(start_ind:end)];
 cage_pos = lla2ned(lla, cage_origin,'flat');
 figure(5)
