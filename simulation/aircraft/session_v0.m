@@ -25,6 +25,97 @@ Aircraft.Mass.inertia_kgm2 = [Aircraft.Mass.ixx_kgm2    0   -Aircraft.Mass.ixz_k
                               0          Aircraft.Mass.iyy_kgm2          0;...
                               -Aircraft.Mass.ixz_kgm2   0       Aircraft.Mass.izz_kgm2];
 
+%% Effectors
+% Number of PWM channels
+Aircraft.Eff.nPwm = 8;
+% Number of SBUS channels
+Aircraft.Eff.nSbus = 16;
+% Total number of channels
+Aircraft.Eff.nCh = Aircraft.Eff.nPwm + Aircraft.Eff.nSbus;
+
+%% Motor Maps 
+
+% Number of motors
+Aircraft.Motor.nMotor = 5;
+
+% Assign a pwm channel to motor
+Aircraft.Motor.map = [ 1 ; 2 ; 3 ; 4; 5];
+
+% Motor positions relative to c.g in [m] [x,y,z](obtained from OpenVSP)
+% First 4 Motor numbers and order using Arducopter convention (QUAD-H)
+% 5th motor is the forward motor. (pusher configuration at the end of fuselage)
+Aircraft.Motor.pos_m = [0.610   0.5    0;...
+                        -0.6   -0.5   0;...
+                        0.610    -0.5   0;...
+                        -0.6   0.5    0;...
+                        -0.55   0   0]; 
+
+% Alignment of thrust with body frame x, y, z axis
+% All hover rotors are aligned so that thrust is in -z
+% The forward flight rotor has thrust on +x. 
+Aircraft.Motor.align = [0, 0, -1;...
+                            0, 0, -1;...
+                            0, 0, -1;...
+                            0, 0, -1;...
+                            1, 0, 0];
+
+% Use 1 for motors facing the forward direction. 
+Aircraft.Motor.forward = [0; 0; 0; 0; 1];
+Aircraft.Motor.forward = diag(Aircraft.Motor.forward);
+Aircraft.Motor.hover = diag(1 - Aircraft.Motor.forward);
+
+%% Hover Propulsion System
+
+% Motor speed constant Kv
+Aircraft.HoverMotor.kv = 320; % Kv of T-Motor MN605-S
+
+% Motor zero load current [Amp]
+Aircraft.HoverMotor.io = 2.2; 
+
+% Motor internal resistance [Ohm]
+Aircraft.HoverMotor.r = 0.021 ;
+
+% Motor rotation direction (right hand rule with z_body)
+% Motor 1 and 2 are cw and motor 3 and 4 are ccw
+% put 0 for forward motors
+Aircraft.HoverMotor.dir = [1; 1; -1; -1; 0];
+
+% Coef of torque of MN1005 motor based on T-Motor's website
+Aircraft.HoverMotor.kq = 0.0411;     %N-m/A
+
+
+% Motor mixing law for hover [hover_thrust, roll, pitch, yaw]
+% The cmd vector [hover_thrust,roll,pitch, yaw] will by multiplied with the motor
+% mixing matrix to result in the individual motor outputs which is then
+% scaled to the PMW range that the ESC can decode
+Aircraft.HoverMotor.motor_yaw_factor = 0.1;
+Aircraft.HoverMotor.mix = [0.7,  -0.1, 0.1, -Aircraft.HoverMotor.motor_yaw_factor;...
+                      0.7,   0.1,     -0.1,  -Aircraft.HoverMotor.motor_yaw_factor;...
+                      0.7,   0.1,  0.1, Aircraft.HoverMotor.motor_yaw_factor;...
+                      0.7,   -0.1,  -0.1, Aircraft.HoverMotor.motor_yaw_factor;...
+                      0, 0, 0, 0;...
+                      0, 0, 0, 0;...
+                      0, 0, 0, 0;...
+                      0, 0, 0, 0];
+
+%% Rotors for Hover flight
+
+% Diameter [inches]
+Aircraft.HoverRotor.dia_in = 21;
+
+% Coefficient of thrust constant obtained from T-motor's website data
+Aircraft.HoverRotor.kt = 0.0388;   %N-m/N
+
+% Thrust and torque models obtained from Tmotor's data
+% for throttle 0-1
+% 2nd order polyfit on thrust(N)
+Aircraft.HoverRotor.poly_thrust = [40.5584, 28.3258, -4.1581];
+% 2nd order polyfit on torque
+Aircraft.HoverRotor.poly_torque = [0.5954, 1.0777, -0.2594];
+
+
+%% Forward Flight Propulsion system
+
 
 %% Battery
 

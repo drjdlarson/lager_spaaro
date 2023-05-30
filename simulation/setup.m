@@ -136,7 +136,7 @@ if any(strcmp(vehicle, {'super', 'malt'}))
     multirotor_sim();
 elseif any(strcmpi(vehicle, {'ale'}))
     ground_sim();
-elseif any(strcmpi(vehicle, {'session'}))
+elseif any(strcmpi(vehicle, {'session_v0'}))
     quadplane_sim();
 else
     warning("No simulation defined for vehicle: %s", vehicle);

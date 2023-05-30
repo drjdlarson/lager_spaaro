@@ -10,7 +10,7 @@
 % Vehicle
 % vehicle = 'sig_kadet';
 % vehicle = 'malt';
-% vehicle = 'session';
+vehicle = 'session_v0';
 % vehicle = 'super';
 
 % FMU-R version
@@ -18,7 +18,7 @@ if strcmpi(vehicle, 'malt')
     fmu_version = "mini";
 elseif strcmpi(vehicle, 'ale')
     fmu_version = "v1";
-elseif any(strcmpi(vehicle, {'session', 'super'}))
+elseif any(strcmpi(vehicle, {'session_v0', 'super'}))
     fmu_version = "v2";
 else
     ME = MException("UASpaaro:noSuchVehicle", sprintf("No vehicle %s", vehicle));
@@ -38,3 +38,7 @@ Target.heading_deg = 90;  % +/-180 degrees relative to true north
 Target.airspeed_mps = 17;
 % Ground height above mean sea level [m]
 Env.terrain_alt_msl_m = 0;
+
+
+%% Initial Conditions
+
