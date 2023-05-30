@@ -116,6 +116,37 @@ Aircraft.HoverRotor.poly_torque = [0.5954, 1.0777, -0.2594];
 
 %% Forward Flight Propulsion system
 
+% NEED TO CHANGE THIS::: Copied from ultrastick25e
+
+% Number of motors
+Aircraft.ForwardMotor.nMotor = 1;
+% PWM / SBUS channel number to motor mapping
+% Array ordered as 8 PWM channels then 16 SBUS channels for a total of 24
+% channels, 1-based indexing
+Aircraft.ForwardMotor.map = 1;
+% Position relative to c.g., m
+Aircraft.ForwardMotor.pos_m(1, :) = [-0.075 0 0];
+% Alignment with x, y, z axis
+Aircraft.ForwardMotor.align(1, :) = [1 0 0];
+% Speed constant, Kv [RPM/V]
+Aircraft.ForwardMotor.kv = 870;
+% Resistance [ohm]
+Aircraft.ForwardMotor.r = 0.03;
+% Zero torque current [Amp]
+Aircraft.ForwardMotor.io = 2.4;
+
+%% Forward Flight Propeller
+
+% NEED TO CHANGE THIS::: Copied from ultrastick25e
+
+% Diameter [inches]
+Aircraft.ForwardProp.dia_in = 12;
+% Coefficient of thrust polynomial coefficients
+Aircraft.ForwardProp.ct = [-2.4822 4.1010 -2.6695 0.7331 -0.1958 0.0978];
+% Coefficient of power polynomial coefficients
+Aircraft.ForwardProp.cp = [-1.8863 2.5393 -1.3781 0.3089 -0.0358 0.0329];
+% Electric motor and propeller combine moment of inertia [kg*m^2]
+Aircraft.ForwardProp.Jmp_kgm2 = 0.00012991;
 
 %% Battery
 
