@@ -25,6 +25,19 @@ Aircraft.Mass.inertia_kgm2 = [Aircraft.Mass.ixx_kgm2    0   -Aircraft.Mass.ixz_k
                               0          Aircraft.Mass.iyy_kgm2          0;...
                               -Aircraft.Mass.ixz_kgm2   0       Aircraft.Mass.izz_kgm2];
 
+%% Geometric parameters
+
+% NEED TO CHANGE THIS::: Copied from ultrastick25e
+
+% Reference chord, m
+Aircraft.Geom.c_m = 0.25;
+% Reference span, m
+Aircraft.Geom.b_m = 1.27;
+% Reference area, m^2
+Aircraft.Geom.s_m2 = 0.3097;
+% Center of pressure [x y z], m
+Aircraft.Geom.cp_m = [0.2175 0 0.046];
+
 %% Effectors
 % Number of PWM channels
 Aircraft.Eff.nPwm = 8;
@@ -59,6 +72,11 @@ Aircraft.Motor.align = [0, 0, -1;...
                             0, 0, -1;...
                             1, 0, 0];
 
+% Motor rotation direction (right hand rule with z_body and x_body)
+% Motor 1 and 2 are cw and motor 3 and 4 are ccw
+% put 0 for forward motors
+Aircraft.Motor.dir = [1; 1; -1; -1; 1];
+
 % Use 1 for motors facing the forward direction. 
 Aircraft.Motor.forward = [0; 0; 0; 0; 1];
 Aircraft.Motor.forward = diag(Aircraft.Motor.forward);
@@ -75,10 +93,6 @@ Aircraft.HoverMotor.io = 2.2;
 % Motor internal resistance [Ohm]
 Aircraft.HoverMotor.r = 0.021 ;
 
-% Motor rotation direction (right hand rule with z_body)
-% Motor 1 and 2 are cw and motor 3 and 4 are ccw
-% put 0 for forward motors
-Aircraft.HoverMotor.dir = [1; 1; -1; -1; 0];
 
 % Coef of torque of MN1005 motor based on T-Motor's website
 Aircraft.HoverMotor.kq = 0.0411;     %N-m/A
@@ -147,6 +161,8 @@ Aircraft.ForwardProp.ct = [-2.4822 4.1010 -2.6695 0.7331 -0.1958 0.0978];
 Aircraft.ForwardProp.cp = [-1.8863 2.5393 -1.3781 0.3089 -0.0358 0.0329];
 % Electric motor and propeller combine moment of inertia [kg*m^2]
 Aircraft.ForwardProp.Jmp_kgm2 = 0.00012991;
+
+
 
 %% Battery
 
