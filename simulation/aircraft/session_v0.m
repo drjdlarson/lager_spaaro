@@ -46,6 +46,87 @@ Aircraft.Eff.nSbus = 16;
 % Total number of channels
 Aircraft.Eff.nCh = Aircraft.Eff.nPwm + Aircraft.Eff.nSbus;
 
+%% Control surfaces
+% Number of control surfaces
+% [left ail, right ail, elev, ruder]
+% Positive TED, TEL
+Aircraft.Surf.nSurf = 4;
+% PWM / SBUS channel number to control surface mapping
+% Array ordered as 8 PWM channels then 16 SBUS channels for a total of 24
+% channels, 1-based indexing
+Aircraft.Surf.map = [2 3 4 5];
+% Rate limits
+Aircraft.Surf.Limit.rate_dps = 150 * ones(Aircraft.Surf.nSurf, 1);
+% Position limits
+Aircraft.Surf.Limit.pos_deg = 30 * ones(Aircraft.Surf.nSurf, 1);
+Aircraft.Surf.Limit.neg_deg = -30 * ones(Aircraft.Surf.nSurf, 1);
+
+%% Aerodynamic paramters
+
+% Axis system for aerodynamic coefficients
+% https://www.mathworks.com/help/aeroblks/aerodynamicforcesandmoments.html
+% 1 = Wind axis
+% 2 = Stability axis
+% 3 = Body axis
+
+% Body axis is selected because OpenVSP gives output in this frame and is
+% easier to deal with 
+Aircraft.Aero.axis = 3;
+
+% Using StabilityCoefAndDerivatives class in utils/, base coefficients and 
+% derivatives are used here to model aerodynamic forces and moments. 
+
+% Note: Base values are taken at 0 deg, and derivatives are taken for 2 deg
+% point. This is because the derivatives are more consistent after 2 deg,
+% and they are assumed to be linear, so the derivatives at 2 deg are
+% assumed for 0 deg as well. 
+
+% CL
+Aircraft.Aero.CL.zero = 0.8899;
+Aircraft.Aero.CL.alpha = 0;
+Aircraft.Aero.CL.q = 16.8499;
+Aircraft.Aero.CL.elevator_def = 0;
+
+% CD
+Aircraft.Aero.CD.zero = 0.066803;
+Aircraft.Aero.CD.alpha = 0.4951;
+Aircraft.Aero.CD.q = -0.4301;
+Aircraft.Aero.CD.elevator_def = 0;
+
+% CY (side force)
+Aircraft.Aero.CY.zero = 0.0001;
+Aircraft.Aero.CY.beta = -0.4186;
+Aircraft.Aero.CY.p = -0.0306;
+Aircraft.Aero.CY.q = -0.0382;
+Aircraft.Aero.CY.r = 0.1210;
+Aircraft.Aero.CY.aileron_def = 0;
+Aircraft.Aero.CY.rudder_def = 0;
+
+% Cl 
+Aircraft.Aero.Cl.zero = -0.0003;
+Aircraft.Aero.Cl.beta = -0.0901;
+Aircraft.Aero.Cl.p = -0.6406;
+Aircraft.Aero.Cl.q = -0.0143;
+Aircraft.Aero.Cl.r = 0.1686;
+Aircraft.Aero.Cl.aileron_def = 0;
+Aircraft.Aero.Cl.rudder_def = 0;
+
+% Cm 
+Aircraft.Aero.Cm.zero = -0.0041;
+Aircraft.Aero.Cm.alpha = -1.6601;
+Aircraft.Aero.Cm.q = -100.02;
+Aircraft.Aero.Cm.elevator_def = 0;
+
+% Cn 
+Aircraft.Aero.Cn.zero = 0.0000;
+Aircraft.Aero.Cn.beta = -0.0024;
+Aircraft.Aero.Cn.p = -0.1008;
+Aircraft.Aero.Cn.q = 0.0065;
+Aircraft.Aero.Cn.r = -0.0370;
+Aircraft.Aero.Cn.aileron_def = 0;
+Aircraft.Aero.Cn.rudder_def = 0;
+
+
 %% Motor Maps 
 
 % Number of motors
@@ -161,8 +242,6 @@ Aircraft.ForwardProp.ct = [-2.4822 4.1010 -2.6695 0.7331 -0.1958 0.0978];
 Aircraft.ForwardProp.cp = [-1.8863 2.5393 -1.3781 0.3089 -0.0358 0.0329];
 % Electric motor and propeller combine moment of inertia [kg*m^2]
 Aircraft.ForwardProp.Jmp_kgm2 = 0.00012991;
-
-
 
 %% Battery
 

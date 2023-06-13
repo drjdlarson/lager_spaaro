@@ -155,18 +155,26 @@ if __name__ == "__main__":
 
     # Use the methods this way
     stab_data.package_into_np_arrays()
-    stab_data.plot_base_coefs()
-    stab_data.plot_coef_derivatives()
+    # stab_data.plot_base_coefs()
+    # stab_data.plot_coef_derivatives()
     
-    print("base coefficient::  ", stab_data.base_coef)
-    print("alpha:: ", stab_data.alpha)
 
+    # print("base coefficient::  ", stab_data.base_coef)
+    # print("alpha:: ", stab_data.alpha)  
+    # print("derivatives:: ", stab_data.derivatives)
 
     # print(stab_data.trim_conditions)
 
     # print("4th trim point Cn0 base value: {}\n".format(stab_data.trim_conditions[3].base['Cno']))
 
-    # print("6th trim point Clq derivative {}".format(stab_data.trim_conditions[5].derivatives['Cl_q']))
+    # print("6th trim point Clq derivative {}".format(stab_data.trim_conditions[5].derivative['Cl_q']))
 
     # print("last trim points alpha is {}".format(stab_data.trim_conditions[-1].trim['ALPHA_o']))
     
+
+    # printing base coef values at 0 deg
+    for base_key in BASE_KEYS:
+        print('Base coef {:s} at 0 deg is {:s}\n'. format(base_key, stab_data.trim_conditions[1].base[base_key]))
+
+    for derivative_key in DERIVATIVE_KEYS:
+        print('Derivative {} at 2 deg is {}\n'.format(derivative_key, stab_data.trim_conditions[2].derivative[derivative_key]))
