@@ -61,7 +61,18 @@ Aircraft.Surf.Limit.rate_dps = 150 * ones(Aircraft.Surf.nSurf, 1);
 Aircraft.Surf.Limit.pos_deg = 30 * ones(Aircraft.Surf.nSurf, 1);
 Aircraft.Surf.Limit.neg_deg = -30 * ones(Aircraft.Surf.nSurf, 1);
 
-%% Aerodynamic paramters
+%% Hover Aerodynamics
+
+% k where ||Drag|| = k * airspeed
+% linear assumption for low speed is good enough
+Aircraft.Aero.linear_drag_coef = 0;
+
+% cutoff airspeed
+% below this speed, only include Quadcopter aero forces and moments
+% above this speed, include full forward flight's aero forces and moments 
+Aircraft.Aero.cutoff_airspeed_mps = 5;
+
+%% Forward Flight Aerodynamics
 
 % Axis system for aerodynamic coefficients
 % https://www.mathworks.com/help/aeroblks/aerodynamicforcesandmoments.html
