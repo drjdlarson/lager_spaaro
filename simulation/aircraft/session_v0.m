@@ -47,14 +47,18 @@ Aircraft.Eff.nSbus = 16;
 Aircraft.Eff.nCh = Aircraft.Eff.nPwm + Aircraft.Eff.nSbus;
 
 %% Control surfaces
+
 % Number of control surfaces
-% [left ail, right ail, elev, ruder]
+% [ail, elev, ruder]
 % Positive TED, TEL
-Aircraft.Surf.nSurf = 4;
+
+Aircraft.Surf.nSurf = 3;
 % PWM / SBUS channel number to control surface mapping
 % Array ordered as 8 PWM channels then 16 SBUS channels for a total of 24
 % channels, 1-based indexing
-Aircraft.Surf.map = [2 3 4 5];
+
+% 6 = both ailerons, 7 = elevators, 8 = rudders
+Aircraft.Surf.map = [6, 7, 8];
 % Rate limits
 Aircraft.Surf.Limit.rate_dps = 150 * ones(Aircraft.Surf.nSurf, 1);
 % Position limits
@@ -144,6 +148,7 @@ Aircraft.Aero.Cn.rudder_def = 0;
 Aircraft.Motor.nMotor = 5;
 
 % Assign a pwm channel to motor
+% 1, 2, 3, 4 are hover motors, and 5 is forward motor. 
 Aircraft.Motor.map = [ 1 ; 2 ; 3 ; 4; 5];
 
 % Motor positions relative to c.g in [m] [x,y,z](obtained from OpenVSP)
@@ -171,8 +176,8 @@ Aircraft.Motor.dir = [1; 1; -1; -1; 1];
 
 % Use 1 for motors facing the forward direction. 
 Aircraft.Motor.forward = [0; 0; 0; 0; 1];
-Aircraft.Motor.forward = diag(Aircraft.Motor.forward);
 Aircraft.Motor.hover = diag(1 - Aircraft.Motor.forward);
+Aircraft.Motor.forward = diag(Aircraft.Motor.forward);
 
 %% Hover Propulsion System
 
@@ -336,4 +341,16 @@ Aircraft.Control.throttle_min = 0.05;
 % Time so slowly ramp motor from 0 to motor_spin_min. Prevent initial
 % voltage spike
 Aircraft.Control.motor_ramp_time_s = 3;
+
+
+Aircraft.Control.wp_radius = 0;
+
+%% Aircraft Specific Initial Conditions
+
+InitCond.motor_cmd = [0, 0, 0, 0, 0.5];
+InitCond.surface_rad = [0, 0, 0, 0];
+
+% Forward prop rotation rate (rad/s)
+InitCond.engine_speed_radps = 0;
+
 
