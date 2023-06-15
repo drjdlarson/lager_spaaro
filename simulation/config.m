@@ -52,7 +52,7 @@ InitCond.lon_rad = -1.527761279167;
 InitCond.alt_m = 67.117600;
 
 % [Xe, Ye, Ze]
-InitCond.ned_pos_m = [0 0 -500];
+InitCond.ned_pos_m = [0 0 500];
 
 % [u, v, w]
 InitCond.body_vel_mps = [0 0 0];

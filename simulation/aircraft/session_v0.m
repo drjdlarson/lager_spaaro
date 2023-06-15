@@ -14,7 +14,7 @@ Aircraft.name = 'session_v0';
 % Mass [kg]
 Aircraft.Mass.mass_kg = 9.594;
 % c.g. location [m]
-Aircraft.Mass.cg_m = [0 0 0];
+Aircraft.Mass.cg_m = [0, 0, 0];
 
 % Moments of inertia [kg*m^2] obtained from OpenVSP model 
 Aircraft.Mass.ixx_kgm2 = 1.231;
@@ -154,11 +154,20 @@ Aircraft.Motor.map = [ 1 ; 2 ; 3 ; 4; 5];
 % Motor positions relative to c.g in [m] [x,y,z](obtained from OpenVSP)
 % First 4 Motor numbers and order using Arducopter convention (QUAD-H)
 % 5th motor is the forward motor. (pusher configuration at the end of fuselage)
+
 Aircraft.Motor.pos_m = [0.610   0.5    0;...
                         -0.6   -0.5   0;...
                         0.610    -0.5   0;...
                         -0.6   0.5    0;...
                         -0.55   0   0]; 
+
+% NOTE: Use this motor position for debugging hover sim (all equidistant from CG)
+% Aircraft.Motor.pos_m = [0.60   0.5    0;...
+%                         -0.6   -0.5   0;...
+%                         0.60    -0.5   0;...
+%                         -0.6   0.5    0;...
+%                         -0.55   0   0]; 
+
 
 % Alignment of thrust with body frame x, y, z axis
 % All hover rotors are aligned so that thrust is in -z
@@ -175,9 +184,9 @@ Aircraft.Motor.align = [0, 0, -1;...
 Aircraft.Motor.dir = [1; 1; -1; -1; 1];
 
 % Use 1 for motors facing the forward direction. 
-Aircraft.Motor.forward = [0; 0; 0; 0; 1];
-Aircraft.Motor.hover = diag(1 - Aircraft.Motor.forward);
-Aircraft.Motor.forward = diag(Aircraft.Motor.forward);
+Aircraft.Motor.forward_bool = [0; 0; 0; 0; 1];
+Aircraft.Motor.hover = diag(1 - Aircraft.Motor.forward_bool);
+Aircraft.Motor.forward = diag(Aircraft.Motor.forward_bool);
 
 %% Hover Propulsion System
 
@@ -347,10 +356,10 @@ Aircraft.Control.wp_radius = 0;
 
 %% Aircraft Specific Initial Conditions
 
-InitCond.motor_cmd = [0, 0, 0, 0, 0.5];
+InitCond.motor_cmd = [0.6, 0.6, 0.7, 0.7, 0];
 InitCond.surface_rad = [0, 0, 0, 0];
 
 % Forward prop rotation rate (rad/s)
-InitCond.engine_speed_radps = 0;
+InitCond.engine_speed_radps = 20;
 
 
