@@ -1,5 +1,5 @@
 % Initialize a vehicle for use in the simulation
-% A Quadplane model (Based off Iteration1 presented in SESSION's PDR)
+% A Quadplane model (Based on Iteration1 presented in SESSION's PDR)
 %
 % Aabhash Bhandari
 
@@ -155,18 +155,18 @@ Aircraft.Motor.map = [ 1 ; 2 ; 3 ; 4; 5];
 % First 4 Motor numbers and order using Arducopter convention (QUAD-H)
 % 5th motor is the forward motor. (pusher configuration at the end of fuselage)
 
-Aircraft.Motor.pos_m = [0.610   0.5    0;...
-                        -0.6   -0.5   0;...
-                        0.610    -0.5   0;...
-                        -0.6   0.5    0;...
-                        -0.55   0   0]; 
-
-% NOTE: Use this motor position for debugging hover sim (all equidistant from CG)
-% Aircraft.Motor.pos_m = [0.60   0.5    0;...
+% Aircraft.Motor.pos_m = [0.610   0.5    0;...
 %                         -0.6   -0.5   0;...
-%                         0.60    -0.5   0;...
+%                         0.610    -0.5   0;...
 %                         -0.6   0.5    0;...
 %                         -0.55   0   0]; 
+
+% NOTE: Use this motor position for debugging hover sim (all equidistant from CG)
+Aircraft.Motor.pos_m = [0.60   0.5    0;...
+                        -0.6   -0.5   0;...
+                        0.60    -0.5   0;...
+                        -0.6   0.5    0;...
+                        -0.55   0   0]; 
 
 
 % Alignment of thrust with body frame x, y, z axis
@@ -180,15 +180,15 @@ Aircraft.Motor.align = [0, 0, -1;...
 
 % Motor rotation direction (right hand rule with z_body and x_body)
 % Motor 1 and 2 are cw and motor 3 and 4 are ccw
-% put 0 for forward motors
 Aircraft.Motor.dir = [1; 1; -1; -1; 1];
 
 % Use 1 for motors facing the forward direction. 
 Aircraft.Motor.forward_bool = [0; 0; 0; 0; 1];
-Aircraft.Motor.hover = diag(1 - Aircraft.Motor.forward_bool);
-Aircraft.Motor.forward = diag(Aircraft.Motor.forward_bool);
+Aircraft.Motor.forward_index = find(Aircraft.Motor.forward_bool == 1);
 
 %% Hover Propulsion System
+
+% Tmotor MN-605s 320 kV, 21x6.3 Prop
 
 % Motor speed constant Kv
 Aircraft.HoverMotor.kv = 320; % Kv of T-Motor MN605-S
@@ -199,10 +199,8 @@ Aircraft.HoverMotor.io = 2.2;
 % Motor internal resistance [Ohm]
 Aircraft.HoverMotor.r = 0.021 ;
 
-
 % Coef of torque of MN1005 motor based on T-Motor's website
 Aircraft.HoverMotor.kq = 0.0411;     %N-m/A
-
 
 % Motor mixing law for hover [hover_thrust, roll, pitch, yaw]
 % The cmd vector [hover_thrust,roll,pitch, yaw] will by multiplied with the motor
@@ -218,7 +216,6 @@ Aircraft.HoverMotor.mix = [0.7,  -0.1, 0.1, -Aircraft.HoverMotor.motor_yaw_facto
                       0, 0, 0, 0;...
                       0, 0, 0, 0];
 
-%% Rotors for Hover flight
 
 % Diameter [inches]
 Aircraft.HoverRotor.dia_in = 21;
@@ -236,37 +233,30 @@ Aircraft.HoverRotor.poly_torque = [0.5954, 1.0777, -0.2594];
 
 %% Forward Flight Propulsion system
 
-% NEED TO CHANGE THIS::: Copied from ultrastick25e
+% Tmotor AT5220-B, kV 380, APC 19x10 prop
 
-% Number of motors
-Aircraft.ForwardMotor.nMotor = 1;
-% PWM / SBUS channel number to motor mapping
-% Array ordered as 8 PWM channels then 16 SBUS channels for a total of 24
-% channels, 1-based indexing
-Aircraft.ForwardMotor.map = 1;
-% Position relative to c.g., m
-Aircraft.ForwardMotor.pos_m(1, :) = [-0.075 0 0];
-% Alignment with x, y, z axis
-Aircraft.ForwardMotor.align(1, :) = [1 0 0];
 % Speed constant, Kv [RPM/V]
-Aircraft.ForwardMotor.kv = 870;
+Aircraft.ForwardMotor.kv = 380;
 % Resistance [ohm]
-Aircraft.ForwardMotor.r = 0.03;
+Aircraft.ForwardMotor.r = 0.011;
 % Zero torque current [Amp]
-Aircraft.ForwardMotor.io = 2.4;
-
-%% Forward Flight Propeller
-
-% NEED TO CHANGE THIS::: Copied from ultrastick25e
+Aircraft.ForwardMotor.io = 4;
 
 % Diameter [inches]
-Aircraft.ForwardProp.dia_in = 12;
+Aircraft.ForwardProp.dia_in = 19;
+
+% See simulation/utils/get_prop_coefs.m to get polyfits
+
 % Coefficient of thrust polynomial coefficients
-Aircraft.ForwardProp.ct = [-2.4822 4.1010 -2.6695 0.7331 -0.1958 0.0978];
+Aircraft.ForwardProp.ct = [-0.2594   -0.0480    0.0216];
 % Coefficient of power polynomial coefficients
-Aircraft.ForwardProp.cp = [-1.8863 2.5393 -1.3781 0.3089 -0.0358 0.0329];
+Aircraft.ForwardProp.cp = [-0.0826   -0.0525    0.0066    0.0022];
+
+% hand calculated using available hardware
 % Electric motor and propeller combine moment of inertia [kg*m^2]
-Aircraft.ForwardProp.Jmp_kgm2 = 0.00012991;
+Aircraft.ForwardProp.Jmp_kgm2 = 7.9421e-4;
+
+
 
 %% Battery
 
@@ -351,15 +341,14 @@ Aircraft.Control.throttle_min = 0.05;
 % voltage spike
 Aircraft.Control.motor_ramp_time_s = 3;
 
-
 Aircraft.Control.wp_radius = 0;
 
 %% Aircraft Specific Initial Conditions
 
-InitCond.motor_cmd = [0.6, 0.6, 0.7, 0.7, 0];
+InitCond.motor_cmd = [0.6, 0.6, 0.6, 0.6, 0.3];
 InitCond.surface_rad = [0, 0, 0, 0];
 
 % Forward prop rotation rate (rad/s)
-InitCond.engine_speed_radps = 20;
+InitCond.engine_speed_radps = 3000 * (2*pi/60);
 
 

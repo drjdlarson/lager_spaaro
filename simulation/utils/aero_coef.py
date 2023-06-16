@@ -1,5 +1,9 @@
 """Handle data management from Stability outputs from OpenVSP"""
 
+# Author : Aabhash Bhandari
+
+# REQUIRES .flt FILE FROM OPENVSP
+
 import numpy as np
 import matplotlib.pyplot as plt
 
@@ -16,7 +20,7 @@ DERIVATIVE_KEYS = ['CL_alpha', 'CL_beta', 'CL_p', 'CL_q', 'CL_r', 'CL_u', 'CL_al
 
 
 class StabilityCoefAndDerivatives:
-    """Main Class to Handle data management from .stab files"""
+    """Main Class to Handle data management from OpenVSP stability output"""
 
     def __init__(self, file):
         """Read the file and store data as Trim instance"""
@@ -147,7 +151,7 @@ class TrimPoint:
 
 if __name__ == "__main__":
 
-    # use the .flt output from openvsp here
+    # USE THE .flt OUTPUT FROM OPENVSP HERE. 
     file = './session_v0_DegenGeom.flt'
 
     # main instance of the class
@@ -155,21 +159,21 @@ if __name__ == "__main__":
 
     # Use the methods this way
     stab_data.package_into_np_arrays()
-    # stab_data.plot_base_coefs()
-    # stab_data.plot_coef_derivatives()
+    stab_data.plot_base_coefs()
+    stab_data.plot_coef_derivatives()
     
 
-    # print("base coefficient::  ", stab_data.base_coef)
-    # print("alpha:: ", stab_data.alpha)  
-    # print("derivatives:: ", stab_data.derivatives)
+    print("base coefficient::  ", stab_data.base_coef)
+    print("alpha:: ", stab_data.alpha)  
+    print("derivatives:: ", stab_data.derivatives)
 
-    # print(stab_data.trim_conditions)
+    print(stab_data.trim_conditions)
 
-    # print("4th trim point Cn0 base value: {}\n".format(stab_data.trim_conditions[3].base['Cno']))
+    print("4th trim point Cn0 base value: {}\n".format(stab_data.trim_conditions[3].base['Cno']))
 
-    # print("6th trim point Clq derivative {}".format(stab_data.trim_conditions[5].derivative['Cl_q']))
+    print("6th trim point Clq derivative {}".format(stab_data.trim_conditions[5].derivative['Cl_q']))
 
-    # print("last trim points alpha is {}".format(stab_data.trim_conditions[-1].trim['ALPHA_o']))
+    print("last trim points alpha is {}".format(stab_data.trim_conditions[-1].trim['ALPHA_o']))
     
 
     # printing base coef values at 0 deg
