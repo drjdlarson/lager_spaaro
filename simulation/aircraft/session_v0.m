@@ -345,10 +345,10 @@ Aircraft.Control.wp_radius = 0;
 
 %% Aircraft Specific Initial Conditions
 
-InitCond.motor_cmd = [0.6, 0.6, 0.6, 0.6, 0.3];
+InitCond.motor_cmd = [0 0 0 0 0.39];
 InitCond.surface_rad = [0, 0, 0, 0];
 
 % Forward prop rotation rate (rad/s)
-InitCond.engine_speed_radps = 3000 * (2*pi/60);
+InitCond.engine_speed_radps = 4000 * (2*pi/60);
 
 
