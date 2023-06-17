@@ -152,7 +152,7 @@ class TrimPoint:
 if __name__ == "__main__":
 
     # USE THE .flt OUTPUT FROM OPENVSP HERE. 
-    file = './session_v0_DegenGeom.flt'
+    file = './session_v0_sim_model_DegenGeom.flt'
 
     # main instance of the class
     stab_data = StabilityCoefAndDerivatives(file)

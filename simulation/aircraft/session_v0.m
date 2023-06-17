@@ -30,13 +30,14 @@ Aircraft.Mass.inertia_kgm2 = [Aircraft.Mass.ixx_kgm2    0   -Aircraft.Mass.ixz_k
 % NEED TO CHANGE THIS::: Copied from ultrastick25e
 
 % Reference chord, m
-Aircraft.Geom.c_m = 0.25;
+Aircraft.Geom.c_m = 0.150;
 % Reference span, m
-Aircraft.Geom.b_m = 1.27;
+Aircraft.Geom.b_m = 2.75;
 % Reference area, m^2
-Aircraft.Geom.s_m2 = 0.3097;
+Aircraft.Geom.s_m2 = 0.413;
+
 % Center of pressure [x y z], m
-Aircraft.Geom.cp_m = [0.2175 0 0.046];
+Aircraft.Geom.cp_m = [0.0407 0 0];
 
 %% Effectors
 % Number of PWM channels
@@ -94,52 +95,30 @@ Aircraft.Aero.axis = 3;
 % Note: Base values are taken at 0 deg, and derivatives are taken for 2 deg
 % point. This is because the derivatives are more consistent after 2 deg,
 % and they are assumed to be linear, so the derivatives at 2 deg are
-% assumed for 0 deg as well. 
+% assumed for 0 deg as well.
 
-% CL
-Aircraft.Aero.CL.zero = 0.8899;
-Aircraft.Aero.CL.alpha = 0;
-Aircraft.Aero.CL.q = 16.8499;
-Aircraft.Aero.CL.elevator_def = 0;
+% get control derivatives from .stab file output
 
-% CD
-Aircraft.Aero.CD.zero = 0.066803;
-Aircraft.Aero.CD.alpha = 0.4951;
-Aircraft.Aero.CD.q = -0.4301;
-Aircraft.Aero.CD.elevator_def = 0;
+% Format of the array is:: 
+% [base_val, alpha, beta, p, q, r, aileron_def, elevator_def, rudder_def]
 
-% CY (side force)
-Aircraft.Aero.CY.zero = 0.0001;
-Aircraft.Aero.CY.beta = -0.4186;
-Aircraft.Aero.CY.p = -0.0306;
-Aircraft.Aero.CY.q = -0.0382;
-Aircraft.Aero.CY.r = 0.1210;
-Aircraft.Aero.CY.aileron_def = 0;
-Aircraft.Aero.CY.rudder_def = 0;
+% Lift
+Aircraft.Aero.CL_coefs = [0.8899, 6.728874, 0, 0, 16.8703, 0, 0, 0.8582, 0];
 
-% Cl 
-Aircraft.Aero.Cl.zero = -0.0003;
-Aircraft.Aero.Cl.beta = -0.0901;
-Aircraft.Aero.Cl.p = -0.6406;
-Aircraft.Aero.Cl.q = -0.0143;
-Aircraft.Aero.Cl.r = 0.1686;
-Aircraft.Aero.Cl.aileron_def = 0;
-Aircraft.Aero.Cl.rudder_def = 0;
+% Drag
+Aircraft.Aero.CD_coefs = [0.0668, 0.4951, 0, 0, -0.4293, 0, 0, 0.0293, 0];
 
-% Cm 
-Aircraft.Aero.Cm.zero = -0.0041;
-Aircraft.Aero.Cm.alpha = -1.6601;
-Aircraft.Aero.Cm.q = -100.02;
-Aircraft.Aero.Cm.elevator_def = 0;
+% Side Force
+Aircraft.Aero.CY_coefs = [0.0001, 0, -0.4186, -0.0330, -0.0380, 0.1206, 0.1398, 0, -0.1749];
 
-% Cn 
-Aircraft.Aero.Cn.zero = 0.0000;
-Aircraft.Aero.Cn.beta = -0.0024;
-Aircraft.Aero.Cn.p = -0.1008;
-Aircraft.Aero.Cn.q = 0.0065;
-Aircraft.Aero.Cn.r = -0.0370;
-Aircraft.Aero.Cn.aileron_def = 0;
-Aircraft.Aero.Cn.rudder_def = 0;
+% X-axis moment
+Aircraft.Aero.Cl_coefs = [-0.0003, 0, -0.0910, -0.6384, -0.0143, 0.1687, 0.3334, 0, 0.0079];
+
+% Y-axis moment
+Aircraft.Aero.Cm_coefs = [-0.0040, -1.659, 0, 0, -100.0173, 0, 0, 2.302, 0];
+
+% Z-axis_moment
+Aircraft.Aero.Cn_coefs = [0.0000, 0, -0.0024, -0.1002, 0.0064, -0.0369, -0.0197, 0, 0.0310];
 
 
 %% Motor Maps 
@@ -346,7 +325,7 @@ Aircraft.Control.wp_radius = 0;
 %% Aircraft Specific Initial Conditions
 
 InitCond.motor_cmd = [0 0 0 0 0.39];
-InitCond.surface_rad = [0, 0, 0, 0];
+InitCond.surface_rad = [0, 0.5, 0];
 
 % Forward prop rotation rate (rad/s)
 InitCond.engine_speed_radps = 4000 * (2*pi/60);
