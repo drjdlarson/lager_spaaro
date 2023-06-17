@@ -129,11 +129,6 @@ end
 if(strcmp(vehicle, 'ale'))
     ale_config = ale_model_confg();
 end
-
-%% Setup configuration set
-if(strcmp(vehicle, 'ale'))
-    ale_config = ale_model_confg();
-end
 %% Select sim
 % if (vms_only)
 %     if strcmp(vehicle,'malt')
