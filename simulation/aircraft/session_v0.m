@@ -20,7 +20,7 @@ Aircraft.Mass.cg_m = [0, 0, 0];
 Aircraft.Mass.ixx_kgm2 = 1.231;
 Aircraft.Mass.iyy_kgm2 = 1.399;
 Aircraft.Mass.izz_kgm2 = 2.602;
-Aircraft.Mass.ixz_kgm2 = 0.07;
+Aircraft.Mass.ixz_kgm2 = 0.00;
 Aircraft.Mass.inertia_kgm2 = [Aircraft.Mass.ixx_kgm2    0   -Aircraft.Mass.ixz_kgm2;...
                               0          Aircraft.Mass.iyy_kgm2          0;...
                               -Aircraft.Mass.ixz_kgm2   0       Aircraft.Mass.izz_kgm2];
@@ -65,6 +65,7 @@ Aircraft.Surf.Limit.pos_deg = 30 * ones(Aircraft.Surf.nSurf, 1);
 Aircraft.Surf.Limit.neg_deg = -30 * ones(Aircraft.Surf.nSurf, 1);
 
 %% Hover Aerodynamics
+% Not implemented for now. 
 
 % k where ||Drag|| = k * airspeed
 % linear assumption for low speed is good enough
@@ -83,16 +84,16 @@ Aircraft.Aero.cutoff_airspeed_mps = 5;
 % 2 = Stability axis
 % 3 = Body axis
 
-% Body axis is selected because OpenVSP gives output in this frame and is
+% Wind axis is selected because OpenVSP gives output in this frame and is
 % easier to deal with 
-Aircraft.Aero.axis = 3;
+Aircraft.Aero.axis = 1;
 
 % Using StabilityCoefAndDerivatives class in utils/, base coefficients and 
 % derivatives are used here to model aerodynamic forces and moments. 
 
-% Note: Base values are taken at 0 deg, and derivatives are taken for 2 deg
-% point. This is because the derivatives are more consistent after 2 deg,
-% and they are assumed to be linear, so the derivatives at 2 deg are
+% Note: Base values are taken at 0 deg, and derivatives are taken for 4 deg
+% point. This is because the derivatives are more consistent after 4 deg,
+% and they are assumed to be linear, so the derivatives at 4 deg are
 % assumed for 0 deg as well.
 
 % get control derivatives from .stab file output
@@ -114,7 +115,7 @@ Aircraft.Aero.Cl_coefs = [-0.0004, 0, -0.0719, -0.6494, -0.0457, 0.1962, 0.3357,
 
 % Y-axis moment
 % ignored Cm_q = -101.6445 (not sure why its that low)
-Aircraft.Aero.Cm_coefs = [-0.0447, -1.9881, 0, 0, 0, 0, 0, 4.1454, 0];
+Aircraft.Aero.Cm_coefs = [-0.0447, -1.9881, 0, 0, -101.64, 0, 0, 4.1454, 0];
 
 % Z-axis_moment
 Aircraft.Aero.Cn_coefs = [0.0000, 0, 0.0015, -0.1405, -0.0020, -0.03442, -0.0165, 0, 0.0371];
@@ -132,18 +133,18 @@ Aircraft.Motor.map = [ 1 ; 2 ; 3 ; 4; 5];
 % First 4 Motor numbers and order using Arducopter convention (QUAD-H)
 % 5th motor is the forward motor. (pusher configuration at the end of fuselage)
 
-% Aircraft.Motor.pos_m = [0.610   0.5    0;...
-%                         -0.6   -0.5   0;...
-%                         0.610    -0.5   0;...
-%                         -0.6   0.5    0;...
-%                         -0.55   0   0]; 
-
-% NOTE: Use this motor position for debugging hover sim (all equidistant from CG)
-Aircraft.Motor.pos_m = [0.60   0.5    0;...
+Aircraft.Motor.pos_m = [0.610   0.5    0;...
                         -0.6   -0.5   0;...
-                        0.60    -0.5   0;...
+                        0.610    -0.5   0;...
                         -0.6   0.5    0;...
                         -0.55   0   0]; 
+
+% NOTE: Use this motor position for debugging hover sim (all equidistant from CG)
+% Aircraft.Motor.pos_m = [0.60   0.5    0;...
+%                         -0.6   -0.5   0;...
+%                         0.60    -0.5   0;...
+%                         -0.6   0.5    0;...
+%                         -0.55   0   0]; 
 
 
 % Alignment of thrust with body frame x, y, z axis
@@ -322,8 +323,8 @@ Aircraft.Control.wp_radius = 0;
 
 %% Aircraft Specific Initial Conditions
 
-InitCond.motor_cmd = [0 0 0 0 0.39];
-InitCond.surface_rad = [-0.70, 0.60, -0.50];
+InitCond.motor_cmd = [0 0 0 0 0.45];
+InitCond.surface_rad = [0 0 0];
 
 % Forward prop rotation rate (rad/s)
 InitCond.engine_speed_radps = 4000 * (2*pi/60);
