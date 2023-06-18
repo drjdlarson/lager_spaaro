@@ -299,13 +299,19 @@ if (FMU STREQUAL "MINI-V1" OR FMU STREQUAL "V2")
 endif()
 # Setup autocode
 if (DEFINED AUTOCODE)
-  include_directories(autocode/${AUTOCODE}_ert_rtw)
-  target_sources(flight
-    PUBLIC
-      autocode/${AUTOCODE}_ert_rtw/autocode.cpp
-      autocode/${AUTOCODE}_ert_rtw/autocode.h
-  )
-  add_definitions(-D__AUTOCODE__)
+    include_directories(autocode/${AUTOCODE}_ert_rtw)
+	target_sources(flight
+		PUBLIC
+			autocode/${AUTOCODE}_ert_rtw/autocode.cpp
+			autocode/${AUTOCODE}_ert_rtw/autocode.h
+			autocode/${AUTOCODE}_ert_rtw/ale_speed_controller.cpp
+			autocode/${AUTOCODE}_ert_rtw/ale_speed_controller.h
+			autocode/${AUTOCODE}_ert_rtw/rt_roundf.cpp
+			autocode/${AUTOCODE}_ert_rtw/rt_roundf.h
+			autocode/${AUTOCODE}_ert_rtw/rtwtypes.h
+			autocode/${AUTOCODE}_ert_rtw/const_params.cpp
+	)
+	add_definitions(-D__AUTOCODE__)
 endif()
 # Add the includes
 target_include_directories(flight PUBLIC 

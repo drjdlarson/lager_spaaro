@@ -131,6 +131,10 @@ elseif(strcmpi(vehicle, 'session'))
     session_config = session_model_config();
 end
 
+%% Setup configuration set
+if(strcmp(vehicle, 'ale'))
+    ale_config = ale_model_confg();
+end
 %% Select sim
 if any(strcmp(vehicle, {'super', 'malt'}))
     multirotor_sim();
