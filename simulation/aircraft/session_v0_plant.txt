@@ -1,9 +1,9 @@
-#########
+************
 Summary of Forces and Moments modelled in session_vo for quadplane sim.
-#########
+************
 
 Aerodynamics
-============
+************
 1. Calculating the coefficients using intercepts and derivatives obtained from OpenVSP for fixed wing. Coefficients are assumed linear with alpha. Using the base values at alpha = 0 deg, and using the derivatives at alpha = 4 deg (because derivatives are more consistent after ~2 deg and they are assumed linear).
 	CL (alpha, q, elevator_def)
 	CD (alpha, q, elevator_def)
@@ -18,9 +18,9 @@ Note : Run the simulation/utils/aero_coef.py script to get these coefficients an
 3. Blade flapping and other prop/rotor/body interactions are ignored. 
 
 
-============ 
+************
 Propulsion
-============
+************
 1. For Hover, polynomial fits are created for thrust and torque output using Tmotor static performance data. These poly fits directly map throttle percent [0,1] to thrust_N and torque_Nm. Moment due to thrust offset from C.G is included in the total moment. Total body thrust and moments are calculated based on motor alignment, position, and spin direction.
 	T-motor MN605-s with 21x6 prop. 
 -----------
@@ -42,21 +42,21 @@ Note: Convert the APC's .data file to .csv and use simulation/utils/get_prop_coe
 6. All forces and moments are adjusted for motor position, alignment, and spin direction and converted to body frame. 
 
 
-============ 
+************
 Gravity
-============
+************
 1. Simply adjusted to body frame. 
 
-============ 
+************
 Mass and Geometry
-============
+************
 1. Obtained geometric and mass properties from OpenVSP.
 ------------
 2. Calculated center of pressure using the coefficient of moment and lift at two different alpha.
 
-============ 
+************
 Controller ouputs
-============
+************
 1. Used 8 PWM channels:
 	[1, 5] : motor_cmds
 	(6, 8] : surface_positions_rad
@@ -71,6 +71,3 @@ Controller ouputs
 	1 : Aileron deflection
 	2 : Elevator deflection
 	3 : Rudder deflection
-
-		
-	
