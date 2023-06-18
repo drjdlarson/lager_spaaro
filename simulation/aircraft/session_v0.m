@@ -27,8 +27,6 @@ Aircraft.Mass.inertia_kgm2 = [Aircraft.Mass.ixx_kgm2    0   -Aircraft.Mass.ixz_k
 
 %% Geometric parameters
 
-% NEED TO CHANGE THIS::: Copied from ultrastick25e
-
 % Reference chord, m
 Aircraft.Geom.c_m = 0.150;
 % Reference span, m
@@ -103,23 +101,23 @@ Aircraft.Aero.axis = 3;
 % [base_val, alpha, beta, p, q, r, aileron_def, elevator_def, rudder_def]
 
 % Lift
-Aircraft.Aero.CL_coefs = [0.8899, 6.728874, 0, 0, 16.8703, 0, 0, 0.8582, 0];
+Aircraft.Aero.CL_coefs = [0.9181, 6.8855, 0, 0, 18.7786, 0, 0, 0.8388, 0];
 
 % Drag
-Aircraft.Aero.CD_coefs = [0.0668, 0.4951, 0, 0, -0.4293, 0, 0, 0.0293, 0];
+Aircraft.Aero.CD_coefs = [0.06519, 0.5768, 0, 0, -0.7326, 0, 0, 0.1012, 0];
 
 % Side Force
-Aircraft.Aero.CY_coefs = [0.0001, 0, -0.4186, -0.0330, -0.0380, 0.1206, 0.1398, 0, -0.1749];
+Aircraft.Aero.CY_coefs = [0.0006, 0, -0.4412, -0.0205, 0.003166, 0.1137, 0.1638, 0, -0.2071];
 
 % X-axis moment
-Aircraft.Aero.Cl_coefs = [-0.0003, 0, -0.0910, -0.6384, -0.0143, 0.1687, 0.3334, 0, 0.0079];
+Aircraft.Aero.Cl_coefs = [-0.0004, 0, -0.0719, -0.6494, -0.0457, 0.1962, 0.3357, 0, 0.010322];
 
 % Y-axis moment
-Aircraft.Aero.Cm_coefs = [-0.0040, -1.659, 0, 0, -100.0173, 0, 0, 2.302, 0];
+% ignored Cm_q = -101.6445 (not sure why its that low)
+Aircraft.Aero.Cm_coefs = [-0.0447, -1.9881, 0, 0, 0, 0, 0, 4.1454, 0];
 
 % Z-axis_moment
-Aircraft.Aero.Cn_coefs = [0.0000, 0, -0.0024, -0.1002, 0.0064, -0.0369, -0.0197, 0, 0.0310];
-
+Aircraft.Aero.Cn_coefs = [0.0000, 0, 0.0015, -0.1405, -0.0020, -0.03442, -0.0165, 0, 0.0371];
 
 %% Motor Maps 
 
@@ -325,7 +323,7 @@ Aircraft.Control.wp_radius = 0;
 %% Aircraft Specific Initial Conditions
 
 InitCond.motor_cmd = [0 0 0 0 0.39];
-InitCond.surface_rad = [0, 0.5, 0];
+InitCond.surface_rad = [-0.70, 0.60, -0.50];
 
 % Forward prop rotation rate (rad/s)
 InitCond.engine_speed_radps = 4000 * (2*pi/60);

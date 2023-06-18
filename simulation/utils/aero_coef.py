@@ -181,4 +181,4 @@ if __name__ == "__main__":
         print('Base coef {:s} at 0 deg is {:s}\n'. format(base_key, stab_data.trim_conditions[1].base[base_key]))
 
     for derivative_key in DERIVATIVE_KEYS:
-        print('Derivative {} at 2 deg is {}\n'.format(derivative_key, stab_data.trim_conditions[2].derivative[derivative_key]))
+        print('Derivative {} at 4 deg is {}\n'.format(derivative_key, stab_data.trim_conditions[3].derivative[derivative_key]))

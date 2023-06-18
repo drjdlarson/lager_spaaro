@@ -55,7 +55,7 @@ InitCond.alt_m = 67.117600;
 InitCond.ned_pos_m = [0 0 -200];
 
 % [u, v, w]
-InitCond.body_vel_mps = [14.926666 0 0];
+InitCond.body_vel_mps = [18 0 0];
 
 % [roll, pitch, yaw]
 InitCond.euler_rad = [0 0 0];
