@@ -295,9 +295,9 @@ void DatalogAdd(const AircraftData &ref) {
   datalog_msg_.opflow_new_data = ref.sensor.opflow.new_data;
   datalog_msg_.opflow_sur_qual = ref.sensor.opflow.sur_qual;
   datalog_msg_.opflow_range_qual = ref.sensor.opflow.range_qual;
-  datalog_msg_.opflow_mot_x = ref.sensor.opflow.mot_x;
-  datalog_msg_.opflow_mot_y = ref.sensor.opflow.mot_y;
-  datalog_msg_.opflow_range_mm = ref.sensor.opflow.range_mm;
+  datalog_msg_.opflow_mot_x = Scale(float(ref.sensor.opflow.mot_x), -500.0f, 500.0f, 1.0f, 600.0f);
+  datalog_msg_.opflow_mot_y = Scale(float(ref.sensor.opflow.mot_y), -500.0f, 500.0f, 1.0f, 600.0f);
+  datalog_msg_.opflow_range_mm = Scale(float(ref.sensor.opflow.range_mm), -1.0f, 2000.0f, 1.0f, 3000.0f);
   #endif
 
   /* AIN */

@@ -208,9 +208,9 @@ std::vector<uint8_t> opflow_healthy;
 std::vector<uint8_t> opflow_new_data;
 std::vector<uint8_t> opflow_sur_qual;
 std::vector<uint8_t> opflow_range_qual;
-std::vector<int32_t> opflow_mot_x;
-std::vector<int32_t> opflow_mot_y;
-std::vector<int32_t> opflow_range_mm;
+std::vector<float> opflow_mot_x;
+std::vector<float> opflow_mot_y;
+std::vector<float> opflow_range_mm;
 #endif
 std::vector<float> ain0_v;
 std::vector<float> ain1_v;
@@ -615,9 +615,9 @@ int main(int argc, char** argv) {
         opflow_new_data.push_back(datalog_msg_.opflow_new_data);
         opflow_sur_qual.push_back(datalog_msg_.opflow_sur_qual);
         opflow_range_qual.push_back(datalog_msg_.opflow_range_qual);
-        opflow_mot_x.push_back(datalog_msg_.opflow_mot_x);
-        opflow_mot_y.push_back(datalog_msg_.opflow_mot_y);
-        opflow_range_mm.push_back(datalog_msg_.opflow_range_mm);
+        opflow_mot_x.push_back(Scale(datalog_msg_.opflow_mot_x, -500.0f, 500.0f, 1.0f, 600.0f));
+        opflow_mot_y.push_back(Scale(datalog_msg_.opflow_mot_y, -500.0f, 500.0f, 1.0f, 600.0f));
+        opflow_range_mm.push_back(Scale(datalog_msg_.opflow_range_mm, -1.0f, 2000.0f, 1.0f, 3000.0f));
         #endif
         ain0_v.push_back(Scale(datalog_msg_.ain0_v, 0.0f, 3.3f, 1240.90909090909f, 0.0f));
         ain1_v.push_back(Scale(datalog_msg_.ain1_v, 0.0f, 3.3f, 1240.90909090909f, 0.0f));
