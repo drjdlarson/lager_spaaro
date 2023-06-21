@@ -285,6 +285,20 @@ void DatalogAdd(const AircraftData &ref) {
   datalog_msg_.rad_alt_snr = ref.sensor.rad_alt.snr;
   datalog_msg_.rad_alt_alt_m = Scale(ref.sensor.rad_alt.alt_m, 0.0f, 50.0f, 40.94f, 0.0f);
   #endif
+  
+
+  /* OPTICAL FLOW */
+  #if defined(__FMU_R_V2__) || defined(__FMU_R_V2_BETA__) || \
+      defined(__FMU_R_MINI_V1__)
+  datalog_msg_.opflow_installed = ref.sensor.opflow.installed;
+  datalog_msg_.opflow_healthy = ref.sensor.opflow.healthy;
+  datalog_msg_.opflow_new_data = ref.sensor.opflow.new_data;
+  datalog_msg_.opflow_sur_qual = ref.sensor.opflow.sur_qual;
+  datalog_msg_.opflow_range_qual = ref.sensor.opflow.range_qual;
+  datalog_msg_.opflow_mot_x = ref.sensor.opflow.mot_x;
+  datalog_msg_.opflow_mot_y = ref.sensor.opflow.mot_y;
+  datalog_msg_.opflow_range_mm = ref.sensor.opflow.range_mm;
+  #endif
 
   /* AIN */
   datalog_msg_.ain0_v = Scale(ref.sensor.analog.voltage_v[0], 0.0f, 3.3f, 1240.90909090909f, 0.0f);
