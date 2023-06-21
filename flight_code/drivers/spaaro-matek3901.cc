@@ -31,7 +31,7 @@
 #include "drivers/spaaro-matek3901.h"
 
 void SpaaroMatek3901::Init(const OpFlowConfig &cfg) {
-  if (cfg.device != OPFLOW_MATEK3901) {
+  if (cfg.device != OPFLOW_NONE) {
     if (!opflow_.Begin()) {
       MsgError("Unable to establish communication with optical flow");
     } else {

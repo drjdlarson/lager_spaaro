@@ -208,9 +208,9 @@ std::vector<uint8_t> opflow_healthy;
 std::vector<uint8_t> opflow_new_data;
 std::vector<uint8_t> opflow_sur_qual;
 std::vector<uint8_t> opflow_range_qual;
-std::vector<float> opflow_mot_x;
-std::vector<float> opflow_mot_y;
-std::vector<float> opflow_range_mm;
+std::vector<int32_t> opflow_mot_x;
+std::vector<int32_t> opflow_mot_y;
+std::vector<int32_t> opflow_range_mm;
 #endif
 std::vector<float> ain0_v;
 std::vector<float> ain1_v;
