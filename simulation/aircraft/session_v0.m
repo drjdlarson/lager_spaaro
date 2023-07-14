@@ -24,7 +24,7 @@ Aircraft.Mass.ixz_kgm2 = 0.00;
 Aircraft.Mass.inertia_kgm2 = [Aircraft.Mass.ixx_kgm2    0   -Aircraft.Mass.ixz_kgm2;...
                               0          Aircraft.Mass.iyy_kgm2          0;...
                               -Aircraft.Mass.ixz_kgm2   0       Aircraft.Mass.izz_kgm2];
-Aircraft.Mass.inertia_inv = inv(Aircraft.Mass.inertia_kgm2);
+
 
 %% Geometric parameters
 
@@ -370,7 +370,7 @@ Aircraft.Control.Forward.Cn_coefs = Aircraft.Aero.Cn_coefs;
 
 % Moment of inertia
 Aircraft.Control.inertia_inv = inv(Aircraft.Mass.inertia_kgm2);
-
+Aircraft.Control.inertia_inv_4by4 = inv([[Aircraft.Mass.inertia_kgm2, [0;0;0]]; [0,0,0,1]]);
 
 %% Aircraft Specific Initial Conditions
 
