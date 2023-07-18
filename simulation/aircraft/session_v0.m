@@ -206,10 +206,10 @@ Aircraft.HoverRotor.kt = 0.0388;   %N-m/N
 
 % Thrust and torque models obtained from Tmotor's data
 % for throttle 0-1
-% 3rd order polyfit on thrust(N), 0 throttle = 0 thrust
-Aircraft.HoverRotor.poly_thrust = [-17.7335 75.4118 6.7215 0.0702];
-% 3rd order polyfit on torque
-Aircraft.HoverRotor.poly_torque = [-0.9072 2.4718 -0.1583 -0.0001];
+% 2nd order polyfit on thrust(N), 0 throttle = 0 thrust
+Aircraft.HoverRotor.poly_thrust = [48.8680 16.6778 -0.3264];
+% 2nd order polyfit on torque
+Aircraft.HoverRotor.poly_torque = [1.1138 0.3510 -0.0204];
 
 
 %% Forward Flight Propulsion system
