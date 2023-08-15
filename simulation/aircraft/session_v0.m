@@ -118,7 +118,7 @@ Aircraft.Aero.Cl_coefs = [-0.0004, 0, -0.0719, -0.6494, -0.0457, -0.1962, 0.3357
 
 % Y-axis moment
 % ignored Cm_q = -101.6445 (not sure why its that low)
-Aircraft.Aero.Cm_coefs = [-0.0447, -1.9881, 0, 0, -101.64, 0, 0, 4.1454, 0];
+Aircraft.Aero.Cm_coefs = [-0.0447, -1.9881, 0, 0, -101.6445, 0, 0, 4.1454, 0];
 
 % Z-axis_moment
 Aircraft.Aero.Cn_coefs = [0.0000, 0, 0.0015, -0.1405, -0.0020, -0.03442, -0.0165, 0, 0.0371];
@@ -357,6 +357,12 @@ Aircraft.Control.Forward.altitude_P = 1;
 % FixedWing Outer Loop indi gain (airspeed and flight path control)
 Aircraft.Control.Forward.outer_indi_gains = 0.75;
 
+% Hover Inner Loop low-pass filter cutoff throttle output
+Aircraft.Control.Hover.throttle_output_LP_filter_CTOFF = 75;
+
+% Hover Inner Loop Gain
+Aircraft.Control.Hover.inner_loop_gain = 3;
+
 
 %% Aircraft Parameters used in Controller
 % For nominal case, this will be equal to the expected/known parameters.
@@ -374,10 +380,10 @@ Aircraft.Control.inertia_inv_4by4 = inv([[Aircraft.Mass.inertia_kgm2, [0;0;0]]; 
 
 %% Aircraft Specific Initial Conditions
 
-InitCond.motor_cmd = [0 0 0 0 0];
+InitCond.motor_cmd = [0, 0, 0, 0, 0.0];
 InitCond.surface_rad = [0 0 0];
 
 % Forward prop rotation rate (rad/s)
-InitCond.engine_speed_radps = 3000 * (2*pi/60);
+InitCond.engine_speed_radps = 0.1 * (2*pi/60);
 
 
