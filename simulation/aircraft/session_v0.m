@@ -360,8 +360,11 @@ Aircraft.Control.Forward.outer_indi_gains = 0.75;
 % Hover Inner Loop low-pass filter cutoff throttle output
 Aircraft.Control.Hover.throttle_output_LP_filter_CTOFF = 75;
 
-% Hover Inner Loop Gain
-Aircraft.Control.Hover.inner_loop_gain = 3;
+% Hover Inner Loop Body Rates (pqr) Gain
+Aircraft.Control.Hover.body_rates_gain = 3;
+
+% Hover Inner Loop Attitude Control Gain (roll, pitch)
+Aircraft.Control.Hover.att_gain = 8;
 
 
 %% Aircraft Parameters used in Controller
