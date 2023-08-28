@@ -64,8 +64,11 @@ Aircraft.Surf.Limit.rate_dps = 150 * ones(Aircraft.Surf.nSurf, 1);
 % Position limits
 Aircraft.Surf.Limit.pos_deg = 30 * ones(Aircraft.Surf.nSurf, 1);
 Aircraft.Surf.Limit.neg_deg = -30 * ones(Aircraft.Surf.nSurf, 1);
+
 % Servo Actuator bandwidth radps (copied from Ekeren INDI paper)
 Aircraft.Surf.bandwidth = 14.56;
+
+
 
 %% Hover Aerodynamics
 % Not implemented for now. 
@@ -78,6 +81,14 @@ Aircraft.Aero.linear_drag_coef = 0;
 % below this speed, only include Quadcopter aero forces and moments
 % above this speed, include full forward flight's aero forces and moments 
 Aircraft.Aero.cutoff_airspeed_mps = 5;
+
+%% Weighted Sum between forward and hover aerodynamics
+
+% Using a Sigmoidal MF to calculate weight of aerodynamics contribution
+% x = u_mps
+% a = shape parameter, c = inflection point (on u_mps)
+Aircraft.Aero.sigmoidal_shape = 1.2;
+Aircraft.Aero.sigmoidal_inflection = 4.5;   
 
 %% Forward Flight Aerodynamics
 
@@ -131,6 +142,9 @@ Aircraft.Motor.nMotor = 5;
 % Assign a pwm channel to motor
 % 1, 2, 3, 4 are hover motors, and 5 is forward motor. 
 Aircraft.Motor.map = [ 1 ; 2 ; 3 ; 4; 5];
+
+% Motor bandwidth radps 
+Aircraft.Motor.bandwidth = 25;
 
 % Motor positions relative to c.g in [m] [x,y,z](obtained from OpenVSP)
 % First 4 Motor numbers and order using Arducopter convention (QUAD-H)
@@ -357,14 +371,22 @@ Aircraft.Control.Forward.altitude_P = 1;
 % FixedWing Outer Loop indi gain (airspeed and flight path control)
 Aircraft.Control.Forward.outer_indi_gains = 0.75;
 
-% Hover Inner Loop low-pass filter cutoff throttle output
-Aircraft.Control.Hover.throttle_output_LP_filter_CTOFF = 75;
+% Hover Inner Loop low-pass filters 
+% cutoff throttle output
+Aircraft.Control.Hover.throttle_output_LP_filter_CTOFF = 2.5;
+% cutoff w and pqr references
+Aircraft.Control.Hover.inner_ref_LP_filter_CTOFF = 0.1;
 
 % Hover Inner Loop Body Rates (pqr) Gain
-Aircraft.Control.Hover.body_rates_gain = 3;
+Aircraft.Control.Hover.body_rates_gain = 0.5;
+
+% Hover Inner Loop 
 
 % Hover Inner Loop Attitude Control Gain (roll, pitch)
-Aircraft.Control.Hover.att_gain = 8;
+Aircraft.Control.Hover.att_gain = 3;
+
+% U_cmd will be calculated if airspeed > threshold. else, u_cmd = 0.
+Aircraft.Control.Hover.uv_ref_airspeed_threshold = 2;
 
 
 %% Aircraft Parameters used in Controller
@@ -383,7 +405,7 @@ Aircraft.Control.inertia_inv_4by4 = inv([[Aircraft.Mass.inertia_kgm2, [0;0;0]]; 
 
 %% Aircraft Specific Initial Conditions
 
-InitCond.motor_cmd = [0, 0, 0, 0, 0.0];
+InitCond.motor_cmd = [0.55, 0.55, 0.55, 0.55, 0.0];
 InitCond.surface_rad = [0 0 0];
 
 % Forward prop rotation rate (rad/s)
