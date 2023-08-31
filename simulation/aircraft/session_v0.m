@@ -373,20 +373,43 @@ Aircraft.Control.Forward.outer_indi_gains = 0.75;
 
 % Hover Inner Loop low-pass filters 
 % cutoff throttle output
-Aircraft.Control.Hover.throttle_output_LP_filter_CTOFF = 2.5;
+Aircraft.Control.Hover.throttle_output_LP_filter_CTOFF = 1;
 % cutoff w and pqr references
 Aircraft.Control.Hover.inner_ref_LP_filter_CTOFF = 0.1;
 
-% Hover Inner Loop Body Rates (pqr) Gain
-Aircraft.Control.Hover.body_rates_gain = 0.5;
+% Hover Inner Loop Body Rates (pqrw) Gain
+Aircraft.Control.Hover.body_rates_gain = [1.5, 1.5, 0.25, 3];
 
-% Hover Inner Loop 
+% Hover Attitude Control pqr output limits
+Aircraft.Control.Hover.pqr_limit = 2;
 
 % Hover Inner Loop Attitude Control Gain (roll, pitch)
-Aircraft.Control.Hover.att_gain = 3;
+Aircraft.Control.Hover.att_gain = 2.25;
+
+% Hover Altitude Control
+Aircraft.Control.Hover.alt_gain = 0.75;
+
+% Hover Inertial and Body vertical speed limits 
+Aircraft.Control.Hover.nav_vert_limits = [2, -4];
+Aircraft.Control.Hover.body_vert_limits = [4, -6];
 
 % U_cmd will be calculated if airspeed > threshold. else, u_cmd = 0.
-Aircraft.Control.Hover.uv_ref_airspeed_threshold = 2;
+Aircraft.Control.Hover.uv_ref_airspeed_threshold = 1;
+
+% Hover Speed control LP filter cutoff
+Aircraft.Control.Hover.u_ref_LP_filter_CTOFF = 0.05; 
+Aircraft.Control.Hover.roll_pitch_ref_LP_filter_CTOFF = 0.01;
+
+% Hover Speed Control Gains
+Aircraft.Control.Hover.uv_gain = 0.25; 
+Aircraft.Control.Hover.uv_d = 1.25;
+
+% Roll pitch reference limits
+Aircraft.Control.Hover.roll_pitch_ref_limits = [0.35, 0.35];
+
+% Hover heading control 
+Aircraft.Control.Hover.heading_gain = 2.5;
+Aircraft.Control.Hover.yaw_rate_ref_limit = 1;
 
 
 %% Aircraft Parameters used in Controller
