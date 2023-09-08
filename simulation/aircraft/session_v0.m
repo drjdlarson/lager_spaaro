@@ -434,10 +434,10 @@ Aircraft.Control.inertia_inv_4by4 = inv([[Aircraft.Mass.inertia_kgm2, [0;0;0]]; 
 
 %% Aircraft Specific Initial Conditions
 
-InitCond.motor_cmd = [0.0, 0.0, 0.0, 0.0, 0.3];
+InitCond.motor_cmd = [0.0, 0.0, 0.0, 0.0, 0.0];
 InitCond.surface_rad = [0 0 0];
 
 % Forward prop rotation rate (rad/s)
-InitCond.engine_speed_radps = 2000 * (2*pi/60);
+InitCond.engine_speed_radps = 2 * (2*pi/60);
 
 
