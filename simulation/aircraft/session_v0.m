@@ -438,6 +438,6 @@ InitCond.motor_cmd = [0.0, 0.0, 0.0, 0.0, 0.0];
 InitCond.surface_rad = [0 0 0];
 
 % Forward prop rotation rate (rad/s)
-InitCond.engine_speed_radps = 2 * (2*pi/60);
+InitCond.engine_speed_radps = 30 * (2*pi/60);
 
 
