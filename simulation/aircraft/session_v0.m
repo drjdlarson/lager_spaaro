@@ -417,6 +417,13 @@ Aircraft.Control.Hover.roll_pitch_ref_limits = [0.35, 0.35];
 Aircraft.Control.Hover.heading_gain = 2.5;
 Aircraft.Control.Hover.yaw_rate_ref_limit = 1;
 
+% Mode Switching and Transition related parameters
+Aircraft.Control.modes.mode_shutoff_airspeeds = [7,18];
+
+Aircraft.Control.modes.hover2forward_airspeed_ramp = 5;
+Aircraft.Control.modes.forward2hover_airspeed_ramp = -1.5;
+
+
 
 %% Aircraft Parameters used in Controller
 % For nominal case, this will be equal to the expected/known parameters.
