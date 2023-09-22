@@ -144,7 +144,7 @@ Aircraft.Motor.nMotor = 5;
 Aircraft.Motor.map = [ 1 ; 2 ; 3 ; 4; 5];
 
 % Motor bandwidth radps 
-Aircraft.Motor.bandwidth = 25;
+Aircraft.Motor.bandwidth = 100;
 
 % Motor positions relative to c.g in [m] [x,y,z](obtained from OpenVSP)
 % First 4 Motor numbers and order using Arducopter convention (QUAD-H)
@@ -407,14 +407,14 @@ Aircraft.Control.Hover.u_ref_LP_filter_CTOFF = 0.05;
 Aircraft.Control.Hover.roll_pitch_ref_LP_filter_CTOFF = 0.01;
 
 % Hover Speed Control Gains
-Aircraft.Control.Hover.uv_gain = 0.25; 
-Aircraft.Control.Hover.uv_d = 1.25;
+Aircraft.Control.Hover.uv_gain = [1.1, 0.2]; 
+Aircraft.Control.Hover.uv_d = [2.0, 1.25];
 
 % Roll pitch reference limits
 Aircraft.Control.Hover.roll_pitch_ref_limits = [0.35, 0.35];
 
 % Hover heading control 
-Aircraft.Control.Hover.heading_gain = 2.5;
+Aircraft.Control.Hover.heading_gain = 7;
 Aircraft.Control.Hover.yaw_rate_ref_limit = 1;
 
 % Mode Switching and Transition related parameters
@@ -441,7 +441,7 @@ Aircraft.Control.inertia_inv_4by4 = inv([[Aircraft.Mass.inertia_kgm2, [0;0;0]]; 
 
 %% Aircraft Specific Initial Conditions
 
-InitCond.motor_cmd = [0.0, 0.0, 0.0, 0.0, 0.0];
+InitCond.motor_cmd = [0.5, 0.5, 0.5, 0.5, 0.0];
 InitCond.surface_rad = [0 0 0];
 
 % Forward prop rotation rate (rad/s)
