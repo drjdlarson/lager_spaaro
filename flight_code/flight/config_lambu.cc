@@ -57,7 +57,7 @@ AircraftConfig config = {
   .bfs_ins = {
     .imu_source = INS_IMU_FMU,
     .mag_source = INS_MAG_FMU,
-    .gnss_source = INS_GNSS_EXT_GNSS1,
+    .gnss_source = INS_GNSS_EXT_GNSS2,
     .accel_cutoff_hz = 40.0f,
     .gyro_cutoff_hz = 40.0f,
     // Match with lambu GNSS, 31.395 cm or 0.31395 meters

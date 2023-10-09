@@ -50,8 +50,8 @@ uint8_t init_counter_ = 0;
 
 void BfsInsInit(const InsConfig &ref) {
   cfg_ = ref;
-  ekf_.gnss_pos_ne_std_m(0.2f);
-  ekf_.gnss_pos_d_std_m(0.2f);
+  ekf_. init_heading_err_std_rad(0.174533f);
+  //ekf_.gnss_pos_d_std_m(0.2f);
   BASELINE_LEN_M = cfg_.antenna_baseline_m.norm();
 }
 
@@ -134,16 +134,17 @@ void BfsInsRun(SensorData &ref, InsData * const ptr) {
       #endif
     }
     /* Init EKF */
-    // Check for GNSS fix type if moving baseline is used. Skip this if using normal GPS
-    if ((BASELINE_LEN_M != 0) && (gnss_->fix < 5)){
+    // Check for GNSS fix type if moving baseline is used. Skip this if using normal GPS. 
+    // Only initialized if RTK fixed on rover is acchived
+    if ((BASELINE_LEN_M != 0) && (gnss_->fix < 6)){
       return;
     }
     if ((imu_->new_data) && (mag_->new_data) && (gnss_->new_data) &&
         (gnss_->num_sats > MIN_SAT_)) {
-      // Wait for initial conditions to pass several time before initializing the filter. Just to make sure everything is stabile
-      elapsedMillis t_ms;
-      t_ms = 0;
-      while (t_ms < 5000.0f) {}
+      // Wait for initial conditions to pass several time before initializing the filter. Just to make sure everything is stable
+      //elapsedMillis t_ms;
+      //t_ms = 0;
+      //while (t_ms < 5000.0f) {}
       accel_mps2_[0] = imu_->accel_mps2[0];
       accel_mps2_[1] = imu_->accel_mps2[1];
       accel_mps2_[2] = imu_->accel_mps2[2];
@@ -167,7 +168,7 @@ void BfsInsRun(SensorData &ref, InsData * const ptr) {
       /* Init DLPF */
       gx_.Init(cfg_.gyro_cutoff_hz, FRAME_RATE_HZ, ekf_.gyro_radps()[0]);
       gy_.Init(cfg_.gyro_cutoff_hz, FRAME_RATE_HZ, ekf_.gyro_radps()[1]);
-      gz_.Init(1.0f, FRAME_RATE_HZ, ekf_.gyro_radps()[2]);
+      gz_.Init(cfg_.gyro_cutoff_hz, FRAME_RATE_HZ, ekf_.gyro_radps()[2]);
       ax_.Init(cfg_.accel_cutoff_hz, FRAME_RATE_HZ, ekf_.accel_mps2()[0]);
       ay_.Init(cfg_.accel_cutoff_hz, FRAME_RATE_HZ, ekf_.accel_mps2()[1]);
       az_.Init(cfg_.accel_cutoff_hz, FRAME_RATE_HZ, ekf_.accel_mps2()[2]);
@@ -198,9 +199,10 @@ void BfsInsRun(SensorData &ref, InsData * const ptr) {
       rel_pos_ned_ [2] = float(gnss_->rel_pos_ned_m[2]);
       cur_baseline_len_m_ = rel_pos_ned_.norm();
       ekf_.MeasurementUpdate_gnss(ned_vel_, llh_);
-      //if ((gnss_->fix >= 5) && (abs(cur_baseline_len_m_ - BASELINE_LEN_M) < 0.1f )){
-      //  ekf_.MeasurementUpdate_moving_base(rel_pos_ned_);
-      //}
+      //RTK fixed only due to small basene on LAMBU
+      if ((gnss_->fix > 5) && (abs(cur_baseline_len_m_ - BASELINE_LEN_M) < 0.1f )){
+        ekf_.MeasurementUpdate_moving_base(rel_pos_ned_);
+      }
     }
     ptr->pitch_rad = ekf_.pitch_rad();
     ptr->roll_rad = ekf_.roll_rad();

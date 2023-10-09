@@ -100,10 +100,10 @@ int main() {
   /* Init system */
   SysInit();
   // Hack to pause the main program until beacon finish booting up
-  elapsedMillis t_ms;
-  t_ms = 0;
-  while (t_ms < 10000.0f) {
-  }
+  //elapsedMillis t_ms;
+  //t_ms = 0;
+  //while (t_ms < 10000.0f) {
+  //}
   /* Init sensors */
   SensorsInit(config.sensor);
   /* Calibrate sensors */
