@@ -53,6 +53,9 @@ void BfsInsInit(const InsConfig &ref) {
   ekf_. init_heading_err_std_rad(0.174533f);
   //ekf_.gnss_pos_d_std_m(0.2f);
   BASELINE_LEN_M = cfg_.antenna_baseline_m.norm();
+  ekf_.antenna_baseline_m(cfg_.antenna_baseline_m);
+  ekf_.gnss_rel_pos_ne_std_m(0.05f);
+  ekf_.gnss_rel_pos_d_std_m(0.05f);
 }
 
 void BfsInsRun(SensorData &ref, InsData * const ptr) {
@@ -202,6 +205,7 @@ void BfsInsRun(SensorData &ref, InsData * const ptr) {
       //RTK fixed only due to small basene on LAMBU
       if ((gnss_->fix > 5) && (abs(cur_baseline_len_m_ - BASELINE_LEN_M) < 0.1f )){
         ekf_.MeasurementUpdate_moving_base(rel_pos_ned_);
+        //MsgInfo("Measurement update for moving baseline called\n");
       }
     }
     ptr->pitch_rad = ekf_.pitch_rad();

@@ -62,12 +62,13 @@ void run() {
   SysRead(&data.sys);
   /* Sensor data */
   SensorsRead(&data.sensor);
-  for (uint8_t i = 0; i < 16; i++){
-    std::string dbg = std::to_string(data.sensor.inceptor.ch[i]) + " ";
-    MsgInfo(dbg.c_str());
-  }
-  MsgInfo("\n");
-  //std::string dbg = std::to_string((int)data.sensor.power_module.voltage_v * 100) + "\n";
+  //for (uint8_t i = 0; i < 16; i++){
+  //  std::string dbg = std::to_string(data.sensor.inceptor.ch[i]) + " ";
+  //  MsgInfo(dbg.c_str());
+  //}
+  //MsgInfo("\n");
+  //std::string dbg = std::to_string((int)(data.sensor.ext_gnss2.rel_pos_ned_m[0] * 1000)) +","+ std::to_string((int)(data.sensor.ext_gnss2.rel_pos_ned_m[1] * 1000))+","+
+  //std::to_string((int)(data.sensor.ext_gnss2.rel_pos_ned_m[2] * 1000)) + "\n";
   //MsgInfo(dbg.c_str());
   /* VectorNav */
   #if defined(__FMU_R_V1__) || defined(__FMU_R_V2__) || \

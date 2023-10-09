@@ -135,7 +135,7 @@ if (vms_only)
         malt_mot_test();
         % malt()
     elseif strcmp(vehicle,'lambu')
-        lambu_test_angle();
+        lambu_mot_test();
         % lambu()
     elseif strcmp(vehicle,'super')
         super()
