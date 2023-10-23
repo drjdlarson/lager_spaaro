@@ -3,7 +3,7 @@ clear
 clc
 
 %name = "/home/tuan/Projects/ua_spaaro/mat_converter/log/flight_day1/flight2/malt1_1.mat";
-name = 'malt1_23.mat';
+name = 'malt4_9.mat';
 load(name);
 
 pos_hold_log = 1;
@@ -132,8 +132,12 @@ end
 
 if (wp_log == 1)
 cage_origin = [33.2154770, -87.5436600, 0];
-wp = [4.0505 2.7443 .5;
-      0.6489 1.7163 .5];
+wp = [1.1,1.3,0.3;
+        1.7,1.3,0.3;
+        1.7,1.3,0.75;
+        2.5,1.3,0.75;
+        3.5,1.5,0.75;
+        3.5,3,0.75;];
 start_ind = 1000;
 lla = [rad2deg(bfs_ins_lat_rad(start_ind:end)), rad2deg(bfs_ins_lon_rad(start_ind:end)), bfs_ins_alt_wgs84_m(start_ind:end)];
 cage_pos = lla2ned(lla, cage_origin,'flat');

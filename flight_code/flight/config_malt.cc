@@ -47,7 +47,7 @@ AircraftConfig config = {
       .baud = -1
     },
     .opflow = {
-      .device = OPFLOW_MATEK3901
+      .device = OPFLOW_NONE
     },
     .power_module = {
       .volts_per_volt = 2.87f,

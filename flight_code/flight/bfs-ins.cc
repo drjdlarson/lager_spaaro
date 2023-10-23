@@ -50,8 +50,8 @@ uint8_t init_counter_ = 0;
 
 void BfsInsInit(const InsConfig &ref) {
   cfg_ = ref;
-  ekf_.gnss_pos_ne_std_m(0.2f);
-  ekf_.gnss_pos_d_std_m(0.2f);
+  ekf_.gnss_pos_ne_std_m(0.3f);
+  ekf_.gnss_pos_d_std_m(0.3f);
   BASELINE_LEN_M = cfg_.antenna_baseline_m.norm();
 }
 
@@ -167,7 +167,7 @@ void BfsInsRun(SensorData &ref, InsData * const ptr) {
       /* Init DLPF */
       gx_.Init(cfg_.gyro_cutoff_hz, FRAME_RATE_HZ, ekf_.gyro_radps()[0]);
       gy_.Init(cfg_.gyro_cutoff_hz, FRAME_RATE_HZ, ekf_.gyro_radps()[1]);
-      gz_.Init(1.0f, FRAME_RATE_HZ, ekf_.gyro_radps()[2]);
+      gz_.Init(cfg_.gyro_cutoff_hz, FRAME_RATE_HZ, ekf_.gyro_radps()[2]);
       ax_.Init(cfg_.accel_cutoff_hz, FRAME_RATE_HZ, ekf_.accel_mps2()[0]);
       ay_.Init(cfg_.accel_cutoff_hz, FRAME_RATE_HZ, ekf_.accel_mps2()[1]);
       az_.Init(cfg_.accel_cutoff_hz, FRAME_RATE_HZ, ekf_.accel_mps2()[2]);

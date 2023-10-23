@@ -62,11 +62,11 @@ void run() {
   SysRead(&data.sys);
   /* Sensor data */
   SensorsRead(&data.sensor);
-  for (uint8_t i = 0; i < 16; i++){
-    std::string dbg = std::to_string(data.sensor.inceptor.ch[i]) + " ";
-    MsgInfo(dbg.c_str());
-  }
-  MsgInfo("\n");
+  //for (uint8_t i = 0; i < 16; i++){
+  //  std::string dbg = std::to_string(data.sensor.inceptor.ch[i]) + " ";
+  //  MsgInfo(dbg.c_str());
+  //}
+  //MsgInfo("\n");
   //std::string dbg = std::to_string((int)data.sensor.power_module.voltage_v * 100) + "\n";
   //MsgInfo(dbg.c_str());
   /* VectorNav */
@@ -128,8 +128,8 @@ int main() {
   /* Init datalog */
   DatalogInit();
   WaypointRead(&data.telem);
-  std::string dbg = std::to_string(data.telem.num_waypoints);
-  MsgInfo(dbg.c_str());
+  //std::string dbg = std::to_string(data.telem.num_waypoints);
+  //MsgInfo(dbg.c_str());
   /* Attach data ready interrupt */
   attachInterrupt(IMU_DRDY, run, RISING);\
   while (1) {
