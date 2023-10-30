@@ -45,11 +45,13 @@ Target.airspeed_mps = 17;
 Env.terrain_alt_msl_m = 0;
 Env.terrain_alt_wgs84 = 0;
 
+Env.const_g = 9.81;
+
 %% Initial Environmental Conditions
 
 % Initial lat, lon in rad
-InitCond.lat_rad = 0.579621767644;
-InitCond.lon_rad = -1.527761279167;
+InitCond.lat_rad = 0.4831;
+InitCond.lon_rad = 1.4735;
 
 InitCond.alt_m = 67.117600;
 
@@ -57,7 +59,7 @@ InitCond.alt_m = 67.117600;
 InitCond.ned_pos_m = [0 0 -100];
 
 % [u, v, w]
-InitCond.body_vel_mps = [1.5,0.5,0.5];
+InitCond.body_vel_mps = [2.0 ,0.1,0.1];
 
 % [roll, pitch, yaw]
 InitCond.euler_rad = [0 0 0];
