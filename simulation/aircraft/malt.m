@@ -11,6 +11,16 @@ Aircraft.name = 'malt';
 %% Mass properties (Obtained using Solidworks) CG is at body origin
 % Mass [kg]
 Aircraft.Mass.mass_kg = 0.3;
+
+% Weight breakdown
+% 2 Li-Ion battery and case = 103g
+% top_housing and ultrasonic = 35g
+% top_plate and electronics = 60g
+% bottom plate = 36g
+% motors = 5g each 
+% other electroncis = 30g
+% total = 284g
+
 % c.g. location [m]
 Aircraft.Mass.cg_m = [0 0 0];
 % Moments of inertia [kg*m^2] obtained from Solidworks model
