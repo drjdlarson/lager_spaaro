@@ -65,8 +65,10 @@ Aircraft.Surf.Limit.rate_dps = 150 * ones(Aircraft.Surf.nSurf, 1);
 Aircraft.Surf.Limit.pos_deg = 30 * ones(Aircraft.Surf.nSurf, 1);
 Aircraft.Surf.Limit.neg_deg = -30 * ones(Aircraft.Surf.nSurf, 1);
 
-% Servo Actuator bandwidth radps (copied from Ekeren INDI paper)
-Aircraft.Surf.bandwidth = 14.56;
+% Servo Actuator first-order dynamics time constant 
+% From WVU YF-22 research UAVs 
+% https://researchrepository.wvu.edu/cgi/viewcontent.cgi?article=3634&context=etd
+Aircraft.Surf.time_constant = 0.0424;
 
 
 
@@ -129,7 +131,7 @@ Aircraft.Aero.Cl_coefs = [-0.0004, 0, -0.0719, -0.6494, -0.0457, -0.1962, 0.3357
 
 % Y-axis moment
 % ignored Cm_q = -101.6445 (not sure why its that low)
-Aircraft.Aero.Cm_coefs = [-0.0447, -1.9881, 0, 0, -101.6445, 0, 0, 4.1454, 0];
+Aircraft.Aero.Cm_coefs = [-0.0447, -1.9881, 0, 0, 0, 0, 0, 4.1454, 0];
 
 % Z-axis_moment
 Aircraft.Aero.Cn_coefs = [0.0000, 0, 0.0015, -0.1405, -0.0020, -0.03442, -0.0165, 0, 0.0371];
@@ -325,6 +327,7 @@ Aircraft.Control.wp_radius = 0;
 
 % FixedWing Angular Rate INDI controller
 Aircraft.Control.Forward.indi_pqr_gain = [8,8,15];
+Aircraft.Control.Forward_v2.indi_pqr_gain = [3, 3, 5];
 
 % cutoff frequency for LP filter on inner loop surface deflection outputs
 Aircraft.Control.Forward.surf_def_out_LP_filter_CTOFF = 5;
@@ -337,6 +340,9 @@ Aircraft.Control.Forward.sideslip_accel_LP_filter_CTOFF = 0.5;
 
 % FixedWing Attitude Linear Controller Gains (Roll-pitch)
 Aircraft.Control.Forward.Att_err_gain = [3, 2.5];
+Aircraft.Control.Forward_v2.att_p_gain = [10, 12.5];
+Aircraft.Control.Forward_v2.att_d_gain = [0, 0.25];
+
 
 % FixedWing Attitude Linear Controller D gains (Roll-pitch)
 Aircraft.Control.Forward.Att_D_gain = [0.5, 0.15];
@@ -420,7 +426,7 @@ Aircraft.Control.Hover_v2.uv_ref_k1_k2 = [4, 30];
 % Hover Speed Control Gains
 Aircraft.Control.Hover.uv_gain = [1.1, 0.2]; 
 Aircraft.Control.Hover_v2.uv_p_gain = 1.25;
-Aircraft.Control.Hover.uv_d = [2.0, 1.25];
+Aircraft.Control.Hover.uv_d_gain = [2.0, 1.25];
 
 % Roll pitch reference limits
 Aircraft.Control.Hover.roll_pitch_ref_limits = [0.35, 0.35];
@@ -457,10 +463,10 @@ Aircraft.Control.inertia_inv_4by4 = inv([[Aircraft.Mass.inertia_kgm2, [0;0;0]]; 
 
 %% Aircraft Specific Initial Conditions
 
-InitCond.motor_cmd = [0.5, 0.5, 0.5, 0.5, 0.1];
+InitCond.motor_cmd = [0, 0, 0, 0, 0.4];
 InitCond.surface_rad = [0 0 0];
 
 % Forward prop rotation rate (rad/s)
-InitCond.engine_speed_radps = 4 * (2*pi/60);
+InitCond.engine_speed_radps = 4000 * (2*pi/60);
 
 
