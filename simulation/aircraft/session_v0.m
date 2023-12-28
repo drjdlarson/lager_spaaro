@@ -234,6 +234,9 @@ Aircraft.ForwardProp.ct = [-0.2594   -0.0480    0.0216];
 % Coefficient of power polynomial coefficients
 Aircraft.ForwardProp.cp = [-0.0826   -0.0525    0.0066    0.0022];
 
+% Approx. maximum thrust with given configuration (from Tmotor)
+Aircraft.ForwardProp.max_thrust_N = 75;
+
 % hand calculated using available hardware
 % Electric motor and propeller combine moment of inertia [kg*m^2]
 Aircraft.ForwardProp.Jmp_kgm2 = 7.9421e-4;
@@ -404,7 +407,7 @@ Aircraft.Control.Hover.pqr_limit = 2;
 
 % Hover Inner Loop Attitude Control Gain (roll, pitch)
 Aircraft.Control.Hover.att_gain = 2.25;
-Aircraft.Control.Hover_v2.att_gain = 3.0;
+Aircraft.Control.Hover_v2.att_gain = 7.5;
 
 % Hover Altitude Control
 Aircraft.Control.Hover.alt_gain = 0.75;
@@ -425,8 +428,8 @@ Aircraft.Control.Hover_v2.uv_ref_k1_k2 = [4, 30];
 
 % Hover Speed Control Gains
 Aircraft.Control.Hover.uv_gain = [1.1, 0.2]; 
-Aircraft.Control.Hover_v2.uv_p_gain = 1.25;
-Aircraft.Control.Hover.uv_d_gain = [2.0, 1.25];
+Aircraft.Control.Hover_v2.uv_p_gain = [1.5, 1.25];
+Aircraft.Control.Hover.uv_d_gain = [2.0, 1.75];
 
 % Roll pitch reference limits
 Aircraft.Control.Hover.roll_pitch_ref_limits = [0.35, 0.35];
@@ -463,10 +466,10 @@ Aircraft.Control.inertia_inv_4by4 = inv([[Aircraft.Mass.inertia_kgm2, [0;0;0]]; 
 
 %% Aircraft Specific Initial Conditions
 
-InitCond.motor_cmd = [0, 0, 0, 0, 0.4];
+InitCond.motor_cmd = [0.4, 0.4, 0.4, 0.4, 0.0];
 InitCond.surface_rad = [0 0 0];
 
 % Forward prop rotation rate (rad/s)
-InitCond.engine_speed_radps = 4000 * (2*pi/60);
+InitCond.engine_speed_radps = 40 * (2*pi/60);
 
 
