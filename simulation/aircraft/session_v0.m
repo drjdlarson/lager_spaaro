@@ -131,7 +131,7 @@ Aircraft.Aero.Cl_coefs = [-0.0004, 0, -0.0719, -0.6494, -0.0457, -0.1962, 0.3357
 
 % Y-axis moment
 % ignored Cm_q = -101.6445 (not sure why its that low)
-Aircraft.Aero.Cm_coefs = [-0.0447, -1.9881, 0, 0, 0, 0, 0, 4.1454, 0];
+Aircraft.Aero.Cm_coefs = [-0.0447, -1.9881, 0, 0, -101.6445, 0, 0, 4.1454, 0];
 
 % Z-axis_moment
 Aircraft.Aero.Cn_coefs = [0.0000, 0, 0.0015, -0.1405, -0.0020, -0.03442, -0.0165, 0, 0.0371];
@@ -346,7 +346,6 @@ Aircraft.Control.Forward.Att_err_gain = [3, 2.5];
 Aircraft.Control.Forward_v2.att_p_gain = [10, 12.5];
 Aircraft.Control.Forward_v2.att_d_gain = [0, 0.25];
 
-
 % FixedWing Attitude Linear Controller D gains (Roll-pitch)
 Aircraft.Control.Forward.Att_D_gain = [0.5, 0.15];
 
@@ -378,12 +377,21 @@ Aircraft.Control.Forward.heading_P = 2.25;
 
 % FixedWing Altitude Controller P-gain
 Aircraft.Control.Forward.altitude_P = 1;
+Aircraft.Control.Forward_v2.altitude_P = 2; 
+
+% FixedWing Outer Model reference shape
+Aircraft.Control.Forward_v2.pqr_ref_k1_k2 = [45, 150];
+Aircraft.Control.Forward_v2.outer_indi_ref_k1 = [1, 10];
+Aircraft.Control.Forward_v2.outer_indi_ref_k2 = [20, 30];
 
 % FixedWing Outer Loop indi gain (airspeed and flight path control)
 Aircraft.Control.Forward.outer_indi_gains = [1.0, 1.5];
+Aircraft.Control.Forward_v2.outer_indi_gains = [1, 2.5];
 
 % LP filter on throttle_cmd_out and pitch_ref
 Aircraft.Control.Forward.outer_indi_outputs_LP_filter_CTOFF = [0.15, 0.75];
+Aircraft.Control.Forward_v2.outer_indi_outputs_LP_filter_CTOFF = [1, 0.75];
+Aircraft.Control.Forward_v2.airspeed_ref_LP_filter_CTOFF = 0.075;
 
 % Hover Inner Loop low-pass filters 
 % cutoff throttle output
@@ -393,12 +401,13 @@ Aircraft.Control.Hover.inner_ref_LP_filter_CTOFF = 0.1;
 
 % Hover Inner Loop model references
 Aircraft.Control.Hover_v2.pqr_ref_k1_k2 = [35, 50];
+Aircraft.Control.Hover_v2.r_ref_k1_k2 = [2, 10];
 Aircraft.Control.Hover_v2.w_ref_k1_k2 = [15, 75];
 
 % Hover Inner Loop Body Rates (pqrw) Gain
 Aircraft.Control.Hover.body_rates_gain = [1.5, 1.5, 1, 3];
 Aircraft.Control.Hover_v2.pq_p_gain = 1.5;
-Aircraft.Control.Hover_v2.r_p_gain = 3.75;
+Aircraft.Control.Hover_v2.r_p_gain = 0.5;
 Aircraft.Control.Hover_v2.w_p_gain = 8;
 Aircraft.Control.Hover_v2.w_i_gain = 10;
 
@@ -411,6 +420,7 @@ Aircraft.Control.Hover_v2.att_gain = 7.5;
 
 % Hover Altitude Control
 Aircraft.Control.Hover.alt_gain = 0.75;
+Aircraft.Control.Hover_v2.alt_gain = 2.25;
 
 % Hover Inertial and Body vertical speed limits 
 Aircraft.Control.Hover.nav_vert_limits = [2, -4];
@@ -422,31 +432,42 @@ Aircraft.Control.Hover.uv_ref_airspeed_threshold = 1;
 % Hover Speed control LP filter cutoff
 Aircraft.Control.Hover.u_ref_LP_filter_CTOFF = 0.05; 
 Aircraft.Control.Hover.roll_pitch_ref_LP_filter_CTOFF = 0.01;
+Aircraft.Control.Hover_v2.roll_pitch_ref_LP_filter_CTOFF = 0.1;
+
 
 % Hover Outer Loop model reference
-Aircraft.Control.Hover_v2.uv_ref_k1_k2 = [4, 30];
+Aircraft.Control.Hover_v2.uv_ref_k1_k2 = [2, 8];
 
 % Hover Speed Control Gains
 Aircraft.Control.Hover.uv_gain = [1.1, 0.2]; 
-Aircraft.Control.Hover_v2.uv_p_gain = [1.5, 1.25];
+Aircraft.Control.Hover_v2.uv_p_gain = 1.8;
 Aircraft.Control.Hover.uv_d_gain = [2.0, 1.75];
 
 % Roll pitch reference limits
-Aircraft.Control.Hover.roll_pitch_ref_limits = [0.35, 0.35];
+Aircraft.Control.Hover.roll_pitch_ref_limits = [0.25, 0.25];
 
 % Hover heading control 
 Aircraft.Control.Hover.heading_gain = 7;
+Aircraft.Control.Hover_v2.heading_gain = 1.5;
 Aircraft.Control.Hover.yaw_rate_ref_limit = 1;
+Aircraft.Control.Hover_v2.yaw_rate_ref_limit = 0.45;
 
 % Mode Switching and Transition related parameters
-Aircraft.Control.modes.mode_shutoff_airspeeds = [7,18];
+Aircraft.Control.modes.mode_shutoff_airspeeds = [7, 18];
+Aircraft.Control.modes_v2.throttle_min_speed = 6;
+Aircraft.Control.modes_v2.transition_shutoff_airspeed = [7, 17];
+Aircraft.Control.modes_v2.detransition_shutoff_airspeed = [8, 18];
+
 
 Aircraft.Control.modes.hover2forward_airspeed_ramp = 3;
-Aircraft.Control.modes.forward2hover_airspeed_ramp = -1.5;
+Aircraft.Control.modes.forward2hover_airspeed_ramp = -1.25;
 
 % Parameters of the controller input blending sigmoidal function
 Aircraft.Control.modes.transition_sigmoidal_a = 0.4;
 Aircraft.Control.modes.transition_sigmoidal_c = 14;
+
+Aircraft.Control.modes_v2.transition_sigmoidal_a = 0.4;
+Aircraft.Control.modes_v2.transition_sigmoidal_c = 14;
 
 
 
@@ -466,7 +487,7 @@ Aircraft.Control.inertia_inv_4by4 = inv([[Aircraft.Mass.inertia_kgm2, [0;0;0]]; 
 
 %% Aircraft Specific Initial Conditions
 
-InitCond.motor_cmd = [0.4, 0.4, 0.4, 0.4, 0.0];
+InitCond.motor_cmd = [0.4,0.4,0.4,0.4,0];
 InitCond.surface_rad = [0 0 0];
 
 % Forward prop rotation rate (rad/s)
