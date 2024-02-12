@@ -68,5 +68,13 @@ InitCond.euler_rad = [0 0 0];
 % [p, q, r]
 InitCond.body_rot_rate_radps = [0 0 0];
 
+%% Additional Effects
+% Bool of whether to include additional effects. With some parameters
 
+AddEffects.wind.bool = 1; 
+AddEffects.wind.direction_rad = 0.6;
+AddEffects.wind.speed_mps = 4; 
+
+AddEffects.pqr.noise_bool = 1;
+AddEffects.pqr.bias_bool = 0;
 

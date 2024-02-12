@@ -272,7 +272,7 @@ Aircraft.Sensors.Imu.Gyro.scale_factor = eye(3);
 Aircraft.Sensors.Imu.Gyro.bias_radps = [0 0 0]';
 % G-sensitivity in rad/s per m/s/s
 Aircraft.Sensors.Imu.Gyro.accel_sens_radps = [0 0 0]';  
-Aircraft.Sensors.Imu.Gyro.noise_radps = deg2rad(0.1) * ones(3, 1);
+Aircraft.Sensors.Imu.Gyro.noise_radps = deg2rad(0.00001) * ones(3, 1);
 Aircraft.Sensors.Imu.Gyro.upper_limit_radps = deg2rad(2000) * ones(3, 1);
 Aircraft.Sensors.Imu.Gyro.lower_limit_radps = -1 * Aircraft.Sensors.Imu.Gyro.upper_limit_radps;
 % Magnetometer
@@ -454,8 +454,8 @@ Aircraft.Control.Hover_v2.yaw_rate_ref_limit = 0.45;
 
 % Mode Switching and Transition related parameters
 Aircraft.Control.modes.mode_shutoff_airspeeds = [7, 18];
-Aircraft.Control.modes_v2.throttle_min_speed = 6;
-Aircraft.Control.modes_v2.transition_shutoff_airspeed = [7, 17];
+Aircraft.Control.modes_v2.throttle_min_speed = 5;
+Aircraft.Control.modes_v2.transition_shutoff_airspeed = [6, 17];
 Aircraft.Control.modes_v2.detransition_shutoff_airspeed = [8, 18];
 
 
@@ -487,7 +487,7 @@ Aircraft.Control.inertia_inv_4by4 = inv([[Aircraft.Mass.inertia_kgm2, [0;0;0]]; 
 
 %% Aircraft Specific Initial Conditions
 
-InitCond.motor_cmd = [0.4,0.4,0.4,0.4,0];
+InitCond.motor_cmd = [0.4, 0.4, 0.4, 0.4, 0.0];
 InitCond.surface_rad = [0 0 0];
 
 % Forward prop rotation rate (rad/s)
