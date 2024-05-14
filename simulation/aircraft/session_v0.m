@@ -25,6 +25,11 @@ Aircraft.Mass.inertia_kgm2 = [Aircraft.Mass.ixx_kgm2    0   -Aircraft.Mass.ixz_k
                               0          Aircraft.Mass.iyy_kgm2          0;...
                               -Aircraft.Mass.ixz_kgm2   0       Aircraft.Mass.izz_kgm2];
 
+% Computing matrix inverses
+Aircraft.Mass.inertia_inv = inv(Aircraft.Mass.inertia_kgm2);
+Aircraft.Mass.inertia_inv_4by4 = inv([[Aircraft.Mass.inertia_kgm2, [0;0;0]]; [0,0,0,1]]);
+
+
 
 %% Geometric parameters
 
@@ -269,7 +274,7 @@ Aircraft.Sensors.Imu.Accel.upper_limit_mps2 = 156.9064 * ones(3, 1);
 Aircraft.Sensors.Imu.Accel.lower_limit_mps2 = -1 * Aircraft.Sensors.Imu.Accel.upper_limit_mps2;
 % Gyro
 Aircraft.Sensors.Imu.Gyro.scale_factor = eye(3);
-Aircraft.Sensors.Imu.Gyro.bias_radps = [0 0 0]';
+Aircraft.Sensors.Imu.Gyro.bias_radps = 3e-5 .* [1, 1, 1]';
 % G-sensitivity in rad/s per m/s/s
 Aircraft.Sensors.Imu.Gyro.accel_sens_radps = [0 0 0]';  
 Aircraft.Sensors.Imu.Gyro.noise_radps = deg2rad(0.00001) * ones(3, 1);
@@ -343,7 +348,8 @@ Aircraft.Control.Forward.sideslip_accel_LP_filter_CTOFF = 0.5;
 
 % FixedWing Attitude Linear Controller Gains (Roll-pitch)
 Aircraft.Control.Forward.Att_err_gain = [3, 2.5];
-Aircraft.Control.Forward_v2.att_p_gain = [10, 12.5];
+% Aircraft.Control.Forward_v2.att_p_gain = [10, 12.5];
+Aircraft.Control.Forward_v2.att_p_gain = [3, 2.5];
 Aircraft.Control.Forward_v2.att_d_gain = [0, 0.25];
 
 % FixedWing Attitude Linear Controller D gains (Roll-pitch)
@@ -367,7 +373,7 @@ Aircraft.Control.Forward.thcs.psi_dot_ref = 0.4;
 Aircraft.Control.Forward.max_roll_rad = deg2rad(35);
 
 % FixedWing Outer Loop Controller Max pitch Angle
-Aircraft.Control.Forward.max_pitch_rad = deg2rad(30);
+Aircraft.Control.Forward.max_pitch_rad = deg2rad(20);
 
 % FixedWing Outer Loop Controller Max yaw ref rate
 Aircraft.Control.Forward.max_yaw_rate = deg2rad(40);
@@ -455,6 +461,8 @@ Aircraft.Control.Hover_v2.yaw_rate_ref_limit = 0.45;
 % Mode Switching and Transition related parameters
 Aircraft.Control.modes.mode_shutoff_airspeeds = [7, 18];
 Aircraft.Control.modes_v2.throttle_min_speed = 5;
+Aircraft.Control.modes_v2.max_hover_attitude_tracking_speed = 6;
+Aircraft.Control.modes_v2.min_forward_attitude_tracking_speed = 8;
 Aircraft.Control.modes_v2.transition_shutoff_airspeed = [6, 17];
 Aircraft.Control.modes_v2.detransition_shutoff_airspeed = [8, 18];
 
@@ -476,21 +484,82 @@ Aircraft.Control.modes_v2.transition_sigmoidal_c = 14;
 % But, these values can be changed to represent aircraft model's parameters
 % uncertainties
 
-% Moment Coefficients
-Aircraft.Control.Forward.Cl_coefs = Aircraft.Aero.Cl_coefs;
-Aircraft.Control.Forward.Cm_coefs = Aircraft.Aero.Cm_coefs;
-Aircraft.Control.Forward.Cn_coefs = Aircraft.Aero.Cn_coefs;
+% Aerodynamic coefficients Coefficients
+
+Aircraft.Ucertain.Forward.CL_coefs = Aircraft.Aero.CL_coefs;
+Aircraft.Ucertain.Forward.CD_coefs = Aircraft.Aero.CD_coefs;
+Aircraft.Ucertain.Forward.CY_coefs = Aircraft.Aero.CY_coefs;
+Aircraft.Ucertain.Forward.Cl_coefs = Aircraft.Aero.Cl_coefs;
+Aircraft.Ucertain.Forward.Cm_coefs = Aircraft.Aero.Cm_coefs;
+Aircraft.Ucertain.Forward.Cn_coefs = Aircraft.Aero.Cn_coefs;
 
 % Moment of inertia
-Aircraft.Control.inertia_inv = inv(Aircraft.Mass.inertia_kgm2);
-Aircraft.Control.inertia_inv_4by4 = inv([[Aircraft.Mass.inertia_kgm2, [0;0;0]]; [0,0,0,1]]);
+Aircraft.Ucertain.inertia = Aircraft.Mass.inertia_kgm2;
+
+% Thrust and Torque Curves
+Aircraft.Ucertain.hover_thrust_poly_fit = Aircraft.HoverRotor.poly_thrust;
+Aircraft.Ucertain.hover_torque_poly_fit = Aircraft.HoverRotor.poly_torque;
+
+% Motor and surface deflections bandwidth
+Aircraft.Ucertain.motor_bandwidth = Aircraft.Motor.bandwidth;
+Aircraft.Ucertain.surf_time_cons = Aircraft.Surf.time_constant;
+
+% Deviation in the aerodynamics coefficient bases and derivatives
+% changing CL0, CL_alpha, Cm_alpha, Cl_p, Cn_p
+if AddEffects.aero_moments.sys_dynamics_bias_bool
+    Aircraft.Ucertain.Forward.CL_coefs(1) = 0.95 * Aircraft.Ucertain.Forward.CL_coefs(1);
+    Aircraft.Ucertain.Forward.CL_coefs(2) = 0.9 * Aircraft.Ucertain.Forward.CL_coefs(2);
+    Aircraft.Ucertain.Forward.CD_coefs(1) = 1.25 * Aircraft.Ucertain.Forward.CD_coefs(1);
+    Aircraft.Ucertain.Forward.Cm_coefs(2) = 1.2 * Aircraft.Ucertain.Forward.Cm_coefs(2);
+    Aircraft.Ucertain.Forward.Cl_coefs(4) = 0.9 * Aircraft.Ucertain.Forward.Cl_coefs(4);
+    Aircraft.Ucertain.Forward.CY_coefs(3) = 1.05 * Aircraft.Ucertain.Forward.CY_coefs(3);
+end
+
+% Loss of control effectiveness
+if AddEffects.aero_moments.loss_control_eff_bias_bool
+    Aircraft.Ucertain.Forward.Cl_coefs(7) = 1.15 * Aircraft.Ucertain.Forward.Cl_coefs(7);
+    Aircraft.Ucertain.Forward.Cm_coefs(8) = 0.9 * Aircraft.Ucertain.Forward.Cm_coefs(8);
+    Aircraft.Ucertain.Forward.Cn_coefs(9) = 0.95 * Aircraft.Ucertain.Forward.Cn_coefs(9);
+end
+
+
+% Deviation in moment of inertia properties (increased by 10%)
+if AddEffects.inertia.bias_bool
+    Aircraft.Ucertain.inertia = 1.2 .* Aircraft.Ucertain.inertia;
+end
+
+% Deviation in actuator model
+if AddEffects.motor_bias_bool
+    Aircraft.Ucertain.motor_bandwidth = 0.8 * Aircraft.Ucertain.motor_bandwidth;
+end
+if AddEffects.surf_bias_bool
+    Aircraft.Ucertain.surf_time_cons = 1.2 * Aircraft.Ucertain.surf_time_cons;
+end
+
+% Actuator faults
+if AddEffects.actuator_fault_bool
+    
+end
+
+
+% Deviation in thrust and torque coefficients (reduced by 15%)
+Aircraft.Ucertain.hover_thrust_poly_fit(1) = 0.85 * Aircraft.Ucertain.hover_thrust_poly_fit(1);
+Aircraft.Ucertain.hover_torque_poly_fit(1) = 0.85 * Aircraft.Ucertain.hover_torque_poly_fit(1);
+
+
 
 %% Aircraft Specific Initial Conditions
 
-InitCond.motor_cmd = [0.4, 0.4, 0.4, 0.4, 0.0];
+InitCond.motor_cmd = [0.4, 0.4, 0.4, 0.4, 0];
 InitCond.surface_rad = [0 0 0];
-
+% 
+% InitCond.motor_cmd = [0, 0, 0, 0, 0.5];
+% InitCond.surface_rad = [0 0 0];
+%
 % Forward prop rotation rate (rad/s)
-InitCond.engine_speed_radps = 40 * (2*pi/60);
+InitCond.engine_speed_radps = 4000 * (2*pi/60);
 
+%% SESSION specific simulation settings
 
+% sample time for fixed-step solver 
+SimConfig.sample_time = 0.01;
