@@ -52,6 +52,7 @@ sudo cp 00-teensy.rules /etc/udev/rules.d/
 - [ ] Datalog explanation
 - [ ] Outline of C++ code
 - [ ] CMakeList explain
+- [ ] Add vehicle
 - [ ] Add custom data to log
 - [ ] EKF modifications
 - [ ] Add new sensors and drivers
