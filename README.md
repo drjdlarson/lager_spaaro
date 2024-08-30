@@ -6,17 +6,15 @@ This branch acts as a sandbox for new users to learn SPAARO platform. Although s
 ## Getting started
 Setup Git on your machine natively or in WSL. This repo has been tested with Ubuntu 18.04, 20.04, 22.04 native and WSL (WSL1 is recommended if using MATLAB Simulink functionalities). Currently, lager-spaaro is setup with MATLAB 2023A. Additionally, you need a serial monitor (i.e. Arduino built-in monitor) to recieve startup and debug messages from the microcontroller.
 
-Clone this repo and switch to the tutorial branch by 
+Clone this repo and rreate your own sandbox branch by 
 
-```git checkout -b tutorial origin/tutorial```
-
-Create your own sandbox branch by 
-
-```git checkout -b <sandbox-name>```
+```git checkout -b <sandbox-name> origin/tutorial```
 
 Your sandbox can be pushed to remote by
 
 ```git push --set-upstream origin <sandbox-name>```
+
+!!! Please make sure to make your sandbox to a new branch in remote and not to the tutorial branch !!!
 
 Run the setup script with
 
@@ -52,6 +50,7 @@ sudo cp 00-teensy.rules /etc/udev/rules.d/
 - [ ] Datalog explanation
 - [ ] Outline of C++ code
 - [ ] CMakeList explain
+- [ ] Add vehicle
 - [ ] Add custom data to log
 - [ ] EKF modifications
 - [ ] Add new sensors and drivers
