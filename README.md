@@ -41,6 +41,9 @@ You may need to download udev rules to enable uploading code to the microcontrol
 sudo cp 00-teensy.rules /etc/udev/rules.d/
 ```
 
+## Tutorials 
+The tutorials are separated into their own directories. It is noted that the file structure in each tutorial directory is identical to the main spaaro repository. Separating tutorial into different directory aims to provide an isolated sandbox relavent to the topics of each tutorial. 
+
 ## TO DOs
 - [ ] How to setup Matlab + Simulink
 - [ ] Outline of Simulink model
