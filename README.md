@@ -51,7 +51,7 @@ The tutorials are separated into their own directories. It is noted that the fil
 - [ ] Autocode to upload
 - [ ] Telemetry interactions
 - [ ] Datalog explanation
-- [ ] Outline of C++ code
+- [x] Outline of C++ code
 - [ ] CMakeList explain
 - [ ] Add vehicle
 - [ ] Add custom data to log

@@ -142,7 +142,7 @@ The flight code to be uploaded exists in the ```/flight_code``` directory. This 
     <summary>StateEst Data (Data from the state estimation systems)</summary>
 
   * <details>
-    <summary> INS Data (Data from the EKF filters. Can be BFS ES-EKF or VectorNav estimations) </summary>
+    <summary> Ins Data (Data from the EKF filters. Can be BFS ES-EKF or VectorNav estimations) </summary>
 
     * bool initialized: whether the estimation filter has been initialized.
     * float pitch_rad: pitch angle, rad.
@@ -156,7 +156,79 @@ The flight code to be uploaded exists in the ```/flight_code``` directory. This 
     * double lat_rad: latitude, rad.
     * double lon_rad: longitude, rad.
     </details>
+
+* <details>
+    <summary> AuxIns Data (Auxillary navigation data. Data that are derived from the EKF estimates)</summary>
+
+    * float home_alt_wgs84_m: home location (i.e. origin of the NED position) above the WGS84 ellipsoid, m.
+    * float gnd_spd_mps: ground speed, m/s.
+    * float gnd_tracK_rad: ground track, rad.
+    * float flight_path_rad: flight path angle, rad.
+    * double home_lat_rad: home location (i.e. origin of the NED position) latitude, rad.
+    * double home_lon_rad: home location (i.e. origin of the NED position) longitude, rad.
+    * double ned_pos_m[3]: North east down position relative to where the navigation filter was initialized, m [north east down].
+        </details>
+
+  * <details>
+    <summary> ADC Data (Air Data Computer system)</summary>
+
+    * float static_pres_pa: estimated static pressure, Pa.
+    * float diff_pres_pa: estimated differential pressure, Pa.
+    * float pres_alt_m: estimated pressure from pressure measurement, m.
+    * float rel_alt_m: relative altitude from the intial startup, m.
+    * float ias_mps: indicated airspeed, m/s.
+    </details>
 </details>
+
+<details>
+    <summary> Telemetry Data (Relevant to communication with the ground control station. This is just an interface, actually flight features such as autonomous waypoint or fencing or rally point need to be developed separately in the flight control law.)</summary>
+
+* bool waypoint_updated: whether the flight plan waypoints have been updated.
+* bool fence_updated: whether the geofence has been updated.
+* bool rally_points_updated: whether the rally points have been updated.
+* int16_t current_waypoint: the index of the current waypoint.
+* int16_t num_waypoints: the number of waypoints in the current flight plan.
+* int16_t num_fence_items: the number of fence items.
+* int16_t num_rally_points: the number of rally points. 
+* std::array<float, NUM_TELEM_PARAMS> param: an array of in-flight-tunable parameters sent from the ground station. ```NUM_TELEM_PARAMS ```defines the number of parameters available, typically 24. These parameters can be used for anything that might be adjusted in flight, such as controlling gains, selecting excitation waveforms, etc.
+* <details>
+    <summary>bfs::MissionItem (this structure is used to store flight plan, fence point or rally point. They consist of <code>NUM_FLIGHT_PLAN_POINTS</code>, <code>NUM_FENCE_POINTS</code> and <code>NUM_RALLY_POINTS</code>, respectively)</summary>
+
+  * bool autocontinue: whether to automatically continue to the next MissionItem
+  * uint8_t frame: the [coordinate frame](https://mavlink.io/en/messages/common.html#MAV_FRAME) of the MissionItem
+  * uint16_t cmd: the [command](https://mavlink.io/en/messages/common.html#mav_commands) associated with the MissionItem
+  * float param1: command dependent parameter
+  * float param2: command dependent parameter
+  * float param3: command dependent parameter
+  * float param4: command dependent parameter
+  * int32_t x: typically latitude represented as 1e7 degrees
+  * int32_t y: typically longitude represented as 1e7 degrees
+  * float z: typically altitude, but can be dependent on the command and frame
+    </details>
+</details>
+
+<details>
+<summary> VMS Data (Vehicle Management data. This struct contains the output of the control law)</summary>
+
+* bool advance_waypoint: whether the current waypoint has been reached. This is used to indicate to the ground station that the active waypoint should be advanced to the next in the flight plan.
+* bool motors_enabled: whether the motors are armed. This is not a command, rather just feedback provided from the VMS about whether the motors are "hot" and is used in logging, telemetry and for operator situation awareness.
+* <details>
+    <summary> int8_t mode: the current flight mode. This is not a command, rather just a feed back from the VMS for logging, telemetry and operator awareness. While the flight mode is arbitrary and it is up to the developer to implement them, some values are matched to a typical flight mode used by Mission Planner</summary>
+
+    * 0: stabilized
+    * 1: position hold
+    * 2: auto
+  </details>
+* std::array<int16_t, ```NUM_SBUS_CH```>sbus: output from the control law to the SBus out bus
+* std::array<int16_t, ```NUM_PWM_PINS```>pwm: output from the control law to the PWM channels
+* float throttle_cmd_prcnt: the throttle command given as a %, this is used for telemetry and situational awareness.
+* float flight_time_remaining_s: estimated flight time remaining, s. Available only if implemented.
+* float power_remaining_prcnt: battery pack capacity remaining, %. Available only if implemented.
+* float aux[```NUM_AUX_VAR```]: additional output. These are useful to log any signal internal of the control law that is not currently logged by the dataflash logger.
+</details>
+
+#### Configuration system
+LAGER SPAARO is modified to enable handling of different configuration files for different vehicle. 
 
 
 
