@@ -228,7 +228,116 @@ The flight code to be uploaded exists in the ```/flight_code``` directory. This 
 </details>
 
 #### Configuration system
-LAGER SPAARO is modified to enable handling of different configuration files for different vehicle. 
+LAGER SPAARO is modified to enable handling of different configuration files for different vehicle. The vehicle config files are ```flight/<VEHICLE_NAME>_config.cc```. ```bool DEBUG``` defines if the aircraft are in debug mode or not. If set to ```true```, the aircraft is in debug mode, i.e. during power up, the flight code will stop until a serial monitor to the FMU is opened. This is to view alll the system messages, helpful for debugging. These message will show up in non-debug mode but the FMU won't wait for a serial monitor connection to send them.
+
+Aircraft configuration are stored as structs which includes the following structure
+
+<details>
+<summary> Sensor config </summary>
+
+* <details>
+      <summary> fmu (configuration for the IMU located on the FMU board) </summary>
+
+    * <details>
+        <summary> enum dlpf_hz: bandwidth of the digital low pass filter applied to the FMU sensors data. Default to DLPF_BANDWIDTH_41HZ</summary>
+
+        * DLPF_BANDWIDTH_20HZ
+        * DLPF_BANDWIDTH_10HZ
+        * DLPF_BANDWIDTH_5HZ
+        * DLPF_BANDWIDTH_41HZ (Only *FMU-V2* and *FMU-MINI*)
+        * DLPF_BANDWIDTH_92HZ (Only *FMU-V2* and *FMU-MINI* if configured for 200Hz loop rate)
+        </details> 
+
+    * float accel_bias_mps[3]: constant bias of IMU sensor. Default to zeros.
+    * float mag_bias_ut[3]: constant bias of magnetometor. Default to zeros.
+    * float accel_scale[3][3]: scaling factor to IMU readings. Default to 3x3 identity.
+    * float mag_scale[3][3]: scaling factor to magnetometer readings. Default to 3x3 identity.  
+    * float rotation[3][3]: rotation of the FMU board in aircraft body frame. Default to 3x3 identity.
+    </details>
+
+* <details>
+    <summary> ext_mag (Configuration for any external magnetometer) </summary>
+
+    * <details>
+        <summary> enum device: device type of external mag. Default to EXT_MAG_NONE</summary>
+
+        * EXT_MAG_NONE
+        * EXT_MAG_PRIM
+        * EXT_MAG_SEC
+        </details>
+
+    * float mag_bias_ut[3]: constant bias of magnetometor. Default to zeros.
+    * float mag_scale[3][3]: scaling factor to magnetometer readings. Default to 3x3 identity.
+    * float rotation[3][3]: rotation of the external mag in aircraft body frame. Default to 3x3 identity.
+    </details>
+* <details>
+    <summary> ext_gnss1 (<em>FMU-V2 and <em>FMU-MINI support another GNSS receiver with configuration ext_gnss2)</summary>
+
+    * int32_t baud: baud rate for the UART communication with the GNSS receiver. Default to -1 which is disabled.
+    </details>
+* <details>
+    <summary> ext_pres1 (all FMU supports upto 4 pressure transducer which is configured with ext_pres2, ext_pres3, and ext_pres4)</summary>
+
+    * uint8_t addr: I2C address to communicate with the transducer type
+    * <details>
+        <summary>enum device: Select pressure transducer device type. Default to PRES_NONE:</summary>
+
+        * PRES_NONE 
+        * PRES_AMS5915_0005_D 
+        * PRES_AMS5915_0010_D 
+        * PRES_AMS5915_0005_D_B 
+        * PRES_AMS5915_0010_D_B
+        * PRES_AMS5915_0020_D 
+        * PRES_AMS5915_0050_D 
+        * PRES_AMS5915_0100_D 
+        * PRES_AMS5915_0020_D_B 
+        * PRES_AMS5915_0050_D_B 
+        * PRES_AMS5915_0100_D_B
+        * PRES_AMS5915_0200_D 
+        * PRES_AMS5915_0350_D 
+        * PRES_AMS5915_1000_D 
+        * PRES_AMS5915_2000_D 
+        * PRES_AMS5915_4000_D 
+        * PRES_AMS5915_7000_D 
+        * PRES_AMS5915_10000_D 
+        * PRES_AMS5915_0200_D_B
+        * PRES_AMS5915_0350_D_B
+        * PRES_AMS5915_1000_D_B
+        * PRES_AMS5915_1000_A
+        * PRES_AMS5915_1200_B
+        </details>
+    </details>
+
+* <details>
+    <summary>opflow (only supported by <em>FMU-V2 and <em>FMU-MINI)</summary>
+
+    * <details> 
+        <summary>enum device: select optical flow device. Default to OPFLOW_NONE</summary>
+
+        * OPFLOW_NONE,
+        * OPFLOW_MATEK3901
+        </details>
+    </details>
+
+* <details>
+    <summary>rad_alt (only supported by <em>FMU-V2 and <em>FMU-MINI)</summary>
+
+    * <details> 
+        <summary>enum device: select radar altimeter. defaults to RAD_ALT_NONE</summary>
+
+        * RAD_ALT_NONE
+        * RAD_ALT_AINSTEIN_USD1
+        </details>
+    </details>
+
+* <details>
+    <summary>power_module (only supported by <em>FMU-V2 and <em>FMU-MINI)</summary>
+
+    * float volts_per_volt: voltage multiplier to go from measured voltage from the power sensor to battery voltage.
+    * float amps_per_volt: current multiplier to go from measured voltage from the power sensor to current draw.
+    </details>
+
+</details>
 
 
 
