@@ -40,7 +40,7 @@ The flight code to be uploaded exists in the ```/flight_code``` directory. This 
     </details>
 
 * <details>
-    <summary>IMU Data (<em>FMU-V1 and <em>FMU-V2 has additional struct for VectorNav IMU data)</summary>
+    <summary>IMU Data (<em>FMU-V1</em> and <em>FMU-V2</em>  has additional struct for VectorNav IMU data)</summary>
 
     * bool installed: whether the IMU is configured. Default as ```false```
     * bool healthy: whether the accelerometer and gyro are healthy. Unhealthy is defined as missing 5 frames of data in a row at the expected rate.
@@ -51,7 +51,7 @@ The flight code to be uploaded exists in the ```/flight_code``` directory. This 
     </details>
 
 * <details>
-    <summary> Magnetometer Data (<em>FMU-V1 and <em>FMU-V2 has additional struct for VectorNav Magnetometer data)</summary>
+    <summary> Magnetometer Data (<em>FMU-V1</em>  and <em>FMU-V2</em>  has additional struct for VectorNav Magnetometer data)</summary>
 
     * bool installed: whether the Magnetometer is configured. Default as ```false```
     * bool healthy: whether the magnetometer is healthy. Unhealthy is defined as missing 5 frames of data in a row at the expected rate.
@@ -61,7 +61,7 @@ The flight code to be uploaded exists in the ```/flight_code``` directory. This 
     </details>
 
 * <details>
-    <summary> OpFlow Data (Optical flow sensor. <em>FMU-V2 and <em>FMU-MINI supported. Still experimental. Tested with Matek System 3901-LOX)</summary>
+    <summary> OpFlow Data (Optical flow sensor. <em>FMU-V2</em>  and <em>FMU-MINI</em>  supported. Still experimental. Tested with Matek System 3901-LOX)</summary>
 
     * bool installed: whether the optcal flow sensor is configured. Default as ```false```
     * bool healthy: whether the optcal flow sensor is healthy. Unhealthy is defined as missing 5 frames of data in a row at the expected rate.
@@ -74,7 +74,7 @@ The flight code to be uploaded exists in the ```/flight_code``` directory. This 
     </details>
 
 * <details>
-    <summary>GNSS Data (<em>FMU-V2 and <em>FMU-MINI has 2 GNSS structs for upto 2 GNSS receivers. <em>FMU-V1 and <em>FMU-V2 has additional struct for VectorNav GNSS data) </summary>
+    <summary>GNSS Data (<em>FMU-V2</em> and <em>FMU-V2</em> has 2 GNSS structs for upto 2 GNSS receivers. <em>FMU-V2</em> and <em>FMU-V2</em> has additional struct for VectorNav GNSS data) </summary>
 
     * bool installed: whether the GNSS is configured. Default as ```false```
     * bool healthy: whether the GNSS receiver is healthy. Unhealthy is defined as missing 5 frames of data in a row at the expected rate. 
@@ -104,7 +104,7 @@ The flight code to be uploaded exists in the ```/flight_code``` directory. This 
     </details>
 
 * <details>
-    <summary>Pressure Data (<em>FMU-V1 and <em>FMU-V2 has additional struct for VectorNav Pressure data. All FMU has upto 4 Pressure data struct defined) </summary>
+    <summary>Pressure Data (<em>FMU-V2</em> and <em>FMU-V2</em> has additional struct for VectorNav Pressure data. All FMU has upto 4 Pressure data struct defined) </summary>
 
     * bool installed: whether a pressure tranducer is configured. Default as ```false```
     * bool is_static_pres: whether the current pressure sensor is static or differential. Defauls as ```false```
@@ -127,11 +127,11 @@ The flight code to be uploaded exists in the ```/flight_code``` directory. This 
 * <details>
     <summary>ADC Data </summary>
     
-    * float volt[2(<em>FMU-V1)/8(<em>FMU-V2)]: voltages measured by the FMU analog to digital converters
+    * float volt[2(<em>FMU-V1</em> )/8(<em>FMU-V2</em> )]: voltages measured by the FMU analog to digital converters
     </details>
 
 * <details>
-    <summary>Power Module Data (<em>FMU-V2 and <em>FMU-MINI. Measure battery voltage and current draw using analog modules)</summary>
+    <summary>Power Module Data (<em>FMU-V2</em> and <em>FMU-MINI</em>. Measure battery voltage and current draw using analog modules)</summary>
     
     * float voltage_v: voltage measured on the power port voltage pin. Note that this is not the battery pack voltage, typically this value needs to be scaled by the power module volts / volt value and is power module specific.
     * float current_v: voltage measured on the power port current pin. Typically this is scaled by the power module mA / volt value and is power module specific.
@@ -271,7 +271,7 @@ Aircraft configuration are stored as structs which includes the following struct
     * float rotation[3][3]: rotation of the external mag in aircraft body frame. Default to 3x3 identity.
     </details>
 * <details>
-    <summary> ext_gnss1 (<em>FMU-V2 and <em>FMU-MINI support another GNSS receiver with configuration ext_gnss2)</summary>
+    <summary> ext_gnss1 (<em>FMU-V2</em> and <em>FMU-V2</em> support another GNSS receiver with configuration ext_gnss2)</summary>
 
     * int32_t baud: baud rate for the UART communication with the GNSS receiver. Default to -1 which is disabled.
     </details>
@@ -309,7 +309,7 @@ Aircraft configuration are stored as structs which includes the following struct
     </details>
 
 * <details>
-    <summary>opflow (only supported by <em>FMU-V2 and <em>FMU-MINI)</summary>
+    <summary>opflow (only supported by <em>FMU-V2</em> and <em>FMU-MINI</em>)</summary>
 
     * <details> 
         <summary>enum device: select optical flow device. Default to OPFLOW_NONE</summary>
@@ -320,7 +320,7 @@ Aircraft configuration are stored as structs which includes the following struct
     </details>
 
 * <details>
-    <summary>rad_alt (only supported by <em>FMU-V2 and <em>FMU-MINI)</summary>
+    <summary>rad_alt (only supported by <em>FMU-V2</em> and <em>FMU-MINI</em> )</summary>
 
     * <details> 
         <summary>enum device: select radar altimeter. defaults to RAD_ALT_NONE</summary>
@@ -331,7 +331,7 @@ Aircraft configuration are stored as structs which includes the following struct
     </details>
 
 * <details>
-    <summary>power_module (only supported by <em>FMU-V2 and <em>FMU-MINI)</summary>
+    <summary>power_module (only supported by <em>FMU-V2</em> and <em>FMU-MINI</em> )</summary>
 
     * float volts_per_volt: voltage multiplier to go from measured voltage from the power sensor to battery voltage.
     * float amps_per_volt: current multiplier to go from measured voltage from the power sensor to current draw.
@@ -340,7 +340,7 @@ Aircraft configuration are stored as structs which includes the following struct
 </details>
 
 <details>
-<summary>vector_nav (Configuration if using Vector Nav. Only available for <em>FMU-V1 and <em>FMU-V2)</summary>
+<summary>vector_nav (Configuration if using Vector Nav. Only available for <em>FMU-V1</em> and <em>FMU-V2</em>)</summary>
 
 * <details>
     <summary>enum device: select vector nav device. defaults to VECTOR_NAV_NONE</summary>
@@ -369,7 +369,7 @@ Aircraft configuration are stored as structs which includes the following struct
     <summary>enum imu_source: select which IMU to use in EKF. defaults to FMU built in IMU</summary>
 
     * INS_IMU_FMU
-    * INS_IMU_VECTOR_NAV (only available on <em>FMU-V1 and <em>FMU-V2. Not clear if implemented in lager_spaaro)
+    * INS_IMU_VECTOR_NAV (only available on <em>FMU-V1</em> and <em>FMU-V2</em>. Not clear if implemented in lager_spaaro)
     </details>
 
 * <details>
@@ -383,8 +383,8 @@ Aircraft configuration are stored as structs which includes the following struct
     <summary>enum gnss_source: select which GNSS position estimate to use for the EKF. defaults to INS_GNSS_EXT_GNSS1</summary>
 
     * INS_GNSS_EXT_GNSS1
-    * INS_GNSS_EXT_GNSS2 (supported on <em>FMU-V2 and <em>FMU-MINI)
-    * INS_GNSS_VECTOR_NAV (only available on <em>FMU-V1 and <em>FMU-V2. Not clear if implemented in lager_spaaro)
+    * INS_GNSS_EXT_GNSS2 (supported on <em>FMU-V2</em> and <em>FMU-MINI</em> )
+    * INS_GNSS_VECTOR_NAV (only available on <em>FMU-V1</em> and <em>FMU-V2</em>. Not clear if implemented in lager_spaaro)
     </details>
 
 * float accel_cutoff_hz: cutoff frequency for the accelerometer LPF. defaults to 40. (This config apply to SPAARO LPF)
@@ -401,7 +401,7 @@ Aircraft configuration are stored as structs which includes the following struct
     <summary>enum ins_source: defaults to AUX_INS_BFS</summary>
 
     * AUX_INS_BFS
-    * AUX_INS_VECTOR_NAV (only available on <em>FMU-V1 and <em>FMU-V2. Not clear if implemented in lager_spaaro)
+    * AUX_INS_VECTOR_NAV (only available on <em>FMU-V1</em> and <em>FMU-V2</em>. Not clear if implemented in lager_spaaro)
     </details>
 </details>
 
@@ -433,7 +433,7 @@ Aircraft configuration are stored as structs which includes the following struct
 </details>
 
 <details>
-<summmary>telem</summary>
+<summary>telem</summary>
 
 * int32_t baud: configure baudrate of the UART connection between FMU and telemetry air module. defaults to 57600
 * <details>
@@ -449,7 +449,7 @@ Aircraft configuration are stored as structs which includes the following struct
     <summmary>enum imu_source: defaults to TELEM_IMU_FMU</summary>
 
     * TELEM_IMU_FMU
-    * TELEM_IMU_VECTOR_NAV (only available on <em>FMU-V1 and <em>FMU-V2. Not clear if implemented in lager_spaaro)
+    * TELEM_IMU_VECTOR_NAV (only available on <em>FMU-V1</em> and <em>FMU-V2</em>. Not clear if implemented in lager_spaaro)
     </details>
 
 * <details>
@@ -463,8 +463,8 @@ Aircraft configuration are stored as structs which includes the following struct
     <summmary>enum gnss_source: defaults to TELEM_GNSS_EXT_GNSS1</summary>
 
     * TELEM_GNSS_EXT_GNSS1
-    * TELEM_GNSS_EXT_GNSS2 (supported on <em>FMU-V2 and <em>FMU-MINI)
-    * TELEM_GNSS_VECTOR_NAV (only available on <em>FMU-V1 and <em>FMU-V2. Not clear if implemented in lager_spaaro)
+    * TELEM_GNSS_EXT_GNSS2 (supported on <em>FMU-V2</em> and <em>FMU-MINI</em> )
+    * TELEM_GNSS_VECTOR_NAV (only available on <em>FMU-V1</em> and <em>FMU-V2</em>. Not clear if implemented in lager_spaaro)
     </details>
 
 * <details>
@@ -491,7 +491,7 @@ Aircraft configuration are stored as structs which includes the following struct
     <summmary>enum ins_source: defaults to TELEM_INS_BFS</summary>
 
     * TELEM_INS_BFS
-    * TELEM_INS_VECTOR_NAV(only available on <em>FMU-V1 and <em>FMU-V2. Not clear if implemented in lager_spaaro)
+    * TELEM_INS_VECTOR_NAV(only available on <em>FMU-V1</em> and <em>FMU-V2</em>. Not clear if implemented in lager_spaaro)
     </details>
 
 * <details>
@@ -499,7 +499,7 @@ Aircraft configuration are stored as structs which includes the following struct
 
     * TELEM_GNSS_RTK_NONE
     * TELEM_GNSS_RTK_EXT_GNSS1
-    * TELEM_GNSS_RTK_EXT_GNSS2 (supported on <em>FMU-V2 and <em>FMU-MINI)
+    * TELEM_GNSS_RTK_EXT_GNSS2 (supported on <em>FMU-V2</em> and <em>FMU-MINI</em> )
     </details>
 
 * int16_t raw_sens_stream_period_ms: defaults to 500
@@ -508,14 +508,73 @@ Aircraft configuration are stored as structs which includes the following struct
 * int16_t pos_stream_period_ms: defaults to 250
 * int16_t extra1_stream_period_ms: defaults to 100
 * int16_t extra2_stream_period_ms: defaults to 100
-
 </details>
 
+Since the configuration data structure contains pre-defined defaults values, values don't need to be defined in ```flight/<VEHICLE_NAME>_config.cc``` unless values are changed.
 
+#### Flight code execution
+
+On boot, SPAARO initializes the:
+1. Messaging bus, which provides status, warning, and error messages over the FMU micro USB.
+2. System, which includes:
+   * Initializing I2C and SPI buses
+   * Setting up the analog to digital converters for monitoring system voltages
+3. Sensors, which includes:
+   * IMU: establish communications, configure the IMU, and estimate gyro biases.
+   * GNSS: establish communications.
+   * Inceptors: establish communications.
+   * Pressure transducers: establish communications, configure the pressure transducers, and estimate differential pressure biases.
+   * Battery monitoring (*FMU-V2* and *FMU-MINI*): measures battery voltage and current, estimates battery capacity remaining and remaining flight time.
+   * Analog: measures analog inputs, converts to engineering units.
+4. Effectors, which establishes communications over SBUS and PWM protocols.
+5. Telemetry, which establishing communications with the radio modem.
+6. Datalog, which checks for an SD card present and creates a datalog file.
+
+After a succesful boot, a low priority loop is established to write datalog entries from a buffer to the SD card. An interrupt is attached to the IMU data ready pin to trigger the main flight software loop at the desired frame rate.
+
+The main flight software loop consists of:
+1. Reading system data: system time, frame duration, and input, regulated, and servo voltages.
+2. Reading sensor data, correcting scale factors and biases, and rotating sensor data into the vehicle frame.
+3. Running the navigation filter to filter the sensor data and estimate the aircraft states.
+4. Run the control software. This is defined in ```VmsRun()``` function in ```flight/flight.cc``` which reference the function call in ```/flight/vms.cc```. This file is where manual control law implemented in the ```void VmsRun``` function or the autocoded ```autocode.Run()``` generated from Simulink will be called. 
+5. Convert effector commands from engineering units to PWM and SBUS values.
+6. Add data to the datalog buffer.
+7. Send updated telemetry data. Check for updated in-flight-tunable parameters, flight plans, fences, and rally points.
+
+A timer to send commands to the effectors is started by the main flight software loop and triggers at 90% of the frame duration. On this trigger, the effector commands are sent to the effectors. This approach provides a fixed latency between sensing and actuation for developing robust control laws.
+
+This process continues until the system is powered down.
 
 ### Log converter code
+This section explains the logging system in SPARRO and provides build instruction. Building the tool is not needed for this tutorial and is included only for reference for the initiatives. This section will be reiterated in Tutorial 2 for implemetation instruction.
+
+<details>
+<summary>Detailed instruction</summary>
+
+SPAARO logs its signal onto an SD card with file names defined in variable ```DATA_LOG_NAME_``` in file ```/flight/datalog.cc```. The file name on the SD card is displayed as ```<DATA_LOG_NAME_><INDEX>.bfs``` where ```<INDEX>``` increments based on the file exists in the SD card. SPAARO provides a tool to convert the ```*.bfs``` to a MATLAB compatible ```*.mat``` file in ```/lager_spaaro/mat_converter```. The signal that is logged onto the SD card is found in ```/lager_spaaro/common/datalog_fmu.h```.
+
+To use the mat_converter tool, it needs to be built first by doing the following. 
+
+Make a build directory in ```/lager_spaaro/mat_converter``` and navigate in to it, i.e ```/lager_spaaro/mat_converter/build/```.
+
+Run
+
+```
+cmake ..
+make -j6
+```
+
+After compiling, the ```mat_converter``` will be in the ``````/lager_spaaro/mat_converter/build``` directory. The command to use the tool is 
+
+```
+mat_converter <PATH_TO_BFS_LOG_FILE>
+```
+
+The converter will create a corresponding ```*.mat``` file in the same location of the input ```*.bfs``` file. 
+</details>
 
 ## MATLAB/Simulink
+MATLAB/Simulink integration provide a relatively easy way to design and autocode the control law. This system include vehicle and environment definition in MATLAB then designing and autocoding control law in Simulink. This tutorial will outline these components and briefly explain their layout and how to start a simulink session, ready for development
 
 ### MATLAB code and setup
 
