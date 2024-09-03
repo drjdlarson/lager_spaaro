@@ -233,13 +233,13 @@ LAGER SPAARO is modified to enable handling of different configuration files for
 Aircraft configuration are stored as structs which includes the following structure
 
 <details>
-<summary> Sensor config </summary>
+<summary> sensor </summary>
 
 * <details>
       <summary> fmu (configuration for the IMU located on the FMU board) </summary>
 
     * <details>
-        <summary> enum dlpf_hz: bandwidth of the digital low pass filter applied to the FMU sensors data. Default to DLPF_BANDWIDTH_41HZ</summary>
+        <summary> enum dlpf_hz: bandwidth of the digital low pass filter applied to the FMU sensors data. Default to DLPF_BANDWIDTH_41HZ (This is used to set the IMU built in LPF and not for SPAARO LPF)</summary>
 
         * DLPF_BANDWIDTH_20HZ
         * DLPF_BANDWIDTH_10HZ
@@ -339,8 +339,177 @@ Aircraft configuration are stored as structs which includes the following struct
 
 </details>
 
+<details>
+<summary>vector_nav (Configuration if using Vector Nav. Only available for <em>FMU-V1 and <em>FMU-V2)</summary>
 
+* <details>
+    <summary>enum device: select vector nav device. defaults to VECTOR_NAV_NONE</summary>
 
+    * VECTOR_NAV_NONE
+    * VECTOR_NAV_VN100
+    * VECTOR_NAV_VN200
+    * VECTOR_NAV_VN300
+    </details>
+
+* uint16_t accel_filt_window: defaults to 4
+* uint16_t gyro_filt_window: defaults to 4
+* uint16_t mag_filt_window: defaults to 0
+* uint16_t temp_filt_window: defaults to 4
+* uint16_t pres_filt_window: defaults to 0
+* float antenna_offset_m[3]: default to zeros
+* float antenna_baseline_m[3]: default to zeros
+* float baseline_uncertainty_m[3]: default to zeros
+* float rotation[3][3]: default to 3x3 identtity
+</details>
+
+<details>
+<summary>bfs_ins (configuration for the navigation filter solutions)</summary>
+
+* <details>
+    <summary>enum imu_source: select which IMU to use in EKF. defaults to FMU built in IMU</summary>
+
+    * INS_IMU_FMU
+    * INS_IMU_VECTOR_NAV (only available on <em>FMU-V1 and <em>FMU-V2. Not clear if implemented in lager_spaaro)
+    </details>
+
+* <details>
+    <summary>enum mag_source: select which magnetometer to use in EKF. defaults to FMU built in magnetometer. (This won't be too relevant for vehicle opearting indoor or has GNSS heading as the mag is only used for heading initialization and not for measurement update in EKF)</summary>
+
+    * INS_MAG_FMU
+    * INS_MAG_EXT_MAG
+    </details>
+
+* <details>
+    <summary>enum gnss_source: select which GNSS position estimate to use for the EKF. defaults to INS_GNSS_EXT_GNSS1</summary>
+
+    * INS_GNSS_EXT_GNSS1
+    * INS_GNSS_EXT_GNSS2 (supported on <em>FMU-V2 and <em>FMU-MINI)
+    * INS_GNSS_VECTOR_NAV (only available on <em>FMU-V1 and <em>FMU-V2. Not clear if implemented in lager_spaaro)
+    </details>
+
+* float accel_cutoff_hz: cutoff frequency for the accelerometer LPF. defaults to 40. (This config apply to SPAARO LPF)
+* float gyro_cutoff_hz: cutoff frequency for the gyro LPF. defaults to 40. (This config apply to SPAARO LPF)
+* float mag_cutoff_hz: cutoff frequency for the magnetometer LPF. defaults to 10. (This config apply to SPAARO LPF)
+* float hardcoded_heading: override the EKF initial heading estimates. defaults to -1 to disable (set to any number in range 0-360 to set initial heading to a known value or for indoor environment)
+* Eigen::Vector3f antenna_baseline_m: moving baseline or vector to describe the rover antenna position relative to the moving base antenna in aircraft body frame. default to zero to disable. Set in config file with syntax (Eigen::Vector3f() << x, y, z).finished()
+</details>
+
+<details>
+<summary>aux_ins (configuration for auxilary INS estimations)</summary>
+
+* <details>
+    <summary>enum ins_source: defaults to AUX_INS_BFS</summary>
+
+    * AUX_INS_BFS
+    * AUX_INS_VECTOR_NAV (only available on <em>FMU-V1 and <em>FMU-V2. Not clear if implemented in lager_spaaro)
+    </details>
+</details>
+
+<details>
+<summary>adc</summary>
+
+* <details>
+    <summmary>enum static_pres_source: defaults to ADC_STATIC_PRES_FMU</summary>
+
+    * ADC_STATIC_PRES_FMU
+    * ADC_STATIC_PRES_EXT_PRES1
+    * ADC_STATIC_PRES_EXT_PRES2
+    * ADC_STATIC_PRES_EXT_PRES3
+    * ADC_STATIC_PRES_EXT_PRES4
+    </details>
+
+* <details>
+    <summmary>enum diff_pres_source: defaults to ADC_DIFF_PRES_NONE</summary>
+
+    * ADC_DIFF_PRES_NONE
+    * ADC_DIFF_PRES_EXT_PRES1
+    * ADC_DIFF_PRES_EXT_PRES2
+    * ADC_DIFF_PRES_EXT_PRES3
+    * ADC_DIFF_PRES_EXT_PRES4
+    </details>
+
+* float static_pres_cutoff_hz: defaults to 10
+* float diff_pres_cutoff_hz: defaults to 10
+</details>
+
+<details>
+<summmary>telem</summary>
+
+* int32_t baud: configure baudrate of the UART connection between FMU and telemetry air module. defaults to 57600
+* <details>
+    <summmary>enum aircraft_type: defaults to bfs::FIXED_WING</summary>
+
+    * bfs::FIXED_WING
+    * bfs::HELICOPTER
+    * bfs::MULTIROTOR
+    * bfs::VTOL
+    </details>
+
+* <details>
+    <summmary>enum imu_source: defaults to TELEM_IMU_FMU</summary>
+
+    * TELEM_IMU_FMU
+    * TELEM_IMU_VECTOR_NAV (only available on <em>FMU-V1 and <em>FMU-V2. Not clear if implemented in lager_spaaro)
+    </details>
+
+* <details>
+    <summmary>enum mag_source: defaults to TELEM_MAG_FMU</summary>
+
+    * TELEM_MAG_FMU
+    * TELEM_MAG_EXT_MAG
+    </details>
+
+* <details>
+    <summmary>enum gnss_source: defaults to TELEM_GNSS_EXT_GNSS1</summary>
+
+    * TELEM_GNSS_EXT_GNSS1
+    * TELEM_GNSS_EXT_GNSS2 (supported on <em>FMU-V2 and <em>FMU-MINI)
+    * TELEM_GNSS_VECTOR_NAV (only available on <em>FMU-V1 and <em>FMU-V2. Not clear if implemented in lager_spaaro)
+    </details>
+
+* <details>
+    <summmary>enum static_pres_source: defaults to TELEM_STATIC_PRES_FMU</summary>
+
+    * TELEM_STATIC_PRES_FMU
+    * TELEM_STATIC_PRES_EXT_PRES1
+    * TELEM_STATIC_PRES_EXT_PRES2
+    * TELEM_STATIC_PRES_EXT_PRES3
+    * TELEM_STATIC_PRES_EXT_PRES4
+    </details>
+
+* <details>
+    <summmary>enum diff_pres_source: defaults to TELEM_DIFF_PRES_NONE</summary>
+
+    * TELEM_DIFF_PRES_NONE
+    * TELEM_DIFF_PRES_EXT_PRES1
+    * TELEM_DIFF_PRES_EXT_PRES2
+    * TELEM_DIFF_PRES_EXT_PRES3
+    * TELEM_DIFF_PRES_EXT_PRES4
+    </details>
+
+* <details>
+    <summmary>enum ins_source: defaults to TELEM_INS_BFS</summary>
+
+    * TELEM_INS_BFS
+    * TELEM_INS_VECTOR_NAV(only available on <em>FMU-V1 and <em>FMU-V2. Not clear if implemented in lager_spaaro)
+    </details>
+
+* <details>
+    <summmary>enum gnss_rtk: select which GNSS receiver to send RTK corrections to. defaults to TELEM_GNSS_RTK_NONE</summary>
+
+    * TELEM_GNSS_RTK_NONE
+    * TELEM_GNSS_RTK_EXT_GNSS1
+    * TELEM_GNSS_RTK_EXT_GNSS2 (supported on <em>FMU-V2 and <em>FMU-MINI)
+    </details>
+
+* int16_t raw_sens_stream_period_ms: defaults to 500
+* int16_t ext_status_stream_period_ms: defaults to 1000
+* int16_t rc_channel_stream_period_ms: defaults to 500
+* int16_t pos_stream_period_ms: defaults to 250
+* int16_t extra1_stream_period_ms: defaults to 100
+* int16_t extra2_stream_period_ms: defaults to 100
+
+</details>
 
 
 
