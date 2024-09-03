@@ -589,7 +589,7 @@ Environment definitions are defined in ```/simulation/config.m```. In this file,
 The remaining of the file can be used to set whatever variable or condition needed if the user chose to work with a simulation environment.
 
 #### Setup environment
-Before working with the Simulink environment, ```/simulation/setup.m``` needs to be run. The script will call ```/simulation/config.m``` which will setup the aircraft parameters from ```/simulation/aircraft/<AIRCRAFT_NAME>.m``` along with setting up the data structs (called data buses in the MATLAB envronment). If ```vms_only = true``` then the script will also open the corresponding VMS Simulink model.
+Before working with the Simulink environment, ```/simulation/setup.m``` needs to be run. The script will call ```/simulation/config.m``` which will setup the aircraft parameters from ```/simulation/aircraft/<AIRCRAFT_NAME>.m``` along with setting up the data structs (called data buses in the MATLAB envronment). If ```vms_only = true``` then the script will only open the corresponding VMS Simulink model.
 
 ### Simulink model
 There are several Simulink models within the SPAARO framework. If simulation is enable in config, ```/simulation/setup.m``` will open the corresponding physics simulator (```/simulation/multirotor_sim.slx``` for multirotor or ```/simulation/uas_sim.slx``` for generic fixed wing/VTOL). One can developed their own simulator with the relevent physics and fidelity and change ```/simulation/setup.m``` accordingly.
