@@ -11,10 +11,10 @@ This section outlines the C++ codes and highlight the important components
 The flight code to be uploaded exists in the ```/flight_code``` directory. This directory includes all the C++ source and header files. When compiling the project, SPAARO will automatically setup any dependencies such as hardware drivers, EKF, etc. from other repositories. The project utilize CMake to handle project builds. CMake also handle the dependencies as well as different build configuration depending on which vehicle is being built for. 
 
 #### Hardware definition
-```/include/hardware_defs.h``` describes the hardware definitions to SPAARO. This is used to configure the project for different teensy and FMU version such as *FMU-V1*, *FMU-V2* or *FMU-MINI*. Generally, no changes are needed to be made here. A useful parameter one can change in this file is the loop rate which is defined by ```FRAME_RATE_HZ``` and  ```FRAME_PERIOD_MS``` for the corresponding board. *FMU-MINI* have been tested with upto 200Hz rate. 
+```/flight_code/include/hardware_defs.h``` describes the hardware definitions to SPAARO. This is used to configure the project for different teensy and FMU version such as *FMU-V1*, *FMU-V2* or *FMU-MINI*. Generally, no changes are needed to be made here. A useful parameter one can change in this file is the loop rate which is defined by ```FRAME_RATE_HZ``` and  ```FRAME_PERIOD_MS``` for the corresponding board. *FMU-MINI* have been tested with upto 200Hz rate. 
 
 #### Global definition
-```/include/global_defs.h``` contains all the data and configuration relavant to SPAARO. the datas are group into 4 main structs(or buses). Some datas within the main buses are structs themselves and will be denoted with the drop down list. Variables followed by square brackets are arrays. For example, x[y] is variable x which is an array or vector with y number of elements. 
+```/flight_code/include/global_defs.h``` contains all the data and configuration relavant to SPAARO. the datas are group into 4 main structs(or buses). Some datas within the main buses are structs themselves and will be denoted with the drop down list. Variables followed by square brackets are arrays. For example, x[y] is variable x which is an array or vector with y number of elements. 
 
 <details>
 <summary>System Data (Data mostly used for debugging)</summary>
@@ -228,7 +228,7 @@ The flight code to be uploaded exists in the ```/flight_code``` directory. This 
 </details>
 
 #### Configuration system
-LAGER SPAARO is modified to enable handling of different configuration files for different vehicle. The vehicle config files are ```flight/<VEHICLE_NAME>_config.cc```. ```bool DEBUG``` defines if the aircraft are in debug mode or not. If set to ```true```, the aircraft is in debug mode, i.e. during power up, the flight code will stop until a serial monitor to the FMU is opened. This is to view alll the system messages, helpful for debugging. These message will show up in non-debug mode but the FMU won't wait for a serial monitor connection to send them.
+LAGER SPAARO is modified to enable handling of different configuration files for different vehicle. The vehicle config files are ```/flight_code/flight/<VEHICLE_NAME>_config.cc```. ```bool DEBUG``` defines if the aircraft are in debug mode or not. If set to ```true```, the aircraft is in debug mode, i.e. during power up, the flight code will stop until a serial monitor to the FMU is opened. This is to view alll the system messages, helpful for debugging. These message will show up in non-debug mode but the FMU won't wait for a serial monitor connection to send them.
 
 Aircraft configuration are stored as structs which includes the following structure
 
@@ -510,7 +510,7 @@ Aircraft configuration are stored as structs which includes the following struct
 * int16_t extra2_stream_period_ms: defaults to 100
 </details>
 
-Since the configuration data structure contains pre-defined defaults values, values don't need to be defined in ```flight/<VEHICLE_NAME>_config.cc``` unless values are changed.
+Since the configuration data structure contains pre-defined defaults values, values don't need to be defined in ```/flight_code/flight/<VEHICLE_NAME>_config.cc``` unless values are changed.
 
 #### Flight code execution
 
@@ -536,7 +536,7 @@ The main flight software loop consists of:
 1. Reading system data: system time, frame duration, and input, regulated, and servo voltages.
 2. Reading sensor data, correcting scale factors and biases, and rotating sensor data into the vehicle frame.
 3. Running the navigation filter to filter the sensor data and estimate the aircraft states.
-4. Run the control software. This is defined in ```VmsRun()``` function in ```flight/flight.cc``` which reference the function call in ```/flight/vms.cc```. This file is where manual control law implemented in the ```void VmsRun``` function or the autocoded ```autocode.Run()``` generated from Simulink will be called. 
+4. Run the control software. This is defined in ```VmsRun()``` function in ```/flight_code/flight/flight.cc``` which reference the function call in ```/flight_code/flight/vms.cc```. This file is where manual control law implemented in the ```void VmsRun``` function or the autocoded ```autocode.Run()``` generated from Simulink will be called. 
 5. Convert effector commands from engineering units to PWM and SBUS values.
 6. Add data to the datalog buffer.
 7. Send updated telemetry data. Check for updated in-flight-tunable parameters, flight plans, fences, and rally points.
@@ -551,11 +551,11 @@ This section explains the logging system in SPARRO and provides build instructio
 <details>
 <summary>Detailed instruction</summary>
 
-SPAARO logs its signal onto an SD card with file names defined in variable ```DATA_LOG_NAME_``` in file ```/flight/datalog.cc```. The file name on the SD card is displayed as ```<DATA_LOG_NAME_><INDEX>.bfs``` where ```<INDEX>``` increments based on the file exists in the SD card. SPAARO provides a tool to convert the ```*.bfs``` to a MATLAB compatible ```*.mat``` file in ```/lager_spaaro/mat_converter```. The signal that is logged onto the SD card is found in ```/lager_spaaro/common/datalog_fmu.h```.
+SPAARO logs its signal onto an SD card with file names defined in variable ```DATA_LOG_NAME_``` in file ```/flight_code/flight/datalog.cc```. The file name on the SD card is displayed as ```<DATA_LOG_NAME_><INDEX>.bfs``` where ```<INDEX>``` increments based on the file exists in the SD card. SPAARO provides a tool to convert the ```*.bfs``` to a MATLAB compatible ```*.mat``` file in ```/mat_converter```. The signal that is logged onto the SD card is found in ```/common/datalog_fmu.h```.
 
 To use the mat_converter tool, it needs to be built first by doing the following. 
 
-Make a build directory in ```/lager_spaaro/mat_converter``` and navigate in to it, i.e ```/lager_spaaro/mat_converter/build/```.
+Make a build directory in ```/mat_converter``` and navigate in to it, i.e ```/mat_converter/build/```.
 
 Run
 
@@ -564,7 +564,7 @@ cmake ..
 make -j6
 ```
 
-After compiling, the ```mat_converter``` will be in the ``````/lager_spaaro/mat_converter/build``` directory. The command to use the tool is 
+After compiling, the ```mat_converter``` will be in the ```/mat_converter/build``` directory. The command to use the tool is 
 
 ```
 mat_converter <PATH_TO_BFS_LOG_FILE>
@@ -594,14 +594,33 @@ Before working with the Simulink environment, ```/simulation/setup.m``` needs to
 ### Simulink model
 There are several Simulink models within the SPAARO framework. If simulation is enable in config, ```/simulation/setup.m``` will open the corresponding physics simulator (```/simulation/multirotor_sim.slx``` for multirotor or ```/simulation/uas_sim.slx``` for generic fixed wing/VTOL). One can developed their own simulator with the relevent physics and fidelity and change ```/simulation/setup.m``` accordingly.
 
-Within the simulation Simulink model, it reference the corresponding VMS model (vehicle and FMU version dependent) in the ```/simulation/vms/```. This directory is where all the control law for autocode functionality. If the configuration is set to ```vms_only = true``` then only these VMS Simulink model is opened
+Within the simulation Simulink model, it reference the corresponding VMS model (vehicle and FMU version dependent) in the ```/simulation/vms/```. This directory is where all the control law for autocode functionality. If the configuration is set to ```vms_only = true``` then only these VMS Simulink model is opened. It is noted that you can have multiple VMS model using the same aircraft definition. This is useful when expanding an existing aircraft to more flight mode or control laws.
 
 ### Exercise
 #### Explore MATLAB/Simulink environment and autocode
 Run the ```/simulation/setup.m``` script which is current set to configure a vehicle called ```tutorial``` and only open the VMS for control law development. Explore the sample VMS model and any corresponding MATLAB files.
 
-To autocode the example, in the top bar, click on ```App``` and select ```Embedded Coder```. On the top bar, select ```Generate Code```. After succesful process, a report will appear and the generated code will be shown in the side bar. The generated code is stored in ```/flight_code/autocode/<VEHICLE_NAME>_ert_rtw/``` directory. You should not have to mess with that much.
+To autocode the example, in the top bar, click on ```App``` and select ```Embedded Coder```. On the top bar, select ```Generate Code```. After succesful process, a report will appear and the generated code will be shown in the side bar. The generated code is stored in ```/flight_code/autocode/<VMS_NAME>_ert_rtw/``` directory. You should not have to mess with that much. For this tutorial, the vehicle name is ```tutorial``` and VMS name is ```tutorial_vms```
 
 #### Build project and upload
+SPAARO is compiled using CMake build system. To compile, first create a build directory in ```/flight_code/``` directory and navigate into build. From there, in a terminal, run the cmake command i.e.
+
+```
+cmake .. -D FMU=mini-v1 -D VEHICLE=tutorial -D AUTOCODE=tutorial_vms
+```
+
+``` -D FMU=mini-v1``` specifies what FMU version to build for. Options include ```mini-v1```,```v2```, ```v2-beta``` and ```v1```. 
+
+``` -D VEHICLE=tutorial``` specifies what vehicle to build for. This tells CMake to select the correct ```/flight_code/flight/<VEHICLE_NAME>_config.cc``` to choose. For this case, ```/flight_code/flight/tutorial_config.cc``` is chosen. 
+
+``` -D AUTOCODE=tutorial_vms``` specifies what control law or vms file to build for. If this is not defined, the project assumes the manually coded control law implemented in  ```/flight_code/flight/vms.cc```. Otherwise, if defined, the project will build with the corresponding ```/flight_code/autocode/<VMS_NAME>_ert_rtw/```, for this example, it would be ```/flight_code/autocode/tutorial_vms_ert_rtw/```
+
+After CMake command, the project can be compiled with 
+
+```
+make -j6
+```
+
+Once everything is compiled, the flight code can be uploaded with ```make flight_upload```. For this project, the debug option is set to true in ```/flight_code/flight/tutorial_config.cc``` so flight code execution is paused until a serial monitor is openned. Since we don't have any hardware or anything connected, the FMU will throw error in the serial monitor. This means everything is working and you can proceed to the next tutorial.
 
 

@@ -46,9 +46,9 @@ The tutorials are separated into their own directories. It is noted that the fil
 
 ## TO DOs
 - [x] How to setup Matlab + Simulink
-- [ ] Outline of Simulink model
-- [ ] Outline of input and outputs in Simulink
-- [ ] Autocode to upload
+- [X] Outline of Simulink model
+- [X] Outline of input and outputs in Simulink
+- [X] Autocode to upload
 - [ ] Telemetry interactions
 - [ ] Datalog explanation
 - [x] Outline of C++ code

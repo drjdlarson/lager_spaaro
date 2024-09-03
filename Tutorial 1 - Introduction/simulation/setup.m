@@ -138,7 +138,7 @@ if (vms_only)
         lambu_test_angle();
         % lambu()
     elseif strcmp(vehicle,'tutorial')
-        tutorial()
+        tutorial_vms()
     elseif strcmp(vehicle,'super')
         super()
     end
