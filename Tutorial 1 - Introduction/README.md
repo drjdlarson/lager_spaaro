@@ -574,9 +574,14 @@ The converter will create a corresponding ```*.mat``` file in the same location 
 </details>
 
 ## MATLAB/Simulink
-MATLAB/Simulink integration provide a relatively easy way to design and autocode the control law. This system include vehicle and environment definition in MATLAB then designing and autocoding control law in Simulink. This tutorial will outline these components and briefly explain their layout and how to start a simulink session, ready for development
+MATLAB/Simulink integration provide a relatively easy way to design and autocode the control law. This system exists in the ```/simulation``` directory since it can be used to simulate an aircraft for SITL development but this tutorial series will only go over development for hardware, not simulations. This system include vehicle and environment definition in MATLAB then designing and autocoding control law in Simulink. This tutorial will outline these components and briefly explain their layout and how to start a simulink session, ready for development
 
+Detailed comment can be found within the relevant files but brief explanations are provided below.
 ### MATLAB code and setup
+The MATLAB code include the following components. 
+
+#### Aicraft definition
+Aircraft specific definition file is defined as ```/simulation/aircraft/<AIRCRAFT_NAME>.m``` (for this tutorial it is ```/simulation/aircraft/tutorial.m```). This file contains all of the values pertaining to simulation or control law development of an aircraft. It is important to set ```Aircraft.name = <AIRCRAFT_NAME>``` for each ```<AIRCRAFT_NAME>.m```
 
 ### Simulink model
 

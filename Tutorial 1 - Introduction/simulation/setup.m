@@ -129,7 +129,7 @@ end
 if(strcmp(vehicle, 'ale'))
     ale_config = ale_model_confg();
 end
-%% Select sim
+%% Select sim. If only VMS is needed, then open the corresponding Simulink file with the VMS only
 if (vms_only)
     if strcmp(vehicle,'malt')
         malt_mot_test();
@@ -137,10 +137,12 @@ if (vms_only)
     elseif strcmp(vehicle,'lambu')
         lambu_test_angle();
         % lambu()
+    elseif strcmp(vehicle,'tutorial')
+        tutorial()
     elseif strcmp(vehicle,'super')
         super()
     end
-else
+else % If simulation is needed, open the corresponding simulator depending on vehicle type
     if any(strcmp(vehicle, {'super', 'malt', 'lambu'}))
         multirotor_sim();
     elseif any(strcmpi(vehicle, {'ale'}))
