@@ -15,8 +15,8 @@
 % vehicle = 'lambu';
 vehicle = 'tutorial';
 
-% FMU-R version
-if strcmpi(vehicle, 'malt') || strcmpi(vehicle, 'lambu' || strcmpi(vehicle, 'tutorial'))
+% FMU-R version. Select corresponding FMU hardware based on the vehicle.
+if strcmpi(vehicle, 'malt') || strcmpi(vehicle, 'lambu') || strcmpi(vehicle, 'tutorial')
     fmu_version = "mini";
 elseif strcmpi(vehicle, 'ale')
     fmu_version = "v1";
@@ -28,7 +28,7 @@ else
 end
 
 % Whether to only vms file instead of the full simulation environment. Useful when one chose to only develop hardware control law
-vms_only = false;
+vms_only = true;
 
 %% Section used for simulation 
 % Target trim conditions

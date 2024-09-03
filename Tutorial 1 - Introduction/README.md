@@ -1,8 +1,8 @@
 # Tutorial 1 - Introduction
-This tutorial aims to introduce the SPAARO framework. Topics will include the different components such as MATLAB/Simulink code, the C++ code. By the end of the tutorial, one is expected to be able to understand the data structure of Spaaro and how they interact between C++ and MATLAB, and able to open and load an empty flight control model on Simulink.
+This tutorial aims to introduce the SPAARO framework. Topics will include the different components such as MATLAB/Simulink code, the C++ code. By the end of the tutorial, one is expected to be able to understand the data structure of Spaaro and how they interact between C++ and MATLAB, and able to open and load an empty flight control model on Simulink as well as autocoding it and uploading it to an FMU.
 
 ## Hardware components
-None
+FMU-MINI
 
 ## C++ Code components
 This section outlines the C++ codes and highlight the important components
@@ -581,7 +581,27 @@ Detailed comment can be found within the relevant files but brief explanations a
 The MATLAB code include the following components. 
 
 #### Aicraft definition
-Aircraft specific definition file is defined as ```/simulation/aircraft/<AIRCRAFT_NAME>.m``` (for this tutorial it is ```/simulation/aircraft/tutorial.m```). This file contains all of the values pertaining to simulation or control law development of an aircraft. It is important to set ```Aircraft.name = <AIRCRAFT_NAME>``` for each ```<AIRCRAFT_NAME>.m```
+Aircraft specific definition file is defined as ```/simulation/aircraft/<AIRCRAFT_NAME>.m``` (for this tutorial it is ```/simulation/aircraft/tutorial.m```). It is important to set ```Aircraft.name = <AIRCRAFT_NAME>``` for each ```<AIRCRAFT_NAME>.m```. This file contains all of the values pertaining to simulation or control law development of an aircraft. These value can be parameters or coefficient for physical simulation. Another examples of whta the value can be used for are controller gains, RC channel mapping, PWM channel mapping, motor mixing, or mode enumeration, etc.
+
+#### Environment configuration
+Environment definitions are defined in ```/simulation/config.m```. In this file, the only values that needs to be changed are the vehicle of interest by setting ```vehicle``` variable and whether if only the VMS model is loaded by setting the ```vms_only```. VMS only will only open the VMS Simulink model without opening the other Simulink models. 
+
+The remaining of the file can be used to set whatever variable or condition needed if the user chose to work with a simulation environment.
+
+#### Setup environment
+Before working with the Simulink environment, ```/simulation/setup.m``` needs to be run. The script will call ```/simulation/config.m``` which will setup the aircraft parameters from ```/simulation/aircraft/<AIRCRAFT_NAME>.m``` along with setting up the data structs (called data buses in the MATLAB envronment). If ```vms_only = true``` then the script will also open the corresponding VMS Simulink model.
 
 ### Simulink model
+There are several Simulink models within the SPAARO framework. If simulation is enable in config, ```/simulation/setup.m``` will open the corresponding physics simulator (```/simulation/multirotor_sim.slx``` for multirotor or ```/simulation/uas_sim.slx``` for generic fixed wing/VTOL). One can developed their own simulator with the relevent physics and fidelity and change ```/simulation/setup.m``` accordingly.
+
+Within the simulation Simulink model, it reference the corresponding VMS model (vehicle and FMU version dependent) in the ```/simulation/vms/```. This directory is where all the control law for autocode functionality. If the configuration is set to ```vms_only = true``` then only these VMS Simulink model is opened
+
+### Exercise
+#### Explore MATLAB/Simulink environment and autocode
+Run the ```/simulation/setup.m``` script which is current set to configure a vehicle called ```tutorial``` and only open the VMS for control law development. Explore the sample VMS model and any corresponding MATLAB files.
+
+To autocode the example, in the top bar, click on ```App``` and select ```Embedded Coder```. On the top bar, select ```Generate Code```. After succesful process, a report will appear and the generated code will be shown in the side bar. The generated code is stored in ```/flight_code/autocode/<VEHICLE_NAME>_ert_rtw/``` directory. You should not have to mess with that much.
+
+#### Build project and upload
+
 

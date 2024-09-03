@@ -28,7 +28,7 @@
 #include "global_defs.h"
 
 /* Debug */
-bool DEBUG = false;
+bool DEBUG = true;
 /* Aircraft config */
 AircraftConfig config = {
   .sensor = {
@@ -46,9 +46,6 @@ AircraftConfig config = {
     .ext_gnss2 = {
       .baud = 921600
     },
-    // .opflow = {
-    //   .device = OPFLOW_MATEK3901
-    // },
     .power_module = {
       .volts_per_volt = 2.87f,
       .amps_per_volt = 50.0f
@@ -59,10 +56,7 @@ AircraftConfig config = {
     .mag_source = INS_MAG_FMU,
     .gnss_source = INS_GNSS_EXT_GNSS1,
     .accel_cutoff_hz = 40.0f,
-    .gyro_cutoff_hz = 40.0f,
-    // Match with lambu GNSS, 31.395 cm or 0.31395 meters
-    // (x longitudinal, y lateral, z)
-    .antenna_baseline_m = (Eigen::Vector3f() << 0.31395f, 0.31395f, 0.0f).finished()
+    .gyro_cutoff_hz = 40.0f
   },
   .telem = {
     .baud = 57600,
