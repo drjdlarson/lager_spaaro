@@ -14,7 +14,7 @@ Your sandbox can be pushed to remote by
 
 ```git push --set-upstream origin <sandbox-name>```
 
-!!! Please make sure to make your sandbox to a new branch in remote and not to the tutorial branch !!!
+!!! Please make sure to push your sandbox to a new branch in remote and not to the tutorial branch !!!
 
 Run the setup script with
 
