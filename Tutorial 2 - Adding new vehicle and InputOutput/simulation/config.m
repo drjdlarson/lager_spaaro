@@ -16,7 +16,7 @@
 vehicle = 'tutorial';
 
 % FMU-R version. Select corresponding FMU hardware based on the vehicle.
-if strcmpi(vehicle, 'malt') || strcmpi(vehicle, 'lambu') || strcmpi(vehicle, 'tutorial')
+if strcmpi(vehicle, 'malt') || strcmpi(vehicle, 'lambu') || strcmpi(vehicle,'tutorial')
     fmu_version = "mini";
 elseif strcmpi(vehicle, 'ale')
     fmu_version = "v1";

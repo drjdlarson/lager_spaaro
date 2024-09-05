@@ -137,10 +137,10 @@ if (vms_only)
     elseif strcmp(vehicle,'lambu')
         lambu_test_angle();
         % lambu()
-    elseif strcmp(vehicle,'tutorial')
-        tutorial_vms()
     elseif strcmp(vehicle,'super')
         super()
+    elseif strcmp (vehicle,'tutorial')
+        tutorial_vms()
     end
 else % If simulation is needed, open the corresponding simulator depending on vehicle type
     if any(strcmp(vehicle, {'super', 'malt', 'lambu'}))

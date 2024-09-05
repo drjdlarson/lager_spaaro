@@ -228,7 +228,7 @@ The flight code to be uploaded exists in the ```/flight_code``` directory. This 
 </details>
 
 #### Configuration system
-LAGER SPAARO is modified to enable handling of different configuration files for different vehicle. The vehicle config files are ```/flight_code/flight/<VEHICLE_NAME>_config.cc```. ```bool DEBUG``` defines if the aircraft are in debug mode or not. If set to ```true```, the aircraft is in debug mode, i.e. during power up, the flight code will stop until a serial monitor to the FMU is opened. This is to view alll the system messages, helpful for debugging. These message will show up in non-debug mode but the FMU won't wait for a serial monitor connection to send them.
+LAGER SPAARO is modified to enable handling of different configuration files for different vehicle. The vehicle config files are ```/flight_code/flight/config_<VEHICLE_NAME>.cc```. ```bool DEBUG``` defines if the aircraft are in debug mode or not. If set to ```true```, the aircraft is in debug mode, i.e. during power up, the flight code will stop until a serial monitor to the FMU is opened. This is to view alll the system messages, helpful for debugging. These message will show up in non-debug mode but the FMU won't wait for a serial monitor connection to send them.
 
 Aircraft configuration are stored as structs which includes the following structure
 
@@ -510,7 +510,7 @@ Aircraft configuration are stored as structs which includes the following struct
 * int16_t extra2_stream_period_ms: defaults to 100
 </details>
 
-Since the configuration data structure contains pre-defined defaults values, values don't need to be defined in ```/flight_code/flight/<VEHICLE_NAME>_config.cc``` unless values are changed.
+Since the configuration data structure contains pre-defined defaults values, values don't need to be defined in ```/flight_code/flight/config_<VEHICLE_NAME>.cc``` unless values are changed.
 
 #### Flight code execution
 
@@ -611,7 +611,7 @@ cmake .. -D FMU=mini-v1 -D VEHICLE=tutorial -D AUTOCODE=tutorial_vms
 
 ``` -D FMU=mini-v1``` specifies what FMU version to build for. Options include ```mini-v1```,```v2```, ```v2-beta``` and ```v1```. 
 
-``` -D VEHICLE=tutorial``` specifies what vehicle to build for. This tells CMake to select the correct ```/flight_code/flight/<VEHICLE_NAME>_config.cc``` to choose. For this case, ```/flight_code/flight/tutorial_config.cc``` is chosen. 
+``` -D VEHICLE=tutorial``` specifies what vehicle to build for. This tells CMake to select the correct ```/flight_code/flight/config_<VEHICLE_NAME>.cc``` to choose. For this case, ```/flight_code/flight/config_tutorial.cc``` is chosen. 
 
 ``` -D AUTOCODE=tutorial_vms``` specifies what control law or vms file to build for. If this is not defined, the project assumes the manually coded control law implemented in  ```/flight_code/flight/vms.cc```. Otherwise, if defined, the project will build with the corresponding ```/flight_code/autocode/<VMS_NAME>_ert_rtw/```, for this example, it would be ```/flight_code/autocode/tutorial_vms_ert_rtw/```
 
@@ -621,6 +621,6 @@ After CMake command, the project can be compiled with
 make -j6
 ```
 
-Once everything is compiled, the flight code can be uploaded with ```make flight_upload```. For this project, the debug option is set to true in ```/flight_code/flight/tutorial_config.cc``` so flight code execution is paused until a serial monitor is openned. Since we don't have any hardware or anything connected, the FMU will throw error in the serial monitor. This means everything is working and you can proceed to the next tutorial.
+Once everything is compiled, the flight code can be uploaded with ```make flight_upload```. For this project, the debug option is set to true in ```/flight_code/flight/config_tutorial.cc``` so flight code execution is paused until a serial monitor is openned. Since we don't have any hardware or anything connected, the FMU will throw error in the serial monitor. This means everything is working and you can proceed to the next tutorial.
 
 

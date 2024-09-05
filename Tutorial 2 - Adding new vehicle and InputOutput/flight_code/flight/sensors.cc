@@ -82,8 +82,8 @@ void SensorsInit(const SensorConfig &cfg) {
   ext_gnss1.Init(cfg.ext_gnss1);
   #elif defined(__FMU_R_V2__) || defined(__FMU_R_V2_BETA__) || \
         defined(__FMU_R_MINI_V1__)
-  ext_gnss1.Init(cfg.ext_gnss1);
-  ext_gnss2.Init(cfg.ext_gnss2);
+  //ext_gnss1.Init(cfg.ext_gnss1);   // DISABLED FOR TUTORIAL SCOPE
+  //ext_gnss2.Init(cfg.ext_gnss2);   // DISABLED FOR TUTORIAL SCOPE
   opflow.Init(cfg.opflow);
   rad_alt.Init(cfg.rad_alt);
   #endif
@@ -120,8 +120,8 @@ void SensorsRead(SensorData * const data) {
   ext_gnss1.Read(&data->ext_gnss1);
   #elif defined(__FMU_R_V2__) || defined(__FMU_R_V2_BETA__) || \
         defined(__FMU_R_MINI_V1__)
-  ext_gnss1.Read(&data->ext_gnss1);
-  ext_gnss2.Read(&data->ext_gnss2);
+  //ext_gnss1.Read(&data->ext_gnss1);   // DISABLED FOR TUTORIAL SCOPE
+  // ext_gnss2.Read(&data->ext_gnss2);   // DISABLED FOR TUTORIAL SCOPE
   opflow.Read(&data->opflow);
   #endif
   #if defined(__FMU_R_V2__) || defined(__FMU_R_MINI_V1__)

@@ -62,11 +62,14 @@ void run() {
   SysRead(&data.sys);
   /* Sensor data */
   SensorsRead(&data.sensor);
+
+  /* Print out inceptor channels for debugging */
   for (uint8_t i = 0; i < 16; i++){
     std::string dbg = std::to_string(data.sensor.inceptor.ch[i]) + " ";
     MsgInfo(dbg.c_str());
   }
   MsgInfo("\n");
+
   //std::string dbg = std::to_string((int)data.sensor.power_module.voltage_v * 100) + "\n";
   //MsgInfo(dbg.c_str());
   /* VectorNav */
@@ -77,11 +80,11 @@ void run() {
                 &data.sensor.vector_nav_gnss, &data.state_est.vector_nav_ins);
   #endif
   /* Air data */
-  AdcRun(data.sensor, &data.state_est.adc);
+  //AdcRun(data.sensor, &data.state_est.adc);   // DISABLED FOR TUTORIAL SCOPE
   /* INS */
-  BfsInsRun(data.sensor, &data.state_est.bfs_ins);
+  //BfsInsRun(data.sensor, &data.state_est.bfs_ins);   // DISABLED FOR TUTORIAL SCOPE
   /* Aux INS */
-  AuxInsRun(data, &data.state_est.aux_ins);
+  //AuxInsRun(data, &data.state_est.aux_ins);   // DISABLED FOR TUTORIAL SCOPE
   /* VMS */
   VmsRun(data.sys, data.sensor, data.state_est, data.telem, &data.vms);
   /* Command effectors */
@@ -114,22 +117,22 @@ int main() {
   VectorNavInit(config.vector_nav);
   #endif
   /* Init ADC */
-  AdcInit(config.adc);
+  //AdcInit(config.adc);   // DISABLED FOR TUTORIAL SCOPE
   /* Init INS */
-  BfsInsInit(config.bfs_ins);
+  //BfsInsInit(config.bfs_ins);   // DISABLED FOR TUTORIAL SCOPE
   /* Init Aux INS */
-  AuxInsInit(config.aux_ins);
+  //AuxInsInit(config.aux_ins); // DISABLED FOR TUTORIAL SCOPE
   /* Init effectors */
-  EffectorsInit();
+  //EffectorsInit();  // DISABLED FOR TUTORIAL SCOPE
   /* Init VMS */
   VmsInit();
   /* Init telemetry */
   TelemInit(config.telem, &data.telem);
   /* Init datalog */
   DatalogInit();
-  WaypointRead(&data.telem);
-  std::string dbg = std::to_string(data.telem.num_waypoints);
-  MsgInfo(dbg.c_str());
+  WaypointRead(&data.telem);   
+  std::string dbg = std::to_string(data.telem.num_waypoints);   
+  MsgInfo(dbg.c_str());   
   /* Attach data ready interrupt */
   attachInterrupt(IMU_DRDY, run, RISING);\
   while (1) {
