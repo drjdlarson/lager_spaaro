@@ -2,7 +2,7 @@
 This tutorial aims to introduce the SPAARO framework. Topics will include the different components such as MATLAB/Simulink code, the C++ code. By the end of the tutorial, one is expected to be able to understand the data structure of Spaaro and how they interact between C++ and MATLAB, and able to open and load an empty flight control model on Simulink as well as autocoding it and uploading it to an FMU.
 
 ## Hardware components
-FMU-MINI
+* FMU-MINI
 
 ## C++ Code components
 This section outlines the C++ codes and highlight the important components

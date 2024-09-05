@@ -1,22 +1,22 @@
-%Initialize a vehicle for use in the simulation
+%Initialize a vehicle for use in the simulation and developing control law
 %
 %
 % Tuan Luong
 
 
 %% Platform's name
-Aircraft.name = 'lambu';
+Aircraft.name = 'tutorial';
 
 %% Mass properties (Obtained using Solidworks) CG is at body origin
 % Mass [kg]
-Aircraft.Mass.mass_kg = 0.3;
+Aircraft.Mass.mass_kg = 1;
 % c.g. location [m]
 Aircraft.Mass.cg_m = [0 0 0];
 % Moments of inertia [kg*m^2] obtained from Solidworks model
-Aircraft.Mass.ixx_kgm2 = 0.07151;
-Aircraft.Mass.iyy_kgm2 = 0.08636;
-Aircraft.Mass.izz_kgm2 = 0.15364;
-Aircraft.Mass.ixz_kgm2 = 0.014;
+Aircraft.Mass.ixx_kgm2 = 1;
+Aircraft.Mass.iyy_kgm2 = 1;
+Aircraft.Mass.izz_kgm2 = 1;
+Aircraft.Mass.ixz_kgm2 = 1;
 Aircraft.Mass.inertia_kgm2 = [Aircraft.Mass.ixx_kgm2    0   -Aircraft.Mass.ixz_kgm2;...
                               0          Aircraft.Mass.iyy_kgm2          0;...
                               -Aircraft.Mass.ixz_kgm2   0       Aircraft.Mass.izz_kgm2];

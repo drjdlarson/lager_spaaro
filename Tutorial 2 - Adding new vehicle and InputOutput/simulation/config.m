@@ -10,12 +10,13 @@
 % Vehicle
 % vehicle = 'sig_kadet';
 % vehicle = 'malt';
-vehicle = 'session_v0';
+%vehicle = 'session_v0';
 % vehicle = 'super';
 % vehicle = 'lambu';
+vehicle = 'tutorial';
 
-% FMU-R version
-if strcmpi(vehicle, 'malt') || strcmpi(vehicle, 'lambu')
+% FMU-R version. Select corresponding FMU hardware based on the vehicle.
+if strcmpi(vehicle, 'malt') || strcmpi(vehicle, 'lambu') || strcmpi(vehicle, 'tutorial')
     fmu_version = "mini";
 elseif strcmpi(vehicle, 'ale')
     fmu_version = "v1";
@@ -26,10 +27,11 @@ else
     throw(ME);
 end
 
-vms_only = false;
+% Whether to only vms file instead of the full simulation environment. Useful when one chose to only develop hardware control law
+vms_only = true;
 
-
-%% Target trim conditions
+%% Section used for simulation 
+% Target trim conditions
 
 % Latitude and longitude [deg]
 Target.lat_deg = 35.691544;

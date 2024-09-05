@@ -28,12 +28,12 @@
 #include "global_defs.h"
 
 /* Debug */
-bool DEBUG = false;
+bool DEBUG = true;
 /* Aircraft config */
 AircraftConfig config = {
   .sensor = {
     .fmu = {
-      .dlpf_hz = DLPF_BANDWIDTH_41HZ,
+      .dlpf_hz = DLPF_BANDWIDTH_10HZ,
       .accel_bias_mps = {0, 0, 0},
       .mag_bias_ut = {0, 0, 0},
       .accel_scale = {{1, 0, 0}, {0, 1, 0}, {0, 0, 1}},
@@ -47,17 +47,16 @@ AircraftConfig config = {
       .baud = 921600
     },
     .power_module = {
-      .volts_per_volt = 18.95f,
-      .amps_per_volt = 125.65f
+      .volts_per_volt = 2.87f,
+      .amps_per_volt = 50.0f
     }
   },
   .bfs_ins = {
     .imu_source = INS_IMU_FMU,
     .mag_source = INS_MAG_FMU,
-    .gnss_source = INS_GNSS_EXT_GNSS2,
+    .gnss_source = INS_GNSS_EXT_GNSS1,
     .accel_cutoff_hz = 40.0f,
-    .gyro_cutoff_hz = 40.0f,
-    .antenna_baseline_m = (Eigen::Vector3f() << 0.0f, -0.62f, 0.0f).finished()
+    .gyro_cutoff_hz = 40.0f
   },
   .telem = {
     .baud = 57600,
