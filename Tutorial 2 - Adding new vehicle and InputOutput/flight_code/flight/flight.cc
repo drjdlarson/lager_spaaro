@@ -123,7 +123,7 @@ int main() {
   /* Init Aux INS */
   //AuxInsInit(config.aux_ins); // DISABLED FOR TUTORIAL SCOPE
   /* Init effectors */
-  //EffectorsInit();  // DISABLED FOR TUTORIAL SCOPE
+  EffectorsInit();
   /* Init VMS */
   VmsInit();
   /* Init telemetry */

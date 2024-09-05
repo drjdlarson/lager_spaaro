@@ -41,8 +41,23 @@ elseif strcmp (vehicle,'test')
 This setup so that when running ```setup.m``` with the configuration prescribed in this tutorial, the ```/simulation/vms/test_vms.slx``` is opened.
 
 ### Build and upload
-After these modification, a new vehicle is added to SPAARO and can be compiled and uploaded to the FMU for vehicle name ```test``` following the build instruction in Tutorial 1. Since the debug mode is set to true in ```/flight_code/flight/config_test.cc```, one needs to open a serial monitor for the rest of the flight code to proceed. After then, one can attempt to connect the FMU to a ground control software such as Mission Planner.
+After these modification, a new vehicle is added to SPAARO and can be compiled and uploaded to the FMU for vehicle name ```test``` following the build instruction in Tutorial 1. Ensure that an micro SD card is inserted for logging, if not, the flight code will throw an error message in the serial monitor. Since the debug mode is set to true in ```/flight_code/flight/config_test.cc```, one needs to open a serial monitor for the rest of the flight code to proceed. After then, one can attempt to connect the FMU to a ground control software such as Mission Planner.
 
 ## Input and Output demonstration
 
-This section mainly explain the contents of the ```/simulation/vms/tutorial_vms.slx``` which is the same as the ```/simulation/vms/test_vms.slx```. This tutorial hopes to explain the typical implementation for reading and processing inceptor signal(RC commands), telemetry parameters, logging. 
+This section mainly explain the contents of the ```/simulation/vms/tutorial_vms.slx``` which is the same as the ```/simulation/vms/test_vms.slx```. This tutorial hopes to explain the typical implementation for reading and processing inceptor signal(RC commands), telemetry parameters, logging. Comments are in the simulink model but some explanation is provided here.
+
+First, the signals of interested are extracted from the data structures (or buses) using ```Bus Selector``` blocks. In this example, the ```sensor.inceptor.ch``` and ```telem.param``` arrays are extracted. ```sensor.inceptor.ch``` was defined as int16_t[16] (array of type itn16 with 16 elements), to perform mathmatic operation within Simulink, one needs to convert the signals to float (or single). Then a specific channel in the inceptor channel array is extracted using a ```Selector``` block, we extract the roll channel in this example. SBus signal has range from 172 to 1811. However, it might be more intuitive to use roll command with range -1 to 1 (or minimum roll to maximum roll). Therefore a ```MATLAB Code``` block with the function definition called ```remap_with_deadband```. This function linearly map signal from input range to output range. It also introduce a deadband region in the mid point to prevent bad gimbal data from incursion in the control law. Another usage of ```remap_with_deaband``` can be converting each motor throttle command from 0 to 1 to the hardware specific 1100 to 1900 of some ESCs. An explanation diagram for the remap function is shown below
+
+![image](fig/remap.png)
+
+The value of the first channel of the ```telem.param``` array is also extracted ```Bus Selector``` block. Since this array is defined as float already, no extra conversion is needed. From the array, the first element (corresponding to the PARAM_00 in Mission Planner) is chosen using ```Selector``` block. 
+
+The remapped inceptor and telemetry signal is summed together. The raw inceptor signal, remapped inceptor signal, telemetry signal and combined signal are logged in the ```vms.aux``` array.
+
+### Exercise
+Build and upload the flight code to an FMU following the instruction above. Once a serial monitor is opened, the FMU should continuosly print the 16 inceptor channel. One can move the RC transmitter to observe values changing in the serial monitor. 
+
+Connect the FMU to Mission Planner. Modified the PARAM_00 accordingly. 
+
+After powering off, check the SD card. There should be files with the name ```tutorial_XX.bfs```. Grab the latest one and convert them to ```tutorial_XX.mat``` file using the mat_converter instruction in Tutorial 1. One can inspect the logged signal in the vms_aux variables in the workspace to confirm that the VMS is performing correctly. 
