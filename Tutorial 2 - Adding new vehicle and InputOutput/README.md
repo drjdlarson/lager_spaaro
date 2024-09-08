@@ -1,4 +1,4 @@
-# Tutorial 2 - Autocode generation
+# Tutorial 2 - Adding new vehicle and Input/Output
 This tutorial will outline the process to add a new vehicle to the framework as well as showcasing the input and output functionality and log review.
 
 ## Hardware components
