@@ -371,6 +371,8 @@ std::vector<float> vms_aux20;
 std::vector<float> vms_aux21;
 std::vector<float> vms_aux22;
 std::vector<float> vms_aux23;
+// Sample variable for the tutorial
+std::vector<float> bar;
 
 template<typename T>
 T Scale(uint64_t val, T min, T max, T sf, T bias) {
@@ -888,6 +890,8 @@ int main(int argc, char** argv) {
         temp_ = datalog_msg_.vms_aux23;
         memcpy(&tempf_, &temp_, 4);
         vms_aux23.push_back(tempf_);
+        // Sample variable for the tutorial
+        bar.push_back(Scale(datalog_msg_.sensor.foo.bar, 0.0f, 1000.0f, 10.0f, 0.0f));
       }
     }
   }
@@ -1230,6 +1234,8 @@ int main(int argc, char** argv) {
   bfs::MatWrite("vms_aux21", vms_aux21, output);
   bfs::MatWrite("vms_aux22", vms_aux22, output);
   bfs::MatWrite("vms_aux23", vms_aux23, output);
+  // Sample variable for 
+  bfs::MatWrite("bar_matlab", bar, output);
   /* Print out closing info */
   std::cout << "done." << std::endl;
   std::cout << "Wrote " << sys_time_s.size() << " data packets." << std::endl;

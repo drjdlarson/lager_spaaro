@@ -553,6 +553,9 @@ void DatalogAdd(const AircraftData &ref) {
   memcpy(&temp_, &ref.vms.aux[23], 4);
   datalog_msg_.vms_aux23 = temp_;
 
+  // Sample data for tutorial
+  datalog_msg_.bar = Scale(ref.sensor.foo.bar, 0.0f, 1000.0f, 10.0f, 0.0f);
+
   /* Framing */
   std::size_t bytes_written = encoder.Write((uint8_t *)&datalog_msg_,
                                             sizeof(datalog_msg_));
