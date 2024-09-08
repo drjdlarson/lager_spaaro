@@ -528,12 +528,16 @@ On boot, SPAARO initializes the:
    * Analog: measures analog inputs, converts to engineering units.
 4. Effectors, which establishes communications over SBUS and PWM protocols.
 5. Telemetry, which establishing communications with the radio modem.
-6. Datalog, which checks for an SD card present and creates a datalog file.
+6. Datalog, which checks for an SD card present and creates a datalog file. lager_spaaro will also attempt to parse a saved flight plan
+   * It will look for a ```waypoint.txt```
+   * If the file exists, the contents which, include an array of encoded MissionItem, will be copied to populate the ```telem.flight_plan``` struct
+   * If the file does not exist, SPAARO will send a message to the Serial Monitor stating that the file does not exist and it will be created when a flight_plan is sent to the FMU
 
 After a succesful boot, a low priority loop is established to write datalog entries from a buffer to the SD card. An interrupt is attached to the IMU data ready pin to trigger the main flight software loop at the desired frame rate.
 
 The main flight software loop consists of:
 1. Reading system data: system time, frame duration, and input, regulated, and servo voltages.
+   * If flight plan is uploaded to the FMU from a ground control station, a new file ```waypoint.txt``` is created to store encoded flight plan parameters.
 2. Reading sensor data, correcting scale factors and biases, and rotating sensor data into the vehicle frame.
 3. Running the navigation filter to filter the sensor data and estimate the aircraft states.
 4. Run the control software. This is defined in ```VmsRun()``` function in ```/flight_code/flight/flight.cc``` which reference the function call in ```/flight_code/flight/vms.cc```. This file is where manual control law implemented in the ```void VmsRun``` function or the autocoded ```autocode.Run()``` generated from Simulink will be called. 
