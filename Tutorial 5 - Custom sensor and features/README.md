@@ -142,6 +142,6 @@ FetchContent_MakeAvailable(foobar)
 Then to allow SPAARO to link the flight code to ```foobar```, it needs to be added as shown in line 387 in ```/flight_code/CMakeLists.txt```. After this, all the functionalities implemented in ```https://github.com/example/foobar.git``` become available to any files in ```/flight_code/``` without even needing to reference it by ```include "foobar.h"```
 
 If one needs to modify an external depency instead, one can fork the neccessary repositories and make the needed change. Then one needs to change the CMake FetchContent command to target the correct GIT_REPOSITORY and GIT_TAG. In lager_spaaro, the following external dependencies or modified or added from the default BFS spaaro project
-* sbus - optionally target https://github.com/TL-4319/sbus is ```-D SBUS_SRC=XBEE``` to allow for controlling swarm of vehicle using XBEE Digimesh hardwares. If not define then default to original BFS SBUS library
+* sbus - optionally target https://github.com/TL-4319/sbus if defined ```-D SBUS_SRC=XBEE``` to allow for controlling swarm of vehicle using XBEE Digimesh hardwares. If not defined then default to original BFS SBUS library
 * mavlink - targets https://github.com/TL-4319/mavlink.git to correct flight mode enumeration for use with Mission Planner
 * navigation - targets https://github.com/TL-4319/navigation.git to add moving baseline and indoor beacon support for the ES-EKF
