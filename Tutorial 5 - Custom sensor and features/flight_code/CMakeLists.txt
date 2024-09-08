@@ -156,9 +156,8 @@ if (SBUS_SRC STREQUAL "XBEE")
   message("Fetching XBEE sbus module")
   FetchContent_Declare(
     sbus
-    GIT_REPOSITORY https://github.com/bolderflight/sbus.git
-    GIT_TAG v8.1.3
-    #SOURCE_DIR /home/tuan/Projects/sbus
+    GIT_REPOSITORY https://github.com/TL-4319/sbus
+    GIT_TAG v1.0.0
     )
 else()
   FetchContent_Declare(
@@ -270,6 +269,15 @@ FetchContent_Declare(
   GIT_TAG v1.1.0
 )
 FetchContent_MakeAvailable(matek3901)
+# Sample section for tutorial
+FetchContent_Declare(
+  foobar
+  GIT_REPOSITORY https://github.com/example/foobar.git
+  GIT_TAG v1.2.3
+  #SOURCE_DIR /path/to/local/fork/ # For dependencies store on local machine
+)
+FetchContent_MakeAvailable(foobar)
+
 # Add the executable
 add_executable(flight
   include/global_defs.h
@@ -376,6 +384,8 @@ target_link_libraries(flight
     pwm
     imap
     matek3901
+    # Example for tutorial
+    foobar
 )
 target_compile_options(flight PUBLIC -std=c++20 -O3)
 # Add hex and upload targets

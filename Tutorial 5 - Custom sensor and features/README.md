@@ -2,6 +2,8 @@
 
 This tutorial outline the processes needed to modify/add functionalities to SPAARO. This include adding new variables such as sensors, or estimation datas for processing and loggin and adding new dependency from external repositories. These are only for advanced users looking to develop new drivers for new sensors or modify the dependencies. Only control law development might not need any information from this tutorial.
 
+NOTE: The examples provide in this tutorial is for reference only and the project may not build with only the additions in this example without appropriate implementations.
+
 ## Hardware components
 
 * None
@@ -92,3 +94,54 @@ bfs::MatWrite("bar_matlab", bar, output);
 ```
 
 This will add a variable in the workspace name "bar_matlab" which contains value for ```bar``` during the runtime of SPAARO.
+
+## Add new variables interface with MATLAB/Simulink
+
+The varible ```bar``` from the previous sections are added to the C++ components of SPAARO. However, there are currently no way to access ```bar``` in MATLAB/Simulink. To add the new variables, one must update the bus definitions in the ```/simulation/data/``` directory(MATLAB/Simulink equivalent to C++ data structs).
+
+There are multiple bus definitions for different FMU version. This tutorial will only add ```bar``` to the bus definition of the *FMU-MINI* which is defined in ```/simulation/data/fmu_mini_bus_defs.mat```.
+
+Open MATLAB and load ```/simulation/data/fmu_mini_bus_defs.mat``` to the workspace. Each data struct are stored as "Bus" objects in MATLAB. For this example, we need to create a ```FooData``` bus object and add it to the ```SensorData```. To our current knowledge, the best way to edit bus objects in MATLAB is to double-click any bus in the workspace to open the "Type Editor" GUI. 
+
+To create a new ```FooData``` bus, the easiest method is to duplicate and rename aother sensor bus such as ```AnalogData```. Then in the drop down options for ```FooData```, modify by adding, removing and renaming the elements within. For this example, we have an element name ```bar``` which is type single and has dimension 1. The type and dimension will match with the variable type and dimension in the C++ definition.
+
+To add the created ```FooData``` bus into ```SensorData``` bus, the easiest method again is to select the drop down option for ```SensorData```, duplicate and rename an existing bus such as ```AnalogData```. Then change the "Name" of the bus to ```foo```. Change the "Data Type" to ```Bus: FooData```. 
+
+Save this new bus definition by exporting to a new ```.mat``` file which will replace the original ```/simulation/data/fmu_mini_bus_defs.mat```. Now, the control law in Simulink will have access to the variable ```bar``` from sensor ```foo```.
+
+## Modify/Add dependencies
+
+If one needs to add a new sensor drivers or modify an external SPAARO module such as PWM drivers or navigation filters, SPAARO need to be made aware of these changes via updating CMake.
+
+External dependencies are handled using CMake [FetchContent](https://cmake.org/cmake/help/latest/module/FetchContent.html) functionality. Essentially, CMake gets external dependencies by downloading the corresponding code from relevant github repos and build them with the main SPAARO project.
+
+In this example, given the repo of the external dependency is ```https://github.com/example/foobar.git``` and we want version 1.2.3. We add the following in ```/flight_code/CMakeLists.txt```  (line 273 in ```/flight_code/CMakeLists.txt```)
+
+```
+FetchContent_Declare(
+  foobar
+  GIT_REPOSITORY https://github.com/example/foobar.git
+  GIT_TAG v1.2.3
+)
+FetchContent_MakeAvailable(foobar)
+```
+
+This code copy the content of the ```https://github.com/example/foobar.git``` with the release tag 1.2.3 and configure the code of that repo to be built under a project/library name ```foobar```. 
+
+Another way to FetchContent that might be better during initial testing is to target the fork local copy on your machine so you does not to have to push a change before the new library is updated. This can be done with
+
+```
+FetchContent_Declare(
+  foobar
+  SOURCE_DIR /path/to/foobar/
+)
+FetchContent_MakeAvailable(foobar)
+```
+ Remember to push and update the release tag of the library so that other people can build SPAARO with the correct library.
+
+Then to allow SPAARO to link the flight code to ```foobar```, it needs to be added as shown in line 387 in ```/flight_code/CMakeLists.txt```. After this, all the functionalities implemented in ```https://github.com/example/foobar.git``` become available to any files in ```/flight_code/``` without even needing to reference it by ```include "foobar.h"```
+
+If one needs to modify an external depency instead, one can fork the neccessary repositories and make the needed change. Then one needs to change the CMake FetchContent command to target the correct GIT_REPOSITORY and GIT_TAG. In lager_spaaro, the following external dependencies or modified or added from the default BFS spaaro project
+* sbus - optionally target https://github.com/TL-4319/sbus is ```-D SBUS_SRC=XBEE``` to allow for controlling swarm of vehicle using XBEE Digimesh hardwares. If not define then default to original BFS SBUS library
+* mavlink - targets https://github.com/TL-4319/mavlink.git to correct flight mode enumeration for use with Mission Planner
+* navigation - targets https://github.com/TL-4319/navigation.git to add moving baseline and indoor beacon support for the ES-EKF
