@@ -52,8 +52,10 @@ The tutorials are separated into their own directories. It is noted that the fil
 - [x] Telemetry interactions
 - [x] Datalog explanation
 - [x] Outline of C++ code
-- [ ] CMakeList explain
+- [x] CMakeList explain
 - [x] Add vehicle
-- [ ] Add custom data to log
-- [ ] EKF modifications
-- [ ] Add new sensors and drivers
+- [x] Add custom data to log
+- [x] EKF modifications
+- [x] Add new sensors and drivers
+- [ ] Tutorial 3 - control law fundamentals
+- [ ] Tutorial 4 - explanation of multirotor control laws with different modes
