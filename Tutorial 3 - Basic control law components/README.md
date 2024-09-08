@@ -36,4 +36,7 @@ Currently, the arm state is controlled by the pilot with two mechanisms and by t
 
 Autonomous disarm is currently only available in the LAND mode. The idea is that LAND mode happens after an autonomous flight plan or Return to Launch mode. LAND mode only issue a down velocity command to the vehicle while trying to keep the vehicle in place laterally. After the aircraft is below an altitude threshold from the home altitude, LAND mode switch the arm state to disarm. In the current implementation, after LAND mode has disarm the vehicle, a power cycle is recommended. It has not been tested with re-arming after LAND mode execution. 
 
-One thing to note is that for multirotor systems, it is adviced not to issue zero throttle command during flight to prevent motor sync problem. Therefore, when armed, even with zero throttle command, the motor will be given a minimum throttle command to keep them spinning without producing much thrust (defined in ```/simulation/aircraft/<VEHICLE_NAME>.m``` with variable ```Aircraft.Control.motor_spin_min``` which ranges from 0 to 1 )
+One thing to note is that for multirotor systems, it is adviced not to issue zero throttle command during flight to prevent motor sync problem. Therefore, when armed, even with zero throttle command, the motor will be given a minimum throttle command to keep them spinning without producing much thrust (defined in ```/simulation/aircraft/<VEHICLE_NAME>.m``` with variable ```Aircraft.Control.motor_spin_min``` which ranges from 0 to 1). For bigger propeller, it is also recommended to ramp up the throttle from 0 to ```Aircraft.Control.motor_spin_min```.
+
+## Flight mode management system
+Currently, SPAARO utilizes a series of 
