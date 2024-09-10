@@ -1,5 +1,7 @@
 # Tutorial 3 - Basic control law components
-The current control law for multirotor follows a modular design the there exist different feedback controller in a cascaded fashion. The flight mode manager chooses which controllers are enable. The resulting commands from the controller are converted to throttle commands to each motor. This tutorial covers the basics components of a multirotor control laws including the motor mixing system, arm/disarm system and flight mode management system. This tutorial and the code within are for reference only and should not be built as is.
+The current control law for multirotor follows a modular design the there exist different feedback controller in a cascaded fashion. The flight mode manager chooses which controllers are enable. The resulting commands from the controller are converted to throttle commands to each motor. This tutorial covers the basics components of a multirotor control laws including the motor mixing system, arm/disarm system and flight mode management system. This tutorial and the code within are for reference only and should not be built as is. 
+
+This ReadMe provides a brief description of these topics, more details can be found from comments in ```/simulation/vms/multirotor.slx```
 
 ## Hardware components
 Although this tutorial is for reference only and no hardware is needed, having a fully configured quadrotor might be useful. For LAGER users, the tutorial covers in details MALT and LAMBU. If one wishes to follow with hardwares, ensure that the vehicle is able to enter flight loop without any error messages
@@ -39,4 +41,6 @@ Autonomous disarm is currently only available in the LAND mode. The idea is that
 One thing to note is that for multirotor systems, it is adviced not to issue zero throttle command during flight to prevent motor sync problem. Therefore, when armed, even with zero throttle command, the motor will be given a minimum throttle command to keep them spinning without producing much thrust (defined in ```/simulation/aircraft/<VEHICLE_NAME>.m``` with variable ```Aircraft.Control.motor_spin_min``` which ranges from 0 to 1). For bigger propeller, it is also recommended to ramp up the throttle from 0 to ```Aircraft.Control.motor_spin_min```.
 
 ## Flight mode management system
-Currently, SPAARO utilizes a series of 
+Currently, SPAARO utilizes a series of logic switches to handle state transitions. The pilot can control the flight mode (stabilized, pos_hold and enter auto mode) of the aircraft via a flight mode switch. The control law also enter certain flight modes depending on other conditions. More detail is in ```/simulation/vms/multirotor.slx```.
+
+NOTE FROM TUAN: Our current implementation of flight mode is not the best as there are still undefined behavior and event that have yet been tested for. A better approach is to use an actual Finite State Machine. Simulink has a system to build Finite State Machine called StateFlow and it would be nice if someone can build a correct state machine for SPAARO. 
