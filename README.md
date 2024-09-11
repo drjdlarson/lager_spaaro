@@ -44,18 +44,3 @@ sudo cp 00-teensy.rules /etc/udev/rules.d/
 ## Tutorials 
 The tutorials are separated into their own directories. It is noted that the file structure in each tutorial directory is identical to the main spaaro repository. Separating tutorial into different directory aims to provide an isolated sandbox relavent to the topics of each tutorial. 
 
-## TO DOs
-- [x] How to setup Matlab + Simulink
-- [x] Outline of Simulink model
-- [x] Outline of input and outputs in Simulink
-- [x] Autocode to upload
-- [x] Telemetry interactions
-- [x] Datalog explanation
-- [x] Outline of C++ code
-- [x] CMakeList explain
-- [x] Add vehicle
-- [x] Add custom data to log
-- [x] EKF modifications
-- [x] Add new sensors and drivers
-- [ ] Tutorial 3 - control law fundamentals
-- [ ] Tutorial 4 - explanation of multirotor control laws with different modes
